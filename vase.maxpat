@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 874.0, 87.0, 772.0, 929.0 ],
+		"rect" : [ 34.0, 87.0, 772.0, 929.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -40,12 +40,23 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 470.0, 221.0, 40.0, 18.0 ],
+					"text" : "Player:"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-29",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 37.5, 514.0, 633.0, 40.0 ],
+					"patching_rect" : [ 38.0, 864.0, 633.0, 40.0 ],
 					"text" : "Ecosystem mode: Chosen at instantiation - Spaces can live, die, and create new spaces based on evolutionary characteristics, altering for feature sets\n"
 				}
 
@@ -57,7 +68,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 485.0, 231.0, 23.0 ],
+					"patching_rect" : [ 17.0, 835.0, 231.0, 23.0 ],
 					"text" : "VASE System params:"
 				}
 
@@ -69,8 +80,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 37.5, 449.0, 633.0, 29.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 38.0, 799.0, 633.0, 29.0 ],
 					"text" : "Revulsion: a set of spectromophological characteristics (Smalley 1997) which are repellent to a space-agent, resulting in the space having a higher chance of moving away from its current position if they are experienced"
 				}
 
@@ -82,7 +92,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 407.0, 632.0, 40.0 ],
+					"patching_rect" : [ 38.0, 757.0, 633.0, 40.0 ],
 					"text" : "Attraction: a set of spectromophological characteristics (Smalley 1997) which are appealing to the space-agent, resulting in the space having a higher chance of staying still in space if experiencing this set of features. If these features are heard at a distance, this may trigger the space to move towards that location"
 				}
 
@@ -94,8 +104,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 378.0, 231.0, 23.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 17.0, 728.0, 231.0, 23.0 ],
 					"text" : "Space-agent behavioural params:"
 				}
 
@@ -107,7 +116,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 309.0, 632.0, 62.0 ],
+					"patching_rect" : [ 38.0, 659.0, 632.0, 62.0 ],
 					"text" : "Absorption: coeffiecient of reflection off of space-agent boundary material\nInsulation: amount of sound that can transfer outside of a space-agent to another spatial entity\nSubstance: set of materials which fill the space-agent, altering transmission time, transmission loss, and propagation direction of player audio\nViscosity: a material parameter which affects drag of other spaces moving through this space\nMass: spaces enact gravitational pull upon other spaces within an appropriate range"
 				}
 
@@ -119,7 +128,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 284.0, 207.0, 23.0 ],
+					"patching_rect" : [ 17.0, 634.0, 207.0, 23.0 ],
 					"text" : "Space-agent material params:"
 				}
 
@@ -139,12 +148,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-16",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 556.0, 15.0, 198.0, 29.0 ],
-					"text" : "Indeterminate compositional flow \n(tunable within autonomous behaviours)"
+					"patching_rect" : [ 556.0, 15.0, 198.0, 40.0 ],
+					"text" : "Allows for tunable levels of indeterminacy within compositional flow - stochastic elements delegated to activity of agents"
 				}
 
 			}
@@ -198,7 +207,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 682.0, 119.0, 35.0, 18.0 ],
+					"patching_rect" : [ 651.0, 119.0, 35.0, 18.0 ],
 					"text" : "Both?"
 				}
 
