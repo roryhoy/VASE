@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontsize" : 16.893583843942121,
+					"id" : "obj-76",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 740.0, 775.0, 226.0, 44.0 ],
+					"text" : "note liscense usage in writing / documentation?"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontsize" : 11.767441860465114,
 					"id" : "obj-74",
 					"linecount" : 3,
@@ -1352,16 +1365,6 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 447.0, 375.0, 150.0, 40.0 ],
 					"text" : "Area checking - how to tell when a listener / player's audio should be sent for the space? "
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-39",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 566.0, 586.0, 150.0, 18.0 ]
 				}
 
 			}
