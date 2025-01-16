@@ -16,6 +16,138 @@
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-142",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1121.0, 287.0, 139.0, 20.0 ],
+					"text" : "sprintf setPlayerRot %i %f %f"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-141",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1263.0, 150.0, 22.0, 18.0 ],
+					"presentation_linecount" : 2,
+					"text" : "ele"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-140",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1180.0, 150.0, 21.0, 18.0 ],
+					"text" : "azi"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-138",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 1241.0, 201.0, 29.5, 20.0 ],
+					"text" : "- 90."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-137",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1241.0, 172.0, 65.0, 20.0 ],
+					"text" : "random 180."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-136",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1158.0, 172.0, 65.0, 20.0 ],
+					"text" : "random 360."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 14.068606165870607,
+					"id" : "obj-135",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1458.0, 752.0, 289.0, 54.0 ],
+					"text" : "x forward, y left, z up\nazi = 0 deg forward, counter clockwise +\nele = 0 deg forward, -90 - 90 deg"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 19.160746230513666,
+					"id" : "obj-133",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1413.0, 656.0, 440.0, 71.0 ],
+					"text" : "Using Shifted Mathematical System for cartesian positon, and Blauert / Gerzon for spherical rotational coordinates"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-131",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 969.0, 413.0, 121.0, 18.0 ],
+					"text" : "Print all player dist arrays"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-129",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 676.0, 471.0, 228.0, 20.0 ],
+					"text" : "setPlayerPos 2 1.917667 9.637186 1.338301"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-127",
+					"maxclass" : "newobj",
+					"numinlets" : 4,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 741.0, 405.0, 155.0, 20.0 ],
+					"text" : "sprintf setPlayerPos %i %f %f %f"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-124",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -23,18 +155,6 @@
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 942.0, 471.0, 29.5, 20.0 ],
 					"text" : "- 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-123",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 969.0, 409.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -116,7 +236,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 780.0, 335.0, 77.0, 20.0 ],
+					"patching_rect" : [ 780.0, 315.0, 77.0, 20.0 ],
 					"text" : "getPlayerCount"
 				}
 
@@ -128,7 +248,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 780.0, 293.0, 121.0, 20.0 ],
+					"patching_rect" : [ 780.0, 273.0, 121.0, 20.0 ],
 					"text" : "sprintf setPlayerCount %i"
 				}
 
@@ -495,7 +615,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 937.0, 363.5, 73.0, 20.0 ],
+					"patching_rect" : [ 975.0, 350.0, 73.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"precision" : 6
@@ -888,7 +1008,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1215.0, 15.0, 150.0, 18.0 ],
+					"patching_rect" : [ 1391.0, 13.0, 150.0, 18.0 ],
 					"text" : "What co-ord system to use?"
 				}
 
@@ -902,7 +1022,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 1621.0, 40.0, 424.000000000000171, 593.861325115562636 ],
+					"patching_rect" : [ 1797.0, 38.0, 424.000000000000171, 593.861325115562636 ],
 					"pic" : "Macintosh HD:/Users/roryhoy/Documents/School/PhD/Dissertation/VASE/lib/images/spherical-coords.png"
 				}
 
@@ -916,7 +1036,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 1195.0, 41.0, 424.0, 592.94769230769225 ],
+					"patching_rect" : [ 1371.0, 39.0, 424.0, 592.94769230769225 ],
 					"pic" : "Macintosh HD:/Users/roryhoy/Documents/School/PhD/Dissertation/VASE/lib/images/cartesian-coords.png"
 				}
 
@@ -26044,7 +26164,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-119", 1 ],
+					"order" : 0,
+					"source" : [ "obj-112", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-73", 1 ],
+					"order" : 1,
 					"source" : [ "obj-112", 0 ]
 				}
 
@@ -26072,15 +26201,45 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-119", 1 ],
-					"source" : [ "obj-123", 0 ]
+					"destination" : [ "obj-114", 0 ],
+					"source" : [ "obj-124", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-114", 0 ],
-					"source" : [ "obj-124", 0 ]
+					"destination" : [ "obj-111", 0 ],
+					"order" : 1,
+					"source" : [ "obj-127", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-129", 1 ],
+					"order" : 0,
+					"source" : [ "obj-127", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-142", 1 ],
+					"source" : [ "obj-136", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-138", 0 ],
+					"source" : [ "obj-137", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-142", 2 ],
+					"source" : [ "obj-138", 0 ]
 				}
 
 			}
@@ -26270,7 +26429,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-111", 1 ],
+					"destination" : [ "obj-127", 0 ],
 					"order" : 1,
 					"source" : [ "obj-64", 0 ]
 				}
