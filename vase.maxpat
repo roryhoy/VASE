@@ -10,11 +10,71 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 366.0, 87.0, 840.0, 929.0 ],
+		"rect" : [ 34.0, 87.0, 1252.0, 929.0 ],
 		"default_fontsize" : 10.0,
 		"gridsize" : [ 15.0, 15.0 ],
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-40",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 32.0, 503.125, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-42",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 92.0, 503.125, 91.0, 20.0 ],
+					"text" : "getPlayerRoom $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-39",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 88.0, 466.0, 80.0, 20.0 ],
+					"text" : "getPlayerRot $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-28",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 88.0, 433.0, 82.0, 20.0 ],
+					"text" : "getPlayerPos $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-37",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 557.0, 111.0, 150.0, 40.0 ],
+					"text" : "Centre positions of generated spaces. Need to create system for volumes."
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-15",
 					"maxclass" : "newobj",
@@ -34,7 +94,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 236.0, 545.0, 50.0, 20.0 ]
+					"patching_rect" : [ 236.0, 656.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -45,7 +105,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 254.0, 608.0, 65.0, 20.0 ],
+					"patching_rect" : [ 236.0, 686.0, 65.0, 20.0 ],
 					"text" : "getPlayer $1"
 				}
 
@@ -70,7 +130,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 284.0, 483.0, 50.0, 20.0 ]
+					"patching_rect" : [ 32.0, 554.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -81,7 +141,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 284.0, 511.625, 95.0, 20.0 ],
+					"patching_rect" : [ 92.0, 554.0, 95.0, 20.0 ],
 					"text" : "getPlayerAngles $1"
 				}
 
@@ -749,7 +809,7 @@
 
 							}
  ],
-						"originid" : "pat-728",
+						"originid" : "pat-3180",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -793,7 +853,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 168.0, 380.0, 71.0, 18.0 ],
+					"patching_rect" : [ 93.5, 409.0, 71.0, 18.0 ],
 					"text" : "get messages"
 				}
 
@@ -1149,7 +1209,7 @@
 
 							}
  ],
-						"originid" : "pat-730",
+						"originid" : "pat-3182",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -1220,7 +1280,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 567.0, 331.0, 29.5, 20.0 ],
+					"patching_rect" : [ 574.0, 335.0, 29.5, 20.0 ],
 					"text" : "- 1"
 				}
 
@@ -1268,7 +1328,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 567.0, 355.5, 82.0, 20.0 ],
+					"patching_rect" : [ 574.0, 360.0, 82.0, 20.0 ],
 					"text" : "getPlayerDist $1"
 				}
 
@@ -1317,7 +1377,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 341.0, 291.0, 90.0, 29.0 ],
-					"text" : "update messages (on frame)"
+					"text" : "update position (on frame)"
 				}
 
 			}
@@ -1450,11 +1510,11 @@
 
 							}
  ],
-						"originid" : "pat-732",
+						"originid" : "pat-3184",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 133.0, 636.0, 31.0, 20.0 ],
+					"patching_rect" : [ 341.0, 750.0, 31.0, 20.0 ],
 					"text" : "gen~"
 				}
 
@@ -1574,7 +1634,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 442.0, 331.0, 92.0, 20.0 ],
+					"patching_rect" : [ 434.0, 350.0, 92.0, 20.0 ],
 					"text" : "calculateDistances"
 				}
 
@@ -1809,12 +1869,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-67",
-					"linecount" : 6,
+					"linecount" : 8,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 189.0, 288.0, 74.0 ],
-					"text" : "Composer live controls\n- Can wormhole into an space to monitor live\n- May bridge spaces to connect players which  are in disperate locations, this is evocative of a meta-telamaticism, remote players placed remotely in a central space\n- may preview bridged connections before pushing them"
+					"patching_rect" : [ 17.0, 189.0, 288.0, 96.0 ],
+					"text" : "Composer live controls\n- Can move into an space to monitor live (Wormhole)\n- Can take over control of a space live (Puppet)\n- May connect players which are in different spaces, this is evocative of a meta-telamaticism, remote players placed remotely in a central space (Bridge)\n- may preview bridged connections before \"pushing\" them - akin to DJ mix"
 				}
 
 			}
@@ -1884,12 +1944,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-56",
-					"linecount" : 12,
+					"linecount" : 14,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1732.0, 871.0, 277.0, 141.0 ],
-					"text" : "Visualization in Unreal via OSC?\nDistributable to be run on each player's machine?\nWould need to have mac and pc version... mac would force lightweight which is ok - then running into lots of networking things most likely. \n\n\nWould be amazing to plugin and choose audio devices + send audio... \nthis would be a whole other PhD project most likely.\n\ncan there be unreal connection with terminal scripts?"
+					"patching_rect" : [ 1749.0, 858.0, 277.0, 163.0 ],
+					"text" : "Visualization in Unreal via OSC?\nDistributable to be run on each player's machine?\nWould need to have mac and pc version... mac would force lightweight which is ok - then running into lots of networking things most likely. \n\nThere is an audio capture component if direct sound and listening over IP is possible\n\nWould be amazing to plugin and choose audio devices + send audio... \nthis would be a whole other PhD project most likely.\n\ncan there be unreal connection with terminal scripts?"
 				}
 
 			}
@@ -3007,7 +3067,7 @@
 
 							}
  ],
-						"originid" : "pat-3756",
+						"originid" : "pat-6208",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -3617,7 +3677,7 @@
 
 															}
  ],
-														"originid" : "pat-3772"
+														"originid" : "pat-6224"
 													}
 ,
 													"patching_rect" : [ 982.575684000000024, 130.0, 48.0, 21.0 ],
@@ -3958,7 +4018,7 @@
 
 															}
  ],
-														"originid" : "pat-3774"
+														"originid" : "pat-6226"
 													}
 ,
 													"patching_rect" : [ 931.425658999999996, 130.0, 48.0, 21.0 ],
@@ -4299,7 +4359,7 @@
 
 															}
  ],
-														"originid" : "pat-3776"
+														"originid" : "pat-6228"
 													}
 ,
 													"patching_rect" : [ 880.275696000000039, 130.0, 48.0, 21.0 ],
@@ -4640,7 +4700,7 @@
 
 															}
  ],
-														"originid" : "pat-3778"
+														"originid" : "pat-6230"
 													}
 ,
 													"patching_rect" : [ 830.315246999999999, 130.0, 48.0, 21.0 ],
@@ -4981,7 +5041,7 @@
 
 															}
  ],
-														"originid" : "pat-3780"
+														"originid" : "pat-6232"
 													}
 ,
 													"patching_rect" : [ 779.165221999999972, 130.0, 48.0, 21.0 ],
@@ -5322,7 +5382,7 @@
 
 															}
  ],
-														"originid" : "pat-3782"
+														"originid" : "pat-6234"
 													}
 ,
 													"patching_rect" : [ 729.204711999999972, 130.0, 48.0, 21.0 ],
@@ -5663,7 +5723,7 @@
 
 															}
  ],
-														"originid" : "pat-3784"
+														"originid" : "pat-6236"
 													}
 ,
 													"patching_rect" : [ 678.054688000000056, 130.0, 48.0, 21.0 ],
@@ -6004,7 +6064,7 @@
 
 															}
  ],
-														"originid" : "pat-3786"
+														"originid" : "pat-6238"
 													}
 ,
 													"patching_rect" : [ 626.904663000000028, 130.0, 48.0, 21.0 ],
@@ -6345,7 +6405,7 @@
 
 															}
  ],
-														"originid" : "pat-3788"
+														"originid" : "pat-6240"
 													}
 ,
 													"patching_rect" : [ 575.754699999999957, 130.0, 48.0, 21.0 ],
@@ -6686,7 +6746,7 @@
 
 															}
  ],
-														"originid" : "pat-3790"
+														"originid" : "pat-6242"
 													}
 ,
 													"patching_rect" : [ 525.794250000000034, 130.0, 48.0, 21.0 ],
@@ -7027,7 +7087,7 @@
 
 															}
  ],
-														"originid" : "pat-3792"
+														"originid" : "pat-6244"
 													}
 ,
 													"patching_rect" : [ 475.833771000000013, 130.0, 48.0, 21.0 ],
@@ -7368,7 +7428,7 @@
 
 															}
  ],
-														"originid" : "pat-3794"
+														"originid" : "pat-6246"
 													}
 ,
 													"patching_rect" : [ 424.683777000000021, 130.0, 48.0, 21.0 ],
@@ -7709,7 +7769,7 @@
 
 															}
  ],
-														"originid" : "pat-3796"
+														"originid" : "pat-6248"
 													}
 ,
 													"patching_rect" : [ 374.723267000000021, 130.0, 48.0, 21.0 ],
@@ -8050,7 +8110,7 @@
 
 															}
  ],
-														"originid" : "pat-3798"
+														"originid" : "pat-6250"
 													}
 ,
 													"patching_rect" : [ 324.762816999999984, 130.0, 48.0, 21.0 ],
@@ -8391,7 +8451,7 @@
 
 															}
  ],
-														"originid" : "pat-3800"
+														"originid" : "pat-6252"
 													}
 ,
 													"patching_rect" : [ 274.802368000000001, 130.0, 48.0, 21.0 ],
@@ -8732,7 +8792,7 @@
 
 															}
  ],
-														"originid" : "pat-3802"
+														"originid" : "pat-6254"
 													}
 ,
 													"patching_rect" : [ 224.841888000000012, 130.0, 48.0, 21.0 ],
@@ -9073,7 +9133,7 @@
 
 															}
  ],
-														"originid" : "pat-3804"
+														"originid" : "pat-6256"
 													}
 ,
 													"patching_rect" : [ 174.881408999999991, 130.0, 48.0, 21.0 ],
@@ -9414,7 +9474,7 @@
 
 															}
  ],
-														"originid" : "pat-3806"
+														"originid" : "pat-6258"
 													}
 ,
 													"patching_rect" : [ 124.920944000000006, 130.0, 48.0, 21.0 ],
@@ -9755,7 +9815,7 @@
 
 															}
  ],
-														"originid" : "pat-3808"
+														"originid" : "pat-6260"
 													}
 ,
 													"patching_rect" : [ 74.960471999999996, 130.0, 48.0, 21.0 ],
@@ -10096,7 +10156,7 @@
 
 															}
  ],
-														"originid" : "pat-3810"
+														"originid" : "pat-6262"
 													}
 ,
 													"patching_rect" : [ 25.0, 130.0, 48.0, 21.0 ],
@@ -10648,7 +10708,7 @@
 
 											}
  ],
-										"originid" : "pat-3770"
+										"originid" : "pat-6222"
 									}
 ,
 									"patching_rect" : [ 507.0, 463.0, 266.0, 21.0 ],
@@ -11010,7 +11070,7 @@
 
 															}
  ],
-														"originid" : "pat-3814"
+														"originid" : "pat-6266"
 													}
 ,
 													"patching_rect" : [ 1589.031981999999971, 205.0, 80.0, 21.0 ],
@@ -11342,7 +11402,7 @@
 
 															}
  ],
-														"originid" : "pat-3816"
+														"originid" : "pat-6268"
 													}
 ,
 													"patching_rect" : [ 1589.031981999999971, 174.0, 73.0, 21.0 ],
@@ -11691,7 +11751,7 @@
 
 															}
  ],
-														"originid" : "pat-3818"
+														"originid" : "pat-6270"
 													}
 ,
 													"patching_rect" : [ 1506.082885999999917, 205.0, 80.0, 21.0 ],
@@ -12023,7 +12083,7 @@
 
 															}
  ],
-														"originid" : "pat-3820"
+														"originid" : "pat-6272"
 													}
 ,
 													"patching_rect" : [ 1506.082885999999917, 174.0, 73.0, 21.0 ],
@@ -12372,7 +12432,7 @@
 
 															}
  ],
-														"originid" : "pat-3822"
+														"originid" : "pat-6274"
 													}
 ,
 													"patching_rect" : [ 1423.133788999999979, 205.0, 80.0, 21.0 ],
@@ -12704,7 +12764,7 @@
 
 															}
  ],
-														"originid" : "pat-3824"
+														"originid" : "pat-6276"
 													}
 ,
 													"patching_rect" : [ 1423.133788999999979, 174.0, 73.0, 21.0 ],
@@ -13053,7 +13113,7 @@
 
 															}
  ],
-														"originid" : "pat-3826"
+														"originid" : "pat-6278"
 													}
 ,
 													"patching_rect" : [ 1340.18481399999996, 205.0, 80.0, 21.0 ],
@@ -13385,7 +13445,7 @@
 
 															}
  ],
-														"originid" : "pat-3828"
+														"originid" : "pat-6280"
 													}
 ,
 													"patching_rect" : [ 1340.18481399999996, 174.0, 73.0, 21.0 ],
@@ -13734,7 +13794,7 @@
 
 															}
  ],
-														"originid" : "pat-3830"
+														"originid" : "pat-6282"
 													}
 ,
 													"patching_rect" : [ 1257.235717999999906, 205.0, 80.0, 21.0 ],
@@ -14066,7 +14126,7 @@
 
 															}
  ],
-														"originid" : "pat-3832"
+														"originid" : "pat-6284"
 													}
 ,
 													"patching_rect" : [ 1257.235717999999906, 174.0, 73.0, 21.0 ],
@@ -14415,7 +14475,7 @@
 
 															}
  ],
-														"originid" : "pat-3834"
+														"originid" : "pat-6286"
 													}
 ,
 													"patching_rect" : [ 1174.286620999999968, 205.0, 80.0, 21.0 ],
@@ -14747,7 +14807,7 @@
 
 															}
  ],
-														"originid" : "pat-3836"
+														"originid" : "pat-6288"
 													}
 ,
 													"patching_rect" : [ 1174.286620999999968, 174.0, 73.0, 21.0 ],
@@ -15096,7 +15156,7 @@
 
 															}
  ],
-														"originid" : "pat-3838"
+														"originid" : "pat-6290"
 													}
 ,
 													"patching_rect" : [ 1091.33764599999995, 205.0, 80.0, 21.0 ],
@@ -15428,7 +15488,7 @@
 
 															}
  ],
-														"originid" : "pat-3840"
+														"originid" : "pat-6292"
 													}
 ,
 													"patching_rect" : [ 1091.33764599999995, 174.0, 73.0, 21.0 ],
@@ -15777,7 +15837,7 @@
 
 															}
  ],
-														"originid" : "pat-3842"
+														"originid" : "pat-6294"
 													}
 ,
 													"patching_rect" : [ 1008.388610999999969, 205.0, 80.0, 21.0 ],
@@ -16109,7 +16169,7 @@
 
 															}
  ],
-														"originid" : "pat-3844"
+														"originid" : "pat-6296"
 													}
 ,
 													"patching_rect" : [ 1008.388610999999969, 174.0, 73.0, 21.0 ],
@@ -16458,7 +16518,7 @@
 
 															}
  ],
-														"originid" : "pat-3846"
+														"originid" : "pat-6298"
 													}
 ,
 													"patching_rect" : [ 925.439514000000031, 205.0, 80.0, 21.0 ],
@@ -16790,7 +16850,7 @@
 
 															}
  ],
-														"originid" : "pat-3848"
+														"originid" : "pat-6300"
 													}
 ,
 													"patching_rect" : [ 925.439514000000031, 174.0, 73.0, 21.0 ],
@@ -17139,7 +17199,7 @@
 
 															}
  ],
-														"originid" : "pat-3850"
+														"originid" : "pat-6302"
 													}
 ,
 													"patching_rect" : [ 842.49047900000005, 205.0, 80.0, 21.0 ],
@@ -17471,7 +17531,7 @@
 
 															}
  ],
-														"originid" : "pat-3852"
+														"originid" : "pat-6304"
 													}
 ,
 													"patching_rect" : [ 842.49047900000005, 174.0, 73.0, 21.0 ],
@@ -17820,7 +17880,7 @@
 
 															}
  ],
-														"originid" : "pat-3854"
+														"originid" : "pat-6306"
 													}
 ,
 													"patching_rect" : [ 759.541442999999958, 205.0, 80.0, 21.0 ],
@@ -18152,7 +18212,7 @@
 
 															}
  ],
-														"originid" : "pat-3856"
+														"originid" : "pat-6308"
 													}
 ,
 													"patching_rect" : [ 759.541442999999958, 174.0, 73.0, 21.0 ],
@@ -18501,7 +18561,7 @@
 
 															}
  ],
-														"originid" : "pat-3858"
+														"originid" : "pat-6310"
 													}
 ,
 													"patching_rect" : [ 676.59240699999998, 205.0, 80.0, 21.0 ],
@@ -18833,7 +18893,7 @@
 
 															}
  ],
-														"originid" : "pat-3860"
+														"originid" : "pat-6312"
 													}
 ,
 													"patching_rect" : [ 676.59240699999998, 174.0, 73.0, 21.0 ],
@@ -19182,7 +19242,7 @@
 
 															}
  ],
-														"originid" : "pat-3862"
+														"originid" : "pat-6314"
 													}
 ,
 													"patching_rect" : [ 593.64331100000004, 205.0, 80.0, 21.0 ],
@@ -19514,7 +19574,7 @@
 
 															}
  ],
-														"originid" : "pat-3864"
+														"originid" : "pat-6316"
 													}
 ,
 													"patching_rect" : [ 593.64331100000004, 174.0, 73.0, 21.0 ],
@@ -19863,7 +19923,7 @@
 
 															}
  ],
-														"originid" : "pat-3866"
+														"originid" : "pat-6318"
 													}
 ,
 													"patching_rect" : [ 510.694304999999986, 205.0, 80.0, 21.0 ],
@@ -20195,7 +20255,7 @@
 
 															}
  ],
-														"originid" : "pat-3868"
+														"originid" : "pat-6320"
 													}
 ,
 													"patching_rect" : [ 510.694304999999986, 174.0, 73.0, 21.0 ],
@@ -20544,7 +20604,7 @@
 
 															}
  ],
-														"originid" : "pat-3870"
+														"originid" : "pat-6322"
 													}
 ,
 													"patching_rect" : [ 427.745239000000026, 205.0, 80.0, 21.0 ],
@@ -20876,7 +20936,7 @@
 
 															}
  ],
-														"originid" : "pat-3872"
+														"originid" : "pat-6324"
 													}
 ,
 													"patching_rect" : [ 427.745239000000026, 174.0, 73.0, 21.0 ],
@@ -21225,7 +21285,7 @@
 
 															}
  ],
-														"originid" : "pat-3874"
+														"originid" : "pat-6326"
 													}
 ,
 													"patching_rect" : [ 344.796203999999989, 205.0, 80.0, 21.0 ],
@@ -21557,7 +21617,7 @@
 
 															}
  ],
-														"originid" : "pat-3876"
+														"originid" : "pat-6328"
 													}
 ,
 													"patching_rect" : [ 344.796203999999989, 174.0, 73.0, 21.0 ],
@@ -21906,7 +21966,7 @@
 
 															}
  ],
-														"originid" : "pat-3878"
+														"originid" : "pat-6330"
 													}
 ,
 													"patching_rect" : [ 261.847136999999975, 205.0, 80.0, 21.0 ],
@@ -22238,7 +22298,7 @@
 
 															}
  ],
-														"originid" : "pat-3880"
+														"originid" : "pat-6332"
 													}
 ,
 													"patching_rect" : [ 261.847136999999975, 174.0, 73.0, 21.0 ],
@@ -22587,7 +22647,7 @@
 
 															}
  ],
-														"originid" : "pat-3882"
+														"originid" : "pat-6334"
 													}
 ,
 													"patching_rect" : [ 178.898101999999994, 205.0, 80.0, 21.0 ],
@@ -22919,7 +22979,7 @@
 
 															}
  ],
-														"originid" : "pat-3884"
+														"originid" : "pat-6336"
 													}
 ,
 													"patching_rect" : [ 178.898101999999994, 174.0, 73.0, 21.0 ],
@@ -23268,7 +23328,7 @@
 
 															}
  ],
-														"originid" : "pat-3886"
+														"originid" : "pat-6338"
 													}
 ,
 													"patching_rect" : [ 95.949050999999997, 205.0, 80.0, 21.0 ],
@@ -23600,7 +23660,7 @@
 
 															}
  ],
-														"originid" : "pat-3888"
+														"originid" : "pat-6340"
 													}
 ,
 													"patching_rect" : [ 95.949050999999997, 174.0, 73.0, 21.0 ],
@@ -24007,7 +24067,7 @@
 
 															}
  ],
-														"originid" : "pat-3890"
+														"originid" : "pat-6342"
 													}
 ,
 													"patching_rect" : [ 13.0, 205.0, 80.0, 21.0 ],
@@ -24339,7 +24399,7 @@
 
 															}
  ],
-														"originid" : "pat-3892"
+														"originid" : "pat-6344"
 													}
 ,
 													"patching_rect" : [ 13.0, 174.0, 73.0, 21.0 ],
@@ -25314,7 +25374,7 @@
 
 											}
  ],
-										"originid" : "pat-3812"
+										"originid" : "pat-6264"
 									}
 ,
 									"patching_rect" : [ 507.0, 503.0, 278.0, 21.0 ],
@@ -26662,7 +26722,7 @@
 
 							}
  ],
-						"originid" : "pat-3768",
+						"originid" : "pat-6220",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -27048,6 +27108,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-111", 0 ],
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-82", 0 ],
 					"source" : [ "obj-30", 0 ]
 				}
@@ -27095,6 +27162,27 @@
 					"destination" : [ "obj-7", 0 ],
 					"order" : 2,
 					"source" : [ "obj-38", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-111", 0 ],
+					"source" : [ "obj-39", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-42", 0 ],
+					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-111", 0 ],
+					"source" : [ "obj-42", 0 ]
 				}
 
 			}
@@ -27158,7 +27246,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-147", 0 ],
+					"order" : 1,
+					"source" : [ "obj-97", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-86", 0 ],
+					"order" : 0,
 					"source" : [ "obj-97", 0 ]
 				}
 
@@ -27171,7 +27268,7 @@
 
 			}
  ],
-		"originid" : "pat-726",
+		"originid" : "pat-3178",
 		"parameters" : 		{
 			"obj-43::obj-10" : [ "live.toggle[21]", "live.toggle", 0 ],
 			"obj-43::obj-11" : [ "live.toggle[20]", "live.toggle", 0 ],
@@ -27709,8 +27806,8 @@
 			}
 , 			{
 				"name" : "distance_calc.js",
-				"bootpath" : "~/Documents/School/PhD/Dissertation/VASE/lib/images",
-				"patcherrelativepath" : "./lib/images",
+				"bootpath" : "~/Documents/School/PhD/Dissertation/VASE/lib/scripts",
+				"patcherrelativepath" : "./lib/scripts",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
