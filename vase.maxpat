@@ -20353,6 +20353,17 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 0,
+									"patching_rect" : [ 141.789999999999992, 311.180000000000007, 87.0, 20.0 ],
+									"text" : "listener_module 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-9",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -20410,17 +20421,6 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 391.0, 606.0, 74.0, 20.0 ],
 									"text" : "s listener-main"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-3",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 187.0, 296.0, 87.0, 20.0 ],
-									"text" : "listener_module 1"
 								}
 
 							}
@@ -20600,7 +20600,7 @@
 
 											}
  ],
-										"originid" : "pat-146",
+										"originid" : "pat-182",
 										"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 									}
 ,
@@ -21083,7 +21083,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 748.0, 470.5, 191.0, 37.0 ],
+					"patching_rect" : [ 1178.5, 517.0, 191.0, 37.0 ],
 					"text" : "//NOT CURRENTLY USING OFFSET OF FACING ANGLE"
 				}
 
@@ -48376,20 +48376,20 @@
  ],
 		"originid" : "pat-6",
 		"parameters" : 		{
-			"obj-127::obj-3::obj-100::obj-102" : [ "live.toggle[436]", "live.toggle", 0 ],
-			"obj-127::obj-3::obj-100::obj-3" : [ "live.text[1]", "live.text[9]", 0 ],
-			"obj-127::obj-3::obj-100::obj-57" : [ "live.text[9]", "live.text[9]", 0 ],
-			"obj-127::obj-3::obj-100::obj-58" : [ "live.text[10]", "live.text[9]", 0 ],
-			"obj-127::obj-3::obj-100::obj-62" : [ "live.text[12]", "live.text[9]", 0 ],
-			"obj-127::obj-3::obj-100::obj-72" : [ "live.text[14]", "live.text[8]", 0 ],
-			"obj-127::obj-3::obj-103" : [ "live.button[17]", "live.button", 0 ],
-			"obj-127::obj-3::obj-107::obj-10" : [ "live.menu[1]", "live.menu[1]", 0 ],
-			"obj-127::obj-3::obj-2" : [ "live.toggle[81]", "live.toggle[80]", 0 ],
-			"obj-127::obj-3::obj-3" : [ "mc.live.gain~", "Gain", 0 ],
-			"obj-127::obj-3::obj-39" : [ "live.menu[11]", "live.menu[4]", 0 ],
-			"obj-127::obj-3::obj-64" : [ "live.text[24]", "live.text[24]", 0 ],
-			"obj-127::obj-3::obj-89" : [ "live.tab[7]", "live.tab", 0 ],
-			"obj-127::obj-3::obj-98" : [ "live.toggle[80]", "live.toggle[80]", 0 ],
+			"obj-127::obj-1::obj-100::obj-102" : [ "live.toggle[436]", "live.toggle", 0 ],
+			"obj-127::obj-1::obj-100::obj-3" : [ "live.text[1]", "live.text[9]", 0 ],
+			"obj-127::obj-1::obj-100::obj-57" : [ "live.text[9]", "live.text[9]", 0 ],
+			"obj-127::obj-1::obj-100::obj-58" : [ "live.text[10]", "live.text[9]", 0 ],
+			"obj-127::obj-1::obj-100::obj-62" : [ "live.text[12]", "live.text[9]", 0 ],
+			"obj-127::obj-1::obj-100::obj-72" : [ "live.text[14]", "live.text[8]", 0 ],
+			"obj-127::obj-1::obj-103" : [ "live.button[17]", "live.button", 0 ],
+			"obj-127::obj-1::obj-107::obj-10" : [ "live.menu[1]", "live.menu[1]", 0 ],
+			"obj-127::obj-1::obj-2" : [ "live.toggle[81]", "live.toggle[80]", 0 ],
+			"obj-127::obj-1::obj-3" : [ "mc.live.gain~", "Gain", 0 ],
+			"obj-127::obj-1::obj-39" : [ "live.menu[11]", "live.menu[4]", 0 ],
+			"obj-127::obj-1::obj-64" : [ "live.text[24]", "live.text[24]", 0 ],
+			"obj-127::obj-1::obj-89" : [ "live.tab[7]", "live.tab", 0 ],
+			"obj-127::obj-1::obj-98" : [ "live.toggle[80]", "live.toggle[80]", 0 ],
 			"obj-127::obj-5" : [ "live.gain~[2]", "live.gain~[2]", 0 ],
 			"obj-128::obj-11" : [ "live.text[4]", "live.text", 0 ],
 			"obj-128::obj-110" : [ "live.text[5]", "live.text", 0 ],
@@ -48498,19 +48498,6 @@
 			}
 ,
 			"parameter_overrides" : 			{
-				"obj-127::obj-3::obj-3" : 				{
-					"parameter_shortname" : "Gain"
-				}
-,
-				"obj-127::obj-3::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "live.text[24]",
-					"parameter_modmode" : 0,
-					"parameter_shortname" : "live.text[24]",
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
 				"obj-128::obj-16" : 				{
 					"parameter_longname" : "live.text[15]"
 				}
