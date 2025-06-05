@@ -19491,7 +19491,6 @@
 						"default_fontsize" : 10.0,
 						"gridsize" : [ 15.0, 15.0 ],
 						"subpatcher_template" : "bigpatcher",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-13",
@@ -20379,12 +20378,71 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-1",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
+									"id" : "obj-20",
+									"maxclass" : "comment",
+									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 141.789999999999992, 311.180000000000007, 87.0, 20.0 ],
+									"patching_rect" : [ 116.0, 297.0, 150.0, 18.0 ],
 									"text" : "listener_module 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-18",
+									"maxclass" : "number",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 785.0, 214.0, 50.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-34",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 785.0, 251.0, 60.0, 20.0 ],
+									"text" : "v hoa-order"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 651.0, 214.0, 114.0, 18.0 ],
+									"text" : "input for testing spawns"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "number",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 591.0, 213.0, 50.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 591.0, 251.0, 71.0, 20.0 ],
+									"text" : "v player-count"
 								}
 
 							}
@@ -20751,6 +20809,13 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-132", 0 ],
 									"source" : [ "obj-126", 0 ]
 								}
@@ -20767,6 +20832,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-113", 0 ],
 									"source" : [ "obj-154", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-34", 0 ],
+									"source" : [ "obj-18", 0 ]
 								}
 
 							}
@@ -48402,20 +48474,6 @@
  ],
 		"originid" : "pat-4780",
 		"parameters" : 		{
-			"obj-127::obj-1::obj-100::obj-102" : [ "live.toggle[436]", "live.toggle", 0 ],
-			"obj-127::obj-1::obj-100::obj-3" : [ "live.text[1]", "live.text[9]", 0 ],
-			"obj-127::obj-1::obj-100::obj-57" : [ "live.text[9]", "live.text[9]", 0 ],
-			"obj-127::obj-1::obj-100::obj-58" : [ "live.text[10]", "live.text[9]", 0 ],
-			"obj-127::obj-1::obj-100::obj-62" : [ "live.text[12]", "live.text[9]", 0 ],
-			"obj-127::obj-1::obj-100::obj-72" : [ "live.text[14]", "live.text[8]", 0 ],
-			"obj-127::obj-1::obj-103" : [ "live.button[17]", "live.button", 0 ],
-			"obj-127::obj-1::obj-107::obj-10" : [ "live.menu[1]", "live.menu[1]", 0 ],
-			"obj-127::obj-1::obj-2" : [ "live.toggle[81]", "live.toggle[80]", 0 ],
-			"obj-127::obj-1::obj-3" : [ "mc.live.gain~", "Gain", 0 ],
-			"obj-127::obj-1::obj-39" : [ "live.menu[11]", "live.menu[4]", 0 ],
-			"obj-127::obj-1::obj-64" : [ "live.text[24]", "live.text[24]", 0 ],
-			"obj-127::obj-1::obj-89" : [ "live.tab[7]", "live.tab", 0 ],
-			"obj-127::obj-1::obj-98" : [ "live.toggle[80]", "live.toggle[80]", 0 ],
 			"obj-127::obj-5" : [ "live.gain~[2]", "live.gain~[2]", 0 ],
 			"obj-128::obj-11" : [ "live.text[4]", "live.text", 0 ],
 			"obj-128::obj-110" : [ "live.text[5]", "live.text", 0 ],
@@ -49381,13 +49439,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "listener_module.maxpat",
-				"bootpath" : "~/Documents/School/PhD/Dissertation/VASE/lib/patches",
-				"patcherrelativepath" : "./lib/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "morphfilter~.mxo",
 				"type" : "iLaX"
 			}
@@ -49429,30 +49480,8 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "spat5.gui.control.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/spat5/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/spat5/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "spat5.hoa.decoder~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "spat5.hoa.encoder~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "spat5.hostinfos.mxo",
 				"type" : "iLaX"
-			}
-, 			{
-				"name" : "spat5.known.hoanorm.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/spat5/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/spat5/patchers",
-				"type" : "JSON",
-				"implicit" : 1
 			}
 , 			{
 				"name" : "spat5.monitor.maxpat",
