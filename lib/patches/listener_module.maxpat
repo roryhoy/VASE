@@ -11,6 +11,7 @@
 ,
 		"classnamespace" : "box",
 		"rect" : [ 162.0, 87.0, 1462.0, 929.0 ],
+		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
 		"gridsize" : [ 15.0, 15.0 ],
 		"subpatcher_template" : "bigpatcher",
@@ -1616,7 +1617,7 @@
 
 							}
  ],
-						"originid" : "pat-12336",
+						"originid" : "pat-12744",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -3256,7 +3257,7 @@
 
 			}
  ],
-		"originid" : "pat-12328",
+		"originid" : "pat-12736",
 		"parameters" : 		{
 			"obj-100::obj-102" : [ "live.toggle[436]", "live.toggle", 0 ],
 			"obj-100::obj-3" : [ "live.text[1]", "live.text[9]", 0 ],
