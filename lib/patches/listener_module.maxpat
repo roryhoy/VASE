@@ -740,7 +740,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1168.0, 407.5, 66.0, 18.0 ],
+					"patching_rect" : [ 1171.0, 465.0, 66.0, 18.0 ],
 					"text" : "[meth_mess]",
 					"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
 				}
@@ -1629,7 +1629,7 @@
 
 							}
  ],
-						"originid" : "pat-15338",
+						"originid" : "pat-17533",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -1654,31 +1654,6 @@
 					"patching_rect" : [ 572.0, 339.0, 145.0, 20.0 ],
 					"text" : "sprintf /source/%i/aed %f %f 1.",
 					"varname" : "source_aed_mess"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-38",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1169.0, 28.5, 24.0, 24.0 ],
-					"svg" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-36",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1197.0, 17.5, 194.0, 51.0 ],
-					"text" : "Player?\nFirst n listeners are players, \nfirst non-player is the composer, \nfollowed by all audience member listeners"
 				}
 
 			}
@@ -1808,7 +1783,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1336.0, 261.0, 95.0, 18.0 ],
+					"patching_rect" : [ 1339.0, 319.0, 95.0, 18.0 ],
 					"text" : "need to investigate."
 				}
 
@@ -1984,7 +1959,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1192.0, 97.0, 60.0, 20.0 ],
+					"patching_rect" : [ 1195.0, 155.0, 60.0, 20.0 ],
 					"text" : "loadmess 5"
 				}
 
@@ -1997,7 +1972,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1192.0, 119.0, 50.0, 20.0 ]
+					"patching_rect" : [ 1195.0, 177.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -2012,7 +1987,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 1192.0, 148.0, 110.0, 244.0 ],
+					"patching_rect" : [ 1195.0, 206.0, 110.0, 244.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "direct-sampling", "mode-matching", "regularized-mode-matching", "energy-preserving", "all-rad", "allrad+", "mvlad" ],
@@ -2040,7 +2015,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1237.5, 406.0, 66.0, 21.0 ],
+					"patching_rect" : [ 1241.0, 464.0, 66.0, 21.0 ],
 					"text" : "/method $1",
 					"varname" : "meth_mess"
 				}
@@ -2053,7 +2028,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1312.0, 281.0, 137.0, 20.0 ],
+					"patching_rect" : [ 1315.0, 339.0, 137.0, 20.0 ],
 					"text" : "/triangulation/mode delaunay"
 				}
 
@@ -2143,7 +2118,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"lastchannelcount" : 2,
+					"lastchannelcount" : 1,
 					"maxclass" : "mc.live.gain~",
 					"numinlets" : 1,
 					"numoutlets" : 4,
@@ -3278,7 +3253,7 @@
 
 			}
  ],
-		"originid" : "pat-15330",
+		"originid" : "pat-17525",
 		"parameters" : 		{
 			"obj-100::obj-102" : [ "live.toggle[436]", "live.toggle", 0 ],
 			"obj-100::obj-3" : [ "live.text[1]", "live.text[9]", 0 ],

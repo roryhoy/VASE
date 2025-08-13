@@ -10,16 +10,182 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1124.0, 929.0 ],
+		"rect" : [ 34.0, 87.0, 1612.0, 929.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontsize" : 21.277730459506234,
+					"id" : "obj-12",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 182.0, 10.0, 249.0, 78.0 ],
+					"text" : "Do I actually need to capture audio? Not playing back anything"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1364.0, 1077.0, 593.0, 49.0 ],
+					"text" : "sprintf script newdefault data_track 1291. 554 mubu.track %s data @timetagged 1 @samplerate audio @maxsize 10s @predef 1 @matrixcols 20 @info gui \"interface multibpf, colormode rainbow, fgcolor 1. 0. 0. 1, autobounds 1, showcolnames 1\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"basictuning" : 440,
+					"data" : 					{
+						"clips" : [ 							{
+								"absolutepath" : "jongly.aif",
+								"filename" : "jongly.aif",
+								"filekind" : "audiofile",
+								"id" : "u022019978",
+								"loop" : 1,
+								"content_state" : 								{
+									"loop" : 1
+								}
+
+							}
+ ]
+					}
+,
+					"followglobaltempo" : 0,
+					"formantcorrection" : 0,
+					"id" : "obj-14",
+					"maxclass" : "playlist~",
+					"mode" : "basic",
+					"numinlets" : 1,
+					"numoutlets" : 5,
+					"originallength" : [ 0.0, "ticks" ],
+					"originaltempo" : 120.0,
+					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 759.0, 139.0, 150.0, 30.0 ],
+					"pitchcorrection" : 0,
+					"quality" : "basic",
+					"saved_attribute_attributes" : 					{
+						"candicane2" : 						{
+							"expression" : ""
+						}
+,
+						"candicane3" : 						{
+							"expression" : ""
+						}
+,
+						"candicane4" : 						{
+							"expression" : ""
+						}
+,
+						"candicane5" : 						{
+							"expression" : ""
+						}
+,
+						"candicane6" : 						{
+							"expression" : ""
+						}
+,
+						"candicane7" : 						{
+							"expression" : ""
+						}
+,
+						"candicane8" : 						{
+							"expression" : ""
+						}
+
+					}
+,
+					"timestretch" : [ 0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1247.0, 1102.0, 81.0, 20.0 ],
+					"text" : "[data_track]",
+					"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1247.0, 1132.0, 93.0, 20.0 ],
+					"text" : "[data_record]",
+					"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1364.0, 1131.0, 448.0, 22.0 ],
+					"text" : "sprintf script newdefault data_record 1090. 560. mubu.record %s data @overdub 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1153.0, 529.0, 93.0, 20.0 ],
+					"text" : "[data_record]",
+					"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1376.0, 522.0, 81.0, 20.0 ],
+					"text" : "[data_track]",
+					"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 1355.0, 1205.0, 67.0, 22.0 ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"text" : "thispatcher"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-30",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1356.0, 93.0, 150.0, 47.0 ],
+					"patching_rect" : [ 1356.0, 93.0, 151.0, 47.0 ],
 					"text" : "Could maybe just spawn the tracks and rename the record and record~"
 				}
 
@@ -30,7 +196,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1618.0, 896.0, 100.0, 20.0 ],
+					"patching_rect" : [ 1548.0, 920.0, 100.0, 20.0 ],
 					"text" : "give player name"
 				}
 
@@ -41,8 +207,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1387.0, 997.0, 85.0, 20.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 1317.0, 1021.0, 85.0, 20.0 ],
 					"text" : "[audio_record]",
 					"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
 				}
@@ -55,8 +220,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1485.0, 989.0, 469.0, 22.0 ],
-					"text" : "sprintf script newdefault audio_track 1090. 319. mubu.record~ 1 %s audio @overdub 1"
+					"patching_rect" : [ 1415.0, 1020.0, 477.0, 22.0 ],
+					"text" : "sprintf script newdefault audio_record 1090. 319. mubu.record~ 1 %s audio @overdub 1"
 				}
 
 			}
@@ -67,7 +232,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1144.0, 297.0, 93.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "[audio_record]",
 					"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
 				}
@@ -91,8 +255,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1373.0, 946.0, 81.0, 20.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 1303.0, 970.0, 81.0, 20.0 ],
 					"text" : "[audio_track]",
 					"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
 				}
@@ -106,7 +269,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1471.0, 939.0, 562.0, 35.0 ],
+					"patching_rect" : [ 1401.0, 963.0, 562.0, 35.0 ],
 					"text" : "sprintf script newdefault audio_track 1340. 312.5 mubu.track %s audio 1 @samplerate audio @maxsize 10s @predef yes @info gui \"interface multiwave, autobounds 1\""
 				}
 
@@ -120,19 +283,6 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 12.0, 9.0, 58.0, 22.0 ],
 					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-20",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1691.0, 184.0, 67.0, 22.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
-					"text" : "thispatcher"
 				}
 
 			}
@@ -187,7 +337,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -203,7 +353,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 691.0, 83.0, 55.0, 22.0 ],
+					"patching_rect" : [ 602.0, 64.0, 55.0, 22.0 ],
 					"text" : "name #1"
 				}
 
@@ -717,7 +867,7 @@
 							}
  ],
 						"lines" : [  ],
-						"originid" : "pat-3359",
+						"originid" : "pat-17645",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -882,7 +1032,7 @@
 
 							}
  ],
-						"originid" : "pat-3363"
+						"originid" : "pat-17647"
 					}
 ,
 					"patching_rect" : [ 943.0, 661.0, 128.0, 26.0 ],
@@ -1127,7 +1277,7 @@
 
 							}
  ],
-						"originid" : "pat-3365"
+						"originid" : "pat-17649"
 					}
 ,
 					"patching_rect" : [ 775.0, 661.0, 150.0, 26.0 ],
@@ -2026,7 +2176,7 @@
 
 							}
  ],
-						"originid" : "pat-3367"
+						"originid" : "pat-17651"
 					}
 ,
 					"patching_rect" : [ 247.0, 883.0, 190.0, 26.0 ],
@@ -2591,7 +2741,7 @@
 
 							}
  ],
-						"originid" : "pat-3369"
+						"originid" : "pat-17653"
 					}
 ,
 					"patching_rect" : [ 252.0, 682.0, 170.0, 26.0 ],
@@ -3507,7 +3657,7 @@
 
 							}
  ],
-						"originid" : "pat-3371"
+						"originid" : "pat-17655"
 					}
 ,
 					"patching_rect" : [ 256.0, 1039.0, 190.0, 26.0 ],
@@ -3687,13 +3837,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-118", 0 ],
-					"source" : [ "obj-123", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-125", 0 ],
 					"source" : [ "obj-124", 0 ]
 				}
@@ -3710,6 +3853,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-110", 0 ],
 					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 1 ],
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -3828,29 +3978,7 @@
 
 			}
  ],
-		"originid" : "pat-3357",
-		"dependency_cache" : [ 			{
-				"name" : "imubu.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.record.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.record~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.track.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "pipo~.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0
+		"originid" : "pat-17643"
 	}
 
 }
