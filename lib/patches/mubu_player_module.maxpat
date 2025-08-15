@@ -14,6 +14,18 @@
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-32",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1082.0, 939.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-63",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -152,7 +164,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1082.0, 955.0, 77.0, 22.0 ],
+					"patching_rect" : [ 1082.0, 899.0, 77.0, 22.0 ],
 					"text" : "loadmess #1"
 				}
 
@@ -262,19 +274,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1833.0, 432.0, 65.0, 22.0 ],
 					"text" : "getmedian"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-84",
-					"linecount" : 9,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1275.0, 731.0, 79.0, 129.0 ],
-					"text" : "max undefined ??? ??? ??? ??? ??? ??? ??? ??? ??? ??? ??? ??? ??? ??? ??? ??? ??? ??? ???"
 				}
 
 			}
@@ -905,7 +904,7 @@
 							}
  ],
 						"lines" : [  ],
-						"originid" : "pat-39895",
+						"originid" : "pat-39995",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -1070,7 +1069,7 @@
 
 							}
  ],
-						"originid" : "pat-39897"
+						"originid" : "pat-39997"
 					}
 ,
 					"patching_rect" : [ 612.0, 327.0, 128.0, 26.0 ],
@@ -1315,7 +1314,7 @@
 
 							}
  ],
-						"originid" : "pat-39899"
+						"originid" : "pat-39999"
 					}
 ,
 					"patching_rect" : [ 444.0, 327.0, 150.0, 26.0 ],
@@ -2214,7 +2213,7 @@
 
 							}
  ],
-						"originid" : "pat-39901"
+						"originid" : "pat-40001"
 					}
 ,
 					"patching_rect" : [ 246.0, 652.0, 190.0, 26.0 ],
@@ -2779,7 +2778,7 @@
 
 							}
  ],
-						"originid" : "pat-39903"
+						"originid" : "pat-40003"
 					}
 ,
 					"patching_rect" : [ 251.0, 451.0, 170.0, 26.0 ],
@@ -3695,7 +3694,7 @@
 
 							}
  ],
-						"originid" : "pat-39905"
+						"originid" : "pat-40005"
 					}
 ,
 					"patching_rect" : [ 255.0, 808.0, 190.0, 26.0 ],
@@ -3774,38 +3773,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"id" : "obj-22",
-					"linecount" : 38,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1376.0, 554.0, 102.0, 518.0 ],
-					"saved_object_attributes" : 					{
-						"verbose" : 1
-					}
-,
-					"text" : "mubu.track player_1 data @timetagged 1 @samplerate audio @maxsize 10s @predef 1 @matrixcols 20 @info gui interface multibpf\\, colormode rainbow\\, fgcolor 1. 0. 0. 1\\, autobounds 1\\, showcolnames 1 @matrixcolnames SpectralCentroid SpectralSpread SpectralSkewness SpectralKurtosis SpectralRolloff SpectralVariation SpectralDecrease SpectralSlope Chroma_0 Chroma_1 Chroma_2 Chroma_3 Chroma_4 Chroma_5 Chroma_6 Chroma_7 Chroma_8 Chroma_9 Chroma_10 Chroma_11",
-					"varname" : "data_track"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-24",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1090.0, 560.0, 100.0, 49.0 ],
-					"text" : "mubu.record player_1 data @overdub 1",
-					"varname" : "data_record"
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -3818,13 +3785,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-101", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"source" : [ "obj-102", 0 ]
 				}
 
 			}
@@ -3898,22 +3858,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-124", 0 ],
-					"order" : 0,
 					"source" : [ "obj-119", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"order" : 1,
-					"source" : [ "obj-119", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-63", 0 ],
+					"destination" : [ "obj-32", 0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -4022,6 +3973,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
 					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-63", 0 ],
+					"source" : [ "obj-32", 0 ]
 				}
 
 			}
@@ -4223,7 +4181,23 @@
 
 			}
  ],
-		"originid" : "pat-39891"
+		"originid" : "pat-39991",
+		"dependency_cache" : [ 			{
+				"name" : "mubu.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "pipo~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
