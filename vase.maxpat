@@ -236,418 +236,48 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-22",
-									"maxclass" : "newobj",
+									"id" : "obj-11",
+									"maxclass" : "comment",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 130.0, 606.0, 141.0, 20.0 ],
-									"text" : "receive~ player_post_room_1"
+									"numoutlets" : 0,
+									"patching_rect" : [ 106.0, 318.0, 182.0, 18.0 ],
+									"text" : "script as module and receive in tandem"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-21",
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 106.0, 384.0, 126.0, 20.0 ],
+									"text" : "receive~ player_1_post_fx"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 0,
-									"patcher" : 									{
-										"fileversion" : 1,
-										"appversion" : 										{
-											"major" : 9,
-											"minor" : 0,
-											"revision" : 3,
-											"architecture" : "x64",
-											"modernui" : 1
-										}
-,
-										"classnamespace" : "box",
-										"rect" : [ 34.0, 87.0, 772.0, 929.0 ],
-										"default_fontsize" : 10.0,
-										"gridsize" : [ 15.0, 15.0 ],
-										"subpatcher_template" : "bigpatcher",
-										"visible" : 1,
-										"boxes" : [ 											{
-												"box" : 												{
-													"id" : "obj-13",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 177.0, 7.5, 155.0, 18.0 ],
-													"text" : "Need to make this an abstraction",
-													"textcolor" : [ 1.0, 0.215686274509804, 0.949019607843137, 1.0 ]
-												}
+									"patching_rect" : [ 106.0, 349.0, 82.0, 20.0 ],
+									"text" : "player_module 1"
+								}
 
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-48",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 224.0, 570.0, 117.0, 20.0 ],
-													"text" : "send~ room_2_player_1"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-47",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 99.0, 570.0, 117.0, 20.0 ],
-													"text" : "send~ room_1_player_1"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-46",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 79.0, 667.0, 42.0, 18.0 ],
-													"text" : "[switch]",
-													"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-45",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 79.0, 485.339999999999918, 39.0, 18.0 ],
-													"text" : "[gate]",
-													"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-42",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 646.0, 643.0, 176.0, 18.0 ],
-													"text" : "same number of inputs as gate output"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-40",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 595.0, 643.0, 36.0, 18.0 ],
-													"text" : "switch"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-39",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 595.0, 560.5, 28.0, 18.0 ],
-													"text" : "gate"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-37",
-													"maxclass" : "newobj",
-													"numinlets" : 5,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 136.0, 661.0, 61.0, 20.0 ],
-													"text" : "switch 4 1"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-36",
-													"linecount" : 2,
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 640.0, 555.0, 177.0, 29.0 ],
-													"text" : "space count +1 (for not in room)\n0 is direct (no room processing)"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-32",
-													"maxclass" : "newobj",
-													"numinlets" : 2,
-													"numoutlets" : 4,
-													"outlettype" : [ "", "", "", "" ],
-													"patching_rect" : [ 136.0, 484.339999999999975, 50.5, 20.0 ],
-													"text" : "gate 4 1"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-57",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 567.0, 522.0, 71.0, 20.0 ],
-													"text" : "v space-count"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-31",
-													"maxclass" : "number",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "bang" ],
-													"parameter_enable" : 0,
-													"patching_rect" : [ 691.0, 161.0, 50.0, 20.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-29",
-													"maxclass" : "message",
-													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 998.0, 198.0, 90.0, 20.0 ],
-													"text" : "script delete mubu"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"bgcolor" : [ 1.0, 0.0, 0.0, 1.0 ],
-													"blinkcolor" : [ 0.847058823529412, 0.262745098039216, 0.262745098039216, 1.0 ],
-													"id" : "obj-27",
-													"maxclass" : "button",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "bang" ],
-													"parameter_enable" : 0,
-													"patching_rect" : [ 1024.0, 154.0, 24.0, 24.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-24",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 443.0, 74.0, 39.0, 18.0 ],
-													"text" : "[mubu]",
-													"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-10",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 641.0, 199.0, 39.0, 18.0 ],
-													"text" : "[mubu]",
-													"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-18",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 691.0, 198.0, 293.0, 20.0 ],
-													"text" : "sprintf script newdefault mubu 303. 77. mubu_player_module %i"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-17",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 998.0, 301.0, 57.0, 20.0 ],
-													"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
-													"text" : "thispatcher"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-16",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 90.0, 23.0, 65.0, 20.0 ],
-													"text" : "loadmess #1"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-15",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 90.0, 106.0, 110.0, 20.0 ],
-													"text" : "sprintf name player_%i"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-8",
-													"linecount" : 2,
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 484.0, 69.0, 384.0, 29.0 ],
-													"text" : "all player audio must be sent to a mubu player module in order to track spectral data (pre room / fx)"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-7",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "signal" ],
-													"patching_rect" : [ 90.0, 134.0, 77.0, 20.0 ],
-													"text" : "receive~ player"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-6",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 136.0, 700.0, 115.0, 20.0 ],
-													"text" : "send~ player_1_post_fx"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-5",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 271.0, 461.0, 236.0, 18.0 ],
-													"text" : "script sends for each room agent to toggle between"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-2",
-													"linecount" : 2,
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 246.0, 40.0, 185.0, 29.0 ],
-													"text" : "script mubu_player_module with player number for analysis"
-												}
-
-											}
- ],
-										"lines" : [ 											{
-												"patchline" : 												{
-													"destination" : [ "obj-7", 0 ],
-													"source" : [ "obj-15", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-15", 0 ],
-													"order" : 1,
-													"source" : [ "obj-16", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-31", 0 ],
-													"order" : 0,
-													"source" : [ "obj-16", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-17", 0 ],
-													"source" : [ "obj-18", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-29", 0 ],
-													"source" : [ "obj-27", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-17", 0 ],
-													"source" : [ "obj-29", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-18", 0 ],
-													"source" : [ "obj-31", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-6", 0 ],
-													"source" : [ "obj-37", 0 ]
-												}
-
-											}
- ],
-										"originid" : "pat-45959",
-										"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
-									}
-,
-									"patching_rect" : [ 352.370000000000005, 449.680000000000007, 82.0, 20.0 ],
-									"saved_object_attributes" : 									{
-										"fontsize" : 10.0,
-										"globalpatchername" : "",
-										"locked_bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
-									}
-,
-									"text" : "p player_module"
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 473.0, 778.0, 57.0, 20.0 ],
+									"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+									"text" : "thispatcher"
 								}
 
 							}
@@ -4651,7 +4281,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 67.5, 681.0, 88.0, 18.0 ],
+									"patching_rect" : [ 52.0, 729.0, 88.0, 18.0 ],
 									"text" : "script for source #"
 								}
 
@@ -4698,7 +4328,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 83.0, 290.0, 77.0, 20.0 ],
+									"patching_rect" : [ 38.0, 273.0, 77.0, 20.0 ],
 									"text" : "send~ player_1"
 								}
 
@@ -4732,7 +4362,7 @@
 									"originaltempo" : 120.0,
 									"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 83.0, 240.0, 150.0, 30.0 ],
+									"patching_rect" : [ 38.0, 223.0, 150.0, 30.0 ],
 									"pitchcorrection" : 0,
 									"quality" : "basic",
 									"saved_attribute_attributes" : 									{
@@ -4799,11 +4429,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-2",
+									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 79.0, 520.0, 65.0, 18.0 ],
-									"text" : "after routing:"
+									"patching_rect" : [ 24.0, 379.0, 77.0, 29.0 ],
+									"text" : "after routing through rooms:"
 								}
 
 							}
@@ -4814,7 +4445,7 @@
 									"numinlets" : 13,
 									"numoutlets" : 1,
 									"outlettype" : [ "multichannelsignal" ],
-									"patching_rect" : [ 187.5, 680.0, 145.0, 20.0 ],
+									"patching_rect" : [ 172.0, 728.0, 145.0, 20.0 ],
 									"text" : "mc.pack~ 13"
 								}
 
@@ -4825,7 +4456,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 187.5, 730.0, 90.0, 20.0 ],
+									"patching_rect" : [ 172.0, 778.0, 90.0, 20.0 ],
 									"text" : "mc.send~ sources"
 								}
 
@@ -53489,6 +53120,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "mubu.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "mubu.record.mxo",
 				"type" : "iLaX"
 			}
@@ -53501,12 +53136,26 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "mubu_player_module.maxpat",
+				"bootpath" : "~/Documents/School/PhD/Dissertation/VASE/lib/patches",
+				"patcherrelativepath" : "./lib/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "multiconvolve~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "pipo~.mxo",
 				"type" : "iLaX"
+			}
+, 			{
+				"name" : "player_module.maxpat",
+				"bootpath" : "~/Documents/School/PhD/Dissertation/VASE/lib/patches",
+				"patcherrelativepath" : "./lib/patches",
+				"type" : "JSON",
+				"implicit" : 1
 			}
 , 			{
 				"name" : "room-agent-module.maxpat",
