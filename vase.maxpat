@@ -51,11 +51,36 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-93",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 16.0, 90.0, 75.0, 18.0 ],
+									"text" : "[room_agent_i]",
+									"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 49.0, 579.0, 57.0, 20.0 ],
+									"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+									"text" : "thispatcher"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-1",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 0,
-									"patching_rect" : [ 93.0, 95.0, 96.0, 20.0 ],
+									"patching_rect" : [ 97.0, 89.0, 96.0, 20.0 ],
 									"text" : "room-agent-module"
 								}
 
@@ -66,7 +91,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 128.0, 45.0, 145.0, 18.0 ],
+									"patching_rect" : [ 25.0, 21.0, 145.0, 18.0 ],
 									"text" : "script one for each room agent"
 								}
 
@@ -235,6 +260,31 @@
 						"subpatcher_template" : "bigpatcher",
 						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-16",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 13.0, 385.0, 87.0, 18.0 ],
+									"presentation_linecount" : 2,
+									"text" : "[player_i_post_fx]",
+									"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-93",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 29.0, 350.0, 69.0, 18.0 ],
+									"text" : "[player_i]",
+									"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-11",
 									"maxclass" : "comment",
@@ -4433,7 +4483,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 24.0, 379.0, 77.0, 29.0 ],
+									"patching_rect" : [ 18.0, 412.0, 77.0, 29.0 ],
 									"text" : "after routing through rooms:"
 								}
 
@@ -53120,10 +53170,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "mubu.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "mubu.record.mxo",
 				"type" : "iLaX"
 			}
@@ -53134,13 +53180,6 @@
 , 			{
 				"name" : "mubu.track.mxo",
 				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu_player_module.maxpat",
-				"bootpath" : "~/Documents/School/PhD/Dissertation/VASE/lib/patches",
-				"patcherrelativepath" : "./lib/patches",
-				"type" : "JSON",
-				"implicit" : 1
 			}
 , 			{
 				"name" : "multiconvolve~.mxo",
@@ -53159,13 +53198,6 @@
 			}
 , 			{
 				"name" : "room-agent-module.maxpat",
-				"bootpath" : "~/Documents/School/PhD/Dissertation/VASE/lib/patches",
-				"patcherrelativepath" : "./lib/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "room-reverb-module.maxpat",
 				"bootpath" : "~/Documents/School/PhD/Dissertation/VASE/lib/patches",
 				"patcherrelativepath" : "./lib/patches",
 				"type" : "JSON",

@@ -10,18 +10,88 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 485.0, 87.0, 848.0, 929.0 ],
+		"rect" : [ 34.0, 87.0, 1299.0, 929.0 ],
 		"default_fontsize" : 10.0,
 		"gridsize" : [ 15.0, 15.0 ],
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-289",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 40.5, 248.0, 210.0, 29.0 ],
+					"text" : "Make jitter object to display in visual based on floor object from spat world viewer"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-231",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 113.0, 581.0, 59.0, 18.0 ],
+					"text" : "start muted"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-202",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "bang", "bang", "int" ],
+					"patching_rect" : [ 176.0, 456.0, 40.0, 20.0 ],
+					"text" : "uzi"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-201",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 52.0, 604.0, 172.0, 20.0 ],
+					"text" : "sprintf script sendbox mute_%i_tog 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-200",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 570.0, 414.0, 50.0, 20.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-173",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 869.0, 712.0, 94.0, 18.0 ],
+					"text" : "Kill scripted objects"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-121",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 76.0, 490.0, 29.5, 20.0 ],
+					"patching_rect" : [ 342.0, 488.0, 29.5, 20.0 ],
 					"text" : "t i i"
 				}
 
@@ -33,7 +103,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 624.0, 206.0, 20.0 ],
+					"patching_rect" : [ 286.0, 622.0, 206.0, 20.0 ],
 					"text" : "sprintf script connect mute_%i 0 reverb_%i 0"
 				}
 
@@ -45,7 +115,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 595.0, 220.0, 20.0 ],
+					"patching_rect" : [ 286.0, 593.0, 220.0, 20.0 ],
 					"text" : "sprintf script connect mute_%i_tog 0 mute_%i 0"
 				}
 
@@ -57,7 +127,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 519.0, 615.0, 140.0, 20.0 ],
+					"patching_rect" : [ 785.0, 613.0, 140.0, 20.0 ],
 					"text" : "sprintf script delete reverb_%i"
 				}
 
@@ -69,7 +139,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 515.0, 593.0, 134.0, 20.0 ],
+					"patching_rect" : [ 781.0, 591.0, 134.0, 20.0 ],
 					"text" : "sprintf script delete mute_%i"
 				}
 
@@ -81,7 +151,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 503.0, 571.0, 154.0, 20.0 ],
+					"patching_rect" : [ 769.0, 569.0, 154.0, 20.0 ],
 					"text" : "sprintf script delete mute_%i_tog"
 				}
 
@@ -93,7 +163,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 565.0, 239.0, 20.0 ],
+					"patching_rect" : [ 286.0, 563.0, 239.0, 20.0 ],
 					"text" : "sprintf script connect mute_%i_rec 0 mute_%i_tog 0"
 				}
 
@@ -104,7 +174,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 350.0, 561.0, 72.0, 18.0 ],
+					"patching_rect" : [ 616.0, 559.0, 72.0, 18.0 ],
 					"text" : "spawn objects"
 				}
 
@@ -115,7 +185,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 102.0, 459.0, 78.0, 18.0 ],
+					"patching_rect" : [ 368.0, 457.0, 78.0, 18.0 ],
 					"text" : "connect objects"
 				}
 
@@ -127,7 +197,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "int" ],
-					"patching_rect" : [ 55.0, 458.0, 40.0, 20.0 ],
+					"patching_rect" : [ 321.0, 456.0, 40.0, 20.0 ],
 					"text" : "uzi"
 				}
 
@@ -139,7 +209,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 574.0, 880.0, 140.0, 20.0 ],
+					"patching_rect" : [ 840.0, 878.0, 140.0, 20.0 ],
 					"text" : "sprintf script delete reverb_%i"
 				}
 
@@ -151,7 +221,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 570.0, 858.0, 134.0, 20.0 ],
+					"patching_rect" : [ 836.0, 856.0, 134.0, 20.0 ],
 					"text" : "sprintf script delete mute_%i"
 				}
 
@@ -162,7 +232,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 133.0, 894.0, 193.0, 18.0 ],
+					"patching_rect" : [ 399.0, 892.0, 193.0, 18.0 ],
 					"presentation_linecount" : 3,
 					"text" : "player num, x pos, room num, player num"
 				}
@@ -175,7 +245,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 88.0, 914.0, 319.0, 20.0 ],
+					"patching_rect" : [ 354.0, 912.0, 319.0, 20.0 ],
 					"text" : "sprintf script newdefault reverb_%i %f 186. room-reverb-module %i %i"
 				}
 
@@ -186,7 +256,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 104.0, 843.0, 87.0, 18.0 ],
+					"patching_rect" : [ 370.0, 841.0, 87.0, 18.0 ],
 					"text" : "player num, x pos"
 				}
 
@@ -198,7 +268,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 74.0, 863.0, 223.0, 20.0 ],
+					"patching_rect" : [ 340.0, 861.0, 223.0, 20.0 ],
 					"text" : "sprintf script newdefault mute_%i %f 155. mute~"
 				}
 
@@ -210,7 +280,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 558.0, 836.0, 154.0, 20.0 ],
+					"patching_rect" : [ 824.0, 834.0, 154.0, 20.0 ],
 					"text" : "sprintf script delete mute_%i_tog"
 				}
 
@@ -221,7 +291,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 84.0, 790.0, 87.0, 18.0 ],
+					"patching_rect" : [ 350.0, 788.0, 87.0, 18.0 ],
 					"text" : "player num, x pos"
 				}
 
@@ -233,7 +303,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 56.0, 810.0, 241.0, 20.0 ],
+					"patching_rect" : [ 322.0, 808.0, 241.0, 20.0 ],
 					"text" : "sprintf script newdefault mute_%i_tog %f 121. toggle"
 				}
 
@@ -245,7 +315,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 309.0, 667.0, 29.5, 20.0 ],
+					"patching_rect" : [ 575.0, 665.0, 29.5, 20.0 ],
 					"text" : "#1"
 				}
 
@@ -257,7 +327,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "bang", "int", "int" ],
-					"patching_rect" : [ 320.0, 606.0, 50.5, 20.0 ],
+					"patching_rect" : [ 586.0, 604.0, 50.5, 20.0 ],
 					"text" : "t i b i i"
 				}
 
@@ -268,7 +338,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 74.0, 736.0, 193.0, 18.0 ],
+					"patching_rect" : [ 340.0, 734.0, 193.0, 18.0 ],
 					"text" : "player num, x pos, room num, player num"
 				}
 
@@ -282,7 +352,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 570.0, 711.0, 24.0, 24.0 ]
+					"patching_rect" : [ 836.0, 709.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -293,7 +363,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "int" ],
-					"patching_rect" : [ 570.0, 747.0, 41.0, 20.0 ],
+					"patching_rect" : [ 836.0, 745.0, 41.0, 20.0 ],
 					"text" : "uzi 128"
 				}
 
@@ -305,7 +375,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 543.0, 805.0, 154.0, 20.0 ],
+					"patching_rect" : [ 809.0, 803.0, 154.0, 20.0 ],
 					"text" : "sprintf script delete mute_%i_rec"
 				}
 
@@ -316,7 +386,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 374.0, 657.0, 51.0, 18.0 ],
+					"patching_rect" : [ 640.0, 655.0, 51.0, 18.0 ],
 					"text" : "x offset"
 				}
 
@@ -327,7 +397,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 462.0, 725.0, 51.0, 18.0 ],
+					"patching_rect" : [ 728.0, 723.0, 51.0, 18.0 ],
 					"text" : "first x pos"
 				}
 
@@ -340,7 +410,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 304.0, 489.0, 50.0, 20.0 ]
+					"patching_rect" : [ 570.0, 487.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -351,7 +421,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 304.0, 526.0, 29.5, 20.0 ],
+					"patching_rect" : [ 570.0, 524.0, 29.5, 20.0 ],
 					"text" : "t b i"
 				}
 
@@ -363,7 +433,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "int" ],
-					"patching_rect" : [ 299.0, 561.0, 40.0, 20.0 ],
+					"patching_rect" : [ 565.0, 559.0, 40.0, 20.0 ],
 					"text" : "uzi"
 				}
 
@@ -375,7 +445,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 304.0, 458.0, 71.0, 20.0 ],
+					"patching_rect" : [ 570.0, 456.0, 71.0, 20.0 ],
 					"text" : "v player-count"
 				}
 
@@ -389,7 +459,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 427.0, 753.0, 50.0, 20.0 ]
+					"patching_rect" : [ 693.0, 751.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -400,7 +470,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 462.0, 656.0, 29.5, 20.0 ],
+					"patching_rect" : [ 728.0, 654.0, 29.5, 20.0 ],
 					"text" : "- 1"
 				}
 
@@ -412,7 +482,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 427.0, 724.0, 31.0, 20.0 ],
+					"patching_rect" : [ 693.0, 722.0, 31.0, 20.0 ],
 					"text" : "+ 84."
 				}
 
@@ -424,7 +494,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 427.0, 610.0, 29.5, 20.0 ],
+					"patching_rect" : [ 693.0, 608.0, 29.5, 20.0 ],
 					"text" : "t i i"
 				}
 
@@ -436,7 +506,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 427.0, 690.0, 29.5, 20.0 ],
+					"patching_rect" : [ 693.0, 688.0, 29.5, 20.0 ],
 					"text" : "* 0"
 				}
 
@@ -448,7 +518,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 427.0, 656.0, 29.5, 20.0 ],
+					"patching_rect" : [ 693.0, 654.0, 29.5, 20.0 ],
 					"text" : "150."
 				}
 
@@ -460,7 +530,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 42.0, 764.0, 334.0, 20.0 ],
+					"patching_rect" : [ 308.0, 762.0, 334.0, 20.0 ],
 					"text" : "sprintf script newdefault mute_%i_rec %f 92. r room_%i_source_%i_mute"
 				}
 
@@ -619,7 +689,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 926.0, 474.0, 65.0, 20.0 ],
+					"patching_rect" : [ 1192.0, 472.0, 65.0, 20.0 ],
 					"text" : "loadmess #1"
 				}
 
@@ -631,7 +701,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 955.0, 544.0, 274.0, 20.0 ],
+					"patching_rect" : [ 1221.0, 542.0, 274.0, 20.0 ],
 					"text" : "message to reverb instance settings based on room params"
 				}
 
@@ -643,7 +713,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 926.0, 508.0, 132.0, 20.0 ],
+					"patching_rect" : [ 1192.0, 506.0, 132.0, 20.0 ],
 					"text" : "sprintf send room-reverb-%i"
 				}
 
@@ -654,7 +724,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 926.0, 582.0, 42.0, 20.0 ],
+					"patching_rect" : [ 1192.0, 580.0, 42.0, 20.0 ],
 					"text" : "forward"
 				}
 
@@ -666,7 +736,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 42.0, 958.0, 57.0, 20.0 ],
+					"patching_rect" : [ 308.0, 956.0, 57.0, 20.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -679,7 +749,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1329.0, 909.0, 150.0, 85.0 ],
+					"patching_rect" : [ 1595.0, 907.0, 150.0, 85.0 ],
 					"text" : "preference for scales / modes?\n\nmajor\nminor\n\nLydian \nPhrygian "
 				}
 
@@ -702,7 +772,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1152.0, 786.0, 150.0, 18.0 ],
+					"patching_rect" : [ 1418.0, 784.0, 150.0, 18.0 ],
 					"text" : "Pitched content preference?"
 				}
 
@@ -714,7 +784,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1144.0, 813.0, 150.0, 174.0 ],
+					"patching_rect" : [ 1410.0, 811.0, 150.0, 174.0 ],
 					"text" : "Chroma corresponds to 12 pitch classes:\n\n0 - C\n1 - C#/Db\n2 - D\n3 - D#/Eb\n4 - E\n5 - F\n6 - F#/Gb\n7 - G\n8 - G#/Ab\n9 - A\n10 - A#/Bb\n11 - B"
 				}
 
@@ -726,7 +796,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1335.0, 727.0, 238.0, 29.0 ],
+					"patching_rect" : [ 1601.0, 725.0, 238.0, 29.0 ],
 					"text" : "After determining - send attractand or revusion player to JS and calculate movement there"
 				}
 
@@ -738,7 +808,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1335.0, 609.0, 306.0, 85.0 ],
+					"patching_rect" : [ 1601.0, 607.0, 306.0, 85.0 ],
 					"text" : "Searching\n\nCheck list of all players to determine closest to preference genome in order to start an adoption (pickup and hold player)\n\nCheck list of all players to determine closest revulsion player in order to move away from that player"
 				}
 
@@ -750,7 +820,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 934.0, 813.0, 184.0, 29.0 ],
+					"patching_rect" : [ 1200.0, 811.0, 184.0, 29.0 ],
 					"text" : "Distance filtering and volume attenuation occurs at the listener level"
 				}
 
@@ -762,7 +832,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1604.0, 960.5, 633.0, 29.0 ],
+					"patching_rect" : [ 1870.0, 959.0, 633.0, 29.0 ],
 					"text" : "Revulsion: a set of spectromophological characteristics (Smalley 1997) which are repellent to a space-agent, resulting in the space having a higher chance of moving away from its current position if they are experienced"
 				}
 
@@ -774,7 +844,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1604.0, 918.5, 633.0, 40.0 ],
+					"patching_rect" : [ 1870.0, 917.0, 633.0, 40.0 ],
 					"text" : "Attraction: a set of spectromophological characteristics (Smalley 1997) which are appealing to the space-agent, resulting in the space having a higher chance of staying still in space if experiencing this set of features. If these features are heard at a distance, this may trigger the space to move towards that location"
 				}
 
@@ -786,7 +856,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1583.0, 889.5, 231.0, 23.0 ],
+					"patching_rect" : [ 1849.0, 888.0, 231.0, 23.0 ],
 					"text" : "Space-agent behavioural params:"
 				}
 
@@ -798,7 +868,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1605.0, 808.5, 632.0, 62.0 ],
+					"patching_rect" : [ 1871.0, 807.0, 632.0, 62.0 ],
 					"text" : "Absorption: coefficient of reflection off of space-agent boundary material\nInsulation: amount of sound that can transfer outside of a space-agent to another spatial entity\nSubstance: set of materials which fill the space-agent, altering transmission time, transmission loss, and propagation direction of player audio\nViscosity: a material parameter which affects drag of other spaces moving through this space\nMass: spaces enact gravitational pull upon other spaces within an appropriate range"
 				}
 
@@ -810,7 +880,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1584.0, 783.5, 207.0, 23.0 ],
+					"patching_rect" : [ 1850.0, 782.0, 207.0, 23.0 ],
 					"text" : "Space-agent material params:"
 				}
 
@@ -822,7 +892,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1284.0, 456.0, 255.0, 29.0 ],
+					"patching_rect" : [ 1550.0, 454.0, 255.0, 29.0 ],
 					"text" : "These descriptors are computed for each player's input and determine the seeking behaviour of room agents"
 				}
 
@@ -847,7 +917,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1194.0, 495.0, 462.0, 33.0 ],
+					"patching_rect" : [ 1460.0, 493.0, 462.0, 33.0 ],
 					"text" : "ircamdescriptor.descriptors SpectralCentroid SpectralSpread SpectralSkewness SpectralKurtosis SpectralRolloff SpectralVariation SpectralDecrease SpectralSlope Chroma",
 					"textcolor" : [ 0.92, 0.92, 0.92, 1.0 ]
 				}
@@ -860,7 +930,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1756.0, 518.0, 181.0, 118.0 ],
+					"patching_rect" : [ 2022.0, 516.0, 181.0, 118.0 ],
 					"text" : "room perceptual \nmore broadly room perecptual qualities\n\nmap between - \nfrom literature vs personal experiments\nforeground choice of relevant features for compositional choices\n\nhow is that presented to user in an understandable way"
 				}
 
@@ -873,7 +943,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1756.0, 680.0, 280.0, 39.0 ],
+					"patching_rect" : [ 2022.0, 678.0, 280.0, 39.0 ],
 					"text" : "genome for preference / tendencies:\nwhat the room is drawn to / repulsed from"
 				}
 
@@ -920,8 +990,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-202", 0 ],
+					"source" : [ "obj-110", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
-					"midpoints" : [ 29.5, 588.0, 6.0, 588.0, 6.0, 945.0, 51.5, 945.0 ],
+					"midpoints" : [ 295.5, 586.0, 272.0, 586.0, 272.0, 943.0, 317.5, 943.0 ],
 					"source" : [ "obj-118", 0 ]
 				}
 
@@ -929,7 +1006,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
-					"midpoints" : [ 29.5, 618.0, 6.0, 618.0, 6.0, 945.0, 51.5, 945.0 ],
+					"midpoints" : [ 295.5, 616.0, 272.0, 616.0, 272.0, 943.0, 317.5, 943.0 ],
 					"source" : [ "obj-119", 0 ]
 				}
 
@@ -937,7 +1014,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
-					"midpoints" : [ 29.5, 945.0, 51.5, 945.0 ],
+					"midpoints" : [ 295.5, 943.0, 317.5, 943.0 ],
 					"source" : [ "obj-120", 0 ]
 				}
 
@@ -992,6 +1069,27 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-33", 0 ],
+					"source" : [ "obj-200", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"source" : [ "obj-201", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-201", 0 ],
+					"source" : [ "obj-202", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
 					"source" : [ "obj-24", 0 ]
 				}
@@ -1036,6 +1134,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-110", 1 ],
 					"order" : 1,
+					"source" : [ "obj-35", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-202", 1 ],
+					"order" : 2,
 					"source" : [ "obj-35", 1 ]
 				}
 
@@ -1100,7 +1206,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
-					"midpoints" : [ 552.5, 827.0, 419.0, 827.0, 419.0, 944.0, 51.5, 944.0 ],
+					"midpoints" : [ 818.5, 825.0, 685.0, 825.0, 685.0, 942.0, 317.5, 942.0 ],
 					"source" : [ "obj-49", 0 ]
 				}
 
@@ -1246,7 +1352,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
-					"midpoints" : [ 567.5, 857.0, 419.0, 857.0, 419.0, 944.0, 51.5, 944.0 ],
+					"midpoints" : [ 833.5, 855.0, 685.0, 855.0, 685.0, 942.0, 317.5, 942.0 ],
 					"source" : [ "obj-76", 0 ]
 				}
 
@@ -1268,7 +1374,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
-					"midpoints" : [ 579.5, 881.0, 419.0, 881.0, 419.0, 944.0, 51.5, 944.0 ],
+					"midpoints" : [ 845.5, 879.0, 685.0, 879.0, 685.0, 942.0, 317.5, 942.0 ],
 					"source" : [ "obj-81", 0 ]
 				}
 
@@ -1276,7 +1382,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
-					"midpoints" : [ 583.5, 944.0, 51.5, 944.0 ],
+					"midpoints" : [ 849.5, 942.0, 317.5, 942.0 ],
 					"source" : [ "obj-82", 0 ]
 				}
 
