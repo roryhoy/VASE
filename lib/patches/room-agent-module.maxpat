@@ -122,42 +122,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-115",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 785.0, 613.0, 140.0, 20.0 ],
-					"text" : "sprintf script delete reverb_%i"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-116",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 781.0, 591.0, 134.0, 20.0 ],
-					"text" : "sprintf script delete mute_%i"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-117",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 769.0, 569.0, 154.0, 20.0 ],
-					"text" : "sprintf script delete mute_%i_tog"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-118",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -233,7 +197,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 399.0, 892.0, 193.0, 18.0 ],
-					"presentation_linecount" : 3,
 					"text" : "player num, x pos, room num, player num"
 				}
 
@@ -566,7 +529,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 93.0, 64.0, 18.0 ],
-					"presentation_linecount" : 2,
 					"text" : "[mute_i_rec]",
 					"textcolor" : [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
 				}
@@ -1388,7 +1350,7 @@
 
 			}
  ],
-		"originid" : "pat-49301",
+		"originid" : "pat-3939",
 		"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 	}
 
