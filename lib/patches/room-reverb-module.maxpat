@@ -10,17 +10,78 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1612.0, 929.0 ],
+		"rect" : [ 874.0, 87.0, 459.0, 929.0 ],
 		"default_fontsize" : 10.0,
 		"gridsize" : [ 15.0, 15.0 ],
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-55",
+					"linecount" : 25,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 686.0, 855.0, 294.0, 286.0 ],
+					"presentation_linecount" : 32,
+					"text" : "/reverb/roomsize\nglobal RT60 with value expressed in seconds\n/reverb/gain\nrelative decay for low frequencies (as a % of the global RT60)\nrelative decay for mid frequencies (as a % of the global RT60)\nrelative decay for high frequencies (as a % of the global RT60)\n/reverb/fl\n/reverb/fh\n/reberb/density\n/reverb/air/freq\n/reverb/roomoffset\necho start delay\n\nroom filter\ndirect filter\n\n/early/min\n/early/max\n/early/distr\nearly filter\n\n/cluster/min\n/cluster/max\n/cluster/distr\ncluster filter",
+					"textjustification" : 2
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-54",
+					"linecount" : 25,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 989.0, 855.0, 448.0, 286.0 ],
+					"text" : "/reverb/roomsize\n/reverb/tr0\n/reverb/gain\n/reverb/trl\n/reverb/trm\n/reverb/trh\n/reverb/fl\n/reverb/fh\n/reberb/density\n/reverb/air/freq\n/reverb/roomoffset\n/reverb/min\n\n/room/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]\n/direct/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]\n\n/early/min\n/early/max\n/early/distr\n/early/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]\n\n/cluster/min\n/cluster/max\n/cluster/distr\n/cluster/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-52",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 607.0, 109.0, 95.0, 18.0 ],
+					"text" : "output current state"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 638.0, 137.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-44",
+					"linecount" : 6,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 861.0, 244.0, 297.0, 74.0 ],
+					"text" : "spat5.ircamverb~ uses vbap panning. Based on the speaker layout, it will automatically choose 2D-vbap or 3D-vbap rendering. Since this is dealing individually with singular sources, only one source and speaker will be used, directly ahead of the \"listener\" in this context, spatialization happens at the listener module level"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-43",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 932.0, 608.0, 52.0, 18.0 ],
+					"patching_rect" : [ 945.0, 668.0, 52.0, 18.0 ],
 					"text" : "for testing"
 				}
 
@@ -54,7 +115,7 @@
 					"originaltempo" : 120.0,
 					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 925.0, 633.0, 150.0, 30.0 ],
+					"patching_rect" : [ 920.0, 688.0, 150.0, 30.0 ],
 					"pitchcorrection" : 0,
 					"quality" : "basic",
 					"saved_attribute_attributes" : 					{
@@ -101,7 +162,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 842.0, 553.0, 48.0, 136.0 ],
+					"patching_rect" : [ 830.0, 612.0, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.gain~",
@@ -126,23 +187,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 826.0, 727.0, 55.0, 20.0 ],
+					"patching_rect" : [ 814.0, 786.0, 55.0, 20.0 ],
 					"text" : "dac~ 1 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bubble" : 1,
-					"bubbleside" : 0,
-					"id" : "obj-21",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 613.0, 145.0, 94.0, 48.0 ],
-					"text" : "output current state",
-					"textjustification" : 1
 				}
 
 			}
@@ -709,7 +755,7 @@
 
 							}
  ],
-						"originid" : "pat-5274",
+						"originid" : "pat-10028",
 						"styles" : [ 							{
 								"name" : "AudioStatus_Menu",
 								"default" : 								{
@@ -854,7 +900,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1521.0, 317.0, 125.0, 20.0 ],
+					"patching_rect" : [ 1401.0, 314.0, 125.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"fontsize" : 11.0,
 						"globalpatchername" : ""
@@ -867,30 +913,13 @@
 , 			{
 				"box" : 				{
 					"bubble" : 1,
-					"bubbleside" : 0,
-					"fontname" : "Arial",
-					"fontsize" : 11.0,
-					"id" : "obj-28",
-					"linecount" : 6,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1640.0, 98.0, 133.0, 99.0 ],
-					"text" : "spat5.ircamverb~ uses vbap panning. Based on the speaker layout, it will automatically choose 2D-vbap or 3D-vbap rendering",
-					"textjustification" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bubble" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
 					"id" : "obj-27",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1500.0, 87.0, 129.0, 23.0 ],
+					"patching_rect" : [ 1430.0, 94.0, 129.0, 23.0 ],
 					"text" : "8 speakers in a cube"
 				}
 
@@ -904,7 +933,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1527.0, 45.0, 129.0, 23.0 ],
+					"patching_rect" : [ 1457.0, 52.0, 129.0, 23.0 ],
 					"text" : "8 speakers in a circle"
 				}
 
@@ -919,7 +948,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1316.0, 82.0, 182.0, 33.0 ],
+					"patching_rect" : [ 1246.0, 89.0, 182.0, 33.0 ],
 					"text" : "/speakers/xyz -1 1 1 1 1 1 1 -1 1 -1 -1 1 -1 1 -1 1 1 -1 1 -1 -1 -1 -1 -1"
 				}
 
@@ -932,7 +961,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1283.0, 40.0, 249.0, 31.0 ],
+					"patching_rect" : [ 1213.0, 47.0, 249.0, 31.0 ],
 					"text" : "/speakers/aed 0 0 1 45 0 1 90 0 1 135 0 1 -180 0 1 -135 0 1 -90 0 1 -45 0 1"
 				}
 
@@ -945,7 +974,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "int", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1117.0, 457.0, 320.0, 110.0 ]
+					"patching_rect" : [ 1117.0, 457.0, 320.0, 277.0 ]
 				}
 
 			}
@@ -980,7 +1009,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1100.0, 124.0, 181.0, 23.0 ],
+					"patching_rect" : [ 1030.0, 131.0, 181.0, 23.0 ],
 					"text" : "double-click to open the window"
 				}
 
@@ -1001,7 +1030,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1397.0, 277.0, 110.0, 61.0 ],
+					"patching_rect" : [ 1277.0, 274.0, 110.0, 61.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -1013,7 +1042,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1283.0, 125.0, 340.0, 20.0 ],
+					"patching_rect" : [ 1213.0, 132.0, 340.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -1044,7 +1073,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 817.0, 207.0, 58.0, 20.0 ],
+					"patching_rect" : [ 703.0, 212.0, 58.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -1058,7 +1087,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1375.0, 357.0, 29.0, 21.0 ],
+					"patching_rect" : [ 1255.0, 354.0, 29.0, 21.0 ],
 					"text" : "thru"
 				}
 
@@ -1072,34 +1101,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1375.0, 247.0, 125.0, 21.0 ],
+					"patching_rect" : [ 1255.0, 244.0, 125.0, 21.0 ],
 					"text" : "spat5.dsp.management"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-38",
-					"maxclass" : "live.button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 657.0, 112.0, 15.0, 15.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_enum" : [ "off", "on" ],
-							"parameter_longname" : "live.button[5]",
-							"parameter_mmax" : 1,
-							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
-							"parameter_shortname" : "live.button[5]",
-							"parameter_type" : 2
-						}
-
-					}
-,
-					"varname" : "live.button"
 				}
 
 			}
@@ -1111,7 +1114,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 767.0, 207.0, 29.0, 21.0 ],
 					"text" : "thru"
 				}
@@ -1126,7 +1129,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 842.0, 153.0, 142.0, 21.0 ],
+					"patching_rect" : [ 806.0, 140.5, 142.0, 21.0 ],
 					"text" : "spat5.presets.management"
 				}
 
@@ -1140,7 +1143,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 767.0, 250.0, 329.0, 21.0 ],
+					"patching_rect" : [ 767.0, 341.0, 329.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -1260,11 +1263,11 @@
 
 							}
  ],
-						"originid" : "pat-5270",
+						"originid" : "pat-10096",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 334.0, 319.0, 31.0, 20.0 ],
+					"patching_rect" : [ 298.0, 377.0, 31.0, 20.0 ],
 					"text" : "gen~",
 					"varname" : "gen~_AA"
 				}
@@ -1277,7 +1280,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 368.0, 314.0, 193.0, 29.0 ],
+					"patching_rect" : [ 332.0, 372.0, 151.0, 29.0 ],
 					"text" : "Colouration:\ndefine filter coefficients for room"
 				}
 
@@ -1300,7 +1303,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 55.0, 489.0, 131.0, 40.0 ],
+					"patching_rect" : [ 37.0, 500.0, 131.0, 40.0 ],
 					"text" : "player_i_post_room_j \n\naccessible in player module"
 				}
 
@@ -1463,7 +1466,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 452.0, 192.0, 132.0, 18.0 ],
+					"patching_rect" : [ 428.0, 139.5, 132.0, 18.0 ],
 					"text" : "settings message for reverb"
 				}
 
@@ -1475,7 +1478,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 421.0, 162.0, 128.0, 20.0 ],
+					"patching_rect" : [ 397.0, 109.5, 128.0, 20.0 ],
 					"text" : "sprintf set room_reverb_%i"
 				}
 
@@ -1487,7 +1490,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 421.0, 191.0, 19.0, 20.0 ],
+					"patching_rect" : [ 397.0, 138.5, 19.0, 20.0 ],
 					"text" : "r"
 				}
 
@@ -1604,7 +1607,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-36", 0 ],
-					"midpoints" : [ 1406.5, 347.0, 1384.5, 347.0 ],
+					"midpoints" : [ 1286.5, 344.0, 1264.5, 344.0 ],
 					"source" : [ "obj-32", 0 ]
 				}
 
@@ -1612,7 +1615,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
-					"midpoints" : [ 1292.5, 195.298065185546875, 776.5, 195.298065185546875 ],
+					"midpoints" : [ 1222.5, 195.298065185546875, 776.5, 195.298065185546875 ],
 					"source" : [ "obj-33", 0 ]
 				}
 
@@ -1644,7 +1647,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-34", 0 ],
-					"midpoints" : [ 1384.5, 397.0, 776.5, 397.0 ],
+					"midpoints" : [ 1264.5, 397.0, 776.5, 397.0 ],
 					"source" : [ "obj-36", 0 ]
 				}
 
@@ -1652,15 +1655,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-36", 0 ],
-					"midpoints" : [ 1384.5, 346.0, 1384.5, 346.0 ],
+					"midpoints" : [ 1264.5, 343.0, 1264.5, 343.0 ],
 					"source" : [ "obj-37", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-39", 0 ],
-					"source" : [ "obj-38", 0 ]
 				}
 
 			}
@@ -1721,7 +1717,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
-					"midpoints" : [ 851.5, 182.0, 776.5, 182.0 ],
+					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-39", 0 ],
+					"midpoints" : [ 815.5, 182.0, 776.5, 182.0 ],
 					"source" : [ "obj-59", 0 ]
 				}
 
@@ -1729,7 +1732,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-36", 0 ],
-					"midpoints" : [ 1530.5, 347.0, 1384.5, 347.0 ],
+					"midpoints" : [ 1410.5, 344.0, 1264.5, 344.0 ],
 					"source" : [ "obj-65", 0 ]
 				}
 
@@ -1756,7 +1759,7 @@
 
 			}
  ],
-		"originid" : "pat-5272",
+		"originid" : "pat-10026",
 		"parameters" : 		{
 			"obj-13" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-32::obj-58" : [ "live.text[6]", "live.text[9]", 0 ],
@@ -1780,7 +1783,6 @@
 			"obj-37::obj-7::obj-62" : [ "live.text[12]", "live.text[9]", 0 ],
 			"obj-37::obj-7::obj-6::obj-3" : [ "live.text", "live.text", 0 ],
 			"obj-37::obj-7::obj-6::obj-6" : [ "live.text[2]", "live.text", 0 ],
-			"obj-38" : [ "live.button[5]", "live.button[5]", 0 ],
 			"obj-59::obj-28::obj-75::obj-11" : [ "live.text[260]", "live.text", 0 ],
 			"obj-59::obj-34::obj-75::obj-11" : [ "live.text[1]", "live.text", 0 ],
 			"obj-59::obj-38::obj-42" : [ "live.drop[2]", "live.drop", 0 ],

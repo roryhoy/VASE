@@ -17,6 +17,19 @@
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontsize" : 12.486343062275633,
+					"id" : "obj-36",
+					"linecount" : 11,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 71.0, 265.0, 223.0, 160.0 ],
+					"text" : "CHECK LISTENER SHOULD HEAR GIVEN SPACE \n\n- is the listener in the same space as the source?\n\n- is there a bridge between remote spaces?\n\n- is the source outside of a space and VASE is set in vacuum mode"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "",
 					"id" : "obj-29",
 					"index" : 0,
@@ -1629,7 +1642,7 @@
 
 							}
  ],
-						"originid" : "pat-17533",
+						"originid" : "pat-10152",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -3253,7 +3266,7 @@
 
 			}
  ],
-		"originid" : "pat-17525",
+		"originid" : "pat-10144",
 		"parameters" : 		{
 			"obj-100::obj-102" : [ "live.toggle[436]", "live.toggle", 0 ],
 			"obj-100::obj-3" : [ "live.text[1]", "live.text[9]", 0 ],
