@@ -5854,7 +5854,7 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 21.151210201350942,
+					"fontsize" : 9.829897925557301,
 					"id" : "obj-166",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -5874,7 +5874,6 @@
 						"default_fontsize" : 10.0,
 						"gridsize" : [ 15.0, 15.0 ],
 						"subpatcher_template" : "bigpatcher",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-10",
@@ -6011,14 +6010,14 @@
 							}
 , 							{
 								"box" : 								{
-									"fontsize" : 22.297536945812805,
+									"fontsize" : 29.123313561877943,
 									"id" : "obj-9",
 									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 489.0, 40.0, 250.0, 56.0 ],
-									"text" : "This will pass audio into sources subpatcher"
+									"patching_rect" : [ 328.0, 84.0, 483.0, 72.0 ],
+									"text" : "Bypassing for now - will grab mono adc [n] for player [n]"
 								}
 
 							}
@@ -6047,7 +6046,7 @@
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 299.0, 918.0, 156.0, 32.0 ],
+					"patching_rect" : [ 295.0, 894.0, 93.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"fontsize" : 10.0,
 						"globalpatchername" : "",
@@ -24936,13 +24935,14 @@
 			}
 , 			{
 				"box" : 				{
+					"fontsize" : 8.301404853128989,
 					"id" : "obj-142",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 161.0, 914.0, 150.0, 40.0 ],
-					"text" : "Input matrix for all sources (either individual players or separate inputs)"
+					"patching_rect" : [ 174.0, 891.0, 127.0, 25.0 ],
+					"text" : "bypassinig for now (mono ins on player n adc source)"
 				}
 
 			}
