@@ -14,6 +14,18 @@
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 501.0, 440.0, 54.0, 22.0 ],
+					"text" : "deferlow"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-32",
 					"maxclass" : "number",
 					"numinlets" : 1,
@@ -118,18 +130,6 @@
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1645.0, 928.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-23",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1275.0, 1047.0, 55.0, 22.0 ],
-					"text" : "player_1"
 				}
 
 			}
@@ -630,12 +630,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "float", "" ],
-					"patching_rect" : [ 886.0, 395.0, 893.0, 22.0 ],
+					"patching_rect" : [ 886.0, 395.0, 124.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"active" : 1
 					}
 ,
-					"text" : "pipo~ ircamdescriptor SpectralCentroid SpectralSpread SpectralSkewness SpectralKurtosis SpectralRolloff SpectralVariation SpectralDecrease SpectralSlope Chroma",
+					"text" : "pipo~ ircamdescriptor",
 					"varname" : "pipo_data"
 				}
 
@@ -904,7 +904,7 @@
 							}
  ],
 						"lines" : [  ],
-						"originid" : "pat-39995",
+						"originid" : "pat-17890",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -938,7 +938,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1111.0, 663.0, 199.0, 22.0 ],
+					"patching_rect" : [ 530.0, 225.0, 199.0, 22.0 ],
 					"text" : "prepend ircamdescriptor.descriptors"
 				}
 
@@ -952,7 +952,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1112.0, 625.0, 175.0, 22.0 ]
+					"patching_rect" : [ 531.0, 187.0, 175.0, 22.0 ]
 				}
 
 			}
@@ -1069,7 +1069,7 @@
 
 							}
  ],
-						"originid" : "pat-39997"
+						"originid" : "pat-17892"
 					}
 ,
 					"patching_rect" : [ 612.0, 327.0, 128.0, 26.0 ],
@@ -1314,7 +1314,7 @@
 
 							}
  ],
-						"originid" : "pat-39999"
+						"originid" : "pat-17894"
 					}
 ,
 					"patching_rect" : [ 444.0, 327.0, 150.0, 26.0 ],
@@ -2213,7 +2213,7 @@
 
 							}
  ],
-						"originid" : "pat-40001"
+						"originid" : "pat-17896"
 					}
 ,
 					"patching_rect" : [ 246.0, 652.0, 190.0, 26.0 ],
@@ -2778,7 +2778,7 @@
 
 							}
  ],
-						"originid" : "pat-40003"
+						"originid" : "pat-17898"
 					}
 ,
 					"patching_rect" : [ 251.0, 451.0, 170.0, 26.0 ],
@@ -3694,7 +3694,7 @@
 
 							}
  ],
-						"originid" : "pat-40005"
+						"originid" : "pat-17900"
 					}
 ,
 					"patching_rect" : [ 255.0, 808.0, 190.0, 26.0 ],
@@ -3731,19 +3731,6 @@
 					"patching_rect" : [ 497.0, 656.0, 427.0, 81.0 ],
 					"text" : "ircamdescriptor.descriptors Loudness RelativeSpecificLoudness PerceptualTristimulus PerceptualOddToEvenRatio Sharpness Spread SpectralFlatness SpectralCrest PerceptualSpectralDeviation PerceptualSpectralCentroid PerceptualSpectralSpread PerceptualSpectralSkewness PerceptualSpectralKurtosis PerceptualSpectralRolloff PerceptualSpectralVariation PerceptualSpectralDecrease PerceptualSpectralSlope MFCC",
 					"textcolor" : [ 0.92, 0.92, 0.92, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
-					"id" : "obj-50",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 906.0, 362.0, 243.0, 24.0 ],
-					"text" : "set list of descriptors to compute"
 				}
 
 			}
@@ -3934,24 +3921,24 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-22", 0 ],
+					"order" : 0,
 					"source" : [ "obj-21", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"order" : 0,
-					"source" : [ "obj-23", 0 ]
+					"destination" : [ "obj-4", 0 ],
+					"order" : 1,
+					"source" : [ "obj-21", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"order" : 1,
-					"source" : [ "obj-23", 0 ]
+					"destination" : [ "obj-34", 0 ],
+					"source" : [ "obj-22", 0 ]
 				}
 
 			}
@@ -4181,7 +4168,7 @@
 
 			}
  ],
-		"originid" : "pat-39991",
+		"originid" : "pat-17886",
 		"dependency_cache" : [ 			{
 				"name" : "mubu.mxo",
 				"type" : "iLaX"
