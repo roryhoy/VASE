@@ -16,11 +16,12 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-200",
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 953.0, 277.0, 150.0, 20.0 ],
-					"text" : "scaled position to jit world"
+					"patching_rect" : [ 1015.0, 204.0, 150.0, 100.0 ],
+					"text" : "scaled position to jit world\n\n- need to check and account for variation in display size and if scrolling - mouse reports do not account for scroll"
 				}
 
 			}
@@ -172,7 +173,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "float" ],
-					"patching_rect" : [ 1105.0, 304.0, 29.5, 22.0 ],
+					"patching_rect" : [ 1184.0, 310.0, 29.5, 22.0 ],
 					"text" : "t b f"
 				}
 
@@ -184,8 +185,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1105.0, 276.0, 102.0, 22.0 ],
-					"text" : "0.399484"
+					"patching_rect" : [ 1184.0, 282.0, 102.0, 22.0 ],
+					"text" : "0.458176"
 				}
 
 			}
@@ -320,7 +321,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 409.0, 199.0, 250.0, 22.0 ],
-					"text" : "position 0.399484 0. 0."
+					"text" : "position 0.458176 0. 0."
 				}
 
 			}
@@ -1113,7 +1114,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-64", 0 ],
-					"midpoints" : [ 1114.5, 347.86688232421875, 814.5, 347.86688232421875 ],
+					"midpoints" : [ 1193.5, 347.86688232421875, 814.5, 347.86688232421875 ],
 					"source" : [ "obj-58", 0 ]
 				}
 
@@ -1233,7 +1234,7 @@
 
 			}
  ],
-		"originid" : "pat-16256",
+		"originid" : "pat-3355",
 		"dependency_cache" : [  ],
 		"autosave" : 0
 	}

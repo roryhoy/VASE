@@ -17,6 +17,29 @@
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-42",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 271.5, 152.0, 144.0, 18.0 ],
+					"text" : "get distances from this listener"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-35",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 455.0, 160.5, 88.0, 29.0 ],
+					"text" : "Calculated in player module"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontsize" : 13.546296296296294,
 					"id" : "obj-202",
 					"maxclass" : "comment",
@@ -84,7 +107,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 935.0, 1439.0, 139.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "script delete dist_mess_cycle"
 				}
 
@@ -121,7 +143,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 935.0, 1532.0, 124.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "script delete hoa_encoder"
 				}
 
@@ -169,7 +190,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 447.0, 167.0, 29.5, 20.0 ],
+					"patching_rect" : [ 415.0, 151.0, 29.5, 20.0 ],
 					"text" : "#1"
 				}
 
@@ -182,7 +203,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 447.0, 144.0, 70.0, 20.0 ],
+					"patching_rect" : [ 415.0, 128.0, 70.0, 20.0 ],
 					"text" : "r global_clock"
 				}
 
@@ -1832,7 +1853,7 @@
 
 							}
  ],
-						"originid" : "pat-26551",
+						"originid" : "pat-6916",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -3539,7 +3560,7 @@
 
 			}
  ],
-		"originid" : "pat-26543",
+		"originid" : "pat-6906",
 		"parameters" : 		{
 			"obj-100::obj-102" : [ "live.toggle[436]", "live.toggle", 0 ],
 			"obj-100::obj-3" : [ "live.text[1]", "live.text[9]", 0 ],

@@ -16,6 +16,69 @@
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontsize" : 12.136363636363633,
+					"id" : "obj-146",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2248.0, 97.0, 199.0, 61.0 ],
+					"text" : "GENERATED AZI values or calculated azimuth seems stuck only in front 180 deg - possibly from not adding facing offset?",
+					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 13.691629159765586,
+					"id" : "obj-143",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2427.0, 109.0, 191.0, 37.0 ],
+					"text" : "//NOT CURRENTLY USING OFFSET OF FACING ANGLE"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-39",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2033.0, 109.0, 202.0, 51.0 ],
+					"text" : "azimuth + elevation calc needs to be in relation to rotation_perspective. Simple as an angular offset? Restrict x rotation (pitch forwards and backwards)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-105",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1669.5, 475.0, 67.0, 20.0 ],
+					"text" : "r vase-3d-tog"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-75",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1669.5, 512.0, 52.0, 20.0 ],
+					"text" : "enable $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-40",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -293,8 +356,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 1735.0, 471.0, 397.0, 31.0 ],
-					"text" : "jit.gl.gridshape VASE @shape sphere @smooth_shading 1 @lighting_enable 1 @scale 0.4"
+					"patching_rect" : [ 1669.5, 562.0, 414.0, 31.0 ],
+					"text" : "jit.gl.gridshape VASE @shape sphere @smooth_shading 1 @lighting_enable 1 @scale 0.4 @enable 0"
 				}
 
 			}
@@ -1477,6 +1540,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-75", 0 ],
+					"source" : [ "obj-105", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-34", 1 ],
 					"source" : [ "obj-108", 0 ]
 				}
@@ -2165,6 +2235,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-68", 0 ],
+					"source" : [ "obj-75", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-36", 0 ],
 					"source" : [ "obj-76", 0 ]
 				}
@@ -2316,7 +2393,7 @@
 
 			}
  ],
-		"originid" : "pat-6",
+		"originid" : "pat-12922",
 		"dependency_cache" : [ 			{
 				"name" : "3d-dist.js",
 				"bootpath" : "~/Documents/School/PhD/Dissertation/VASE/lib/scripts",
