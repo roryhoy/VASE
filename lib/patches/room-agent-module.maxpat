@@ -16,12 +16,73 @@
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-142",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2290.0, 146.0, 150.0, 18.0 ],
+					"text" : "-1. to 1."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 12.573529411764707,
+					"id" : "obj-138",
+					"linecount" : 6,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1323.0, 589.0, 184.0, 91.0 ],
+					"text" : "Are agent genome perception weights and prefrerence sets tied to revereration / space qualities of the agent? They don't need to be, but may provide interesting mappings"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-136",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2287.0, 216.0, 150.0, 40.0 ],
+					"text" : "Chroma values are given low or no weighting if the agent is not \"pitch focused\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-133",
+					"linecount" : 11,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2014.0, 125.0, 255.0, 129.0 ],
+					"text" : "Genome:\nPerception weights - scaling how much each feature matters to the agent. Negative weights result in a negaitive arousal of the agent and may result in repelling \n\nPreference set - the \"ideal\" values the agent enjoys for each feature\n\nVariance - does the agent prefer to follow the mean or characteristics of the standard deviation?"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 14.681728408241698,
+					"id" : "obj-131",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1716.0, 215.0, 204.0, 39.0 ],
+					"text" : "keep running tabs on who is \"most\" of something"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-129",
 					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1732.0, 202.0, 235.0, 51.0 ],
+					"patching_rect" : [ 1398.5, 215.0, 235.0, 51.0 ],
 					"presentation_linecount" : 4,
 					"text" : "Dicts contain arrays of values for analysis in order of \n\nmean, median, stddev, min, max"
 				}
@@ -34,7 +95,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1889.5, 259.5, 150.0, 29.0 ],
+					"patching_rect" : [ 1556.5, 273.0, 150.0, 29.0 ],
 					"text" : "dict of all analysis from input audio in mubu"
 				}
 
@@ -46,7 +107,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 5,
 					"outlettype" : [ "dictionary", "", "", "", "" ],
-					"patching_rect" : [ 1732.0, 264.0, 153.0, 20.0 ],
+					"patching_rect" : [ 1398.5, 277.0, 153.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"legacy" : 0,
@@ -64,7 +125,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 938.0, 241.0, 248.0, 18.0 ],
+					"patching_rect" : [ 982.0, 273.0, 248.0, 18.0 ],
 					"text" : "Sensing range (spherical boundary of player listening)"
 				}
 
@@ -78,7 +139,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 886.0, 240.0, 50.0, 20.0 ]
+					"patching_rect" : [ 930.0, 272.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -627,7 +688,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1557.0, 332.0, 759.0, 51.0 ],
+					"patching_rect" : [ 1504.0, 380.0, 759.0, 51.0 ],
 					"text" : "Tendencies:\n- Wander (random walk in space)\n- Stability (Smoothness in movement vs jittery | upper limit on acceleration)\n- Variety (low would mean wants to hang on to players even if not well matching genome, high means more likely to seek out new players even if high match)"
 				}
 
@@ -710,7 +771,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1185.0, 405.0, 220.0, 40.0 ],
+					"patching_rect" : [ 1097.0, 699.0, 220.0, 40.0 ],
 					"text" : "message to reverb instance settings based on room params"
 				}
 
@@ -1363,7 +1424,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1192.0, 580.0, 42.0, 20.0 ],
+					"patching_rect" : [ 1319.0, 709.0, 42.0, 20.0 ],
 					"text" : "forward"
 				}
 
@@ -1527,38 +1588,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-18",
-					"linecount" : 2,
+					"linecount" : 12,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1592.5, 497.0, 255.0, 29.0 ],
-					"text" : "These descriptors are computed for each player's input and determine the seeking behaviour of room agents"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.38, 0.38, 0.38, 1.0 ],
-					"bgcolor2" : [ 0.3, 0.3, 0.3, 1.0 ],
-					"bgfillcolor_angle" : 270.0,
-					"bgfillcolor_autogradient" : 0.0,
-					"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-					"bgfillcolor_color1" : [ 0.38, 0.38, 0.38, 1.0 ],
-					"bgfillcolor_color2" : [ 0.3, 0.3, 0.3, 1.0 ],
-					"bgfillcolor_proportion" : 0.39,
-					"bgfillcolor_type" : "gradient",
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"gradient" : 1,
-					"id" : "obj-11",
-					"linecount" : 9,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1441.5, 462.0, 149.0, 118.0 ],
-					"text" : "ircamdescriptor.descriptors SpectralCentroid SpectralSpread SpectralSkewness SpectralKurtosis SpectralRolloff SpectralVariation SpectralDecrease SpectralSlope Chroma",
-					"textcolor" : [ 0.92, 0.92, 0.92, 1.0 ]
+					"patching_rect" : [ 1370.0, 52.0, 255.0, 141.0 ],
+					"text" : "These descriptors are computed for each player's input and determine the seeking behaviour of room agents:\n\nSpectralCentroid \nSpectralSpread \nSpectralSkewness \nSpectralKurtosis \nSpectralRolloff \nSpectralVariation \nSpectralDecrease \nSpectralSlope \nChroma (0-11)"
 				}
 
 			}
