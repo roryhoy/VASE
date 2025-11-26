@@ -10,17 +10,96 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1612.0, 929.0 ],
+		"rect" : [ 34.0, 87.0, 1332.0, 929.0 ],
 		"default_fontsize" : 10.0,
 		"gridsize" : [ 15.0, 15.0 ],
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-154",
+					"linecount" : 8,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1218.0, 63.0, 150.0, 96.0 ],
+					"text" : "Ranges:\n0 - 20000\n0 - 20000\n~ -3 - 3\n0 - 20+\n0 - 20000\n0 - 1\n(Pipo uses this range) -1 - 2",
+					"textjustification" : 2
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-151",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1418.0, 452.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-148",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1378.0, 414.0, 48.0, 20.0 ],
+					"text" : "room_$1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-146",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1378.0, 388.0, 65.0, 20.0 ],
+					"text" : "loadmess #1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-145",
+					"maxclass" : "newobj",
+					"numinlets" : 21,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1475.0, 491.0, 419.0, 20.0 ],
+					"text" : "sprintf replace %s::genome %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-144",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 5,
+					"outlettype" : [ "dictionary", "", "", "", "" ],
+					"patching_rect" : [ 1475.0, 516.0, 127.0, 20.0 ],
+					"saved_object_attributes" : 					{
+						"embed" : 0,
+						"legacy" : 0,
+						"parameter_enable" : 0,
+						"parameter_mappable" : 0
+					}
+,
+					"text" : "dict room_agent_genomes"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-142",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2290.0, 146.0, 150.0, 18.0 ],
+					"patching_rect" : [ 2240.0, 210.0, 150.0, 18.0 ],
 					"text" : "-1. to 1."
 				}
 
@@ -45,7 +124,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2287.0, 216.0, 150.0, 40.0 ],
+					"patching_rect" : [ 2278.0, 262.0, 150.0, 40.0 ],
 					"text" : "Chroma values are given low or no weighting if the agent is not \"pitch focused\""
 				}
 
@@ -57,7 +136,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2014.0, 125.0, 255.0, 129.0 ],
+					"patching_rect" : [ 1998.0, 200.0, 255.0, 129.0 ],
 					"text" : "Genome:\nPerception weights - scaling how much each feature matters to the agent. Negative weights result in a negaitive arousal of the agent and may result in repelling \n\nPreference set - the \"ideal\" values the agent enjoys for each feature\n\nVariance - does the agent prefer to follow the mean or characteristics of the standard deviation?"
 				}
 
@@ -82,7 +161,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1398.5, 215.0, 235.0, 51.0 ],
+					"patching_rect" : [ 1466.0, 215.0, 235.0, 51.0 ],
 					"presentation_linecount" : 4,
 					"text" : "Dicts contain arrays of values for analysis in order of \n\nmean, median, stddev, min, max"
 				}
@@ -95,7 +174,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1556.5, 273.0, 150.0, 29.0 ],
+					"patching_rect" : [ 1624.0, 273.0, 150.0, 29.0 ],
 					"text" : "dict of all analysis from input audio in mubu"
 				}
 
@@ -107,7 +186,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 5,
 					"outlettype" : [ "dictionary", "", "", "", "" ],
-					"patching_rect" : [ 1398.5, 277.0, 153.0, 20.0 ],
+					"patching_rect" : [ 1466.0, 277.0, 153.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"legacy" : 0,
@@ -688,7 +767,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1504.0, 380.0, 759.0, 51.0 ],
+					"patching_rect" : [ 1461.0, 314.0, 759.0, 51.0 ],
 					"text" : "Tendencies:\n- Wander (random walk in space)\n- Stability (Smoothness in movement vs jittery | upper limit on acceleration)\n- Variety (low would mean wants to hang on to players even if not well matching genome, high means more likely to seek out new players even if high match)"
 				}
 
@@ -1484,7 +1563,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1410.0, 811.0, 150.0, 174.0 ],
+					"patching_rect" : [ 1293.0, 183.0, 150.0, 174.0 ],
 					"text" : "Chroma corresponds to 12 pitch classes:\n\n0 - C\n1 - C#/Db\n2 - D\n3 - D#/Eb\n4 - E\n5 - F\n6 - F#/Gb\n7 - G\n8 - G#/Ab\n9 - A\n10 - A#/Bb\n11 - B"
 				}
 
@@ -1588,12 +1667,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-18",
-					"linecount" : 12,
+					"linecount" : 11,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1370.0, 52.0, 255.0, 141.0 ],
-					"text" : "These descriptors are computed for each player's input and determine the seeking behaviour of room agents:\n\nSpectralCentroid \nSpectralSpread \nSpectralSkewness \nSpectralKurtosis \nSpectralRolloff \nSpectralVariation \nSpectralDecrease \nSpectralSlope \nChroma (0-11)"
+					"patching_rect" : [ 1370.0, 52.0, 1011.0, 129.0 ],
+					"text" : "These descriptors are computed for each player's input and determine the seeking behaviour of room agents:\n\nSpectralCentroid: brilliance of sound (dark to bright)\nSpectralSpread: narrow band (< 1000hz) to noisy or broadband (2000 - 6000 Hz), represents std dev around centroid\nSpectralSkewness: direction of magnitude distribution, left heavy (+ .5 to 2.) or right heavy (- .5 to -2.) \nSpectralKurtosis: peakedness of distribution, sharp peaks (5 to 10) or flat/noisy (1 to 3) \nSpectralRolloff: freq which x% (usually 95%) of energy lies, dark (1000 - 3000 Hz) or bright (> 6000 Hz)\nSpectralVariation: one frame similarity measure, steady (0 to .2), evolving (.2 to .6), highly changing/chaotic/noisy (.6 to 1.) \nSpectralDecrease: High freq attenuation, negative means higher freq content than lower, positive shows more low freq amp, broadband/noisey/bright ( -1 to -0.2), neutral (-0.2 to 0), low-passed/dull (0 to .1)\nSpectralSlope \nChroma (0-11): energy at pitch classes"
 				}
 
 			}
@@ -1850,6 +1929,34 @@
 				"patchline" : 				{
 					"destination" : [ "obj-122", 0 ],
 					"source" : [ "obj-135", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-144", 0 ],
+					"source" : [ "obj-145", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-148", 0 ],
+					"source" : [ "obj-146", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-151", 1 ],
+					"source" : [ "obj-148", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-145", 0 ],
+					"source" : [ "obj-151", 0 ]
 				}
 
 			}
