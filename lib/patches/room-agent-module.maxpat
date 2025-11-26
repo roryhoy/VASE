@@ -16,6 +16,28 @@
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-161",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1444.0, 230.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-158",
+					"maxclass" : "dict.view",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1551.0, 372.0, 383.0, 104.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-154",
 					"linecount" : 8,
 					"maxclass" : "comment",
@@ -34,7 +56,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1418.0, 452.0, 50.0, 20.0 ]
+					"patching_rect" : [ 1557.0, 630.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -45,7 +67,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1378.0, 414.0, 48.0, 20.0 ],
+					"patching_rect" : [ 1517.0, 592.0, 48.0, 20.0 ],
 					"text" : "room_$1"
 				}
 
@@ -57,7 +79,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1378.0, 388.0, 65.0, 20.0 ],
+					"patching_rect" : [ 1517.0, 566.0, 65.0, 20.0 ],
 					"text" : "loadmess #1"
 				}
 
@@ -69,7 +91,7 @@
 					"numinlets" : 21,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1475.0, 491.0, 419.0, 20.0 ],
+					"patching_rect" : [ 1614.0, 669.0, 419.0, 20.0 ],
 					"text" : "sprintf replace %s::genome %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f"
 				}
 
@@ -81,7 +103,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 5,
 					"outlettype" : [ "dictionary", "", "", "", "" ],
-					"patching_rect" : [ 1475.0, 516.0, 127.0, 20.0 ],
+					"patching_rect" : [ 1614.0, 694.0, 127.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"legacy" : 0,
@@ -112,7 +134,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1323.0, 589.0, 184.0, 91.0 ],
+					"patching_rect" : [ 1097.0, 591.0, 184.0, 91.0 ],
 					"text" : "Are agent genome perception weights and prefrerence sets tied to revereration / space qualities of the agent? They don't need to be, but may provide interesting mappings"
 				}
 
@@ -149,7 +171,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1716.0, 215.0, 204.0, 39.0 ],
+					"patching_rect" : [ 1725.0, 216.5, 204.0, 39.0 ],
 					"text" : "keep running tabs on who is \"most\" of something"
 				}
 
@@ -161,7 +183,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1466.0, 215.0, 235.0, 51.0 ],
+					"patching_rect" : [ 1475.0, 216.5, 235.0, 51.0 ],
 					"presentation_linecount" : 4,
 					"text" : "Dicts contain arrays of values for analysis in order of \n\nmean, median, stddev, min, max"
 				}
@@ -1528,7 +1550,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1595.0, 907.0, 150.0, 85.0 ],
+					"patching_rect" : [ 2278.0, 308.0, 150.0, 85.0 ],
 					"text" : "preference for scales / modes?\n\nmajor\nminor\n\nLydian \nPhrygian "
 				}
 
@@ -1542,17 +1564,6 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 12.0, 473.0, 40.0 ],
 					"text" : "for number of players, create a reverb instance. These should be muted (DSP wise) when not being used\n\ncheck list of room adoption (who is currently populating the room)"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1418.0, 784.0, 150.0, 18.0 ],
-					"text" : "Pitched content preference?"
 				}
 
 			}
@@ -1587,20 +1598,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1601.0, 607.0, 306.0, 85.0 ],
+					"patching_rect" : [ 1521.0, 772.0, 306.0, 85.0 ],
 					"text" : "Searching\n\nCheck list of all players to determine closest to preference genome in order to start an adoption (pickup and hold player)\n\nCheck list of all players to determine closest revulsion player in order to move away from that player"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-27",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1200.0, 811.0, 184.0, 29.0 ],
-					"text" : "Distance filtering and volume attenuation occurs at the listener level"
 				}
 
 			}
@@ -1672,7 +1671,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1370.0, 52.0, 1011.0, 129.0 ],
-					"text" : "These descriptors are computed for each player's input and determine the seeking behaviour of room agents:\n\nSpectralCentroid: brilliance of sound (dark to bright)\nSpectralSpread: narrow band (< 1000hz) to noisy or broadband (2000 - 6000 Hz), represents std dev around centroid\nSpectralSkewness: direction of magnitude distribution, left heavy (+ .5 to 2.) or right heavy (- .5 to -2.) \nSpectralKurtosis: peakedness of distribution, sharp peaks (5 to 10) or flat/noisy (1 to 3) \nSpectralRolloff: freq which x% (usually 95%) of energy lies, dark (1000 - 3000 Hz) or bright (> 6000 Hz)\nSpectralVariation: one frame similarity measure, steady (0 to .2), evolving (.2 to .6), highly changing/chaotic/noisy (.6 to 1.) \nSpectralDecrease: High freq attenuation, negative means higher freq content than lower, positive shows more low freq amp, broadband/noisey/bright ( -1 to -0.2), neutral (-0.2 to 0), low-passed/dull (0 to .1)\nSpectralSlope \nChroma (0-11): energy at pitch classes"
+					"text" : "These descriptors are computed for each player's input and determine the seeking behaviour of room agents:\n\nSpectralCentroid: brilliance of sound (dark to bright)\nSpectralSpread: narrow band (< 1000hz) to noisy or broadband (2000 - 6000 Hz), represents std dev around centroid\nSpectralSkewness: direction of magnitude distribution, left heavy (+ .5 to 2.) or right heavy (- .5 to -2.) \nSpectralKurtosis: peakedness of distribution, sharp peaks (5 to 10) or flat/noisy (1 to 3) \nSpectralRolloff: freq which x% (usually 95%) of energy lies, dark (1000 - 3000 Hz) or bright (> 6000 Hz)\nSpectralVariation: one frame similarity measure, steady (0 to .2), evolving (.2 to .6), highly changing/chaotic/noisy (.6 to 1.) \nSpectralDecrease: High freq attenuation, negative means higher freq content than lower, positive shows more low freq amp, broadband/noisey/bright ( -1 to -0.2), neutral (-0.2 to 0), low-passed/dull (0 to .1)\nSpectralSlope: values are too low to reliably use, muffled (more neg), bright/noise (near 0 to +) \nChroma (0-11): energy at pitch classes"
 				}
 
 			}
@@ -1683,7 +1682,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2022.0, 516.0, 181.0, 118.0 ],
+					"patching_rect" : [ 1287.0, 577.5, 181.0, 118.0 ],
 					"text" : "room perceptual \nmore broadly room perecptual qualities\n\nmap between - \nfrom literature vs personal experiments\nforeground choice of relevant features for compositional choices\n\nhow is that presented to user in an understandable way"
 				}
 
@@ -1696,7 +1695,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2022.0, 678.0, 280.0, 39.0 ],
+					"patching_rect" : [ 1517.0, 519.0, 280.0, 39.0 ],
 					"text" : "genome for preference / tendencies:\nwhat the room is drawn to / repulsed from"
 				}
 
@@ -1913,6 +1912,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-158", 0 ],
+					"source" : [ "obj-125", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-156", 0 ],
 					"source" : [ "obj-126", 0 ]
 				}
@@ -1986,6 +1992,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-135", 0 ],
 					"source" : [ "obj-159", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-125", 0 ],
+					"source" : [ "obj-161", 0 ]
 				}
 
 			}

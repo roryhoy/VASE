@@ -10,9 +10,32 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1332.0, 929.0 ],
+		"rect" : [ 34.0, 87.0, 1612.0, 929.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-37",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 644.0, 17.0, 61.0, 20.0 ],
+					"text" : "for testing"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 710.5, 16.0, 29.5, 22.0 ],
+					"text" : "1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-120",
 					"maxclass" : "newobj",
@@ -32,7 +55,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1799.0, 639.0, 29.5, 22.0 ],
-					"text" : "#1"
+					"text" : "1"
 				}
 
 			}
@@ -92,7 +115,19 @@
 						"classnamespace" : "box",
 						"rect" : [ -2525.0, 3.0, 2306.0, 780.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 2273.730000000000018, 346.980000000000018, 32.0, 22.0 ],
+									"text" : "print"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-94",
 									"maxclass" : "comment",
@@ -759,8 +794,8 @@
 									"numinlets" : 5,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 2231.0, 224.0, 225.0, 22.0 ],
-									"text" : "sprintf set SpectralSlope %f %f %f %f %f"
+									"patching_rect" : [ 2231.0, 224.0, 206.0, 22.0 ],
+									"text" : "sprintf SpectralSlope %f %f %f %f %f"
 								}
 
 							}
@@ -795,12 +830,12 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 2231.0, 100.0, 285.0, 22.0 ],
+									"patching_rect" : [ 2231.0, 100.0, 262.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"verbose" : 1
 									}
 ,
-									"text" : "mubu.track player_1 data @matrixcol SpectralSlope"
+									"text" : "mubu.track hold data @matrixcol SpectralSlope"
 								}
 
 							}
@@ -848,12 +883,12 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1965.0, 100.0, 211.0, 35.0 ],
+									"patching_rect" : [ 1965.0, 100.0, 244.0, 35.0 ],
 									"saved_object_attributes" : 									{
 										"verbose" : 1
 									}
 ,
-									"text" : "mubu.track player_1 data @matrixcol SpectralDecrease"
+									"text" : "mubu.track hold data @matrixcol SpectralDecrease"
 								}
 
 							}
@@ -900,12 +935,12 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1644.0, 100.0, 301.0, 22.0 ],
+									"patching_rect" : [ 1644.0, 100.0, 278.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"verbose" : 1
 									}
 ,
-									"text" : "mubu.track player_1 data @matrixcol SpectralVariation"
+									"text" : "mubu.track hold data @matrixcol SpectralVariation"
 								}
 
 							}
@@ -952,12 +987,12 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1329.0, 100.0, 289.0, 22.0 ],
+									"patching_rect" : [ 1329.0, 100.0, 265.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"verbose" : 1
 									}
 ,
-									"text" : "mubu.track player_1 data @matrixcol SpectralRolloff"
+									"text" : "mubu.track hold data @matrixcol SpectralRolloff"
 								}
 
 							}
@@ -1004,12 +1039,12 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1006.0, 100.0, 298.0, 22.0 ],
+									"patching_rect" : [ 1006.0, 100.0, 275.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"verbose" : 1
 									}
 ,
-									"text" : "mubu.track player_1 data @matrixcol SpectralKurtosis"
+									"text" : "mubu.track hold data @matrixcol SpectralKurtosis"
 								}
 
 							}
@@ -1081,12 +1116,12 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 672.0, 100.0, 309.0, 22.0 ],
+									"patching_rect" : [ 672.0, 100.0, 286.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"verbose" : 1
 									}
 ,
-									"text" : "mubu.track player_1 data @matrixcol SpectralSkewness"
+									"text" : "mubu.track hold data @matrixcol SpectralSkewness"
 								}
 
 							}
@@ -1737,6 +1772,15 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-31", 0 ],
+									"order" : 1,
+									"source" : [ "obj-33", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-9", 0 ],
+									"order" : 0,
 									"source" : [ "obj-33", 0 ]
 								}
 
@@ -2733,7 +2777,7 @@
 
 							}
  ],
-						"originid" : "pat-25496"
+						"originid" : "pat-25512"
 					}
 ,
 					"patching_rect" : [ 1895.0, 561.0, 89.0, 22.0 ],
@@ -3689,7 +3733,7 @@
 							}
  ],
 						"lines" : [  ],
-						"originid" : "pat-25498",
+						"originid" : "pat-25514",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -3854,7 +3898,7 @@
 
 							}
  ],
-						"originid" : "pat-25500"
+						"originid" : "pat-25516"
 					}
 ,
 					"patching_rect" : [ 612.0, 327.0, 128.0, 26.0 ],
@@ -4099,7 +4143,7 @@
 
 							}
  ],
-						"originid" : "pat-25502"
+						"originid" : "pat-25518"
 					}
 ,
 					"patching_rect" : [ 444.0, 327.0, 150.0, 26.0 ],
@@ -4998,7 +5042,7 @@
 
 							}
  ],
-						"originid" : "pat-25504"
+						"originid" : "pat-25520"
 					}
 ,
 					"patching_rect" : [ 246.0, 652.0, 190.0, 26.0 ],
@@ -5563,7 +5607,7 @@
 
 							}
  ],
-						"originid" : "pat-25506"
+						"originid" : "pat-25522"
 					}
 ,
 					"patching_rect" : [ 251.0, 451.0, 170.0, 26.0 ],
@@ -6479,7 +6523,7 @@
 
 							}
  ],
-						"originid" : "pat-25508"
+						"originid" : "pat-25524"
 					}
 ,
 					"patching_rect" : [ 255.0, 808.0, 190.0, 26.0 ],
@@ -6722,6 +6766,30 @@
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-118", 1 ],
+					"order" : 0,
+					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"order" : 2,
+					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-32", 0 ],
+					"order" : 1,
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}
@@ -6990,7 +7058,7 @@
 
 			}
  ],
-		"originid" : "pat-25494",
+		"originid" : "pat-25510",
 		"dependency_cache" : [ 			{
 				"name" : "jongly.aif",
 				"bootpath" : "C74:/media/msp",
