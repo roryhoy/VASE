@@ -10,11 +10,58 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1332.0, 929.0 ],
+		"rect" : [ 34.0, 87.0, 1138.0, 929.0 ],
 		"default_fontsize" : 10.0,
 		"gridsize" : [ 15.0, 15.0 ],
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-391",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1605.539999999999964, 967.5, 150.0, 40.0 ],
+					"text" : "could access dict in JS directly - probably would avoid array shenanigans"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-389",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1589.309999999999945, 1078.3900000000001, 78.0, 20.0 ],
+					"text" : "sprintf array %s"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-386",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1367.450000000000045, 1179.369999999999891, 28.0, 20.0 ],
+					"text" : "print"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-383",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1657.039999999999964, 1194.259999999999991, 47.0, 20.0 ],
+					"text" : "array.iter"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-380",
 					"maxclass" : "message",
@@ -29,13 +76,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-379",
-					"linecount" : 6,
+					"linecount" : 5,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1616.0, 1205.0, 50.0, 76.0 ],
-					"text" : "room_0::spectral_centroid array u445012873"
+					"patching_rect" : [ 1564.75, 1197.0, 50.0, 64.0 ],
+					"text" : "760. 3720. 0.178554 0.821446 0.512944"
 				}
 
 			}
@@ -46,25 +93,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1659.190000000000055, 1153.269999999999982, 54.0, 20.0 ],
-					"text" : "array.tolist"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-376",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1530.569999999999936, 1125.269999999999982, 40.0, 20.0 ],
-					"saved_object_attributes" : 					{
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
-					}
-,
-					"text" : "array"
+					"patching_rect" : [ 1589.309999999999945, 1102.0, 102.0, 20.0 ],
+					"text" : "array.tolist @flatten 1"
 				}
 
 			}
@@ -77,7 +107,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1403.0, 1197.0, 50.0, 31.0 ],
-					"text" : "u445012873"
+					"text" : "u471002712"
 				}
 
 			}
@@ -88,7 +118,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1400.589999999999918, 1151.6099999999999, 47.0, 20.0 ],
+					"patching_rect" : [ 1379.0, 1080.0, 47.0, 20.0 ],
 					"text" : "array.iter"
 				}
 
@@ -135,8 +165,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1250.875, 1108.0, 147.0, 31.0 ],
-					"text" : "room_0::spectral_centroid array u445012873"
+					"patching_rect" : [ 1184.5, 1108.0, 147.0, 31.0 ],
+					"text" : "room_0::spectral_centroid array u471002712"
 				}
 
 			}
@@ -457,8 +487,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 243.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_11 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 246.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_11 %f %f %f %f %f"
 								}
 
 							}
@@ -981,8 +1011,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 244.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_10 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 246.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_10 %f %f %f %f %f"
 								}
 
 							}
@@ -1506,8 +1536,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 239.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_9 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 241.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_9 %f %f %f %f %f"
 								}
 
 							}
@@ -2030,8 +2060,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 239.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_8 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 241.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_8 %f %f %f %f %f"
 								}
 
 							}
@@ -2554,8 +2584,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 239.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_7 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 241.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_7 %f %f %f %f %f"
 								}
 
 							}
@@ -3078,8 +3108,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 239.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_6 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 241.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_6 %f %f %f %f %f"
 								}
 
 							}
@@ -3602,8 +3632,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 239.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_5 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 241.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_5 %f %f %f %f %f"
 								}
 
 							}
@@ -4126,8 +4156,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 239.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_4 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 241.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_4 %f %f %f %f %f"
 								}
 
 							}
@@ -4650,8 +4680,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 239.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_3 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 241.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_3 %f %f %f %f %f"
 								}
 
 							}
@@ -5174,8 +5204,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 239.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_2 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 241.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_2 %f %f %f %f %f"
 								}
 
 							}
@@ -5698,8 +5728,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 239.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_1 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 241.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_1 %f %f %f %f %f"
 								}
 
 							}
@@ -6222,8 +6252,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 239.0, 20.0 ],
-									"text" : "sprintf replace room_%s::chroma_0 %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 241.0, 20.0 ],
+									"text" : "sprintf replace room_%s::Chroma_0 %f %f %f %f %f"
 								}
 
 							}
@@ -6747,8 +6777,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 259.0, 20.0 ],
-									"text" : "sprintf replace room_%s::spectral_slope %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 256.0, 20.0 ],
+									"text" : "sprintf replace room_%s::SpectralSlope %f %f %f %f %f"
 								}
 
 							}
@@ -7285,8 +7315,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 276.0, 20.0 ],
-									"text" : "sprintf replace room_%s::spectral_decrease %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 274.0, 20.0 ],
+									"text" : "sprintf replace room_%s::SpectralDecrease %f %f %f %f %f"
 								}
 
 							}
@@ -7811,7 +7841,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 18.0, 324.0, 259.0, 20.0 ],
-									"text" : "sprintf replace room_%s::spectral_rolloff %f %f %f %f %f"
+									"text" : "sprintf replace room_%s::SpectralRolloff %f %f %f %f %f"
 								}
 
 							}
@@ -8334,8 +8364,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 269.0, 20.0 ],
-									"text" : "sprintf replace room_%s::spectral_kurtosis %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 267.0, 20.0 ],
+									"text" : "sprintf replace room_%s::SpectralKurtosis %f %f %f %f %f"
 								}
 
 							}
@@ -8858,8 +8888,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 265.0, 20.0 ],
-									"text" : "sprintf replace room_%s::spectral_spread %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 276.0, 20.0 ],
+									"text" : "sprintf replace room_%s::SpectralSkewness %f %f %f %f %f"
 								}
 
 							}
@@ -9382,8 +9412,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 265.0, 20.0 ],
-									"text" : "sprintf replace room_%s::spectral_spread %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 263.0, 20.0 ],
+									"text" : "sprintf replace room_%s::SpectralSpread %f %f %f %f %f"
 								}
 
 							}
@@ -9919,8 +9949,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 324.0, 315.666666666666686, 20.0 ],
-									"text" : "sprintf replace room_%s::spectral_centroid %f %f %f %f %f"
+									"patching_rect" : [ 18.0, 324.0, 269.0, 20.0 ],
+									"text" : "sprintf replace room_%s::SpectralCentroid %f %f %f %f %f"
 								}
 
 							}
@@ -10349,8 +10379,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1544.0, 626.5, 50.0, 20.0 ],
-					"text" : "0"
+					"patching_rect" : [ 1544.0, 626.5, 29.5, 20.0 ],
+					"text" : "1"
 				}
 
 			}
@@ -12235,7 +12265,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-377", 0 ],
+					"destination" : [ "obj-372", 0 ],
 					"order" : 0,
 					"source" : [ "obj-144", 1 ]
 				}
@@ -12650,6 +12680,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-374", 1 ],
+					"order" : 1,
+					"source" : [ "obj-372", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-389", 0 ],
+					"order" : 0,
 					"source" : [ "obj-372", 0 ]
 				}
 
@@ -12657,6 +12696,23 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-379", 1 ],
+					"order" : 1,
+					"source" : [ "obj-377", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-383", 0 ],
+					"order" : 0,
+					"source" : [ "obj-377", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-386", 0 ],
+					"order" : 2,
 					"source" : [ "obj-377", 0 ]
 				}
 
@@ -12665,6 +12721,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-144", 0 ],
 					"source" : [ "obj-380", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-377", 0 ],
+					"source" : [ "obj-389", 0 ]
 				}
 
 			}
