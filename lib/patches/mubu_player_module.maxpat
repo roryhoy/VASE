@@ -55,7 +55,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1799.0, 639.0, 29.5, 22.0 ],
-					"text" : "1"
+					"text" : "2"
 				}
 
 			}
@@ -113,21 +113,9 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -2525.0, 3.0, 2306.0, 780.0 ],
+						"rect" : [ 34.0, 159.0, 1612.0, 780.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
-						"visible" : 1,
 						"boxes" : [ 							{
-								"box" : 								{
-									"id" : "obj-9",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 2273.730000000000018, 346.980000000000018, 32.0, 22.0 ],
-									"text" : "print"
-								}
-
-							}
-, 							{
 								"box" : 								{
 									"id" : "obj-94",
 									"maxclass" : "comment",
@@ -1772,15 +1760,6 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-31", 0 ],
-									"order" : 1,
-									"source" : [ "obj-33", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-9", 0 ],
-									"order" : 0,
 									"source" : [ "obj-33", 0 ]
 								}
 
@@ -2777,7 +2756,7 @@
 
 							}
  ],
-						"originid" : "pat-25512"
+						"originid" : "pat-29795"
 					}
 ,
 					"patching_rect" : [ 1895.0, 561.0, 89.0, 22.0 ],
@@ -2823,11 +2802,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-56",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1895.0, 352.0, 121.0, 20.0 ],
-					"text" : "this might be heavy..."
+					"patching_rect" : [ 1819.5, 339.0, 209.0, 33.0 ],
+					"text" : "this might be heavy...\nCheck after full mubu track instead?"
 				}
 
 			}
@@ -2879,73 +2859,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 272.0, 63.0, 88.0, 22.0 ],
 					"text" : "name player_1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"basictuning" : 440,
-					"data" : 					{
-						"clips" : [ 							{
-								"absolutepath" : "jongly.aif",
-								"filename" : "jongly.aif",
-								"filekind" : "audiofile",
-								"id" : "u004020638",
-								"loop" : 1,
-								"content_state" : 								{
-									"loop" : 1
-								}
-
-							}
- ]
-					}
-,
-					"followglobaltempo" : 0,
-					"formantcorrection" : 0,
-					"id" : "obj-26",
-					"maxclass" : "playlist~",
-					"mode" : "basic",
-					"numinlets" : 1,
-					"numoutlets" : 5,
-					"originallength" : [ 0.0, "ticks" ],
-					"originaltempo" : 120.0,
-					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 849.0, 48.0, 150.0, 30.0 ],
-					"pitchcorrection" : 0,
-					"quality" : "basic",
-					"saved_attribute_attributes" : 					{
-						"candicane2" : 						{
-							"expression" : ""
-						}
-,
-						"candicane3" : 						{
-							"expression" : ""
-						}
-,
-						"candicane4" : 						{
-							"expression" : ""
-						}
-,
-						"candicane5" : 						{
-							"expression" : ""
-						}
-,
-						"candicane6" : 						{
-							"expression" : ""
-						}
-,
-						"candicane7" : 						{
-							"expression" : ""
-						}
-,
-						"candicane8" : 						{
-							"expression" : ""
-						}
-
-					}
-,
-					"timestretch" : [ 0 ]
 				}
 
 			}
@@ -3733,7 +3646,7 @@
 							}
  ],
 						"lines" : [  ],
-						"originid" : "pat-25514",
+						"originid" : "pat-29797",
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 					}
 ,
@@ -3898,7 +3811,7 @@
 
 							}
  ],
-						"originid" : "pat-25516"
+						"originid" : "pat-29799"
 					}
 ,
 					"patching_rect" : [ 612.0, 327.0, 128.0, 26.0 ],
@@ -4143,7 +4056,7 @@
 
 							}
  ],
-						"originid" : "pat-25518"
+						"originid" : "pat-29801"
 					}
 ,
 					"patching_rect" : [ 444.0, 327.0, 150.0, 26.0 ],
@@ -5042,7 +4955,7 @@
 
 							}
  ],
-						"originid" : "pat-25520"
+						"originid" : "pat-29803"
 					}
 ,
 					"patching_rect" : [ 246.0, 652.0, 190.0, 26.0 ],
@@ -5607,7 +5520,7 @@
 
 							}
  ],
-						"originid" : "pat-25522"
+						"originid" : "pat-29805"
 					}
 ,
 					"patching_rect" : [ 251.0, 451.0, 170.0, 26.0 ],
@@ -6523,7 +6436,7 @@
 
 							}
  ],
-						"originid" : "pat-25524"
+						"originid" : "pat-29807"
 					}
 ,
 					"patching_rect" : [ 255.0, 808.0, 190.0, 26.0 ],
@@ -6818,13 +6731,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 1 ],
-					"source" : [ "obj-26", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-119", 0 ],
 					"source" : [ "obj-28", 0 ]
 				}
@@ -7058,14 +6964,8 @@
 
 			}
  ],
-		"originid" : "pat-25510",
+		"originid" : "pat-29793",
 		"dependency_cache" : [ 			{
-				"name" : "jongly.aif",
-				"bootpath" : "C74:/media/msp",
-				"type" : "AIFF",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "mubu.mxo",
 				"type" : "iLaX"
 			}

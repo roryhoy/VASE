@@ -14,6 +14,18 @@
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-35",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 243.0, 361.0, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-34",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -55,7 +67,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 163.0, 301.0, 109.0, 22.0 ],
+					"patching_rect" : [ 124.0, 389.0, 109.0, 22.0 ],
 					"text" : "calculateDistances"
 				}
 
@@ -67,7 +79,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 31.0, 374.0, 72.0, 22.0 ],
+					"patching_rect" : [ 31.0, 446.0, 72.0, 22.0 ],
 					"text" : "printPlayers"
 				}
 
@@ -79,7 +91,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 31.0, 342.0, 72.0, 22.0 ],
+					"patching_rect" : [ 31.0, 414.0, 72.0, 22.0 ],
 					"text" : "printSpaces"
 				}
 
@@ -90,7 +102,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 124.0, 475.0, 32.0, 22.0 ],
+					"patching_rect" : [ 124.0, 547.0, 32.0, 22.0 ],
 					"text" : "print"
 				}
 
@@ -103,7 +115,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 341.0, 176.5, 24.0, 24.0 ]
+					"patching_rect" : [ 307.0, 356.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -114,7 +126,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 115.0, 183.0, 50.0, 22.0 ],
+					"patching_rect" : [ 243.0, 389.0, 50.0, 22.0 ],
 					"text" : "compile"
 				}
 
@@ -127,7 +139,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 580.0, 171.5, 24.0, 24.0 ]
+					"patching_rect" : [ 546.0, 351.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -139,7 +151,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 5,
 					"outlettype" : [ "dictionary", "", "", "", "" ],
-					"patching_rect" : [ 580.0, 209.5, 232.5, 29.0 ],
+					"patching_rect" : [ 546.0, 389.0, 232.5, 29.0 ],
 					"presentation_linecount" : 3,
 					"saved_object_attributes" : 					{
 						"embed" : 0,
@@ -160,7 +172,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 5,
 					"outlettype" : [ "dictionary", "", "", "", "" ],
-					"patching_rect" : [ 341.0, 209.5, 230.5, 29.0 ],
+					"patching_rect" : [ 307.0, 389.0, 230.5, 29.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"legacy" : 0,
@@ -180,7 +192,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 124.0, 396.0, 105.0, 22.0 ],
+					"patching_rect" : [ 124.0, 468.0, 105.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -193,30 +205,6 @@
 						"autowatch" : 1
 					}
 
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-57",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 31.0, 110.0, 83.0, 22.0 ],
-					"text" : "v space-count"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-94",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 220.0, 110.0, 84.0, 22.0 ],
-					"text" : "v player-count"
 				}
 
 			}
@@ -250,15 +238,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
-					"order" : 0,
-					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
-					"order" : 1,
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -337,6 +316,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-32", 0 ],
 					"source" : [ "obj-34", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-35", 0 ]
 				}
 
 			}
