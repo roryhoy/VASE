@@ -10,9 +10,29 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 247.0, 109.0, 867.0, 763.0 ],
+		"rect" : [ 175.0, 109.0, 972.0, 763.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-36",
+					"maxclass" : "dict.view",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 608.0, 537.0, 314.0, 175.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-369",
+					"maxclass" : "dict.view",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 284.0, 537.0, 314.0, 175.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-35",
 					"maxclass" : "newobj",
@@ -26,24 +46,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-34",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 23.5, 213.0, 61.0, 22.0 ],
-					"text" : "delay 200"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-33",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "bang" ],
-					"patching_rect" : [ 49.939999999999998, 281.589999999999975, 42.0, 22.0 ],
+					"patching_rect" : [ 124.0, 232.0, 42.0, 22.0 ],
 					"text" : "t b b b"
 				}
 
@@ -56,7 +64,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 23.5, 242.0, 24.0, 24.0 ]
+					"patching_rect" : [ 124.0, 193.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -211,12 +219,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-2",
-					"linecount" : 4,
+					"linecount" : 9,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 17.0, 197.0, 60.0 ],
-					"text" : "For every room, \n\nCheck against the mubu spectral feature values of each player"
+					"patching_rect" : [ 31.0, 17.0, 197.0, 127.0 ],
+					"text" : "For every room, \n\nCheck against the mubu spectral feature values of each player to calculate feature \"distance\" \n\nThe higher the number for each player, the further from the ideal spectral play style for the room"
 				}
 
 			}
@@ -309,13 +317,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"source" : [ "obj-33", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-32", 0 ],
-					"source" : [ "obj-34", 0 ]
 				}
 
 			}
