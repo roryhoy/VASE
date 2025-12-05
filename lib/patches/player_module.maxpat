@@ -16,6 +16,19 @@
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontsize" : 18.598011675824175,
+					"id" : "obj-92",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1007.0, 220.0, 264.0, 69.0 ],
+					"text" : "Calculate distance to each other player in order to attenuate listener appropriately"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontsize" : 12.136363636363633,
 					"id" : "obj-146",
 					"linecount" : 4,
@@ -2393,7 +2406,7 @@
 
 			}
  ],
-		"originid" : "pat-12922",
+		"originid" : "pat-36611",
 		"dependency_cache" : [ 			{
 				"name" : "3d-dist.js",
 				"bootpath" : "~/Documents/School/PhD/Dissertation/VASE/lib/scripts",
