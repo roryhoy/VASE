@@ -16,6 +16,41 @@
 		"subpatcher_template" : "bigpatcher",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-526",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 32.5, 414.0, 119.0, 18.0 ],
+					"text" : "probably will need tuning"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-524",
+					"maxclass" : "newobj",
+					"numinlets" : 5,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 17.75, 452.5, 122.0, 20.0 ],
+					"text" : "zmap 0. 20. 1000. 20000."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-523",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 17.0, 362.0, 150.0, 29.0 ],
+					"text" : "duration is mapped from speactral feature distance score"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-513",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -447,7 +482,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 54.0, 512.0, 76.0, 20.0 ],
+					"patching_rect" : [ 61.0, 496.0, 76.0, 20.0 ],
 					"text" : "loadmess 1000"
 				}
 
@@ -1067,7 +1102,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 436.0, 307.0, 187.0, 118.0 ],
+					"patching_rect" : [ 486.0, 273.0, 187.0, 118.0 ],
 					"text" : "on attract, check position coll for players and set movement target in interpolation script\n\non avoid, calc vector away from player to move out of sensing range\n\nIf both occur at once, first navigate to the attraction player and then calc avoidance vector"
 				}
 
@@ -11320,7 +11355,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 48.0, 493.0, 88.0, 18.0 ],
+					"patching_rect" : [ 55.0, 477.0, 88.0, 18.0 ],
 					"text" : "transition duration"
 				}
 
@@ -13474,6 +13509,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-524", 0 ],
+					"midpoints" : [ 244.5, 399.5421142578125, 27.25, 399.5421142578125 ],
+					"source" : [ "obj-435", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-433", 0 ],
 					"source" : [ "obj-436", 1 ]
 				}
@@ -13802,6 +13845,13 @@
 					"destination" : [ "obj-82", 0 ],
 					"order" : 0,
 					"source" : [ "obj-52", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-103", 0 ],
+					"source" : [ "obj-524", 0 ]
 				}
 
 			}
