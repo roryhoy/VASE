@@ -9,10 +9,59 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 134.0, 96.0, 1174.0, 852.0 ],
+        "rect": [ 34.0, 96.0, 1174.0, 852.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-73",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 354.26, 784.72, 51.0, 20.0 ],
+                    "text": "route rt60"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-60",
+                    "linecount": 7,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 415.0, 5.0, 352.0, 85.0 ],
+                    "text": "One instance of this module is spawned per player, per room. Meaning if there are 4 players and 6 rooms there will be 24 total reverb modules, and 4 for each room which the individual player audio is routed into. This allows for unique mixes and separated processed audio per player, and allows approximation of distance attenuation while applying the \n\nThis may get changed to one instance per listener..."
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-53",
+                    "linecount": 6,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 179.0, 680.0, 150.0, 74.0 ],
+                    "text": "calculate room volume based on room xyz dim. Scale beyond \"real\" size? Depending on VASE size this may be quite limited, perhaps they should not be explicitly linked."
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.133333333333333, 0.0, 1.0, 1.0 ],
+                    "id": "obj-451",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 79.0, 706.0, 72.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll space-dim"
+                }
+            },
             {
                 "box": {
                     "format": 6,
@@ -198,11 +247,12 @@
             {
                 "box": {
                     "id": "obj-61",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 371.0, 863.0, 56.0, 18.0 ],
-                    "text": "Room size"
+                    "patching_rect": [ 332.0, 857.5, 101.0, 29.0 ],
+                    "text": "Room size in m ^ 3 (10 - 15000)"
                 }
             },
             {
@@ -256,7 +306,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 589.0, 808.0, 81.0, 74.0 ],
-                    "text": "size effects: \nearly min\nearly max\ncluster min\ncluster max\nrevberb min"
+                    "presentation_linecount": 6,
+                    "text": "size effects: \nearly min\nearly max\ncluster min\ncluster max\nreverb min"
                 }
             },
             {
@@ -274,6 +325,8 @@
                     "format": 6,
                     "id": "obj-38",
                     "maxclass": "flonum",
+                    "maximum": 15000.0,
+                    "minimum": 10.0,
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
@@ -300,7 +353,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 686.0, 855.0, 294.0, 286.0 ],
-                    "text": "/reverb/roomsize\nglobal RT60 with value expressed in seconds\n/reverb/gain\nrelative decay for low frequencies (as a % of the global RT60)\nrelative decay for mid frequencies (as a % of the global RT60)\nrelative decay for high frequencies (as a % of the global RT60)\n/reverb/fl\n/reverb/fh\n/reberb/density\n/reverb/air/freq\n/reverb/roomoffset\necho start delay\n\nroom filter\ndirect filter\n\n/early/min\n/early/max\n/early/distr\nearly filter\n\n/cluster/min\n/cluster/max\n/cluster/distr\ncluster filter",
+                    "text": "Virtual Room Volume in m ^ 3 (10 - 15000)\nglobal RT60 with value expressed in seconds\n/reverb/gain\nrelative decay for low frequencies (as a % of the global RT60)\nrelative decay for mid frequencies (as a % of the global RT60)\nrelative decay for high frequencies (as a % of the global RT60)\n/reverb/fl\n/reverb/fh\n/reverb/density\n/reverb/air/freq\n/reverb/roomoffset\necho start delay\n\nroom filter\ndirect filter\n\n/early/min\n/early/max\n/early/distr\nearly filter\n\n/cluster/min\n/cluster/max\n/cluster/distr\ncluster filter",
                     "textjustification": 2
                 }
             },
@@ -312,7 +365,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 989.0, 855.0, 448.0, 286.0 ],
-                    "text": "/reverb/roomsize\n/reverb/tr0\n/reverb/gain\n/reverb/trl\n/reverb/trm\n/reverb/trh\n/reverb/fl\n/reverb/fh\n/reberb/density\n/reverb/air/freq\n/reverb/roomoffset\n/reverb/min\n\n/room/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]\n/direct/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]\n\n/early/min\n/early/max\n/early/distr\n/early/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]\n\n/cluster/min\n/cluster/max\n/cluster/distr\n/cluster/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]"
+                    "text": "/reverb/roomsize\n/reverb/tr0\n/reverb/gain\n/reverb/trl\n/reverb/trm\n/reverb/trh\n/reverb/fl\n/reverb/fh\n/reverb/density\n/reverb/air/freq\n/reverb/roomoffset\n/reverb/min\n\n/room/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]\n/direct/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]\n\n/early/min\n/early/max\n/early/distr\n/early/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]\n\n/cluster/min\n/cluster/max\n/cluster/distr\n/cluster/filter/params [gain] [low gain] [medium gain] [high gain] [freq low] [freq high]"
                 }
             },
             {
@@ -321,7 +374,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 607.0, 109.0, 95.0, 18.0 ],
+                    "patching_rect": [ 607.0, 121.0, 95.0, 18.0 ],
                     "text": "output current state"
                 }
             },
@@ -333,7 +386,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 638.0, 137.0, 24.0, 24.0 ]
+                    "patching_rect": [ 638.0, 149.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -1160,7 +1213,7 @@
                     "numoutlets": 1,
                     "offset": [ 0.0, 0.0 ],
                     "outlettype": [ "" ],
-                    "patching_rect": [ 717.0, 82.0, 292.0, 39.5 ],
+                    "patching_rect": [ 717.0, 94.0, 292.0, 39.5 ],
                     "viewvisibility": 1
                 }
             },
@@ -1174,7 +1227,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1030.0, 131.0, 181.0, 23.0 ],
+                    "patching_rect": [ 1030.0, 143.0, 181.0, 23.0 ],
                     "text": "double-click to open the window"
                 }
             },
@@ -1285,7 +1338,7 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 806.0, 140.5, 142.0, 21.0 ],
+                    "patching_rect": [ 806.0, 152.0, 142.0, 21.0 ],
                     "text": "spat5.presets.management"
                 }
             },
@@ -1580,7 +1633,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 428.0, 139.5, 132.0, 18.0 ],
+                    "patching_rect": [ 386.0, 737.0, 132.0, 18.0 ],
                     "text": "settings message for reverb"
                 }
             },
@@ -1591,7 +1644,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 397.0, 109.5, 128.0, 20.0 ],
+                    "patching_rect": [ 355.0, 707.0, 128.0, 20.0 ],
                     "text": "sprintf set room_reverb_%i"
                 }
             },
@@ -1602,7 +1655,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 397.0, 138.5, 19.0, 20.0 ],
+                    "patching_rect": [ 355.0, 736.0, 19.0, 20.0 ],
                     "text": "r"
                 }
             },
@@ -1974,6 +2027,14 @@
             "obj-76::obj-58": [ "live.text[16]", "live.text[9]", 0 ],
             "obj-76::obj-62": [ "live.text[15]", "live.text[9]", 0 ],
             "obj-76::obj-72": [ "live.text[14]", "live.text[8]", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-32::obj-58": {
                     "parameter_longname": "live.text[6]"

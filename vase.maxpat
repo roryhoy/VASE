@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 1171.0, 852.0 ],
+        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
@@ -1312,7 +1312,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 874.0, 87.0, 772.0, 929.0 ],
+                        "rect": [ 134.0, 96.0, 772.0, 852.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
@@ -1775,13 +1775,11 @@
                                     "source": [ "obj-8", 0 ]
                                 }
                             }
-                        ],
-                        "bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 437.0, 656.0, 154.0, 34.0 ],
                     "saved_object_attributes": {
-                        "fontsize": 10.0,
-                        "locked_bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        "fontsize": 10.0
                     },
                     "text": "p room-agents"
                 }
@@ -1836,7 +1834,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 34.0, 87.0, 1612.0, 929.0 ],
+                        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
@@ -2741,13 +2739,11 @@
                                     "source": [ "obj-89", 2 ]
                                 }
                             }
-                        ],
-                        "bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 436.0, 596.0, 209.0, 39.0 ],
                     "saved_object_attributes": {
-                        "fontsize": 10.0,
-                        "locked_bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        "fontsize": 10.0
                     },
                     "text": "p player-sources"
                 }
@@ -3525,13 +3521,11 @@
                                     "source": [ "obj-7", 0 ]
                                 }
                             }
-                        ],
-                        "bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 479.0, 526.0, 93.0, 19.0 ],
                     "saved_object_attributes": {
-                        "fontsize": 10.0,
-                        "locked_bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        "fontsize": 10.0
                     },
                     "text": "p routing-matrix"
                 }
@@ -11849,7 +11843,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 34.0, 87.0, 414.0, 190.0 ],
+                        "rect": [ 134.0, 168.0, 414.0, 190.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "title": "VASE Viewer",
@@ -22865,13 +22859,11 @@
                                     "source": [ "obj-99", 0 ]
                                 }
                             }
-                        ],
-                        "bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 43.0, 479.0, 99.0, 38.0 ],
                     "saved_object_attributes": {
-                        "fontsize": 10.0,
-                        "locked_bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        "fontsize": 10.0
                     },
                     "text": "p visual"
                 }
@@ -22991,7 +22983,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 34.0, 87.0, 772.0, 929.0 ],
+                        "rect": [ 134.0, 96.0, 772.0, 852.0 ],
                         "openinpresentation": 1,
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
@@ -23684,13 +23676,11 @@
                                     "source": [ "obj-92", 0 ]
                                 }
                             }
-                        ],
-                        "bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 437.0, 714.0, 123.0, 37.0 ],
                     "saved_object_attributes": {
-                        "fontsize": 10.0,
-                        "locked_bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        "fontsize": 10.0
                     },
                     "text": "p listeners",
                     "varname": "listener-hoa-module"
@@ -48354,6 +48344,14 @@
             "obj-95::obj-96": [ "live.text[17]", "live.text", 0 ],
             "obj-95::obj-98": [ "live.text[16]", "live.text", 0 ],
             "obj-98": [ "live.text", "live.text", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-128::obj-16": {
                     "parameter_longname": "live.text[15]"
