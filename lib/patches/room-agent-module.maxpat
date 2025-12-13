@@ -9,10 +9,88 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 1177.0, 852.0 ],
+        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-153",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1263.5, 1088.5, 80.0, 29.0 ],
+                    "text": "random cant move timeout"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-148",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "patching_rect": [ 1235.0, 1064.0, 50.0, 20.0 ],
+                    "text": "loadbang"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-147",
+                    "maxclass": "number",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "bang" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 1235.0, 1158.0, 50.0, 20.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-140",
+                    "maxclass": "button",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 1235.0, 1091.0, 24.0, 24.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-132",
+                    "maxclass": "newobj",
+                    "numinlets": 4,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1235.0, 1127.0, 137.0, 20.0 ],
+                    "text": "gauss-dist 0. 120. 20. 20. 0.5",
+                    "varname": "gauss_stdv"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-129",
+                    "linecount": 6,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1060.0, 923.0, 343.0, 74.0 ],
+                    "text": "Movement tendencies:\nHow long it takes to reset CanMove value, shorter is quicker swaps around\n\nIdea:\n- Wander (random walk in space)\n- Stability (Smoothness in movement vs jittery | upper limit on acceleration)"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-64",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 259.0, 362.0, 150.0, 29.0 ],
+                    "text": "Incoming messages:\nattract/avoid, player_#, score"
+                }
+            },
             {
                 "box": {
                     "id": "obj-48",
@@ -42,8 +120,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2076.0, 1059.0, 221.0, 50.0 ],
-                    "presentation_linecount": 4,
+                    "patching_rect": [ 2084.0, 1100.0, 221.0, 50.0 ],
                     "text": "Pitch focus weighting not yet implemented, currently same weighting as all spectral features",
                     "textcolor": [ 0.7411764705882353, 0.0392156862745098, 0.0392156862745098, 1.0 ]
                 }
@@ -245,7 +322,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1167.0, 1227.0, 29.5, 20.0 ],
+                    "patching_rect": [ 1202.0, 1255.0, 29.5, 20.0 ],
                     "text": "1"
                 }
             },
@@ -256,7 +333,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1130.25, 1227.0, 29.5, 20.0 ],
+                    "patching_rect": [ 1166.0, 1255.0, 29.5, 20.0 ],
                     "text": "0"
                 }
             },
@@ -267,7 +344,7 @@
                     "numinlets": 2,
                     "numoutlets": 2,
                     "outlettype": [ "bang", "" ],
-                    "patching_rect": [ 1130.25, 1198.0, 30.0, 20.0 ],
+                    "patching_rect": [ 1166.0, 1226.0, 30.0, 20.0 ],
                     "text": "sel 9"
                 }
             },
@@ -278,7 +355,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "bang", "bang" ],
-                    "patching_rect": [ 1130.25, 1043.0, 29.5, 20.0 ],
+                    "patching_rect": [ 1166.0, 1071.0, 29.5, 20.0 ],
                     "text": "t b b"
                 }
             },
@@ -290,7 +367,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 1130.25, 1014.0, 24.0, 24.0 ]
+                    "patching_rect": [ 1166.0, 1042.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -300,7 +377,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1130.25, 1069.0, 29.5, 20.0 ],
+                    "patching_rect": [ 1166.0, 1097.0, 29.5, 20.0 ],
                     "text": "1"
                 }
             },
@@ -311,7 +388,7 @@
                     "numinlets": 5,
                     "numoutlets": 4,
                     "outlettype": [ "int", "", "", "int" ],
-                    "patching_rect": [ 1130.25, 1167.0, 61.0, 20.0 ],
+                    "patching_rect": [ 1166.0, 1195.0, 61.0, 20.0 ],
                     "text": "counter 9"
                 }
             },
@@ -323,7 +400,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 1130.25, 1100.0, 24.0, 24.0 ]
+                    "patching_rect": [ 1166.0, 1128.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -333,7 +410,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 1130.25, 1130.0, 65.0, 20.0 ],
+                    "patching_rect": [ 1166.0, 1158.0, 65.0, 20.0 ],
                     "text": "qmetro 1000"
                 }
             },
@@ -344,7 +421,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1380.0, 1085.0, 141.0, 29.0 ],
+                    "patching_rect": [ 1385.0, 1085.0, 141.0, 29.0 ],
                     "text": "turn off ability to check for new moves if started moving"
                 }
             },
@@ -388,7 +465,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 153.0, 445.0, 24.0, 24.0 ]
+                    "patching_rect": [ 153.0, 450.5, 24.0, 24.0 ]
                 }
             },
             {
@@ -397,7 +474,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1158.25, 1014.0, 132.0, 18.0 ],
+                    "patching_rect": [ 1194.0, 1042.0, 132.0, 18.0 ],
                     "text": "start timer when done move"
                 }
             },
@@ -408,7 +485,7 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1130.25, 988.0, 79.0, 20.0 ],
+                    "patching_rect": [ 1166.0, 1016.0, 79.0, 20.0 ],
                     "text": "r #0-done-move"
                 }
             },
@@ -428,8 +505,9 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 32.5, 414.0, 119.0, 18.0 ],
-                    "text": "probably will need tuning"
+                    "patching_rect": [ 32.5, 431.0, 119.0, 18.0 ],
+                    "text": "probably will need tuning",
+                    "textcolor": [ 0.796078431372549, 0.15294117647058825, 0.15294117647058825, 1.0 ]
                 }
             },
             {
@@ -841,7 +919,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 61.0, 496.0, 76.0, 20.0 ],
+                    "patching_rect": [ 40.75, 507.0, 76.0, 20.0 ],
                     "text": "loadmess 1000"
                 }
             },
@@ -1355,7 +1433,7 @@
                     "numinlets": 1,
                     "numoutlets": 5,
                     "outlettype": [ "", "", "", "", "" ],
-                    "patching_rect": [ 287.5, 413.0, 61.0, 20.0 ],
+                    "patching_rect": [ 287.5, 418.0, 61.0, 20.0 ],
                     "saved_object_attributes": {
                         "legacyoutputorder": 1
                     },
@@ -1401,7 +1479,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 486.0, 273.0, 193.0, 118.0 ],
+                    "patching_rect": [ 453.0, 257.0, 193.0, 118.0 ],
                     "text": "on attract, check position coll for players and set movement target in interpolation script\n\non avoid, calc vector away from player to move out of sensing range\n\nIf both occur at once, first navigate to the attraction player and then calc avoidance vector"
                 }
             },
@@ -1423,7 +1501,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 181.0, 413.0, 50.0, 20.0 ],
+                    "patching_rect": [ 180.5, 418.0, 50.0, 20.0 ],
                     "text": "avoid"
                 }
             },
@@ -1489,7 +1567,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 355.5, 413.0, 61.0, 20.0 ],
+                    "patching_rect": [ 355.5, 418.0, 61.0, 20.0 ],
                     "text": "player_2"
                 }
             },
@@ -1533,7 +1611,7 @@
                     "numinlets": 3,
                     "numoutlets": 3,
                     "outlettype": [ "bang", "bang", "" ],
-                    "patching_rect": [ 181.0, 447.0, 93.0, 20.0 ],
+                    "patching_rect": [ 181.0, 452.5, 93.0, 20.0 ],
                     "text": "sel attract avoid"
                 }
             },
@@ -1686,7 +1764,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 1747.0, 1097.0, 24.0, 24.0 ]
+                    "patching_rect": [ 1747.0, 1101.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -1707,7 +1785,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "float" ],
-                    "patching_rect": [ 1747.0, 1161.0, 29.5, 20.0 ],
+                    "patching_rect": [ 1747.0, 1166.5, 29.5, 20.0 ],
                     "text": "+ 4."
                 }
             },
@@ -1764,7 +1842,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1514.0, 1218.0, 210.0, 20.0 ],
+                    "patching_rect": [ 1508.75, 1246.0, 210.0, 20.0 ],
                     "text": "sprintf replace room_%s::AttractionThresh %f"
                 }
             },
@@ -1864,7 +1942,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1202.0, 299.0, 150.0, 118.0 ],
+                    "patching_rect": [ 1376.0, 578.5, 150.0, 118.0 ],
                     "text": "Ranges:\n0 - 20000\n0 - 20000\n~ -3 - 3\n0 - 20+\n0 - 20000\n0 - 1\n(Pipo uses this range) -1 - 2\n?\n0 - 1",
                     "textjustification": 2
                 }
@@ -1893,23 +1971,13 @@
             },
             {
                 "box": {
-                    "id": "obj-142",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 2224.0, 446.0, 150.0, 18.0 ],
-                    "text": "-1. to 1."
-                }
-            },
-            {
-                "box": {
                     "fontsize": 12.573529411764707,
                     "id": "obj-138",
                     "linecount": 6,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1081.0, 827.0, 184.0, 91.0 ],
+                    "patching_rect": [ 1087.0, 808.0, 184.0, 91.0 ],
                     "text": "Are agent genome perception weights and prefrerence sets tied to revereration / space qualities of the agent? They don't need to be, but may provide interesting mappings"
                 }
             },
@@ -1931,7 +1999,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1982.0, 436.0, 255.0, 118.0 ],
+                    "patching_rect": [ 1744.0, 439.0, 255.0, 118.0 ],
                     "text": "Genome:\nPerception weights - scaling how much each feature matters to the agent. Higher weights result in a great effect to the calculated spectral feature distance\n\nPreference set - the \"ideal\" values the agent enjoys for each feature\n\nVariance - does the agent prefer to follow the mean or characteristics of the standard deviation?"
                 }
             },
@@ -1964,7 +2032,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 55.0, 477.0, 88.0, 18.0 ],
+                    "patching_rect": [ 66.75, 537.0, 88.0, 18.0 ],
                     "text": "transition duration"
                 }
             },
@@ -1976,7 +2044,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 53.75, 536.0, 50.0, 20.0 ]
+                    "patching_rect": [ 17.75, 536.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -2203,11 +2271,12 @@
             {
                 "box": {
                     "id": "obj-72",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 73.75, 696.0, 74.0, 18.0 ],
-                    "text": "time (0. to 1.)"
+                    "patching_rect": [ 74.75, 703.5, 110.0, 29.0 ],
+                    "text": "time through transition \n(0. to 1.)"
                 }
             },
             {
@@ -2221,7 +2290,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 22.75, 695.0, 50.0, 20.0 ]
+                    "patching_rect": [ 22.75, 708.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -2388,12 +2457,12 @@
             {
                 "box": {
                     "id": "obj-56",
-                    "linecount": 10,
+                    "linecount": 5,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2132.0, 777.0, 553.0, 118.0 ],
-                    "text": "Movement tendencies:\n- Wander (random walk in space)\n- Stability (Smoothness in movement vs jittery | upper limit on acceleration)\n\n\nSpectral Feature Genome Tendencies:\n- Wander (high amount of variation in brownian motion walk through range of feature values and variation in care weights)\n- Stability (stays quite similar to initial genome feature values, care weights do not change)\n\n^ Can be consistent per feature or provided with different 0. to 1. tendency values (stable to wander)"
+                    "patching_rect": [ 2132.0, 777.0, 553.0, 62.0 ],
+                    "text": "Spectral Feature Genome Tendencies:\n- Wander (high amount of variation in brownian motion walk through range of feature values and variation in care weights)\n- Stability (stays quite similar to initial genome feature values, care weights do not change)\n\n^ Can be consistent per feature or provided with different 0. to 1. tendency values (stable to wander)"
                 }
             },
             {
@@ -3091,8 +3160,8 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2084.0, 964.0, 150.0, 85.0 ],
-                    "text": "preference for scales / modes?\n\nmajor\nminor\n\nLydian \nPhrygian "
+                    "patching_rect": [ 2081.0, 958.0, 227.0, 96.0 ],
+                    "text": "preference for scales / modes? \nmajor minor Lydian Phrygian etc\n\nChecking occurs over mean of 10 second duration, if there are repeating notes then this can work, but may be better to have random set of chroma values as established\n"
                 }
             },
             {
@@ -3113,7 +3182,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1277.0, 419.0, 150.0, 174.0 ],
+                    "patching_rect": [ 2400.0, 879.0, 150.0, 174.0 ],
                     "text": "Chroma corresponds to 12 pitch classes:\n\n0 - C\n1 - C#/Db\n2 - D\n3 - D#/Eb\n4 - E\n5 - F\n6 - F#/Gb\n7 - G\n8 - G#/Ab\n9 - A\n10 - A#/Bb\n11 - B"
                 }
             },
@@ -3190,7 +3259,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1354.0, 288.0, 1011.0, 129.0 ],
+                    "patching_rect": [ 1528.0, 567.5, 915.0, 129.0 ],
                     "text": "These descriptors are computed for each player's input and determine the seeking behaviour of room agents:\n\nSpectralCentroid: brilliance of sound (dark to bright)\nSpectralSpread: narrow band (< 1000hz) to noisy or broadband (2000 - 6000 Hz), represents std dev around centroid\nSpectralSkewness: direction of magnitude distribution, left heavy (+ .5 to 2.) or right heavy (- .5 to -2.) \nSpectralKurtosis: peakedness of distribution, sharp peaks (5 to 10) or flat/noisy (1 to 3) \nSpectralRolloff: freq which x% (usually 95%) of energy lies, dark (1000 - 3000 Hz) or bright (> 6000 Hz)\nSpectralVariation: one frame similarity measure, steady (0 to .2), evolving (.2 to .6), highly changing/chaotic/noisy (.6 to 1.) \nSpectralDecrease: High freq attenuation, negative means higher freq content than lower, positive shows more low freq amp, broadband/noisey/bright ( -1 to -0.2), neutral (-0.2 to 0), low-passed/dull (0 to .1)\nSpectralSlope: values are too low to reliably use, muffled (more neg), bright/noise (near 0 to +) \nChroma (0-11): energy at pitch classes"
                 }
             },
@@ -3201,7 +3270,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1271.0, 813.0, 181.0, 118.0 ],
+                    "patching_rect": [ 1277.0, 794.0, 181.0, 118.0 ],
                     "text": "room perceptual \nmore broadly room perecptual qualities\n\nmap between - \nfrom literature vs personal experiments\nforeground choice of relevant features for compositional choices\n\nhow is that presented to user in an understandable way"
                 }
             },
@@ -3404,8 +3473,20 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-147", 0 ],
+                    "source": [ "obj-132", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-122", 0 ],
                     "source": [ "obj-135", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-132", 0 ],
+                    "source": [ "obj-140", 0 ]
                 }
             },
             {
@@ -3418,6 +3499,27 @@
                 "patchline": {
                     "destination": [ "obj-357", 0 ],
                     "source": [ "obj-146", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-543", 4 ],
+                    "order": 0,
+                    "source": [ "obj-147", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-559", 1 ],
+                    "midpoints": [ 1244.5, 1227.0, 1197.0, 1227.0, 1197.0, 1221.0, 1186.5, 1221.0 ],
+                    "order": 1,
+                    "source": [ "obj-147", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-140", 0 ],
+                    "source": [ "obj-148", 0 ]
                 }
             },
             {
@@ -3487,7 +3589,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-127", 0 ],
-                    "midpoints": [ 1537.5, 1014.0, 1569.0, 1014.0, 1569.0, 1122.0, 1848.0, 1122.0, 1848.0, 1131.0, 1876.5, 1131.0 ],
+                    "midpoints": [ 1537.5, 1014.0, 1569.0, 1014.0, 1569.0, 1129.53125, 1848.0, 1129.53125, 1848.0, 1132.29296875, 1876.5, 1132.29296875 ],
                     "order": 0,
                     "source": [ "obj-151", 0 ]
                 }
@@ -3518,7 +3620,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-423", 1 ],
-                    "midpoints": [ 1537.5, 1023.0, 1338.5, 1023.0 ],
+                    "midpoints": [ 1537.5, 1071.0, 1371.0, 1071.0, 1371.0, 1122.0, 1380.625, 1122.0, 1380.625, 1164.0, 1338.5, 1164.0 ],
                     "order": 20,
                     "source": [ "obj-151", 0 ]
                 }
@@ -3574,7 +3676,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-98", 0 ],
-                    "midpoints": [ 1537.5, 894.0, 1848.0, 894.0, 1848.0, 873.0, 1876.5, 873.0 ],
+                    "midpoints": [ 1537.5, 889.30859375, 1863.0, 889.30859375, 1863.0, 873.0, 1876.5, 873.0 ],
                     "order": 10,
                     "source": [ "obj-151", 0 ]
                 }
@@ -3775,6 +3877,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-410", 0 ],
+                    "midpoints": [ 1756.5, 1196.484375, 1803.05078125, 1196.484375, 1803.05078125, 1239.28125, 1778.5, 1239.28125 ],
                     "order": 0,
                     "source": [ "obj-409", 0 ]
                 }
@@ -3821,7 +3924,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-412", 0 ],
-                    "midpoints": [ 1548.0, 1197.1959228515625, 1734.0, 1197.1959228515625, 1734.0, 1092.0, 1756.5, 1092.0 ],
+                    "midpoints": [ 1548.0, 1197.1959228515625, 1734.0, 1197.1959228515625, 1734.0, 1098.44140625, 1756.5, 1098.44140625 ],
                     "source": [ "obj-418", 1 ]
                 }
             },
@@ -4107,7 +4210,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-445", 0 ],
-                    "midpoints": [ 318.0, 560.4912109375, 285.0, 560.4912109375, 285.0, 435.0, 273.0, 435.0, 273.0, 408.0, 190.5, 408.0 ],
+                    "midpoints": [ 318.0, 560.4912109375, 280.02734375, 560.4912109375, 280.02734375, 435.0, 273.0, 435.0, 273.0, 408.0, 190.0, 408.0 ],
                     "source": [ "obj-502", 0 ]
                 }
             },
@@ -4286,7 +4389,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-543", 2 ],
-                    "midpoints": [ 1150.25, 1065.5772094726562, 1116.25, 1065.5772094726562, 1116.25, 1159.163818359375, 1160.75, 1159.163818359375 ],
+                    "midpoints": [ 1186.0, 1093.5772094726562, 1152.0, 1093.5772094726562, 1152.0, 1187.163818359375, 1196.5, 1187.163818359375 ],
                     "source": [ "obj-556", 1 ]
                 }
             },
@@ -4313,13 +4416,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-542", 0 ],
-                    "midpoints": [ 1139.75, 1254.7884521484375, 1106.823974609375, 1254.7884521484375, 1106.823974609375, 1095.0, 1139.75, 1095.0 ],
+                    "midpoints": [ 1175.5, 1282.7884521484375, 1142.573974609375, 1282.7884521484375, 1142.573974609375, 1123.0, 1175.5, 1123.0 ],
                     "source": [ "obj-561", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-421", 0 ],
+                    "midpoints": [ 1211.5, 1278.0, 1284.0, 1278.0, 1284.0, 1194.69921875, 1446.0, 1194.69921875, 1446.0, 1146.0, 1470.5, 1146.0 ],
                     "source": [ "obj-563", 0 ]
                 }
             },
