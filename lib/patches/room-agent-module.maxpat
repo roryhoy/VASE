@@ -9,10 +9,37 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
+        "rect": [ 34.0, 93.0, 2492.0, 1313.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-130",
+                    "linecount": 10,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1176.0, 280.0, 182.0, 118.0 ],
+                    "text": "Check if player in sensing bounds of the room - if so, unmute reverb instance\n\nif within sensing distance but not inside boundary of the room agent, only sonify reflections\n\nif within room boundary, sonify direct and reverb audio"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.0196078431372549, 0.0, 1.0, 1.0 ],
+                    "id": "obj-5",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 1364.0, 322.0, 73.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player-pos"
+                }
+            },
             {
                 "box": {
                     "id": "obj-164",
@@ -20,7 +47,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1165.0, 1218.0, 115.0, 40.0 ],
+                    "patching_rect": [ 1165.0, 1218.0, 116.0, 40.0 ],
                     "text": "move duration with drunk step after timeout is completed"
                 }
             },
@@ -1700,7 +1727,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 1298.0, 1168.0, 50.0, 20.0 ],
-                    "text": "1"
+                    "text": "0"
                 }
             },
             {
@@ -1988,7 +2015,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 1528.0, 862.0, 29.5, 20.0 ],
-                    "text": "1"
+                    "text": "0"
                 }
             },
             {
