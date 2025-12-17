@@ -9,10 +9,26 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 93.0, 2492.0, 1313.0 ],
+        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "color": [ 0.07058823529411765, 0.13725490196078433, 0.796078431372549, 1.0 ],
+                    "id": "obj-128",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 1155.5, 333.5, 131.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player_in_agent_range"
+                }
+            },
             {
                 "box": {
                     "id": "obj-143",
@@ -64,46 +80,13 @@
             },
             {
                 "box": {
-                    "color": [ 0.011764705882352941, 1.0, 0.0, 1.0 ],
-                    "id": "obj-131",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 5,
-                    "outlettype": [ "dictionary", "", "", "", "" ],
-                    "patching_rect": [ 1178.5, 465.0, 127.0, 20.0 ],
-                    "saved_object_attributes": {
-                        "legacy": 0,
-                        "parameter_enable": 0,
-                        "parameter_mappable": 0
-                    },
-                    "text": "dict players-in-agent-range"
-                }
-            },
-            {
-                "box": {
                     "id": "obj-130",
-                    "linecount": 10,
+                    "linecount": 12,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1176.0, 280.0, 182.0, 118.0 ],
-                    "text": "Check if player in sensing bounds of the room - if so, unmute reverb instance\n\nif within sensing distance but not inside boundary of the room agent, only sonify reflections\n\nif within room boundary, sonify direct and reverb audio"
-                }
-            },
-            {
-                "box": {
-                    "color": [ 0.0196078431372549, 0.0, 1.0, 1.0 ],
-                    "id": "obj-5",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 4,
-                    "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 1364.0, 322.0, 73.0, 20.0 ],
-                    "saved_object_attributes": {
-                        "embed": 0,
-                        "precision": 6
-                    },
-                    "text": "coll player-pos"
+                    "patching_rect": [ 1295.0, 290.0, 428.0, 141.0 ],
+                    "text": "(done in calc_player_agent_distances patcher)\n\nCheck if player in sensing bounds of the room - if so, unmute reverb instance\n\n0 = not in sensing range or room boundary\n\n1 = if within sensing distance but not inside boundary of the room agent, only sonify reflections\n\n2 = if within room boundary, sonify direct and reverb audio\n\nResults in coll are ordered in line by agent number, and integers represent these distances for each agent 0 - n"
                 }
             },
             {

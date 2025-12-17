@@ -9,8 +9,24 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 288.0, 105.0, 1143.0, 780.0 ],
+        "rect": [ 288.0, 96.0, 1143.0, 836.0 ],
         "boxes": [
+            {
+                "box": {
+                    "color": [ 0.07058823529411765, 0.13725490196078433, 0.796078431372549, 1.0 ],
+                    "id": "obj-65",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 100.0, 753.0, 153.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player_in_agent_range"
+                }
+            },
             {
                 "box": {
                     "id": "obj-63",
@@ -99,16 +115,6 @@
             },
             {
                 "box": {
-                    "id": "obj-34",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 100.0, 683.0, 32.0, 22.0 ],
-                    "text": "print"
-                }
-            },
-            {
-                "box": {
                     "id": "obj-33",
                     "maxclass": "button",
                     "numinlets": 1,
@@ -160,23 +166,6 @@
                     "numoutlets": 0,
                     "patching_rect": [ 297.0, 339.0, 123.0, 20.0 ],
                     "text": "range on 4th element"
-                }
-            },
-            {
-                "box": {
-                    "color": [ 0.011764705882352941, 1.0, 0.0, 1.0 ],
-                    "id": "obj-131",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 5,
-                    "outlettype": [ "dictionary", "", "", "", "" ],
-                    "patching_rect": [ 231.0, 737.0, 151.0, 22.0 ],
-                    "saved_object_attributes": {
-                        "legacy": 0,
-                        "parameter_enable": 0,
-                        "parameter_mappable": 0
-                    },
-                    "text": "dict players-in-agent-range"
                 }
             },
             {
@@ -519,14 +508,14 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-34", 0 ],
-                    "source": [ "obj-5", 0 ]
+                    "destination": [ "obj-41", 0 ],
+                    "source": [ "obj-5", 1 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-41", 0 ],
-                    "source": [ "obj-5", 1 ]
+                    "destination": [ "obj-65", 0 ],
+                    "source": [ "obj-5", 0 ]
                 }
             },
             {
