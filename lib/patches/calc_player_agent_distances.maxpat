@@ -13,6 +13,18 @@
         "boxes": [
             {
                 "box": {
+                    "fontsize": 14.919040479760119,
+                    "id": "obj-30",
+                    "linecount": 6,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 386.0, 625.0, 457.0, 107.0 ],
+                    "text": "dict contains keys of all room agents and values of proximity:\n\n0 = not in sensing range or room area\n1 = in sensing range, but not room area\n2 = in room area (may technically not be in sensing range, but handle both direct and reflection audio)"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-27",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -40,7 +52,7 @@
                     "numinlets": 2,
                     "numoutlets": 5,
                     "outlettype": [ "dictionary", "", "", "", "" ],
-                    "patching_rect": [ 196.0, 685.0, 151.0, 22.0 ],
+                    "patching_rect": [ 214.0, 700.0, 151.0, 22.0 ],
                     "saved_object_attributes": {
                         "legacy": 0,
                         "parameter_enable": 0,
@@ -155,7 +167,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 93.5, 583.0, 185.0, 22.0 ],
+                    "patching_rect": [ 100.0, 607.0, 185.0, 22.0 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0
                     },
