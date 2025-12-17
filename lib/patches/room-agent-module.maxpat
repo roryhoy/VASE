@@ -15,6 +15,72 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-143",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "float", "float", "float", "float" ],
+                    "patching_rect": [ 617.0, 465.0, 85.0, 20.0 ],
+                    "text": "unpack 0. 0. 0. 0."
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-142",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 617.0, 407.0, 65.0, 20.0 ],
+                    "text": "loadmess #1"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.133333333333333, 0.0, 1.0, 1.0 ],
+                    "id": "obj-141",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 617.0, 439.0, 72.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll space-dim"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 15.434637557382299,
+                    "id": "obj-139",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 669.0, 505.0, 428.0, 24.0 ],
+                    "text": "Sensing range (spherical radius of space agent listening)"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.011764705882352941, 1.0, 0.0, 1.0 ],
+                    "id": "obj-131",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 5,
+                    "outlettype": [ "dictionary", "", "", "", "" ],
+                    "patching_rect": [ 1178.5, 465.0, 127.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "legacy": 0,
+                        "parameter_enable": 0,
+                        "parameter_mappable": 0
+                    },
+                    "text": "dict players-in-agent-range"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-130",
                     "linecount": 10,
                     "maxclass": "comment",
@@ -953,27 +1019,6 @@
             },
             {
                 "box": {
-                    "id": "obj-508",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 683.0, 436.0, 216.0, 18.0 ],
-                    "text": "should be relative to max VASE space size"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-506",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "patching_rect": [ 617.0, 439.0, 62.0, 20.0 ],
-                    "text": "loadmess 5."
-                }
-            },
-            {
-                "box": {
                     "id": "obj-505",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -1011,7 +1056,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 134.0, 159.0, 403.0, 562.0 ],
+                        "rect": [ 134.0, 159.0, 562.0, 562.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
@@ -1321,13 +1366,11 @@
                                     "source": [ "obj-6", 1 ]
                                 }
                             }
-                        ],
-                        "bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 308.5, 529.0, 83.0, 20.0 ],
                     "saved_object_attributes": {
-                        "fontsize": 10.0,
-                        "locked_bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        "fontsize": 10.0
                     },
                     "text": "p check-in-range"
                 }
@@ -1765,6 +1808,7 @@
             },
             {
                 "box": {
+                    "color": [ 0.011764705882352941, 1.0, 0.0, 1.0 ],
                     "fontsize": 18.53165064102564,
                     "id": "obj-144",
                     "maxclass": "newobj",
@@ -2066,12 +2110,12 @@
             {
                 "box": {
                     "id": "obj-124",
-                    "linecount": 8,
+                    "linecount": 6,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 667.0, 465.0, 248.0, 96.0 ],
-                    "text": "Sensing range (spherical boundary of space agent listening)\n\nThis does not take room dimensions into consideration, and is a radius from the centre of the room agents dimensions. There can be situations where a room's sensing range is smaller than its own size."
+                    "patching_rect": [ 669.0, 518.0, 294.0, 74.0 ],
+                    "text": "\n\nThis does not take room dimensions into consideration, and is a radius from the centre of the room agents dimensions. There can be situations where a room's sensing range is smaller than its own size."
                 }
             },
             {
@@ -3551,6 +3595,24 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-143", 0 ],
+                    "source": [ "obj-141", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-141", 0 ],
+                    "source": [ "obj-142", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-111", 0 ],
+                    "source": [ "obj-143", 3 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-144", 0 ],
                     "source": [ "obj-145", 0 ]
                 }
@@ -4306,12 +4368,6 @@
                 "patchline": {
                     "destination": [ "obj-103", 0 ],
                     "source": [ "obj-505", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-111", 0 ],
-                    "source": [ "obj-506", 0 ]
                 }
             },
             {

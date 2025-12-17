@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
+        "rect": [ 34.0, 93.0, 2492.0, 1313.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
@@ -572,6 +572,7 @@
             },
             {
                 "box": {
+                    "color": [ 0.0196078431372549, 0.0, 1.0, 1.0 ],
                     "id": "obj-62",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -587,6 +588,7 @@
             },
             {
                 "box": {
+                    "color": [ 0.0196078431372549, 0.0, 1.0, 1.0 ],
                     "id": "obj-38",
                     "maxclass": "newobj",
                     "numinlets": 1,
