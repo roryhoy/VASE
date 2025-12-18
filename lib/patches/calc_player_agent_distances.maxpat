@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 288.0, 96.0, 1143.0, 836.0 ],
+        "rect": [ 151.0, 143.0, 1143.0, 836.0 ],
         "boxes": [
             {
                 "box": {
@@ -175,8 +175,8 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 301.0, 121.5, 348.0, 33.0 ],
-                    "text": "don't need to supply index / order, \nrecieved order in JS will keep proper index when cleared in time"
+                    "patching_rect": [ 291.0, 92.0, 493.0, 33.0 ],
+                    "text": "don't need to supply index / order, \nrecieved order in JS will keep proper index ordering when pushed to arrays for procressing"
                 }
             },
             {

@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
+        "rect": [ 34.0, 96.0, 2492.0, 1310.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
@@ -269,7 +269,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 156.0, 222.0, 69.0, 20.0 ],
+                    "patching_rect": [ 58.0, 255.0, 69.0, 20.0 ],
                     "text": "s vase-3d-tog"
                 }
             },
@@ -11041,7 +11041,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 134.0, 252.0, 150.0, 29.0 ],
+                    "patching_rect": [ 138.0, 304.5, 150.0, 29.0 ],
                     "text": "can migrate logic for position display etc into module patches"
                 }
             },
@@ -11051,7 +11051,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 81.0, 226.0, 68.0, 18.0 ],
+                    "patching_rect": [ 16.0, 210.0, 68.0, 18.0 ],
                     "text": "VASE Viewer"
                 }
             },
@@ -11100,7 +11100,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 134.0, 168.0, 414.0, 190.0 ],
+                        "rect": [ 134.0, 168.0, 1489.0, 937.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "title": "VASE Viewer",
@@ -22118,7 +22118,7 @@
                             }
                         ]
                     },
-                    "patching_rect": [ 28.0, 252.0, 99.0, 38.0 ],
+                    "patching_rect": [ 33.0, 300.0, 99.0, 38.0 ],
                     "saved_object_attributes": {
                         "fontsize": 10.0
                     },
@@ -46102,14 +46102,6 @@
             "obj-95::obj-96": [ "live.text[17]", "live.text", 0 ],
             "obj-95::obj-98": [ "live.text[16]", "live.text", 0 ],
             "obj-98": [ "live.text", "live.text", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-128::obj-16": {
                     "parameter_longname": "live.text[15]"
