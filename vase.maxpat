@@ -15,11 +15,21 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-7",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 0,
+                    "patching_rect": [ 744.5, 47.38235294117647, 76.0, 20.0 ],
+                    "text": "check_genome"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-110",
                     "maxclass": "newobj",
                     "numinlets": 0,
                     "numoutlets": 0,
-                    "patching_rect": [ 724.0, 46.06999999999999, 137.0, 20.0 ],
+                    "patching_rect": [ 744.5, 18.38235294117647, 137.0, 20.0 ],
                     "text": "calc_player_agent_distances"
                 }
             },
@@ -46102,6 +46112,14 @@
             "obj-95::obj-96": [ "live.text[17]", "live.text", 0 ],
             "obj-95::obj-98": [ "live.text[16]", "live.text", 0 ],
             "obj-98": [ "live.text", "live.text", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-128::obj-16": {
                     "parameter_longname": "live.text[15]"
