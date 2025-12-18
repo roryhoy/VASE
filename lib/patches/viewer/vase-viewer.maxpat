@@ -14,6 +14,51 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-87",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1822.0, 266.0, 89.0, 22.0 ],
+                    "text": "v draw-sensing"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-86",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1812.0, 356.0, 84.0, 22.0 ],
+                    "text": "v draw-agents"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-90",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 449.0, 41.5, 33.0, 22.0 ],
+                    "text": "front"
+                }
+            },
+            {
+                "box": {
+                    "comment": "",
+                    "id": "obj-80",
+                    "index": 0,
+                    "maxclass": "inlet",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 449.0, 6.0, 30.0, 30.0 ]
+                }
+            },
+            {
+                "box": {
                     "id": "obj-58",
                     "maxclass": "newobj",
                     "numinlets": 2,
@@ -61,7 +106,7 @@
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
-                            "parameter_longname": "live.toggle[18]",
+                            "parameter_longname": "live.toggle[27]",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "live.toggle",
@@ -121,7 +166,7 @@
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
-                            "parameter_longname": "live.toggle[17]",
+                            "parameter_longname": "live.toggle[29]",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "live.toggle",
@@ -6074,7 +6119,7 @@
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
-                            "parameter_longname": "live.toggle[11]",
+                            "parameter_longname": "live.toggle[28]",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "live.toggle",
@@ -6132,7 +6177,7 @@
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
-                            "parameter_longname": "live.toggle[12]",
+                            "parameter_longname": "live.toggle[26]",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "live.toggle",
@@ -6461,7 +6506,7 @@
                                     "saved_attribute_attributes": {
                                         "valueof": {
                                             "parameter_enum": [ "off", "on" ],
-                                            "parameter_longname": "live.toggle[13]",
+                                            "parameter_longname": "live.toggle[23]",
                                             "parameter_mmax": 1,
                                             "parameter_modmode": 0,
                                             "parameter_shortname": "live.toggle",
@@ -6545,7 +6590,7 @@
                                     "saved_attribute_attributes": {
                                         "valueof": {
                                             "parameter_enum": [ "off", "on" ],
-                                            "parameter_longname": "live.toggle[14]",
+                                            "parameter_longname": "live.toggle[22]",
                                             "parameter_mmax": 1,
                                             "parameter_modmode": 0,
                                             "parameter_shortname": "live.toggle",
@@ -6759,7 +6804,7 @@
                                     "saved_attribute_attributes": {
                                         "valueof": {
                                             "parameter_enum": [ "off", "on" ],
-                                            "parameter_longname": "live.button[1]",
+                                            "parameter_longname": "live.button[2]",
                                             "parameter_mmax": 1,
                                             "parameter_modmode": 0,
                                             "parameter_shortname": "live.button",
@@ -8024,7 +8069,7 @@
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
-                            "parameter_longname": "live.toggle[15]",
+                            "parameter_longname": "live.toggle[25]",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "live.toggle",
@@ -8169,7 +8214,7 @@
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
-                            "parameter_longname": "live.toggle[16]",
+                            "parameter_longname": "live.toggle[24]",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "live.toggle",
@@ -8699,6 +8744,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-36", 0 ],
+                    "order": 1,
+                    "source": [ "obj-30", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-87", 0 ],
+                    "order": 0,
                     "source": [ "obj-30", 0 ]
                 }
             },
@@ -8729,6 +8782,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-43", 0 ],
+                    "order": 1,
+                    "source": [ "obj-37", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-86", 0 ],
+                    "order": 0,
                     "source": [ "obj-37", 0 ]
                 }
             },
@@ -8998,6 +9059,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-90", 0 ],
+                    "source": [ "obj-80", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-16", 0 ],
                     "source": [ "obj-81", 0 ]
                 }
@@ -9069,6 +9136,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-192", 0 ],
+                    "source": [ "obj-90", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-175", 0 ],
                     "source": [ "obj-91", 1 ]
                 }
@@ -9118,21 +9191,21 @@
             }
         ],
         "parameters": {
-            "obj-11": [ "live.toggle[12]", "live.toggle", 0 ],
+            "obj-11": [ "live.toggle[26]", "live.toggle", 0 ],
             "obj-147": [ "live.text[8]", "live.text", 0 ],
             "obj-159": [ "live.text[1]", "live.text", 0 ],
-            "obj-175": [ "live.toggle[15]", "live.toggle", 0 ],
-            "obj-19": [ "live.toggle[11]", "live.toggle", 0 ],
+            "obj-175": [ "live.toggle[25]", "live.toggle", 0 ],
+            "obj-19": [ "live.toggle[28]", "live.toggle", 0 ],
             "obj-197::obj-175": [ "live.text[21]", "live.text", 0 ],
-            "obj-197::obj-19": [ "live.toggle[13]", "live.toggle", 0 ],
-            "obj-197::obj-41": [ "live.toggle[14]", "live.toggle", 0 ],
-            "obj-197::obj-48": [ "live.button[1]", "live.button", 0 ],
+            "obj-197::obj-19": [ "live.toggle[23]", "live.toggle", 0 ],
+            "obj-197::obj-41": [ "live.toggle[22]", "live.toggle", 0 ],
+            "obj-197::obj-48": [ "live.button[2]", "live.button", 0 ],
             "obj-211": [ "live.numbox[7]", "live.numbox", 0 ],
-            "obj-30": [ "live.toggle[17]", "live.toggle", 0 ],
-            "obj-37": [ "live.toggle[18]", "live.toggle", 0 ],
+            "obj-30": [ "live.toggle[29]", "live.toggle", 0 ],
+            "obj-37": [ "live.toggle[27]", "live.toggle", 0 ],
             "obj-39": [ "live.toggle[10]", "live.toggle", 0 ],
             "obj-46": [ "live.toggle[9]", "live.toggle", 0 ],
-            "obj-5": [ "live.toggle[16]", "live.toggle", 0 ],
+            "obj-5": [ "live.toggle[24]", "live.toggle", 0 ],
             "obj-56": [ "live.text[11]", "live.text", 0 ],
             "obj-68": [ "live.numbox[6]", "live.numbox", 0 ],
             "obj-83": [ "live.text[12]", "live.text", 0 ],

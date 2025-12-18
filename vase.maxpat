@@ -15,11 +15,40 @@
         "boxes": [
             {
                 "box": {
+                    "activebgcolor": [ 0.3254901960784314, 0.16470588235294117, 0.35294117647058826, 1.0 ],
+                    "id": "obj-15",
+                    "maxclass": "live.text",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "parameter_enable": 1,
+                    "patching_rect": [ 79.0, 227.0, 44.0, 15.0 ],
+                    "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": ""
+                        },
+                        "valueof": {
+                            "parameter_enum": [ "val1", "val2" ],
+                            "parameter_longname": "live.text[16]",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "live.text",
+                            "parameter_type": 2
+                        }
+                    },
+                    "text": "Open",
+                    "texton": "On",
+                    "varname": "live.text[1]"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-11",
                     "maxclass": "newobj",
-                    "numinlets": 1,
+                    "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 28.0, 300.0, 62.0, 20.0 ],
+                    "patching_rect": [ 28.0, 270.0, 70.0, 20.0 ],
                     "text": "vase-viewer"
                 }
             },
@@ -289,7 +318,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 87.0, 260.0, 69.0, 20.0 ],
+                    "patching_rect": [ 175.0, 270.0, 69.0, 20.0 ],
                     "text": "s vase-3d-tog"
                 }
             },
@@ -34804,6 +34833,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-11", 1 ],
+                    "source": [ "obj-15", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-156", 0 ],
                     "source": [ "obj-154", 0 ]
                 }
@@ -35053,6 +35088,7 @@
             "obj-128::obj-55": [ "live.text[3]", "live.text", 0 ],
             "obj-128::obj-606": [ "live.text[2]", "live.text", 0 ],
             "obj-128::obj-607": [ "live.button[1]", "live.button", 0 ],
+            "obj-15": [ "live.text[16]", "live.text", 0 ],
             "obj-43::obj-10": [ "live.toggle[21]", "live.toggle", 0 ],
             "obj-43::obj-11": [ "live.toggle[20]", "live.toggle", 0 ],
             "obj-43::obj-12": [ "live.toggle[14]", "live.toggle[7]", 0 ],
