@@ -15,6 +15,16 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-19",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 337.0, 295.0, 96.0, 20.0 ],
+                    "text": "s init-rooms-players"
+                }
+            },
+            {
+                "box": {
                     "activebgcolor": [ 0.3254901960784314, 0.16470588235294117, 0.35294117647058826, 1.0 ],
                     "id": "obj-15",
                     "maxclass": "live.text",
@@ -79,7 +89,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 699.5, 335.0, 79.0, 20.0 ],
+                    "patching_rect": [ 891.0, 339.0, 79.0, 20.0 ],
                     "text": "v vase-z-size"
                 }
             },
@@ -90,7 +100,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 699.5, 308.0, 79.0, 20.0 ],
+                    "patching_rect": [ 891.0, 312.0, 79.0, 20.0 ],
                     "text": "v vase-y-size"
                 }
             },
@@ -101,7 +111,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 699.5, 279.0, 79.0, 20.0 ],
+                    "patching_rect": [ 891.0, 283.0, 79.0, 20.0 ],
                     "text": "v vase-x-size"
                 }
             },
@@ -112,7 +122,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 705.0, 182.0, 68.0, 20.0 ],
+                    "patching_rect": [ 696.0, 165.0, 68.0, 20.0 ],
                     "text": "loadmess 10."
                 }
             },
@@ -125,7 +135,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 822.0, 212.0, 50.0, 20.0 ]
+                    "patching_rect": [ 813.0, 203.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -137,7 +147,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 762.0, 212.0, 50.0, 20.0 ]
+                    "patching_rect": [ 754.5, 203.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -149,7 +159,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 705.0, 212.0, 50.0, 20.0 ]
+                    "patching_rect": [ 696.0, 203.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -249,7 +259,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 762.0, 242.0, 143.0, 22.0 ],
+                    "patching_rect": [ 841.0, 247.0, 143.0, 22.0 ],
                     "text": "VASE Dimensions (m)"
                 }
             },
@@ -260,7 +270,7 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 696.0, 243.0, 58.0, 20.0 ],
+                    "patching_rect": [ 696.0, 243.0, 136.0, 20.0 ],
                     "text": "pak 0. 0. 0."
                 }
             },
@@ -310,16 +320,6 @@
                         "precision": 6
                     },
                     "text": "coll space-dim"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-75",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 175.0, 270.0, 69.0, 20.0 ],
-                    "text": "s vase-3d-tog"
                 }
             },
             {
@@ -12026,7 +12026,7 @@
                     "numoutlets": 5,
                     "outlettype": [ "signal", "signal", "signal", "", "dictionary" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 1582.0, 1106.0, 150.0, 30.0 ],
+                    "patching_rect": [ 1684.0, 1112.0, 150.0, 30.0 ],
                     "quality": "basic",
                     "saved_attribute_attributes": {
                         "candicane2": {
@@ -12084,7 +12084,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 559.0, 325.0, 69.0, 20.0 ],
+                    "patching_rect": [ 678.0, 329.0, 69.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -12100,7 +12100,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 557.0, 300.0, 73.0, 20.0 ],
+                    "patching_rect": [ 676.0, 304.0, 73.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -34997,7 +34997,15 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-19", 0 ],
+                    "order": 1,
+                    "source": [ "obj-69", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-50", 0 ],
+                    "order": 0,
                     "source": [ "obj-69", 0 ]
                 }
             },
@@ -35107,6 +35115,14 @@
             "obj-43::obj-48": [ "live.toggle[12]", "live.toggle", 0 ],
             "obj-64": [ "live.gain~", "live.gain~", 0 ],
             "obj-98": [ "live.text", "live.text", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-11::obj-11": {
                     "parameter_longname": "live.toggle[26]"
