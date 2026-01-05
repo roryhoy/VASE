@@ -15,6 +15,17 @@
         "boxes": [
             {
                 "box": {
+                    "fontsize": 20.166200326308353,
+                    "id": "obj-165",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1380.0, 257.0, 245.25, 29.0 ],
+                    "text": "Adoption / Range Sensing"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-161",
                     "maxclass": "newobj",
                     "numinlets": 1,

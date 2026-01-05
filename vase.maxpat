@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 2492.0, 1310.0 ],
+        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
@@ -19,7 +19,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 337.0, 295.0, 96.0, 20.0 ],
+                    "patching_rect": [ 341.0, 300.0, 96.0, 20.0 ],
                     "text": "s init-rooms-players"
                 }
             },
@@ -89,7 +89,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 891.0, 339.0, 79.0, 20.0 ],
+                    "patching_rect": [ 868.0, 331.0, 79.0, 20.0 ],
                     "text": "v vase-z-size"
                 }
             },
@@ -100,7 +100,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 891.0, 312.0, 79.0, 20.0 ],
+                    "patching_rect": [ 868.0, 304.0, 79.0, 20.0 ],
                     "text": "v vase-y-size"
                 }
             },
@@ -111,7 +111,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 891.0, 283.0, 79.0, 20.0 ],
+                    "patching_rect": [ 868.0, 275.0, 79.0, 20.0 ],
                     "text": "v vase-x-size"
                 }
             },
@@ -169,7 +169,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 618.0, 241.0, 60.0, 20.0 ],
+                    "patching_rect": [ 482.0, 190.0, 60.0, 20.0 ],
                     "text": "loadmess 3"
                 }
             },
@@ -179,7 +179,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 362.0, 220.0, 102.0, 18.0 ],
+                    "patching_rect": [ 338.0, 203.5, 102.0, 18.0 ],
                     "text": "Init colls with random"
                 }
             },
@@ -191,16 +191,17 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 401.0, 239.0, 24.0, 24.0 ]
+                    "patching_rect": [ 377.0, 222.5, 24.0, 24.0 ]
                 }
             },
             {
                 "box": {
                     "id": "obj-89",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 490.0, 191.0, 159.0, 18.0 ],
+                    "patching_rect": [ 560.0, 184.0, 97.0, 29.0 ],
                     "text": "0 -  128 for player and room count"
                 }
             },
@@ -35024,7 +35025,6 @@
             {
                 "patchline": {
                     "destination": [ "obj-46", 0 ],
-                    "midpoints": [ 627.5, 263.0, 477.0, 263.0, 477.0, 239.0, 491.5, 239.0 ],
                     "order": 1,
                     "source": [ "obj-82", 0 ]
                 }
@@ -35032,7 +35032,6 @@
             {
                 "patchline": {
                     "destination": [ "obj-79", 0 ],
-                    "midpoints": [ 627.5, 263.0, 558.0, 263.0, 558.0, 239.0, 572.5, 239.0 ],
                     "order": 0,
                     "source": [ "obj-82", 0 ]
                 }
@@ -35115,14 +35114,6 @@
             "obj-43::obj-48": [ "live.toggle[12]", "live.toggle", 0 ],
             "obj-64": [ "live.gain~", "live.gain~", 0 ],
             "obj-98": [ "live.text", "live.text", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-11::obj-11": {
                     "parameter_longname": "live.toggle[26]"
