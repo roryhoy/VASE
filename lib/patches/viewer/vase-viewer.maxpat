@@ -9,7 +9,9 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 0.0, 62.0, 650.0, 334.0 ],
+        "rect": [ 134.0, 168.0, 650.0, 334.0 ],
+        "openinpresentation": 1,
+        "toolbarvisible": 0,
         "title": "VASE Viewer",
         "boxes": [
             {
@@ -644,7 +646,7 @@
                 "box": {
                     "comment": "",
                     "id": "obj-80",
-                    "index": 0,
+                    "index": 2,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
@@ -741,10 +743,10 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1544.0, 196.0, 107.0, 35.0 ],
+                    "patching_rect": [ 1544.0, 196.0, 110.0, 35.0 ],
                     "presentation": 1,
                     "presentation_linecount": 2,
-                    "presentation_rect": [ 272.5, 227.0, 107.0, 35.0 ],
+                    "presentation_rect": [ 272.5, 227.0, 110.0, 35.0 ],
                     "text": "Draw Space Agent \nsensing range"
                 }
             },
@@ -1025,7 +1027,7 @@
                 "box": {
                     "comment": "",
                     "id": "obj-94",
-                    "index": 0,
+                    "index": 1,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
@@ -1325,7 +1327,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1212.5, 320.0, 95.0, 21.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 90.0, 113.0, 103.0, 21.0 ],
+                    "presentation_rect": [ 89.0, 121.0, 103.0, 21.0 ],
                     "text": "Lens Angle [+/-]"
                 }
             },
@@ -1351,7 +1353,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 1157.5, 321.0, 50.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 38.0, 112.0, 50.0, 22.0 ]
+                    "presentation_rect": [ 37.0, 120.0, 50.0, 22.0 ]
                 }
             },
             {
@@ -6482,7 +6484,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 755.0, 170.0, 100.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 38.0, 89.0, 106.0, 20.0 ]
+                    "presentation_rect": [ 37.0, 97.0, 106.0, 20.0 ]
                 }
             },
             {
@@ -6573,10 +6575,10 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 62.0, 677.0, 85.0, 21.0 ],
+                    "patching_rect": [ 61.0, 681.0, 78.0, 21.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 302.5, 40.5, 85.0, 21.0 ],
-                    "text": "Room Co-ords"
+                    "text": "Draw Legend"
                 }
             },
             {
@@ -8598,8 +8600,8 @@
                     "numinlets": 1,
                     "numoutlets": 3,
                     "outlettype": [ "jit_matrix", "bang", "" ],
-                    "patching_rect": [ 48.75, 552.0, 204.0, 22.0 ],
-                    "text": "jit.world VASE @enable 0 @visible 0"
+                    "patching_rect": [ 48.75, 552.0, 322.0, 22.0 ],
+                    "text": "jit.world VASE @enable 0 @visible 0 @erase_color 0. 0. 0."
                 }
             },
             {
@@ -9663,40 +9665,6 @@
                     "source": [ "obj-99", 0 ]
                 }
             }
-        ],
-        "parameters": {
-            "obj-11": [ "live.toggle[26]", "live.toggle", 0 ],
-            "obj-147": [ "live.text[8]", "live.text", 0 ],
-            "obj-159": [ "live.text[1]", "live.text", 0 ],
-            "obj-160": [ "live.toggle[1]", "live.toggle", 0 ],
-            "obj-164": [ "live.toggle[2]", "live.toggle", 0 ],
-            "obj-175": [ "live.toggle[25]", "live.toggle", 0 ],
-            "obj-19": [ "live.toggle[28]", "live.toggle", 0 ],
-            "obj-197::obj-175": [ "live.text[21]", "live.text", 0 ],
-            "obj-197::obj-19": [ "live.toggle[23]", "live.toggle", 0 ],
-            "obj-197::obj-41": [ "live.toggle[22]", "live.toggle", 0 ],
-            "obj-197::obj-48": [ "live.button[2]", "live.button", 0 ],
-            "obj-211": [ "live.numbox[7]", "live.numbox", 0 ],
-            "obj-30": [ "live.toggle[29]", "live.toggle", 0 ],
-            "obj-37": [ "live.toggle[27]", "live.toggle", 0 ],
-            "obj-39": [ "live.toggle[10]", "live.toggle", 0 ],
-            "obj-46": [ "live.toggle[9]", "live.toggle", 0 ],
-            "obj-5": [ "live.toggle[24]", "live.toggle", 0 ],
-            "obj-56": [ "live.text[11]", "live.text", 0 ],
-            "obj-68": [ "live.numbox[6]", "live.numbox", 0 ],
-            "obj-83": [ "live.text[12]", "live.text", 0 ],
-            "obj-96": [ "live.text[10]", "live.text", 0 ],
-            "obj-98": [ "live.text[9]", "live.text", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
-            "inherited_shortname": 1
-        },
-        "autosave": 0
+        ]
     }
 }
