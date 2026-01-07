@@ -15,6 +15,87 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-91",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 728.0, 101.0, 119.0, 18.0 ],
+                    "presentation_linecount": 2,
+                    "text": "need to delay after start?",
+                    "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-87",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 0,
+                    "patching_rect": [ 650.0, 68.0, 140.0, 20.0 ],
+                    "text": "calc_player_player_distances"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-86",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 577.0, 332.0, 154.0, 18.0 ],
+                    "text": "distances from each other player"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.13725490196078433, 0.0, 1.0, 1.0 ],
+                    "id": "obj-83",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 577.0, 352.0, 85.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player-dist"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-45",
+                    "linecount": 3,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 446.0, 82.0, 92.0, 40.0 ],
+                    "text": "change to qmetro?\nI think only need to check mubu stuff",
+                    "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-40",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 650.0, 19.0, 177.0, 18.0 ],
+                    "text": "These patches use global clock inside"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 16.76377490179574,
+                    "id": "obj-35",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 271.0, 184.0, 262.0, 25.0 ],
+                    "text": "Spawn Players and Space Agents"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-30",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -31,7 +112,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 341.0, 300.0, 96.0, 20.0 ],
+                    "patching_rect": [ 222.0, 326.0, 96.0, 20.0 ],
                     "text": "s init-rooms-players"
                 }
             },
@@ -80,7 +161,7 @@
                     "maxclass": "newobj",
                     "numinlets": 0,
                     "numoutlets": 0,
-                    "patching_rect": [ 744.5, 47.38235294117647, 76.0, 20.0 ],
+                    "patching_rect": [ 650.0, 100.0, 76.0, 20.0 ],
                     "text": "check_genome"
                 }
             },
@@ -90,7 +171,7 @@
                     "maxclass": "newobj",
                     "numinlets": 0,
                     "numoutlets": 0,
-                    "patching_rect": [ 744.5, 18.38235294117647, 137.0, 20.0 ],
+                    "patching_rect": [ 652.0, 43.0, 137.0, 20.0 ],
                     "text": "calc_player_agent_distances"
                 }
             },
@@ -101,7 +182,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 868.0, 331.0, 79.0, 20.0 ],
+                    "patching_rect": [ 771.5, 342.0, 79.0, 20.0 ],
                     "text": "v vase-z-size"
                 }
             },
@@ -112,7 +193,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 868.0, 304.0, 79.0, 20.0 ],
+                    "patching_rect": [ 771.5, 315.0, 79.0, 20.0 ],
                     "text": "v vase-y-size"
                 }
             },
@@ -123,7 +204,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 868.0, 275.0, 79.0, 20.0 ],
+                    "patching_rect": [ 771.5, 286.0, 79.0, 20.0 ],
                     "text": "v vase-x-size"
                 }
             },
@@ -134,7 +215,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 696.0, 165.0, 68.0, 20.0 ],
+                    "patching_rect": [ 577.0, 191.0, 68.0, 20.0 ],
                     "text": "loadmess 10."
                 }
             },
@@ -147,7 +228,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 813.0, 203.0, 50.0, 20.0 ]
+                    "patching_rect": [ 694.0, 229.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -159,7 +240,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 754.5, 203.0, 50.0, 20.0 ]
+                    "patching_rect": [ 636.0, 229.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -171,7 +252,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 696.0, 203.0, 50.0, 20.0 ]
+                    "patching_rect": [ 577.0, 229.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -181,7 +262,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 482.0, 202.5, 60.0, 20.0 ],
+                    "patching_rect": [ 363.0, 229.0, 60.0, 20.0 ],
                     "text": "loadmess 3"
                 }
             },
@@ -191,7 +272,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 302.0, 203.5, 102.0, 18.0 ],
+                    "patching_rect": [ 183.0, 230.0, 102.0, 18.0 ],
                     "text": "Init colls with random"
                 }
             },
@@ -203,7 +284,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 341.0, 222.5, 24.0, 24.0 ]
+                    "patching_rect": [ 222.0, 249.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -213,7 +294,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 555.0, 194.0, 97.0, 29.0 ],
+                    "patching_rect": [ 436.0, 220.0, 97.0, 29.0 ],
                     "text": "0 -  128 for player and room count"
                 }
             },
@@ -224,7 +305,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 596.0, 236.5, 56.0, 29.0 ],
+                    "patching_rect": [ 477.0, 263.0, 56.0, 29.0 ],
                     "text": "Player \nPopulation"
                 }
             },
@@ -238,7 +319,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 544.0, 241.0, 50.0, 20.0 ]
+                    "patching_rect": [ 425.0, 267.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -248,7 +329,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 417.5, 236.5, 68.0, 29.0 ],
+                    "patching_rect": [ 299.0, 263.0, 68.0, 29.0 ],
                     "text": "Space Agent \nPopulation"
                 }
             },
@@ -262,7 +343,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 482.0, 241.0, 50.0, 20.0 ]
+                    "patching_rect": [ 363.0, 267.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -272,7 +353,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 841.0, 247.0, 143.0, 22.0 ],
+                    "patching_rect": [ 744.5, 258.0, 143.0, 22.0 ],
                     "text": "VASE Dimensions (m)"
                 }
             },
@@ -283,7 +364,7 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 696.0, 243.0, 136.0, 20.0 ],
+                    "patching_rect": [ 577.0, 269.0, 136.0, 20.0 ],
                     "text": "pak 0. 0. 0."
                 }
             },
@@ -293,7 +374,7 @@
                     "maxclass": "newobj",
                     "numinlets": 4,
                     "numoutlets": 0,
-                    "patching_rect": [ 401.0, 270.0, 262.0, 20.0 ],
+                    "patching_rect": [ 282.0, 296.0, 262.0, 20.0 ],
                     "text": "init_players_rooms"
                 }
             },
@@ -327,7 +408,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 469.0, 352.0, 72.0, 20.0 ],
+                    "patching_rect": [ 350.0, 378.0, 72.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -510,7 +591,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 641.0, 114.0, 71.0, 20.0 ],
+                    "patching_rect": [ 548.0, 114.0, 71.0, 20.0 ],
                     "text": "s global_clock"
                 }
             },
@@ -533,7 +614,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 471.0, 326.0, 68.0, 20.0 ],
+                    "patching_rect": [ 352.0, 352.0, 68.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -12076,7 +12157,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 522.0, 28.0, 114.965, 27.0 ],
+                    "patching_rect": [ 429.0, 28.0, 114.965, 27.0 ],
                     "text": "Global Clock"
                 }
             },
@@ -12100,7 +12181,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 678.0, 329.0, 69.0, 20.0 ],
+                    "patching_rect": [ 492.0, 365.0, 69.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -12116,7 +12197,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 676.0, 304.0, 73.0, 20.0 ],
+                    "patching_rect": [ 490.0, 340.0, 73.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -12132,7 +12213,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 471.0, 300.0, 72.0, 20.0 ],
+                    "patching_rect": [ 352.0, 326.0, 72.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -12173,7 +12254,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 641.0, 17.0, 49.06999999999999, 49.06999999999999 ]
+                    "patching_rect": [ 548.0, 17.0, 49.06999999999999, 49.06999999999999 ]
                 }
             },
             {
@@ -12183,7 +12264,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 641.0, 81.0, 48.0, 20.0 ],
+                    "patching_rect": [ 548.0, 81.0, 48.0, 20.0 ],
                     "text": "metro 30"
                 }
             },
@@ -35131,6 +35212,14 @@
             "obj-43::obj-48": [ "live.toggle[12]", "live.toggle", 0 ],
             "obj-64": [ "live.gain~", "live.gain~", 0 ],
             "obj-98": [ "live.text", "live.text", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-128::obj-16": {
                     "parameter_longname": "live.text[15]"
