@@ -13,13 +13,56 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-4",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 168.0, 225.0, 175.0, 22.0 ],
+                    "text": "sprintf push_rotations %f %f %f"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.023529411764706, 0.0, 1.0, 1.0 ],
+                    "id": "obj-3",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 168.0, 184.0, 81.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player-rot"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.13725490196078433, 0.0, 1.0, 1.0 ],
+                    "id": "obj-2",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 302.0, 333.0, 120.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player-rot-offsets"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-10",
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 4,
-                    "outlettype": [ "calc_dist", "dump", "reset", "clear" ],
-                    "patching_rect": [ 163.0, 91.0, 155.0, 22.0 ],
-                    "text": "t calc_dist dump reset clear"
+                    "outlettype": [ "calc_rotational_offset", "calc_dist", "dump", "reset" ],
+                    "patching_rect": [ 163.0, 91.0, 242.0, 22.0 ],
+                    "text": "t calc_rotational_offset calc_dist dump reset"
                 }
             },
             {
@@ -40,7 +83,7 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 168.0, 219.0, 177.0, 22.0 ],
+                    "patching_rect": [ 358.0, 225.0, 177.0, 22.0 ],
                     "text": "sprintf push_positions %f %f %f"
                 }
             },
@@ -63,8 +106,8 @@
                     "id": "obj-1",
                     "maxclass": "newobj",
                     "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
                     "patching_rect": [ 168.0, 284.0, 153.0, 22.0 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0
@@ -119,7 +162,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 168.0, 178.0, 86.0, 22.0 ],
+                    "patching_rect": [ 358.0, 184.0, 86.0, 22.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -147,6 +190,12 @@
         "lines": [
             {
                 "patchline": {
+                    "destination": [ "obj-2", 0 ],
+                    "source": [ "obj-1", 1 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-60", 0 ],
                     "source": [ "obj-1", 0 ]
                 }
@@ -154,8 +203,15 @@
             {
                 "patchline": {
                     "destination": [ "obj-1", 0 ],
-                    "midpoints": [ 263.1666666666667, 165.0, 129.39453125, 165.0, 129.39453125, 270.0, 177.5, 270.0 ],
-                    "source": [ "obj-10", 2 ]
+                    "midpoints": [ 395.5, 165.0, 129.39453125, 165.0, 129.39453125, 270.0, 177.5, 270.0 ],
+                    "source": [ "obj-10", 3 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-1", 0 ],
+                    "midpoints": [ 246.83333333333331, 165.0, 153.0, 165.0, 153.0, 270.0, 177.5, 270.0 ],
+                    "source": [ "obj-10", 1 ]
                 }
             },
             {
@@ -167,15 +223,22 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-38", 0 ],
-                    "source": [ "obj-10", 1 ]
+                    "destination": [ "obj-3", 0 ],
+                    "order": 1,
+                    "source": [ "obj-10", 2 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-60", 0 ],
-                    "midpoints": [ 308.5, 165.0, 153.0, 165.0, 153.0, 318.0, 177.5, 318.0 ],
-                    "source": [ "obj-10", 3 ]
+                    "destination": [ "obj-38", 0 ],
+                    "order": 0,
+                    "source": [ "obj-10", 2 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-4", 0 ],
+                    "source": [ "obj-3", 0 ]
                 }
             },
             {
@@ -188,6 +251,12 @@
                 "patchline": {
                     "destination": [ "obj-5", 0 ],
                     "source": [ "obj-38", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-1", 0 ],
+                    "source": [ "obj-4", 0 ]
                 }
             },
             {
@@ -220,7 +289,6 @@
                     "source": [ "obj-9", 0 ]
                 }
             }
-        ],
-        "autosave": 0
+        ]
     }
 }
