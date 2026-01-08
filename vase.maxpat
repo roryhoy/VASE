@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
+        "rect": [ 34.0, 93.0, 2492.0, 1313.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
@@ -20,7 +20,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 728.0, 101.0, 119.0, 18.0 ],
-                    "presentation_linecount": 2,
                     "text": "need to delay after start?",
                     "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
                 }
@@ -68,7 +67,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 446.0, 82.0, 92.0, 40.0 ],
+                    "patching_rect": [ 446.0, 82.0, 95.0, 40.0 ],
                     "text": "change to qmetro?\nI think only need to check mubu stuff",
                     "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
                 }
@@ -2685,6 +2684,75 @@
                                     "outlettype": [ "list", "list" ],
                                     "parameter_enable": 0,
                                     "patching_rect": [ 77.0, 77.0, 229.0, 156.0 ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-22",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "signal" ],
+                                    "patching_rect": [ 28.0, 356.0, 100.0, 0.0 ],
+                                    "text": "adc~ 1",
+                                    "varname": "adc_1[1]"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-32",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 28.0, 389.0, 100.0, 0.0 ],
+                                    "text": "send~ player_1",
+                                    "varname": "send_1[1]"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-34",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "signal" ],
+                                    "patching_rect": [ 178.0, 356.0, 100.0, 0.0 ],
+                                    "text": "adc~ 2",
+                                    "varname": "adc_2[1]"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-35",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 178.0, 389.0, 100.0, 0.0 ],
+                                    "text": "send~ player_2",
+                                    "varname": "send_2[1]"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-36",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "signal" ],
+                                    "patching_rect": [ 328.0, 356.0, 100.0, 0.0 ],
+                                    "text": "adc~ 3",
+                                    "varname": "adc_3[1]"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-37",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 328.0, 389.0, 100.0, 0.0 ],
+                                    "text": "send~ player_3",
+                                    "varname": "send_3[1]"
                                 }
                             }
                         ],
@@ -12225,12 +12293,12 @@
                 "box": {
                     "fontsize": 14.068606165870607,
                     "id": "obj-135",
-                    "linecount": 3,
+                    "linecount": 4,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1376.0, 761.0, 289.0, 54.0 ],
-                    "text": "position: x forward, y left, z up\nazimuth: 0 deg forward, counter clockwise +\nelevation: 0 deg forward, -90 - 90 deg"
+                    "patching_rect": [ 1376.0, 761.0, 289.0, 69.0 ],
+                    "text": "position: x forward, y left, z up\nazimuth: 0 deg forward, counter clockwise +\nelevation: 0 deg forward, -90 - 90 deg\nroll: 0 deg flat, -180 to 180"
                 }
             },
             {
@@ -35212,14 +35280,6 @@
             "obj-43::obj-48": [ "live.toggle[12]", "live.toggle", 0 ],
             "obj-64": [ "live.gain~", "live.gain~", 0 ],
             "obj-98": [ "live.text", "live.text", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-128::obj-16": {
                     "parameter_longname": "live.text[15]"
