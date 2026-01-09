@@ -15,6 +15,19 @@
         "boxes": [
             {
                 "box": {
+                    "fontsize": 16.466333223808306,
+                    "id": "obj-112",
+                    "linecount": 3,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1372.5, 681.8613251155625, 385.0, 62.0 ],
+                    "presentation_linecount": 3,
+                    "text": "Now using Mathematical System for position (could implement same coord swapping from original spat world"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-105",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -1339,7 +1352,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 151.0, 153.0, 1651.0, 852.0 ],
+                        "rect": [ 35.0, 105.0, 1651.0, 852.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
@@ -12171,7 +12184,7 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1398.0, 275.0, 352.0, 180.0 ],
+                    "patching_rect": [ 1395.0, 107.0, 382.0, 173.0 ],
                     "proportion": 0.5
                 }
             },
@@ -12339,20 +12352,20 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1376.0, 761.0, 289.0, 69.0 ],
-                    "text": "position: x forward, y left, z up\nazimuth: 0 deg forward, counter clockwise +\nelevation: 0 deg forward, -90 - 90 deg\nroll: 0 deg flat, -180 to 180"
+                    "patching_rect": [ 1372.5, 829.0, 289.0, 69.0 ],
+                    "text": "position: x right, y forward, z up\nazimuth: 0 deg forward, counter clockwise +\nelevation: 0 deg forward, -90 - 90 deg\nroll: 0 deg flat, -180 to 180"
                 }
             },
             {
                 "box": {
-                    "fontsize": 19.160746230513666,
+                    "fontsize": 16.466333223808306,
                     "id": "obj-133",
                     "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1376.0, 669.0, 440.0, 71.0 ],
-                    "text": "Using Shifted Mathematical System for cartesian positon, and Blauert / Gerzon for spherical rotational coordinates"
+                    "patching_rect": [ 1372.5, 755.0, 385.0, 62.0 ],
+                    "text": "Was using Shifted Mathematical System for cartesian positon, and Blauert / Gerzon for spherical rotational coordinates"
                 }
             },
             {
