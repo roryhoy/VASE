@@ -408,7 +408,7 @@
                                     "numoutlets": 2,
                                     "outlettype": [ "", "" ],
                                     "patching_rect": [ 144.0, 895.0, 806.0, 20.0 ],
-                                    "text": "jit.gl.gridshape VASE @shape sphere @lighting_enable 0 @depth_enable 1 @smooth_shading 1 @antialias 1 @drawbounds 0 @enable 1 @scale 0.3 0.3 0.3 @anchor -0.7 0. -0.1"
+                                    "text": "jit.gl.gridshape VASE @shape sphere @lighting_enable 0 @depth_enable 1 @smooth_shading 1 @antialias 1 @drawbounds 0 @enable 0 @scale 0.3 0.3 0.3 @anchor -0.7 0. -0.1"
                                 }
                             },
                             {
@@ -419,7 +419,7 @@
                                     "numoutlets": 2,
                                     "outlettype": [ "", "" ],
                                     "patching_rect": [ 165.0, 841.0, 803.0, 20.0 ],
-                                    "text": "jit.gl.gridshape VASE @shape sphere @lighting_enable 0 @depth_enable 1 @smooth_shading 1 @antialias 1 @drawbounds 0 @enable 1 @scale 0.3 0.3 0.3 @anchor 0.7 0. -0.1"
+                                    "text": "jit.gl.gridshape VASE @shape sphere @lighting_enable 0 @depth_enable 1 @smooth_shading 1 @antialias 1 @drawbounds 0 @enable 0 @scale 0.3 0.3 0.3 @anchor 0.7 0. -0.1"
                                 }
                             },
                             {
@@ -2237,6 +2237,13 @@
                                 "patchline": {
                                     "destination": [ "obj-21", 0 ],
                                     "order": 2,
+                                    "source": [ "obj-49", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-22", 0 ],
+                                    "order": 3,
                                     "source": [ "obj-49", 0 ]
                                 }
                             },

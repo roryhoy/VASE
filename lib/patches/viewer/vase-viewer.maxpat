@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 93.0, 2492.0, 863.0 ],
+        "rect": [ 32.0, 539.0, 641.0, 227.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "title": "VASE Viewer",
@@ -75,7 +75,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1491.0, 513.0, 153.0, 21.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 272.0, 276.0, 153.0, 21.0 ],
+                    "presentation_rect": [ 256.0, 186.0, 153.0, 21.0 ],
                     "text": "Draw Player Sound Activity"
                 }
             },
@@ -100,7 +100,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1659.0, 516.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 427.0, 279.0, 15.0, 15.0 ],
+                    "presentation_rect": [ 243.0, 189.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -145,7 +145,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1574.0, 412.0, 78.0, 21.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 157.0, 276.0, 78.0, 21.0 ],
+                    "presentation_rect": [ 256.0, 164.0, 78.0, 21.0 ],
                     "text": "Draw Players"
                 }
             },
@@ -159,7 +159,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1659.0, 415.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 241.0, 279.0, 15.0, 15.0 ],
+                    "presentation_rect": [ 243.0, 167.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -738,7 +738,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1544.0, 301.0, 109.0, 35.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 126.0, 234.0, 112.0, 21.0 ],
+                    "presentation_rect": [ 256.0, 75.5, 112.0, 21.0 ],
                     "text": "Draw Space Agents"
                 }
             },
@@ -752,7 +752,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1659.0, 311.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 241.0, 237.0, 15.0, 15.0 ],
+                    "presentation_rect": [ 243.0, 78.5, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -798,7 +798,7 @@
                     "patching_rect": [ 1544.0, 196.0, 110.0, 35.0 ],
                     "presentation": 1,
                     "presentation_linecount": 2,
-                    "presentation_rect": [ 272.5, 227.0, 110.0, 35.0 ],
+                    "presentation_rect": [ 256.0, 97.5, 111.0, 35.0 ],
                     "text": "Draw Space Agent \nsensing range"
                 }
             },
@@ -812,7 +812,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1659.0, 206.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 385.5, 237.0, 15.0, 15.0 ],
+                    "presentation_rect": [ 243.0, 107.5, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -946,7 +946,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 35.0, 962.0, 42.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 442.0, 151.0, 42.0, 20.0 ],
+                    "presentation_rect": [ 418.0, 134.68351197034957, 42.0, 20.0 ],
                     "text": "0, 0, 0"
                 }
             },
@@ -960,7 +960,7 @@
                     "patching_rect": [ 68.0, 843.0, 153.0, 131.5 ],
                     "pic": "xyz-coords-spat.world.png",
                     "presentation": 1,
-                    "presentation_rect": [ 476.0, 36.0, 156.0, 128.0 ]
+                    "presentation_rect": [ 452.0, 19.683511970349585, 156.0, 128.0 ]
                 }
             },
             {
@@ -2144,8 +2144,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 178.0, 165.0, 19.0, 21.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 303.0, 128.5, 19.0, 21.0 ],
                     "text": "#"
                 }
             },
@@ -2158,8 +2156,6 @@
                     "outlettype": [ "", "" ],
                     "parameter_enable": 1,
                     "patching_rect": [ 853.0, 507.0, 71.0, 15.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 328.0, 167.5, 73.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -2184,8 +2180,6 @@
                     "outlettype": [ "", "" ],
                     "parameter_enable": 1,
                     "patching_rect": [ 862.0, 446.0, 71.0, 15.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 328.0, 146.5, 73.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -2430,8 +2424,6 @@
                     "outlettype": [ "", "" ],
                     "parameter_enable": 1,
                     "patching_rect": [ 20.0, 1005.5, 61.25, 17.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 330.5, 92.5, 60.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -3547,8 +3539,6 @@
                     "outlettype": [ "", "" ],
                     "parameter_enable": 1,
                     "patching_rect": [ 20.0, 1078.0, 44.0, 15.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 288.0, 92.5, 44.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -5938,7 +5928,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1595.0, 647.0, 62.0, 35.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 302.5, 55.5, 92.0, 21.0 ],
+                    "presentation_rect": [ 259.5, 34.5, 92.0, 21.0 ],
                     "text": "Player Co-ords"
                 }
             },
@@ -5952,7 +5942,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1659.0, 657.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 290.0, 57.0, 15.0, 15.0 ],
+                    "presentation_rect": [ 242.5, 37.5, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -5986,7 +5976,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 61.0, 681.0, 78.0, 21.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 302.5, 40.5, 85.0, 21.0 ],
+                    "presentation_rect": [ 259.5, 16.5, 85.0, 21.0 ],
                     "text": "Draw Legend"
                 }
             },
@@ -6010,7 +6000,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 44.0, 684.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 290.0, 40.5, 15.0, 15.0 ],
+                    "presentation_rect": [ 243.0, 19.5, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
