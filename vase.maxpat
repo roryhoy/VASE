@@ -1339,7 +1339,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 151.0, 153.0, 1444.0, 852.0 ],
+                        "rect": [ 151.0, 153.0, 1651.0, 852.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
@@ -2807,29 +2807,6 @@
                                     "parameter_enable": 0,
                                     "patching_rect": [ 77.0, 77.0, 229.0, 156.0 ]
                                 }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-34",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 1,
-                                    "outlettype": [ "signal" ],
-                                    "patching_rect": [ 28.0, 356.0, 100.0, 0.0 ],
-                                    "text": "adc~ 1",
-                                    "varname": "adc_1[1]"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-35",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [ 28.0, 389.0, 100.0, 0.0 ],
-                                    "text": "send~ player_1",
-                                    "varname": "send_1[1]"
-                                }
                             }
                         ],
                         "lines": [
@@ -3094,7 +3071,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 34.0, 87.0, 1606.0, 929.0 ],
+                        "rect": [ 134.0, 165.0, 1606.0, 929.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
@@ -4254,7 +4231,7 @@
                                                     "numoutlets": 1,
                                                     "outlettype": [ "" ],
                                                     "patching_rect": [ 1105.0, 276.0, 102.0, 22.0 ],
-                                                    "text": "-0.164716"
+                                                    "text": "0.246127"
                                                 }
                                             },
                                             {
@@ -4378,7 +4355,7 @@
                                                     "numoutlets": 1,
                                                     "outlettype": [ "" ],
                                                     "patching_rect": [ 409.0, 199.0, 250.0, 22.0 ],
-                                                    "text": "position -0.164716 0. 0."
+                                                    "text": "position 0.246127 0. 0."
                                                 }
                                             },
                                             {
@@ -11312,13 +11289,11 @@
                                     "source": [ "obj-98", 0 ]
                                 }
                             }
-                        ],
-                        "bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 1059.0, 283.0, 239.0, 37.0 ],
                     "saved_object_attributes": {
-                        "fontsize": 10.0,
-                        "locked_bgcolor": [ 1.0, 1.0, 1.0, 1.0 ]
+                        "fontsize": 10.0
                     },
                     "text": "p composer-timeline",
                     "varname": "composer-timeline"
@@ -11402,7 +11377,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 843.0, 590.0, 150.0, 29.0 ],
+                    "patching_rect": [ 857.0, 590.0, 150.0, 29.0 ],
                     "text": "output matrix to jack sends / audience streams"
                 }
             },
