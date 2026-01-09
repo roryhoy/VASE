@@ -11396,17 +11396,6 @@
             },
             {
                 "box": {
-                    "id": "obj-144",
-                    "linecount": 12,
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 43.5, 781.0, 381.0, 141.0 ],
-                    "text": "listener patchers\n\nencoding and decoding for a given position and relative placement of sources\n\nListeners have ambisonic mixes for all players and audience members\\\n\npoint of view of a player, composer, or audience member. This is a binaural mix which is routed out to a human.\n\nPlayers can be \"disembodied\" listening from a different perspective than their source position. If sources are tied to current positions, only hear wet signal from room/agent as they will be monitoring locally anyway"
-                }
-            },
-            {
-                "box": {
                     "fontsize": 8.30140485312899,
                     "id": "obj-142",
                     "linecount": 2,
@@ -11455,11 +11444,22 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 134.0, 96.0, 772.0, 852.0 ],
+                        "rect": [ 134.0, 96.0, 902.0, 432.0 ],
                         "openinpresentation": 1,
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
+                            {
+                                "box": {
+                                    "id": "obj-197",
+                                    "linecount": 12,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 950.0, 183.5, 381.0, 141.0 ],
+                                    "text": "listener patchers\n\nencoding and decoding for a given position and relative placement of sources\n\nListeners have ambisonic mixes for all players and audience members\\\n\npoint of view of a player, composer, or audience member. This is a binaural mix which is routed out to a human.\n\nPlayers can be \"disembodied\" listening from a different perspective than their source position. If sources are tied to current positions, only hear wet signal from room/agent as they will be monitoring locally anyway"
+                                }
+                            },
                             {
                                 "box": {
                                     "fontsize": 13.773913043478261,
@@ -11881,7 +11881,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 963.0, 225.0, 314.0, 24.0 ],
+                                    "patching_rect": [ 954.0, 139.5, 314.0, 24.0 ],
                                     "text": "This subpatch spawns and holds all listeners"
                                 }
                             },
