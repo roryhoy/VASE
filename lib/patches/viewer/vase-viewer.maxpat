@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 32.0, 539.0, 641.0, 227.0 ],
+        "rect": [ 0.0, 59.0, 625.0, 232.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "title": "VASE Viewer",
@@ -20,7 +20,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1659.0, 693.0, 111.0, 22.0 ],
+                    "patching_rect": [ 1336.0, 951.0, 111.0, 22.0 ],
                     "text": "s legend-tog-player"
                 }
             },
@@ -73,7 +73,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1491.0, 513.0, 153.0, 21.0 ],
+                    "patching_rect": [ 1176.0, 771.0, 153.0, 21.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 256.0, 186.0, 153.0, 21.0 ],
                     "text": "Draw Player Sound Activity"
@@ -86,7 +86,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1659.0, 482.0, 70.0, 22.0 ],
+                    "patching_rect": [ 1336.0, 740.0, 70.0, 22.0 ],
                     "text": "loadmess 0"
                 }
             },
@@ -98,7 +98,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 1659.0, 516.0, 15.0, 15.0 ],
+                    "patching_rect": [ 1336.0, 774.0, 15.0, 15.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 243.0, 189.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
@@ -121,7 +121,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1767.0, 440.0, 87.0, 22.0 ],
+                    "patching_rect": [ 1444.0, 698.0, 87.0, 22.0 ],
                     "text": "v draw-players"
                 }
             },
@@ -132,7 +132,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1659.0, 381.0, 70.0, 22.0 ],
+                    "patching_rect": [ 1336.0, 639.0, 70.0, 22.0 ],
                     "text": "loadmess 1"
                 }
             },
@@ -143,7 +143,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1574.0, 412.0, 78.0, 21.0 ],
+                    "patching_rect": [ 1251.0, 670.0, 78.0, 21.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 256.0, 164.0, 78.0, 21.0 ],
                     "text": "Draw Players"
@@ -157,7 +157,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 1659.0, 415.0, 15.0, 15.0 ],
+                    "patching_rect": [ 1336.0, 673.0, 15.0, 15.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 243.0, 167.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
@@ -179,7 +179,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1659.0, 440.0, 101.0, 22.0 ],
+                    "patching_rect": [ 1336.0, 698.0, 101.0, 22.0 ],
                     "text": "s player-draw-tog"
                 }
             },
@@ -190,7 +190,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1768.0, 560.0, 85.0, 22.0 ],
+                    "patching_rect": [ 1445.0, 818.0, 85.0, 22.0 ],
                     "text": "v draw-activity"
                 }
             },
@@ -200,7 +200,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1658.5, 560.0, 105.0, 22.0 ],
+                    "patching_rect": [ 1336.0, 818.0, 105.0, 22.0 ],
                     "text": "s activity-draw-tog"
                 }
             },
@@ -668,7 +668,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1807.0, 231.0, 89.0, 22.0 ],
+                    "patching_rect": [ 1484.0, 489.0, 89.0, 22.0 ],
                     "text": "v draw-sensing"
                 }
             },
@@ -679,7 +679,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1767.0, 336.0, 84.0, 22.0 ],
+                    "patching_rect": [ 1444.0, 594.0, 84.0, 22.0 ],
                     "text": "v draw-agents"
                 }
             },
@@ -724,7 +724,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1659.0, 277.0, 70.0, 22.0 ],
+                    "patching_rect": [ 1336.0, 535.0, 70.0, 22.0 ],
                     "text": "loadmess 1"
                 }
             },
@@ -732,11 +732,10 @@
                 "box": {
                     "fontname": "Ableton Sans Medium",
                     "id": "obj-35",
-                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1544.0, 301.0, 109.0, 35.0 ],
+                    "patching_rect": [ 1219.0, 566.0, 115.0, 21.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 256.0, 75.5, 112.0, 21.0 ],
                     "text": "Draw Space Agents"
@@ -750,7 +749,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 1659.0, 311.0, 15.0, 15.0 ],
+                    "patching_rect": [ 1336.0, 569.0, 15.0, 15.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 243.0, 78.5, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
@@ -772,7 +771,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1659.0, 336.0, 99.0, 22.0 ],
+                    "patching_rect": [ 1336.0, 594.0, 99.0, 22.0 ],
                     "text": "s agent-draw-tog"
                 }
             },
@@ -783,7 +782,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1659.0, 172.0, 70.0, 22.0 ],
+                    "patching_rect": [ 1336.0, 430.0, 70.0, 22.0 ],
                     "text": "loadmess 0"
                 }
             },
@@ -795,7 +794,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1544.0, 196.0, 110.0, 35.0 ],
+                    "patching_rect": [ 1221.0, 454.0, 110.0, 35.0 ],
                     "presentation": 1,
                     "presentation_linecount": 2,
                     "presentation_rect": [ 256.0, 97.5, 111.0, 35.0 ],
@@ -810,7 +809,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 1659.0, 206.0, 15.0, 15.0 ],
+                    "patching_rect": [ 1336.0, 464.0, 15.0, 15.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 243.0, 107.5, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
@@ -832,7 +831,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1659.0, 231.0, 135.0, 22.0 ],
+                    "patching_rect": [ 1336.0, 489.0, 135.0, 22.0 ],
                     "text": "s sense-range-draw-tog"
                 }
             },
@@ -976,18 +975,6 @@
             },
             {
                 "box": {
-                    "fontsize": 22.07430281167108,
-                    "id": "obj-135",
-                    "linecount": 3,
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 1560.0, 20.0, 412.0, 80.0 ],
-                    "text": "To do:\n\n- Scale legend to vase sizes"
-                }
-            },
-            {
-                "box": {
                     "id": "obj-121",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -1094,7 +1081,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 105.0, 207.0, 29.5, 22.0 ],
+                    "patching_rect": [ 82.25, 193.0, 29.5, 22.0 ],
                     "text": "0"
                 }
             },
@@ -1105,7 +1092,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 72.0, 207.0, 29.5, 22.0 ],
+                    "patching_rect": [ 49.25, 193.0, 29.5, 22.0 ],
                     "text": "30"
                 }
             },
@@ -1116,7 +1103,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 41.0, 207.0, 29.5, 22.0 ],
+                    "patching_rect": [ 18.25, 193.0, 29.5, 22.0 ],
                     "text": "0"
                 }
             },
@@ -1127,7 +1114,7 @@
                     "numinlets": 3,
                     "numoutlets": 3,
                     "outlettype": [ "bang", "bang", "" ],
-                    "patching_rect": [ 105.0, 178.0, 44.0, 22.0 ],
+                    "patching_rect": [ 82.25, 164.0, 44.0, 22.0 ],
                     "text": "sel 0 1"
                 }
             },
@@ -1138,7 +1125,7 @@
                     "numinlets": 3,
                     "numoutlets": 3,
                     "outlettype": [ "bang", "bang", "" ],
-                    "patching_rect": [ 41.0, 178.0, 44.0, 22.0 ],
+                    "patching_rect": [ 18.25, 164.0, 44.0, 22.0 ],
                     "text": "sel 0 1"
                 }
             },
@@ -1149,7 +1136,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 97.0, 234.0, 58.0, 22.0 ],
+                    "patching_rect": [ 74.25, 220.0, 58.0, 22.0 ],
                     "text": "speed $1"
                 }
             },
@@ -1160,7 +1147,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 41.0, 234.0, 58.0, 22.0 ],
+                    "patching_rect": [ 18.25, 220.0, 58.0, 22.0 ],
                     "text": "speed $1"
                 }
             },
@@ -1171,7 +1158,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
-                    "patching_rect": [ 41.0, 153.0, 33.0, 22.0 ],
+                    "patching_rect": [ 18.25, 139.0, 33.0, 22.0 ],
                     "text": "== 0"
                 }
             },
@@ -1182,7 +1169,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
-                    "patching_rect": [ 105.0, 153.0, 29.5, 22.0 ],
+                    "patching_rect": [ 82.25, 139.0, 29.5, 22.0 ],
                     "text": "!= 0"
                 }
             },
@@ -2121,7 +2108,7 @@
                     "numinlets": 3,
                     "numoutlets": 3,
                     "outlettype": [ "bang", "bang", "" ],
-                    "patching_rect": [ 154.0, 185.0, 57.0, 22.0 ],
+                    "patching_rect": [ 171.25, 200.5, 57.0, 22.0 ],
                     "text": "sel 32 27"
                 }
             },
@@ -5914,7 +5901,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1659.0, 612.0, 70.0, 22.0 ],
+                    "patching_rect": [ 1336.0, 870.0, 70.0, 22.0 ],
                     "text": "loadmess 0"
                 }
             },
@@ -5926,7 +5913,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1595.0, 647.0, 62.0, 35.0 ],
+                    "patching_rect": [ 1272.0, 905.0, 62.0, 35.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 259.5, 34.5, 92.0, 21.0 ],
                     "text": "Player Co-ords"
@@ -5940,7 +5927,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 1659.0, 657.0, 15.0, 15.0 ],
+                    "patching_rect": [ 1336.0, 915.0, 15.0, 15.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 242.5, 37.5, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
@@ -7898,8 +7885,8 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "jit_gl_texture", "" ],
-                    "patching_rect": [ 304.0, 266.0, 517.0, 23.0 ],
-                    "text": "jit.gl.camera VASE @tripod 1 @position 0 7 26 @rotatexyz -18. 0. 0. @far_clip 300."
+                    "patching_rect": [ 299.5, 296.0, 523.0, 23.0 ],
+                    "text": "jit.gl.camera VASE @tripod 1 @position 0 7 26 @rotatexyz -0. -90. 0. @far_clip 300."
                 }
             },
             {
@@ -8006,6 +7993,18 @@
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
                     "patching_rect": [ 548.0, 713.5, 150.0, 22.0 ]
+                }
+            },
+            {
+                "box": {
+                    "attr": "rotatexyz",
+                    "id": "obj-179",
+                    "maxclass": "attrui",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 460.0, 269.0, 274.0, 22.0 ]
                 }
             }
         ],
@@ -8414,6 +8413,12 @@
                 "patchline": {
                     "destination": [ "obj-167", 2 ],
                     "source": [ "obj-176", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-17", 0 ],
+                    "source": [ "obj-179", 0 ]
                 }
             },
             {

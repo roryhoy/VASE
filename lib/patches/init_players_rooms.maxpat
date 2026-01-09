@@ -62,7 +62,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "bang", "bang", "bang", "clear" ],
-                    "patching_rect": [ 129.0, 141.0, 71.0, 22.0 ],
+                    "patching_rect": [ 129.0, 103.0, 71.0, 22.0 ],
                     "text": "t b b b clear"
                 }
             },
@@ -83,7 +83,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 159.0, 95.0, 128.0, 20.0 ],
+                    "patching_rect": [ 159.0, 68.0, 128.0, 20.0 ],
                     "text": "randomize new values"
                 }
             },
@@ -95,7 +95,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 129.0, 93.0, 24.0, 24.0 ]
+                    "patching_rect": [ 129.0, 66.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -107,7 +107,7 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 129.0, 41.0, 30.0, 30.0 ]
+                    "patching_rect": [ 129.0, 21.0, 30.0, 30.0 ]
                 }
             },
             {
@@ -1087,7 +1087,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 810.0, 236.5, 50.0, 20.0 ],
-                                    "text": "3"
+                                    "text": "6"
                                 }
                             },
                             {
@@ -1380,7 +1380,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 50.0, 234.0, 50.0, 20.0 ],
-                                    "text": "3"
+                                    "text": "6"
                                 }
                             },
                             {
