@@ -9,8 +9,40 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 151.0, 143.0, 1143.0, 836.0 ],
+        "rect": [ 151.0, 143.0, 1143.0, 968.0 ],
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-8",
+                    "maxclass": "toggle",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "int" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 201.0, 710.0, 24.0, 24.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-6",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 201.0, 745.0, 52.0, 22.0 ],
+                    "text": "gate 1 0"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-1",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 201.0, 788.0, 32.0, 22.0 ],
+                    "text": "print"
+                }
+            },
             {
                 "box": {
                     "color": [ 0.07058823529411765, 0.13725490196078433, 0.796078431372549, 1.0 ],
@@ -19,7 +51,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 125.0, 750.0, 153.0, 22.0 ],
+                    "patching_rect": [ 120.0, 835.0, 153.0, 22.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -481,7 +513,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-65", 0 ],
-                    "midpoints": [ 124.5, 276.0, 96.0, 276.0, 96.0, 735.0, 134.5, 735.0 ],
+                    "midpoints": [ 124.5, 276.0, 96.0, 276.0, 96.0, 818.0, 129.5, 818.0 ],
                     "order": 0,
                     "source": [ "obj-31", 2 ]
                 }
@@ -524,7 +556,15 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-6", 1 ],
+                    "order": 0,
+                    "source": [ "obj-5", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-65", 0 ],
+                    "order": 1,
                     "source": [ "obj-5", 0 ]
                 }
             },
@@ -556,6 +596,18 @@
                 "patchline": {
                     "destination": [ "obj-36", 0 ],
                     "source": [ "obj-59", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-1", 0 ],
+                    "source": [ "obj-6", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-6", 0 ],
+                    "source": [ "obj-8", 0 ]
                 }
             },
             {
