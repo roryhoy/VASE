@@ -2247,7 +2247,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 287.0, 160.0, 949.0, 644.0 ],
+                        "rect": [ 287.0, 160.0, 1111.0, 1057.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
@@ -2732,75 +2732,6 @@
                                     "outlettype": [ "list", "list" ],
                                     "parameter_enable": 0,
                                     "patching_rect": [ 77.0, 77.0, 229.0, 156.0 ]
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-22",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 1,
-                                    "outlettype": [ "signal" ],
-                                    "patching_rect": [ 28.0, 356.0, 100.0, 0.0 ],
-                                    "text": "adc~ 1",
-                                    "varname": "adc_1[1]"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-32",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [ 28.0, 389.0, 100.0, 0.0 ],
-                                    "text": "send~ player_1",
-                                    "varname": "send_1[1]"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-34",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 1,
-                                    "outlettype": [ "signal" ],
-                                    "patching_rect": [ 178.0, 356.0, 100.0, 0.0 ],
-                                    "text": "adc~ 2",
-                                    "varname": "adc_2[1]"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-35",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [ 178.0, 389.0, 100.0, 0.0 ],
-                                    "text": "send~ player_2",
-                                    "varname": "send_2[1]"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-36",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 1,
-                                    "outlettype": [ "signal" ],
-                                    "patching_rect": [ 328.0, 356.0, 100.0, 0.0 ],
-                                    "text": "adc~ 3",
-                                    "varname": "adc_3[1]"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-37",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [ 328.0, 389.0, 100.0, 0.0 ],
-                                    "text": "send~ player_3",
-                                    "varname": "send_3[1]"
                                 }
                             }
                         ],
@@ -35387,14 +35318,6 @@
             "obj-43::obj-48": [ "live.toggle[12]", "live.toggle", 0 ],
             "obj-64": [ "live.gain~", "live.gain~", 0 ],
             "obj-98": [ "live.text", "live.text", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-128::obj-16": {
                     "parameter_longname": "live.text[15]"
