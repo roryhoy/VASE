@@ -16,6 +16,19 @@
         "boxes": [
             {
                 "box": {
+                    "fontsize": 13.204868154158213,
+                    "id": "obj-24",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 768.0, 167.0, 187.0, 36.0 ],
+                    "text": "Rotation seems a little wonky on changes in elevation",
+                    "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
+                }
+            },
+            {
+                "box": {
                     "id": "obj-71",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -414,7 +427,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 602.0, 34.0, 29.5, 20.0 ],
-                    "text": "1"
+                    "text": "#1"
                 }
             },
             {
@@ -3092,6 +3105,14 @@
             "obj-64": [ "live.text[24]", "live.text[24]", 0 ],
             "obj-89": [ "live.tab[7]", "live.tab", 0 ],
             "obj-98": [ "live.toggle[80]", "live.toggle[80]", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0

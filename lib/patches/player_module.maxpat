@@ -43,7 +43,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 1224.25, 643.0, 29.5, 20.0 ],
-                    "text": "1"
+                    "text": "#1"
                 }
             },
             {
@@ -130,7 +130,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 1557.0, 657.0, 29.5, 20.0 ],
-                    "text": "1"
+                    "text": "#1"
                 }
             },
             {
@@ -502,7 +502,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "parameter_enable": 0,
-                                    "patching_rect": [ 891.0, 355.0, 132.0, 23.0 ],
+                                    "patching_rect": [ 881.5, 344.5, 132.0, 23.0 ],
                                     "text_width": 50.0
                                 }
                             },
@@ -513,8 +513,8 @@
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 891.0, 310.0, 62.0, 20.0 ],
-                                    "text": "r legend-tog"
+                                    "patching_rect": [ 881.5, 305.0, 92.0, 20.0 ],
+                                    "text": "r legend-tog-player"
                                 }
                             },
                             {
@@ -1289,7 +1289,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 1329.0, 383.0, 232.0, 18.0 ],
+                                    "patching_rect": [ 1355.0, 384.0, 232.0, 18.0 ],
                                     "text": "scale of activity polls current player signal intensity"
                                 }
                             },
@@ -1301,7 +1301,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 340.0, 296.0, 181.0, 48.0 ],
+                                    "patching_rect": [ 340.0, 296.0, 182.0, 48.0 ],
                                     "text": "scale for jitter based on vase size"
                                 }
                             },
@@ -2446,7 +2446,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 1107.0, 356.0, 29.5, 20.0 ],
-                    "text": "1"
+                    "text": "0"
                 }
             },
             {
