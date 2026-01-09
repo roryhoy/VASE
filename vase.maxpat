@@ -9,10 +9,70 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 93.0, 2492.0, 1313.0 ],
+        "rect": [ 34.0, 93.0, 1742.0, 867.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-96",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 473.0, 88.0, 45.0, 20.0 ],
+                    "text": "gate 1 0"
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Ableton Sans Medium",
+                    "id": "obj-90",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 388.0, 61.0, 85.0, 18.0 ],
+                    "presentation": 1,
+                    "presentation_linecount": 2,
+                    "presentation_rect": [ 157.0, 276.0, 78.0, 30.0 ],
+                    "text": "Mubu Processing"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-95",
+                    "maxclass": "live.toggle",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "parameter_enable": 1,
+                    "patching_rect": [ 474.0, 63.0, 15.0, 15.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 241.0, 279.0, 15.0, 15.0 ],
+                    "saved_attribute_attributes": {
+                        "valueof": {
+                            "parameter_enum": [ "off", "on" ],
+                            "parameter_longname": "live.toggle[30]",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "live.toggle",
+                            "parameter_type": 2
+                        }
+                    },
+                    "varname": "live.toggle[8]"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.5725490196078431, 0.5686274509803921, 0.054901960784313725, 1.0 ],
+                    "id": "obj-42",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 473.0, 116.0, 61.0, 20.0 ],
+                    "text": "s mubu_tog"
+                }
+            },
             {
                 "box": {
                     "id": "obj-84",
@@ -115,7 +175,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 446.0, 82.0, 95.0, 40.0 ],
+                    "patching_rect": [ 364.0, 106.0, 95.0, 40.0 ],
                     "text": "change to qmetro?\nI think only need to check mubu stuff",
                     "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
                 }
@@ -1284,10 +1344,22 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
+                        "rect": [ 862.0, 358.0, 1444.0, 852.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
+                            {
+                                "box": {
+                                    "color": [ 0.5725490196078431, 0.5686274509803921, 0.054901960784313725, 1.0 ],
+                                    "id": "obj-42",
+                                    "maxclass": "newobj",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "" ],
+                                    "patching_rect": [ 927.0, 128.0, 59.0, 20.0 ],
+                                    "text": "r mubu_tog"
+                                }
+                            },
                             {
                                 "box": {
                                     "fontsize": 12.136363636363633,
@@ -2047,6 +2119,12 @@
                             },
                             {
                                 "patchline": {
+                                    "destination": [ "obj-12", 0 ],
+                                    "source": [ "obj-42", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
                                     "destination": [ "obj-30", 0 ],
                                     "source": [ "obj-44", 0 ]
                                 }
@@ -2732,6 +2810,29 @@
                                     "outlettype": [ "list", "list" ],
                                     "parameter_enable": 0,
                                     "patching_rect": [ 77.0, 77.0, 229.0, 156.0 ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-34",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "signal" ],
+                                    "patching_rect": [ 28.0, 356.0, 100.0, 0.0 ],
+                                    "text": "adc~ 1",
+                                    "varname": "adc_1[1]"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-35",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 28.0, 389.0, 100.0, 0.0 ],
+                                    "text": "send~ player_1",
+                                    "varname": "send_1[1]"
                                 }
                             }
                         ],
@@ -12201,11 +12302,12 @@
                 "box": {
                     "fontsize": 18.65881032547699,
                     "id": "obj-55",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 429.0, 28.0, 114.965, 27.0 ],
-                    "text": "Global Clock"
+                    "patching_rect": [ 436.0, 8.917352941176468, 114.965, 48.0 ],
+                    "text": "Start / Global Clock"
                 }
             },
             {
@@ -12301,7 +12403,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 548.0, 17.0, 49.06999999999999, 49.06999999999999 ]
+                    "patching_rect": [ 548.0, 8.382352941176471, 49.06999999999999, 49.06999999999999 ]
                 }
             },
             {
@@ -35252,6 +35354,18 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-96", 0 ],
+                    "source": [ "obj-95", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-42", 0 ],
+                    "source": [ "obj-96", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-88", 0 ],
                     "source": [ "obj-97", 0 ]
                 }
@@ -35264,7 +35378,15 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-96", 1 ],
+                    "order": 1,
+                    "source": [ "obj-99", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-97", 0 ],
+                    "order": 0,
                     "source": [ "obj-99", 0 ]
                 }
             }
@@ -35281,14 +35403,11 @@
             "obj-11::obj-197::obj-19": [ "live.toggle[23]", "live.toggle", 0 ],
             "obj-11::obj-197::obj-41": [ "live.toggle[22]", "live.toggle", 0 ],
             "obj-11::obj-197::obj-48": [ "live.button[2]", "live.button", 0 ],
-            "obj-11::obj-211": [ "live.numbox[7]", "live.numbox", 0 ],
             "obj-11::obj-30": [ "live.toggle[29]", "live.toggle", 0 ],
             "obj-11::obj-37": [ "live.toggle[27]", "live.toggle", 0 ],
-            "obj-11::obj-39": [ "live.toggle[10]", "live.toggle", 0 ],
             "obj-11::obj-46": [ "live.toggle[9]", "live.toggle", 0 ],
             "obj-11::obj-5": [ "live.toggle[24]", "live.toggle", 0 ],
             "obj-11::obj-56": [ "live.text[11]", "live.text", 0 ],
-            "obj-11::obj-68": [ "live.numbox[6]", "live.numbox", 0 ],
             "obj-11::obj-83": [ "live.text[12]", "live.text", 0 ],
             "obj-11::obj-96": [ "live.text[10]", "live.text", 0 ],
             "obj-11::obj-98": [ "live.text[9]", "live.text", 0 ],
@@ -35317,6 +35436,7 @@
             "obj-43::obj-47": [ "live.toggle[11]", "live.toggle", 0 ],
             "obj-43::obj-48": [ "live.toggle[12]", "live.toggle", 0 ],
             "obj-64": [ "live.gain~", "live.gain~", 0 ],
+            "obj-95": [ "live.toggle[30]", "live.toggle", 0 ],
             "obj-98": [ "live.text", "live.text", 0 ],
             "parameter_overrides": {
                 "obj-128::obj-16": {
