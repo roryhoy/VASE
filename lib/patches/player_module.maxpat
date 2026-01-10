@@ -15,6 +15,17 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-14",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 68.0, 492.0, 441.0, 18.0 ],
+                    "text": "CURRENTLY BYPASSING SELECTION, going direct always and allowing all reverb audio though",
+                    "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
+                }
+            },
+            {
+                "box": {
                     "id": "obj-79",
                     "maxclass": "number",
                     "numinlets": 1,
@@ -2650,7 +2661,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 14.0, 345.0, 60.0, 20.0 ],
-                    "text": "loadmess 1"
+                    "text": "loadmess 2"
                 }
             },
             {
@@ -3590,8 +3601,8 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-84", 1 ],
-                    "midpoints": [ 38.5, 330.0, 89.0, 330.0 ],
+                    "destination": [ "obj-6", 0 ],
+                    "midpoints": [ 38.5, 330.0, 51.5, 330.0 ],
                     "source": [ "obj-7", 0 ]
                 }
             },
@@ -3695,6 +3706,7 @@
                 }
             }
         ],
-        "autosave": 0
+        "autosave": 0,
+        "textcolor": [ 0.85, 0.85, 0.85, 1.0 ]
     }
 }
