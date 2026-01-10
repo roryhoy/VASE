@@ -65,7 +65,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 474.5, 1667.0, 235.0, 20.0 ],
-                    "text": "sprintf script newdefault mute_check_%i %f 63. > 0"
+                    "text": "sprintf script newdefault mute_check_%i %f 63. < 1"
                 }
             },
             {
@@ -75,7 +75,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 2.0, 64.0, 76.0, 18.0 ],
-                    "presentation_linecount": 2,
                     "text": "[mute_check_i]",
                     "textcolor": [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
                 }
@@ -131,7 +130,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 1148.0, 419.0, 85.0, 18.0 ],
-                    "presentation_linecount": 2,
                     "text": "[cycle_to_reverb]",
                     "textcolor": [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
                 }
