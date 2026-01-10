@@ -15,6 +15,38 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-31",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 582.5, 580.0, 28.0, 18.0 ],
+                    "text": "print"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-26",
+                    "maxclass": "toggle",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "int" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 624.5, 572.0, 24.0, 24.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-23",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 624.5, 617.0, 45.0, 20.0 ],
+                    "text": "gate 1 0"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-21",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -1212,7 +1244,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 614.0, 703.0, 102.0, 18.0 ],
+                    "patching_rect": [ 517.5, 600.0, 102.0, 18.0 ],
                     "text": "testing what changes"
                 }
             },
@@ -1233,7 +1265,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 582.0, 702.0, 28.0, 20.0 ],
+                    "patching_rect": [ 624.5, 646.0, 28.0, 20.0 ],
                     "text": "print"
                 }
             },
@@ -2487,6 +2519,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-42", 0 ],
+                    "source": [ "obj-23", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-20", 1 ],
                     "source": [ "obj-25", 1 ]
                 }
@@ -2495,6 +2533,12 @@
                 "patchline": {
                     "destination": [ "obj-22", 0 ],
                     "source": [ "obj-25", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-23", 0 ],
+                    "source": [ "obj-26", 0 ]
                 }
             },
             {
@@ -2523,6 +2567,13 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-23", 1 ],
+                    "order": 2,
+                    "source": [ "obj-34", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-30", 0 ],
                     "midpoints": [ 776.5, 449.25, 1126.5, 449.25 ],
                     "order": 0,
@@ -2533,13 +2584,6 @@
                 "patchline": {
                     "destination": [ "obj-41", 0 ],
                     "order": 1,
-                    "source": [ "obj-34", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-42", 0 ],
-                    "order": 2,
                     "source": [ "obj-34", 0 ]
                 }
             },
@@ -2732,6 +2776,14 @@
             "obj-76::obj-58": [ "live.text[16]", "live.text[9]", 0 ],
             "obj-76::obj-62": [ "live.text[15]", "live.text[9]", 0 ],
             "obj-76::obj-72": [ "live.text[14]", "live.text[8]", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-76::obj-3": {
                     "parameter_longname": "live.text[13]"
