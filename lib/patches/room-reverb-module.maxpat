@@ -15,11 +15,33 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-21",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 503.0, 153.0, 46.0, 20.0 ],
+                    "text": "deferlow"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-7",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "patching_rect": [ 503.0, 128.0, 50.0, 20.0 ],
+                    "text": "loadbang"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-111",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 446.0, 410.0, 151.0, 18.0 ],
+                    "patching_rect": [ 529.0, 186.0, 151.0, 18.0 ],
                     "text": "Randomize space reverb values"
                 }
             },
@@ -31,7 +53,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 420.0, 407.0, 24.0, 24.0 ]
+                    "patching_rect": [ 503.0, 183.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -758,7 +780,7 @@
                             }
                         ]
                     },
-                    "patching_rect": [ 420.0, 441.0, 134.0, 20.0 ],
+                    "patching_rect": [ 503.0, 217.0, 134.0, 20.0 ],
                     "saved_object_attributes": {
                         "fontsize": 10.0
                     },
@@ -919,7 +941,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 415.0, 5.0, 352.0, 85.0 ],
+                    "patching_rect": [ 440.0, 22.5, 352.0, 85.0 ],
                     "text": "One instance of this module is spawned per player, per room. Meaning if there are 4 players and 6 rooms there will be 24 total reverb modules, and 4 for each room which the individual player audio is routed into. This allows for unique mixes and separated processed audio per player, and allows approximation of distance attenuation while applying the \n\nThis may get changed to one instance per listener..."
                 }
             },
@@ -2269,7 +2291,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "bang", "int" ],
-                    "patching_rect": [ 191.0, 108.0, 29.5, 20.0 ],
+                    "patching_rect": [ 255.0, 117.0, 29.5, 20.0 ],
                     "text": "t b i"
                 }
             },
@@ -2280,7 +2302,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 191.0, 154.0, 50.0, 20.0 ],
+                    "patching_rect": [ 255.0, 163.0, 50.0, 20.0 ],
                     "text": "#2"
                 }
             },
@@ -2291,7 +2313,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 191.0, 199.0, 168.0, 20.0 ],
+                    "patching_rect": [ 255.0, 208.0, 168.0, 20.0 ],
                     "text": "sprintf set player_%i_post_room_%i"
                 }
             },
@@ -2447,8 +2469,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-14", 0 ],
-                    "midpoints": [ 200.5, 233.91558837890625, 16.5, 233.91558837890625 ],
+                    "midpoints": [ 264.5, 250.91558837890625, 16.5, 250.91558837890625 ],
                     "source": [ "obj-20", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-109", 0 ],
+                    "source": [ "obj-21", 0 ]
                 }
             },
             {
@@ -2642,6 +2670,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-21", 0 ],
+                    "source": [ "obj-7", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-40", 0 ],
                     "midpoints": [ 456.5, 1200.0, 679.77392578125, 1200.0, 679.77392578125, 882.0, 679.8510131835938, 882.0, 679.8510131835938, 336.0, 776.5, 336.0 ],
                     "source": [ "obj-72", 0 ]
@@ -2698,14 +2732,6 @@
             "obj-76::obj-58": [ "live.text[16]", "live.text[9]", 0 ],
             "obj-76::obj-62": [ "live.text[15]", "live.text[9]", 0 ],
             "obj-76::obj-72": [ "live.text[14]", "live.text[8]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-76::obj-3": {
                     "parameter_longname": "live.text[13]"
