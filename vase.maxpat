@@ -21,8 +21,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1372.5, 681.8613251155625, 385.0, 62.0 ],
-                    "presentation_linecount": 3,
+                    "patching_rect": [ 1372.5, 681.8613251155625, 386.0, 62.0 ],
                     "text": "Now using Mathematical System for position (could implement same coord swapping from original spat world"
                 }
             },
@@ -33,7 +32,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 922.0, 864.8613251155626, 188.0, 18.0 ],
-                    "presentation_linecount": 3,
                     "text": "Ensure routing output is correct in matrix",
                     "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
                 }
@@ -191,18 +189,6 @@
                         "precision": 6
                     },
                     "text": "coll player-dist"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-45",
-                    "linecount": 3,
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 307.0, 128.0, 95.0, 40.0 ],
-                    "text": "change to qmetro?\nI think only need to check mubu stuff",
-                    "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
                 }
             },
             {
@@ -1355,7 +1341,6 @@
                         "rect": [ 35.0, 105.0, 1651.0, 852.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
-                        "visible": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -11445,7 +11430,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 134.0, 96.0, 902.0, 432.0 ],
+                        "rect": [ 134.0, 96.0, 1755.0, 1040.0 ],
                         "openinpresentation": 1,
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
@@ -12388,8 +12373,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 491.0, 103.0, 48.0, 20.0 ],
-                    "text": "metro 30"
+                    "patching_rect": [ 491.0, 103.0, 54.0, 20.0 ],
+                    "text": "qmetro 30"
                 }
             },
             {
@@ -35366,6 +35351,14 @@
             "obj-64": [ "live.gain~", "live.gain~", 0 ],
             "obj-95": [ "live.toggle[30]", "live.toggle", 0 ],
             "obj-98": [ "live.text", "live.text", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-128::obj-16": {
                     "parameter_longname": "live.text[15]"
