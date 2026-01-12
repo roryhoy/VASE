@@ -15,6 +15,28 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-65",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1703.0, 1422.0, 30.0, 20.0 ],
+                    "text": "clear"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-62",
+                    "maxclass": "number",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "bang" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 1838.0, 863.0, 50.0, 20.0 ]
+                }
+            },
+            {
+                "box": {
                     "id": "obj-495",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -2564,7 +2586,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1936.0, 846.0, 55.0, 18.0 ],
+                    "patching_rect": [ 1955.5, 823.5, 55.0, 18.0 ],
                     "text": "for testing:"
                 }
             },
@@ -4073,7 +4095,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 1648.0, 1254.0, 50.0, 20.0 ],
-                    "text": "0"
+                    "text": "1"
                 }
             },
             {
@@ -4118,7 +4140,7 @@
                     "numinlets": 2,
                     "numoutlets": 5,
                     "outlettype": [ "dictionary", "", "", "", "" ],
-                    "patching_rect": [ 1838.0, 1424.0, 230.5, 29.0 ],
+                    "patching_rect": [ 1838.0, 1457.0, 230.5, 29.0 ],
                     "saved_object_attributes": {
                         "legacy": 0,
                         "parameter_enable": 0,
@@ -4260,7 +4282,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1981.0, 869.0, 29.5, 20.0 ],
+                    "patching_rect": [ 2000.5, 846.5, 29.5, 20.0 ],
                     "text": "2"
                 }
             },
@@ -4271,7 +4293,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1919.0, 869.0, 29.5, 20.0 ],
+                    "patching_rect": [ 1938.5, 846.5, 29.5, 20.0 ],
                     "text": "0"
                 }
             },
@@ -4327,7 +4349,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1719.0, 1440.0, 339.0, 33.0 ],
+                    "patching_rect": [ 1719.0, 1473.0, 339.0, 33.0 ],
                     "text": "Feature value order: \nIdeal mean, ideal std dev, care mean, care std dev, care feature"
                 }
             },
@@ -4338,7 +4360,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1949.0, 869.0, 29.5, 20.0 ],
+                    "patching_rect": [ 1968.5, 846.5, 29.5, 20.0 ],
                     "text": "1"
                 }
             },
@@ -4349,7 +4371,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1726.0, 665.0, 150.0, 118.0 ],
+                    "patching_rect": [ 1719.0, 634.0, 150.0, 118.0 ],
                     "text": "Ranges:\n0 - 20000\n0 - 20000\n~ -3 - 3\n0 - 20+\n0 - 20000\n0 - 1\n(Pipo uses this range) -1 - 2\n?\n0 - 1",
                     "textjustification": 2
                 }
@@ -4362,7 +4384,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 1878.0, 948.0, 29.5, 20.0 ],
-                    "text": "0"
+                    "text": "1"
                 }
             },
             {
@@ -4372,7 +4394,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1838.0, 844.0, 65.0, 20.0 ],
+                    "patching_rect": [ 1838.0, 828.0, 65.0, 20.0 ],
                     "text": "loadmess #1"
                 }
             },
@@ -4406,7 +4428,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2094.0, 525.0, 255.0, 118.0 ],
+                    "patching_rect": [ 2087.0, 494.0, 255.0, 118.0 ],
                     "text": "Genome:\nPerception weights - scaling how much each feature matters to the agent. Higher weights result in a great effect to the calculated spectral feature distance\n\nPreference set - the \"ideal\" values the agent enjoys for each feature\n\nVariance - does the agent prefer to follow the mean or characteristics of the standard deviation?"
                 }
             },
@@ -5335,7 +5357,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2080.0, 1413.0, 308.0, 118.0 ],
+                    "patching_rect": [ 2080.0, 1446.0, 308.0, 118.0 ],
                     "text": "Searching occurs in \"check_genome\" patch\n\nChecks list of all players to determine closest to preference genome in order to start an adoption (pickup and hold player)\n\nCheck list of all players to determine closest avoidance player in order to move away from that player\n\nChecking uses normalized ranges per feature as the summation of similarity / distance is necessary to calculate"
                 }
             },
@@ -5401,7 +5423,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1878.0, 654.0, 915.0, 129.0 ],
+                    "patching_rect": [ 1871.0, 623.0, 915.0, 129.0 ],
                     "text": "These descriptors are computed for each player's input and determine the seeking behaviour of room agents:\n\nSpectralCentroid: brilliance of sound (dark to bright)\nSpectralSpread: narrow band (< 1000hz) to noisy or broadband (2000 - 6000 Hz), represents std dev around centroid\nSpectralSkewness: direction of magnitude distribution, left heavy (+ .5 to 2.) or right heavy (- .5 to -2.) \nSpectralKurtosis: peakedness of distribution, sharp peaks (5 to 10) or flat/noisy (1 to 3) \nSpectralRolloff: freq which x% (usually 95%) of energy lies, dark (1000 - 3000 Hz) or bright (> 6000 Hz)\nSpectralVariation: one frame similarity measure, steady (0 to .2), evolving (.2 to .6), highly changing/chaotic/noisy (.6 to 1.) \nSpectralDecrease: High freq attenuation, negative means higher freq content than lower, positive shows more low freq amp, broadband/noisey/bright ( -1 to -0.2), neutral (-0.2 to 0), low-passed/dull (0 to .1)\nSpectralSlope: values are too low to reliably use, muffled (more neg), bright/noise (near 0 to +) \nChroma (0-11): energy at pitch classes"
                 }
             },
@@ -5424,7 +5446,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1878.0, 785.0, 280.0, 39.0 ],
+                    "patching_rect": [ 1871.0, 754.0, 280.0, 39.0 ],
                     "text": "genome for preference / tendencies:\nwhat the room is drawn to / repulsed from"
                 }
             }
@@ -5696,7 +5718,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-357", 0 ],
+                    "destination": [ "obj-62", 0 ],
                     "source": [ "obj-146", 0 ]
                 }
             },
@@ -5932,7 +5954,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-357", 0 ],
+                    "destination": [ "obj-62", 0 ],
                     "source": [ "obj-163", 0 ]
                 }
             },
@@ -6427,13 +6449,13 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-357", 0 ],
+                    "destination": [ "obj-62", 0 ],
                     "source": [ "obj-397", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-357", 0 ],
+                    "destination": [ "obj-62", 0 ],
                     "source": [ "obj-399", 0 ]
                 }
             },
@@ -7112,6 +7134,18 @@
                     "destination": [ "obj-79", 0 ],
                     "order": 1,
                     "source": [ "obj-60", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-357", 0 ],
+                    "source": [ "obj-62", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-144", 0 ],
+                    "source": [ "obj-65", 0 ]
                 }
             },
             {
