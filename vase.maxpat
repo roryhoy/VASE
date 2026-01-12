@@ -15,6 +15,50 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-6",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 294.5, 90.0, 60.0, 20.0 ],
+                    "text": "loadmess 1"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.992156862745098, 1.0, 0.0, 1.0 ],
+                    "id": "obj-5",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 449.0, 167.0, 96.0, 20.0 ],
+                    "text": "s global_clock_stop"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.992156862745098, 1.0, 0.0, 1.0 ],
+                    "id": "obj-4",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 465.0, 141.0, 96.0, 20.0 ],
+                    "text": "s global_clock_start"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-3",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 3,
+                    "outlettype": [ "bang", "bang", "" ],
+                    "patching_rect": [ 449.0, 111.0, 40.0, 20.0 ],
+                    "text": "sel 0 1"
+                }
+            },
+            {
+                "box": {
                     "fontsize": 16.466333223808306,
                     "id": "obj-112",
                     "linecount": 3,
@@ -43,8 +87,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 416.0, 110.0, 45.0, 20.0 ],
-                    "text": "gate 1 0"
+                    "patching_rect": [ 294.0, 141.0, 45.0, 20.0 ],
+                    "text": "gate 1 1"
                 }
             },
             {
@@ -54,7 +98,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 331.0, 83.0, 85.0, 18.0 ],
+                    "patching_rect": [ 209.0, 114.0, 85.0, 18.0 ],
                     "presentation": 1,
                     "presentation_linecount": 2,
                     "presentation_rect": [ 157.0, 276.0, 78.0, 30.0 ],
@@ -69,7 +113,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 417.0, 85.0, 15.0, 15.0 ],
+                    "patching_rect": [ 295.0, 116.0, 15.0, 15.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 241.0, 279.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
@@ -92,7 +136,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 416.0, 138.0, 61.0, 20.0 ],
+                    "patching_rect": [ 294.0, 169.0, 61.0, 20.0 ],
                     "text": "s mubu_tog"
                 }
             },
@@ -150,7 +194,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 672.5, 117.0, 119.0, 18.0 ],
+                    "patching_rect": [ 671.0, 142.0, 119.0, 18.0 ],
                     "text": "need to delay after start?",
                     "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
                 }
@@ -161,7 +205,7 @@
                     "maxclass": "newobj",
                     "numinlets": 0,
                     "numoutlets": 0,
-                    "patching_rect": [ 589.5, 90.0, 140.0, 20.0 ],
+                    "patching_rect": [ 588.0, 115.0, 140.0, 20.0 ],
                     "text": "calc_player_player_distances"
                 }
             },
@@ -197,7 +241,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 593.0, 41.0, 177.0, 18.0 ],
+                    "patching_rect": [ 591.0, 66.0, 177.0, 18.0 ],
                     "text": "These patches use global clock inside"
                 }
             },
@@ -279,7 +323,7 @@
                     "maxclass": "newobj",
                     "numinlets": 0,
                     "numoutlets": 0,
-                    "patching_rect": [ 589.5, 116.0, 76.0, 20.0 ],
+                    "patching_rect": [ 588.0, 141.0, 76.0, 20.0 ],
                     "text": "check_genome"
                 }
             },
@@ -289,7 +333,7 @@
                     "maxclass": "newobj",
                     "numinlets": 0,
                     "numoutlets": 0,
-                    "patching_rect": [ 589.5, 65.0, 137.0, 20.0 ],
+                    "patching_rect": [ 588.0, 90.0, 137.0, 20.0 ],
                     "text": "calc_player_agent_distances"
                 }
             },
@@ -701,7 +745,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 491.0, 136.0, 71.0, 20.0 ],
+                    "patching_rect": [ 369.0, 167.0, 71.0, 20.0 ],
                     "text": "s global_clock"
                 }
             },
@@ -772,7 +816,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 217.0, 777.8613251155626, 92.0, 24.0 ],
+                    "patching_rect": [ 217.0, 778.0, 92.0, 24.0 ],
                     "text": "s kill-modules"
                 }
             },
@@ -12314,7 +12358,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 379.0, 31.0, 114.965, 48.0 ],
+                    "patching_rect": [ 337.0, 36.93000000000001, 114.965, 48.0 ],
                     "text": "Start / Global Clock"
                 }
             },
@@ -12411,7 +12455,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 491.0, 30.0, 49.06999999999999, 49.06999999999999 ]
+                    "patching_rect": [ 449.0, 35.93000000000001, 49.06999999999999, 49.06999999999999 ]
                 }
             },
             {
@@ -12421,7 +12465,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 491.0, 103.0, 54.0, 20.0 ],
+                    "patching_rect": [ 369.0, 134.0, 54.0, 20.0 ],
                     "text": "qmetro 30"
                 }
             },
@@ -12721,6 +12765,18 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-4", 0 ],
+                    "source": [ "obj-3", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-5", 0 ],
+                    "source": [ "obj-3", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-62", 0 ],
                     "source": [ "obj-37", 0 ]
                 }
@@ -12777,6 +12833,12 @@
                 "patchline": {
                     "destination": [ "obj-50", 3 ],
                     "source": [ "obj-53", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-95", 0 ],
+                    "source": [ "obj-6", 0 ]
                 }
             },
             {
@@ -12916,15 +12978,22 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-3", 0 ],
+                    "order": 0,
+                    "source": [ "obj-99", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-96", 1 ],
-                    "order": 1,
+                    "order": 2,
                     "source": [ "obj-99", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-97", 0 ],
-                    "order": 0,
+                    "order": 1,
                     "source": [ "obj-99", 0 ]
                 }
             }

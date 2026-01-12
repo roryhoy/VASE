@@ -13,6 +13,40 @@
         "boxes": [
             {
                 "box": {
+                    "fontsize": 13.773913043478261,
+                    "id": "obj-107",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 333.0, 197.0, 90.0, 24.0 ],
+                    "text": "r kill-modules"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-19",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 446.0, 199.0, 111.0, 22.0 ],
+                    "text": "r init-rooms-players"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-7",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 446.0, 233.0, 35.0, 22.0 ],
+                    "text": "clear"
+                }
+            },
+            {
+                "box": {
                     "color": [ 0.992156862745098, 1.0, 0.0, 1.0 ],
                     "fontsize": 14.347826086956522,
                     "id": "obj-83",
@@ -227,7 +261,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 353.0, 94.0, 197.0, 127.0 ],
+                    "patching_rect": [ 395.0, 30.0, 197.0, 127.0 ],
                     "text": "For every room, \n\nCheck against the mubu spectral feature values of each player to calculate feature \"distance\" \n\nThe higher the number for each player, the further from the ideal spectral play style for the room"
                 }
             }
@@ -243,6 +277,12 @@
                 "patchline": {
                     "destination": [ "obj-25", 0 ],
                     "source": [ "obj-1", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-7", 0 ],
+                    "source": [ "obj-107", 0 ]
                 }
             },
             {
@@ -273,6 +313,12 @@
                 "patchline": {
                     "destination": [ "obj-144", 0 ],
                     "source": [ "obj-17", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-7", 0 ],
+                    "source": [ "obj-19", 0 ]
                 }
             },
             {
@@ -344,11 +390,24 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-125", 0 ],
+                    "order": 0,
+                    "source": [ "obj-7", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-144", 0 ],
+                    "order": 1,
+                    "source": [ "obj-7", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-32", 0 ],
                     "source": [ "obj-83", 0 ]
                 }
             }
-        ],
-        "autosave": 0
+        ]
     }
 }
