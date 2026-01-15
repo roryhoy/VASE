@@ -52,7 +52,6 @@
                     "id": "obj-174",
                     "lastchannelcount": 0,
                     "maxclass": "live.gain~",
-                    "mode": 1,
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "signal", "", "float", "list" ],
@@ -65,11 +64,11 @@
                             "expression": "themecolor.live_arranger_grid_tiles"
                         },
                         "valueof": {
-                            "parameter_longname": "live.gain~[3]",
+                            "parameter_longname": "live.gain~[5]",
                             "parameter_mmax": 10.0,
                             "parameter_mmin": -70.0,
                             "parameter_modmode": 3,
-                            "parameter_shortname": "1:",
+                            "parameter_shortname": "#1:",
                             "parameter_type": 0,
                             "parameter_unitstyle": 4
                         }
