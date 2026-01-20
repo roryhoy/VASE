@@ -15,26 +15,89 @@
         "boxes": [
             {
                 "box": {
-                    "id": "obj-14",
+                    "fontname": "Ableton Sans Bold",
+                    "id": "obj-36",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 86.0, 14.882352941176471, 149.0, 18.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 81.0, 22.38235294117647, 149.0, 18.0 ],
+                    "text": "virtual acoustic spatial entities"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-33",
                     "maxclass": "message",
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 903.5, 515.0, 30.0, 20.0 ],
+                    "patching_rect": [ 95.0, 84.0, 30.0, 20.0 ],
                     "text": "set 0"
                 }
             },
             {
                 "box": {
+                    "id": "obj-31",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 95.0, 57.0, 61.0, 20.0 ],
+                    "text": "r view-close"
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Ableton Sans Light",
+                    "id": "obj-18",
+                    "maxclass": "live.text",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "parameter_enable": 1,
+                    "patching_rect": [ 95.0, 113.5, 44.0, 15.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 410.0, 16.38235294117647, 44.0, 15.0 ],
+                    "saved_attribute_attributes": {
+                        "valueof": {
+                            "parameter_enum": [ "val1", "val2" ],
+                            "parameter_longname": "live.text[32]",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "live.text[13]",
+                            "parameter_type": 2
+                        }
+                    },
+                    "text": "Controls",
+                    "texton": "Controls",
+                    "varname": "live.text[3]"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-14",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 737.0, 489.0, 30.0, 20.0 ],
+                    "text": "set 0"
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Ableton Sans Light",
                     "id": "obj-195",
                     "maxclass": "live.text",
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 903.5, 540.0, 44.0, 15.0 ],
+                    "patching_rect": [ 737.0, 514.0, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 88.0, 171.0, 44.0, 15.0 ],
+                    "presentation_rect": [ 17.0, 60.0, 44.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -57,7 +120,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1103.0, 707.0, 56.0, 18.0 ],
+                    "patching_rect": [ 1116.0, 706.5, 56.0, 18.0 ],
                     "text": "Something"
                 }
             },
@@ -69,7 +132,9 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 1086.0, 708.0, 15.0, 15.0 ],
+                    "patching_rect": [ 27.5, 83.0, 15.0, 15.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 393.0, 16.38235294117647, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -90,7 +155,7 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 903.5, 491.0, 74.0, 20.0 ],
+                    "patching_rect": [ 737.0, 465.0, 74.0, 20.0 ],
                     "text": "r in-mix-closed"
                 }
             },
@@ -101,7 +166,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 185.5, 469.0, 83.0, 20.0 ],
+                    "patching_rect": [ 176.0, 524.5, 83.0, 20.0 ],
                     "text": "v space-count"
                 }
             },
@@ -111,7 +176,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 203.0, 150.0, 85.0, 18.0 ],
+                    "patching_rect": [ 289.0, 173.0, 85.0, 18.0 ],
                     "text": "Shortcut to Mubu"
                 }
             },
@@ -122,7 +187,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 203.0, 170.0, 84.0, 18.0 ],
+                    "patching_rect": [ 289.0, 193.0, 84.0, 18.0 ],
                     "text": "s input-analysis"
                 }
             },
@@ -133,7 +198,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 294.5, 90.0, 60.0, 20.0 ],
+                    "patching_rect": [ 381.0, 113.0, 60.0, 20.0 ],
                     "text": "loadmess 1"
                 }
             },
@@ -144,7 +209,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 449.0, 167.0, 96.0, 20.0 ],
+                    "patching_rect": [ 535.0, 190.0, 96.0, 20.0 ],
                     "text": "s global_clock_stop"
                 }
             },
@@ -155,7 +220,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 465.0, 141.0, 96.0, 20.0 ],
+                    "patching_rect": [ 551.0, 164.0, 96.0, 20.0 ],
                     "text": "s global_clock_start"
                 }
             },
@@ -166,7 +231,7 @@
                     "numinlets": 3,
                     "numoutlets": 3,
                     "outlettype": [ "bang", "bang", "" ],
-                    "patching_rect": [ 449.0, 111.0, 40.0, 20.0 ],
+                    "patching_rect": [ 535.0, 134.0, 40.0, 20.0 ],
                     "text": "sel 0 1"
                 }
             },
@@ -200,21 +265,20 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 294.0, 141.0, 45.0, 20.0 ],
+                    "patching_rect": [ 380.0, 164.0, 45.0, 20.0 ],
                     "text": "gate 1 1"
                 }
             },
             {
                 "box": {
-                    "fontname": "Ableton Sans Medium",
+                    "fontname": "Ableton Sans Light",
                     "id": "obj-90",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 209.0, 114.0, 85.0, 18.0 ],
+                    "patching_rect": [ 295.0, 137.0, 82.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_linecount": 2,
-                    "presentation_rect": [ 157.0, 276.0, 78.0, 30.0 ],
+                    "presentation_rect": [ 25.0, 292.0, 82.0, 18.0 ],
                     "text": "Mubu Processing"
                 }
             },
@@ -226,9 +290,9 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 295.0, 116.0, 15.0, 15.0 ],
+                    "patching_rect": [ 381.0, 139.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 241.0, 279.0, 15.0, 15.0 ],
+                    "presentation_rect": [ 118.0, 293.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -249,7 +313,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 294.0, 169.0, 61.0, 20.0 ],
+                    "patching_rect": [ 380.0, 192.0, 61.0, 20.0 ],
                     "text": "s mubu_tog"
                 }
             },
@@ -260,7 +324,7 @@
                     "numinlets": 1,
                     "numoutlets": 3,
                     "outlettype": [ "bang", "bang", "bang" ],
-                    "patching_rect": [ 65.0, 321.5, 40.0, 20.0 ],
+                    "patching_rect": [ 55.0, 377.5, 40.0, 20.0 ],
                     "text": "t b b b"
                 }
             },
@@ -271,7 +335,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 289.0, 367.5, 30.0, 20.0 ],
+                    "patching_rect": [ 279.0, 423.5, 30.0, 20.0 ],
                     "text": "clear"
                 }
             },
@@ -281,7 +345,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 433.0, 419.5, 154.0, 18.0 ],
+                    "patching_rect": [ 423.0, 475.5, 154.0, 18.0 ],
                     "text": "angular offset from each player"
                 }
             },
@@ -293,7 +357,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 433.0, 439.5, 101.0, 20.0 ],
+                    "patching_rect": [ 423.0, 495.5, 101.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -307,7 +371,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 671.0, 142.0, 119.0, 18.0 ],
+                    "patching_rect": [ 719.0, 108.535, 119.0, 18.0 ],
                     "text": "need to delay after start?",
                     "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
                 }
@@ -318,7 +382,7 @@
                     "maxclass": "newobj",
                     "numinlets": 0,
                     "numoutlets": 0,
-                    "patching_rect": [ 588.0, 115.0, 140.0, 20.0 ],
+                    "patching_rect": [ 636.0, 81.535, 140.0, 20.0 ],
                     "text": "calc_player_player_distances"
                 }
             },
@@ -328,7 +392,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 433.0, 368.5, 154.0, 18.0 ],
+                    "patching_rect": [ 423.0, 424.5, 154.0, 18.0 ],
                     "text": "distances from each other player"
                 }
             },
@@ -340,7 +404,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 433.0, 388.5, 85.0, 20.0 ],
+                    "patching_rect": [ 423.0, 444.5, 85.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -354,7 +418,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 591.0, 66.0, 177.0, 18.0 ],
+                    "patching_rect": [ 639.0, 32.535, 177.0, 18.0 ],
                     "text": "These patches use global clock inside"
                 }
             },
@@ -365,19 +429,20 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 114.0, 219.5, 262.0, 25.0 ],
+                    "patching_rect": [ 104.0, 275.5, 262.0, 25.0 ],
                     "text": "Spawn Players and Space Agents"
                 }
             },
             {
                 "box": {
+                    "fontname": "Ableton Sans Light",
                     "id": "obj-30",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 578.0, 735.8613251155626, 56.0, 18.0 ],
+                    "patching_rect": [ 578.0, 735.8613251155626, 55.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 24.0, 70.0, 56.0, 18.0 ],
+                    "presentation_rect": [ 25.0, 323.0, 55.0, 18.0 ],
                     "text": "HoA Order"
                 }
             },
@@ -387,37 +452,8 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 65.0, 384.5, 96.0, 20.0 ],
+                    "patching_rect": [ 55.0, 440.5, 96.0, 20.0 ],
                     "text": "s init-rooms-players"
-                }
-            },
-            {
-                "box": {
-                    "activebgcolor": [ 0.3254901960784314, 0.16470588235294117, 0.35294117647058826, 1.0 ],
-                    "id": "obj-15",
-                    "maxclass": "live.text",
-                    "mode": 0,
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "parameter_enable": 1,
-                    "patching_rect": [ 78.0, 83.0, 44.0, 15.0 ],
-                    "saved_attribute_attributes": {
-                        "activebgcolor": {
-                            "expression": ""
-                        },
-                        "valueof": {
-                            "parameter_enum": [ "val1", "val2" ],
-                            "parameter_longname": "live.text[16]",
-                            "parameter_mmax": 1,
-                            "parameter_modmode": 0,
-                            "parameter_shortname": "live.text",
-                            "parameter_type": 2
-                        }
-                    },
-                    "text": "Open",
-                    "texton": "On",
-                    "varname": "live.text[1]"
                 }
             },
             {
@@ -426,7 +462,7 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 27.0, 126.0, 70.0, 20.0 ],
+                    "patching_rect": [ 27.0, 141.0, 70.0, 20.0 ],
                     "text": "vase-viewer"
                 }
             },
@@ -436,7 +472,7 @@
                     "maxclass": "newobj",
                     "numinlets": 0,
                     "numoutlets": 0,
-                    "patching_rect": [ 588.0, 141.0, 76.0, 20.0 ],
+                    "patching_rect": [ 636.0, 107.535, 76.0, 20.0 ],
                     "text": "check_genome"
                 }
             },
@@ -446,7 +482,7 @@
                     "maxclass": "newobj",
                     "numinlets": 0,
                     "numoutlets": 0,
-                    "patching_rect": [ 588.0, 90.0, 137.0, 20.0 ],
+                    "patching_rect": [ 636.0, 56.535, 137.0, 20.0 ],
                     "text": "calc_player_agent_distances"
                 }
             },
@@ -457,7 +493,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 615.0, 377.5, 79.0, 20.0 ],
+                    "patching_rect": [ 605.0, 433.5, 79.0, 20.0 ],
                     "text": "v vase-z-size"
                 }
             },
@@ -468,7 +504,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 615.0, 350.5, 79.0, 20.0 ],
+                    "patching_rect": [ 605.0, 406.5, 79.0, 20.0 ],
                     "text": "v vase-y-size"
                 }
             },
@@ -479,7 +515,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 615.0, 321.5, 79.0, 20.0 ],
+                    "patching_rect": [ 605.0, 377.5, 79.0, 20.0 ],
                     "text": "v vase-x-size"
                 }
             },
@@ -490,7 +526,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 387.0, 225.0, 68.0, 20.0 ],
+                    "patching_rect": [ 377.0, 280.5, 68.0, 20.0 ],
                     "text": "loadmess 10."
                 }
             },
@@ -503,7 +539,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 504.0, 263.0, 50.0, 20.0 ]
+                    "patching_rect": [ 494.0, 318.5, 50.0, 20.0 ]
                 }
             },
             {
@@ -515,7 +551,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 446.0, 263.0, 50.0, 20.0 ]
+                    "patching_rect": [ 436.0, 318.5, 50.0, 20.0 ]
                 }
             },
             {
@@ -527,7 +563,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 387.0, 263.0, 50.0, 20.0 ]
+                    "patching_rect": [ 377.0, 318.5, 50.0, 20.0 ]
                 }
             },
             {
@@ -537,7 +573,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 206.0, 264.5, 60.0, 20.0 ],
+                    "patching_rect": [ 196.0, 320.5, 60.0, 20.0 ],
                     "text": "loadmess 3"
                 }
             },
@@ -547,7 +583,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 26.0, 265.5, 102.0, 18.0 ],
+                    "patching_rect": [ 16.0, 321.5, 102.0, 18.0 ],
                     "text": "Init colls with random"
                 }
             },
@@ -559,7 +595,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 65.0, 284.5, 24.0, 24.0 ]
+                    "patching_rect": [ 55.0, 340.5, 24.0, 24.0 ]
                 }
             },
             {
@@ -569,7 +605,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 279.0, 255.5, 97.0, 29.0 ],
+                    "patching_rect": [ 269.0, 311.5, 97.0, 29.0 ],
                     "text": "0 -  128 for player and room count"
                 }
             },
@@ -580,7 +616,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 320.0, 298.5, 56.0, 29.0 ],
+                    "patching_rect": [ 310.0, 354.5, 56.0, 29.0 ],
                     "text": "Player \nPopulation"
                 }
             },
@@ -595,7 +631,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 268.0, 302.5, 50.0, 20.0 ]
+                    "patching_rect": [ 258.0, 358.5, 50.0, 20.0 ]
                 }
             },
             {
@@ -605,7 +641,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 142.0, 298.5, 68.0, 29.0 ],
+                    "patching_rect": [ 132.0, 354.5, 68.0, 29.0 ],
                     "text": "Space Agent \nPopulation"
                 }
             },
@@ -619,7 +655,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 206.0, 302.5, 50.0, 20.0 ]
+                    "patching_rect": [ 196.0, 358.5, 50.0, 20.0 ]
                 }
             },
             {
@@ -629,7 +665,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 588.0, 293.5, 143.0, 22.0 ],
+                    "patching_rect": [ 578.0, 349.5, 143.0, 22.0 ],
                     "text": "VASE Dimensions (m)"
                 }
             },
@@ -640,7 +676,7 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 387.0, 303.0, 136.0, 20.0 ],
+                    "patching_rect": [ 377.0, 358.5, 136.0, 20.0 ],
                     "text": "pak 0. 0. 0."
                 }
             },
@@ -650,7 +686,7 @@
                     "maxclass": "newobj",
                     "numinlets": 4,
                     "numoutlets": 0,
-                    "patching_rect": [ 125.0, 331.5, 262.0, 20.0 ],
+                    "patching_rect": [ 115.0, 387.5, 262.0, 20.0 ],
                     "text": "init_players_rooms"
                 }
             },
@@ -684,7 +720,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 189.0, 436.5, 72.0, 20.0 ],
+                    "patching_rect": [ 179.0, 492.5, 72.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -715,7 +751,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 636.0, 734.8613251155626, 50.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 82.0, 69.0, 50.0, 20.0 ]
+                    "presentation_rect": [ 82.0, 322.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -859,7 +895,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 369.0, 167.0, 71.0, 20.0 ],
+                    "patching_rect": [ 455.0, 190.0, 71.0, 20.0 ],
                     "text": "s global_clock"
                 }
             },
@@ -871,7 +907,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 191.0, 410.5, 68.0, 20.0 ],
+                    "patching_rect": [ 181.0, 466.5, 68.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -2456,7 +2492,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 885.0, 349.5, 199.0, 118.0 ],
+                    "patching_rect": [ 945.0, 301.5, 199.0, 118.0 ],
                     "text": "Recording:\n- Capture HoA recordings inside each agent or listener for later playback\n\nor have a \"playback listener\"\n\ncapture recording of  all player and room positions, recreate on replay as this would allow varied playback from chosen listener position"
                 }
             },
@@ -6977,11 +7013,11 @@
                             }
                         ]
                     },
-                    "patching_rect": [ 737.0, 539.8613251155626, 127.0, 27.0 ],
+                    "patching_rect": [ 737.0, 539.8613251155626, 178.0, 27.0 ],
                     "saved_object_attributes": {
                         "fontsize": 10.0
                     },
-                    "text": "p routing-matrix"
+                    "text": "p input-mapping-mixer"
                 }
             },
             {
@@ -15725,7 +15761,7 @@
                             }
                         ]
                     },
-                    "patching_rect": [ 858.0, 304.5, 239.0, 37.0 ],
+                    "patching_rect": [ 918.0, 256.5, 239.0, 37.0 ],
                     "saved_object_attributes": {
                         "fontsize": 10.0
                     },
@@ -15735,40 +15771,15 @@
             },
             {
                 "box": {
+                    "fontname": "Ableton Sans Light",
                     "id": "obj-103",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 15.0, 66.0, 68.0, 18.0 ],
+                    "patching_rect": [ 15.0, 66.0, 64.0, 18.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 330.0, 15.382352941176471, 64.0, 18.0 ],
                     "text": "VASE Viewer"
-                }
-            },
-            {
-                "box": {
-                    "activebgcolor": [ 1.0, 0.0, 0.0, 1.0 ],
-                    "id": "obj-98",
-                    "maxclass": "live.text",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "parameter_enable": 1,
-                    "patching_rect": [ 27.0, 83.0, 44.0, 15.0 ],
-                    "saved_attribute_attributes": {
-                        "activebgcolor": {
-                            "expression": ""
-                        },
-                        "valueof": {
-                            "parameter_enum": [ "val1", "val2" ],
-                            "parameter_longname": "live.text",
-                            "parameter_mmax": 1,
-                            "parameter_modmode": 0,
-                            "parameter_shortname": "live.text",
-                            "parameter_type": 2
-                        }
-                    },
-                    "text": "Off",
-                    "texton": "On",
-                    "varname": "live.text"
                 }
             },
             {
@@ -15811,20 +15822,8 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 736.0, 502.0, 150.0, 29.0 ],
+                    "patching_rect": [ 985.0, 538.8613251155625, 150.0, 29.0 ],
                     "text": "output matrix to jack sends / audience streams"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 8.30140485312899,
-                    "id": "obj-142",
-                    "linecount": 2,
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 616.0, 536.8613251155626, 127.0, 25.0 ],
-                    "text": "bypassinig for now (mono ins on player n adc source)"
                 }
             },
             {
@@ -15842,7 +15841,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "offset": [ 0.0, 0.0 ],
-                    "patching_rect": [ 845.0, 16.0, 380.0, 140.0 ],
+                    "patching_rect": [ 867.0, 14.0, 380.0, 140.0 ],
                     "viewvisibility": 1
                 }
             },
@@ -16617,7 +16616,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 337.0, 36.93000000000001, 114.965, 48.0 ],
+                    "patching_rect": [ 423.0, 60.0, 114.965, 48.0 ],
                     "text": "Start / Global Clock"
                 }
             },
@@ -16641,7 +16640,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 331.0, 423.5, 69.0, 20.0 ],
+                    "patching_rect": [ 321.0, 479.5, 69.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -16657,7 +16656,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 329.0, 398.5, 73.0, 20.0 ],
+                    "patching_rect": [ 319.0, 454.5, 73.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -16673,7 +16672,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 191.0, 384.5, 72.0, 20.0 ],
+                    "patching_rect": [ 181.0, 440.5, 72.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -16714,7 +16713,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 449.0, 35.93000000000001, 49.06999999999999, 49.06999999999999 ]
+                    "patching_rect": [ 535.0, 59.0, 49.06999999999999, 49.06999999999999 ]
                 }
             },
             {
@@ -16724,7 +16723,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 369.0, 134.0, 54.0, 20.0 ],
+                    "patching_rect": [ 455.0, 157.0, 54.0, 20.0 ],
                     "text": "qmetro 30"
                 }
             },
@@ -16735,7 +16734,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 858.0, 205.5, 288.0, 96.0 ],
+                    "patching_rect": [ 918.0, 157.5, 288.0, 96.0 ],
                     "text": "Composer live controls\n- Can move into an space to monitor live (Wormhole)\n- Can take over control of a space live (Puppet)\n- May connect players which are in different spaces, this is evocative of a meta-telamaticism, remote players placed remotely in a central space (Bridge)\n- may preview bridged connections before \"pushing\" them - akin to DJ mix"
                 }
             },
@@ -16859,18 +16858,21 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 102.0, 8.382352941176471, 198.0, 40.0 ],
+                    "patching_rect": [ 232.0, 8.382352941176471, 198.0, 40.0 ],
                     "text": "Allows for tunable levels of indeterminacy within spatial composition works, using autonomous space agents"
                 }
             },
             {
                 "box": {
+                    "fontname": "Ableton Sans Bold",
                     "fontsize": 21.508090738200483,
                     "id": "obj-2",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 17.0, 8.382352941176471, 65.0, 31.0 ],
+                    "patching_rect": [ 17.0, 8.382352941176471, 62.0, 32.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 17.0, 8.382352941176471, 62.0, 32.0 ],
                     "text": "VASE"
                 }
             },
@@ -16964,12 +16966,6 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-11", 1 ],
-                    "source": [ "obj-15", 0 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-156", 0 ],
                     "source": [ "obj-154", 0 ]
                 }
@@ -17012,6 +17008,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-11", 0 ],
+                    "source": [ "obj-169", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-177", 0 ],
                     "source": [ "obj-176", 0 ]
                 }
@@ -17020,6 +17022,12 @@
                 "patchline": {
                     "destination": [ "obj-179", 0 ],
                     "source": [ "obj-177", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-11", 1 ],
+                    "source": [ "obj-18", 0 ]
                 }
             },
             {
@@ -17044,6 +17052,18 @@
                 "patchline": {
                     "destination": [ "obj-5", 0 ],
                     "source": [ "obj-3", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-33", 0 ],
+                    "source": [ "obj-31", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-18", 0 ],
+                    "source": [ "obj-33", 0 ]
                 }
             },
             {
@@ -17243,12 +17263,6 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-11", 0 ],
-                    "source": [ "obj-98", 0 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-3", 0 ],
                     "order": 0,
                     "source": [ "obj-99", 0 ]
@@ -17302,7 +17316,6 @@
             "obj-128::obj-55": [ "live.text[3]", "live.text", 0 ],
             "obj-128::obj-606": [ "live.text[2]", "live.text", 0 ],
             "obj-128::obj-607": [ "live.button[1]", "live.button", 0 ],
-            "obj-15": [ "live.text[16]", "live.text", 0 ],
             "obj-166::obj-1065": [ "live.text[51]", "live.text[13]", 0 ],
             "obj-166::obj-1087": [ "live.text[52]", "live.text[13]", 0 ],
             "obj-166::obj-1292::obj-12": [ "live.text[31]", "live.text", 0 ],
@@ -17342,9 +17355,9 @@
             "obj-166::obj-195": [ "live.text[17]", "live.text[13]", 0 ],
             "obj-166::obj-4877": [ "live.text[40]", "live.text", 0 ],
             "obj-169": [ "live.toggle[10]", "live.toggle", 0 ],
+            "obj-18": [ "live.text[32]", "live.text[13]", 0 ],
             "obj-195": [ "live.text[18]", "live.text[13]", 0 ],
             "obj-95": [ "live.toggle[30]", "live.toggle", 0 ],
-            "obj-98": [ "live.text", "live.text", 0 ],
             "parameter_overrides": {
                 "obj-128::obj-16": {
                     "parameter_longname": "live.text[15]"
