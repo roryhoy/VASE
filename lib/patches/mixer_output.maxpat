@@ -9,9 +9,20 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 449.0, 168.0, 1000.0, 780.0 ],
+        "rect": [ 234.0, 128.0, 1154.0, 780.0 ],
         "openinpresentation": 1,
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-14",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 355.0, 468.0, 150.0, 33.0 ],
+                    "text": "swap to mc signal gated orrrrr what"
+                }
+            },
             {
                 "box": {
                     "id": "obj-6",
@@ -114,8 +125,9 @@
             },
             {
                 "box": {
-                    "activebgcolor": [ 0.269595890603871, 0.408853959740371, 0.595943257030903, 1.0 ],
-                    "fontsize": 8.0,
+                    "activebgcolor": [ 0.09782765023003, 0.097827613875914, 0.09782762332443, 1.0 ],
+                    "activetextcolor": [ 0.261531128329206, 0.261531061881087, 0.261531079296546, 1.0 ],
+                    "fontsize": 6.0,
                     "hint": "adc~ will take the input audio from your chosen input interface. receive~ will get a signal from another Max patch using [send~ to_vase_3]",
                     "id": "obj-12",
                     "maxclass": "live.text",
@@ -125,10 +137,13 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 312.0, 248.0, 20.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 1.0212766528129578, 196.0, 15.957446694374084, 11.702127575874329 ],
+                    "presentation_rect": [ 1.0, 196.0, 16.0, 12.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
-                            "expression": "themecolor.live_selection"
+                            "expression": "themecolor.live_contrast_frame"
+                        },
+                        "activetextcolor": {
+                            "expression": "themecolor.live_macro_title"
                         },
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -139,8 +154,8 @@
                             "parameter_type": 2
                         }
                     },
-                    "text": "adc~",
-                    "texton": "receive~",
+                    "text": "send~",
+                    "texton": "send~",
                     "varname": "live.text"
                 }
             },
@@ -216,7 +231,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 50.0, 377.0, 122.0, 22.0 ],
+                    "patching_rect": [ 57.5, 377.0, 122.0, 22.0 ],
                     "text": "send~ in_#1_postmix"
                 }
             },
@@ -405,6 +420,20 @@
                     "source": [ "obj-9", 0 ]
                 }
             }
-        ]
+        ],
+        "parameters": {
+            "obj-12": [ "live.text[34]", "live.text", 0 ],
+            "obj-174": [ "live.gain~[15]", "3:", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "inherited_shortname": 1
+        },
+        "autosave": 0
     }
 }
