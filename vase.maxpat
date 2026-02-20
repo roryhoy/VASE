@@ -248,7 +248,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 764.0, 266.0, 446.0, 363.0 ],
+                        "rect": [ 778.0, 264.0, 330.0, 365.0 ],
                         "openinpresentation": 1,
                         "default_fontsize": 10.0,
                         "toolbarvisible": 0,
@@ -2388,8 +2388,8 @@
                                                     "maxclass": "comment",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 2.5, 221.0, 49.0, 18.0 ],
-                                                    "text": "[player_i]",
+                                                    "patching_rect": [ 21.0, 221.0, 30.0, 18.0 ],
+                                                    "text": "[dac]",
                                                     "textcolor": [ 0.0, 0.694117647058824, 1.0, 1.0 ]
                                                 }
                                             },
@@ -2456,7 +2456,7 @@
                                                     "maxclass": "newobj",
                                                     "numinlets": 2,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 67.0, 220.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 67.0, 220.0, 100.0, 20.0 ],
                                                     "text": "dac~ 1 2",
                                                     "varname": "dac"
                                                 }
@@ -2464,12 +2464,11 @@
                                             {
                                                 "box": {
                                                     "id": "obj-65",
-                                                    "linecount": 2,
                                                     "maxclass": "newobj",
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "signal" ],
-                                                    "patching_rect": [ 91.0, 88.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 91.0, 88.0, 127.0, 20.0 ],
                                                     "text": "receive~ 1_out_postmix_R",
                                                     "varname": "mix_1_R"
                                                 }
@@ -2477,12 +2476,11 @@
                                             {
                                                 "box": {
                                                     "id": "obj-66",
-                                                    "linecount": 2,
                                                     "maxclass": "newobj",
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "signal" ],
-                                                    "patching_rect": [ 91.0, 66.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 91.0, 66.0, 126.0, 20.0 ],
                                                     "text": "receive~ 1_out_postmix_L",
                                                     "varname": "mix_1_L"
                                                 }
@@ -2490,12 +2488,11 @@
                                             {
                                                 "box": {
                                                     "id": "obj-67",
-                                                    "linecount": 2,
                                                     "maxclass": "newobj",
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "signal" ],
-                                                    "patching_rect": [ 211.0, 88.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 211.0, 88.0, 127.0, 20.0 ],
                                                     "text": "receive~ 2_out_postmix_R",
                                                     "varname": "mix_2_R"
                                                 }
@@ -2503,12 +2500,11 @@
                                             {
                                                 "box": {
                                                     "id": "obj-68",
-                                                    "linecount": 2,
                                                     "maxclass": "newobj",
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "signal" ],
-                                                    "patching_rect": [ 211.0, 66.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 211.0, 66.0, 126.0, 20.0 ],
                                                     "text": "receive~ 2_out_postmix_L",
                                                     "varname": "mix_2_L"
                                                 }
@@ -2516,12 +2512,11 @@
                                             {
                                                 "box": {
                                                     "id": "obj-69",
-                                                    "linecount": 2,
                                                     "maxclass": "newobj",
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "signal" ],
-                                                    "patching_rect": [ 331.0, 88.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 331.0, 88.0, 127.0, 20.0 ],
                                                     "text": "receive~ 3_out_postmix_R",
                                                     "varname": "mix_3_R"
                                                 }
@@ -2529,12 +2524,11 @@
                                             {
                                                 "box": {
                                                     "id": "obj-70",
-                                                    "linecount": 2,
                                                     "maxclass": "newobj",
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "signal" ],
-                                                    "patching_rect": [ 331.0, 66.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 331.0, 66.0, 126.0, 20.0 ],
                                                     "text": "receive~ 3_out_postmix_L",
                                                     "varname": "mix_3_L"
                                                 }
@@ -2542,12 +2536,11 @@
                                             {
                                                 "box": {
                                                     "id": "obj-71",
-                                                    "linecount": 2,
                                                     "maxclass": "newobj",
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "signal" ],
-                                                    "patching_rect": [ 451.0, 88.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 451.0, 88.0, 127.0, 20.0 ],
                                                     "text": "receive~ 4_out_postmix_R",
                                                     "varname": "mix_4_R"
                                                 }
@@ -2555,12 +2548,11 @@
                                             {
                                                 "box": {
                                                     "id": "obj-73",
-                                                    "linecount": 2,
                                                     "maxclass": "newobj",
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "signal" ],
-                                                    "patching_rect": [ 451.0, 66.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 451.0, 66.0, 126.0, 20.0 ],
                                                     "text": "receive~ 4_out_postmix_L",
                                                     "varname": "mix_4_L"
                                                 }
@@ -2568,12 +2560,11 @@
                                             {
                                                 "box": {
                                                     "id": "obj-74",
-                                                    "linecount": 2,
                                                     "maxclass": "newobj",
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "signal" ],
-                                                    "patching_rect": [ 571.0, 88.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 571.0, 88.0, 127.0, 20.0 ],
                                                     "text": "receive~ 5_out_postmix_R",
                                                     "varname": "mix_5_R"
                                                 }
@@ -2581,12 +2572,11 @@
                                             {
                                                 "box": {
                                                     "id": "obj-75",
-                                                    "linecount": 2,
                                                     "maxclass": "newobj",
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "signal" ],
-                                                    "patching_rect": [ 571.0, 66.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 571.0, 66.0, 126.0, 20.0 ],
                                                     "text": "receive~ 5_out_postmix_L",
                                                     "varname": "mix_5_L"
                                                 }
@@ -2598,7 +2588,7 @@
                                                     "numinlets": 10,
                                                     "numoutlets": 3,
                                                     "outlettype": [ "signal", "signal", "" ],
-                                                    "patching_rect": [ 50.0, 134.0, 100.0, 0.0 ],
+                                                    "patching_rect": [ 50.0, 134.0, 100.0, 20.0 ],
                                                     "text": "matrix~ 10 2",
                                                     "varname": "matrix"
                                                 }
