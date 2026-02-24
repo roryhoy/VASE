@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 93.0, 2093.0, 1313.0 ],
+        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
@@ -3243,9 +3243,9 @@
                                     "filename": "avoidance-vector.js",
                                     "id": "obj-488",
                                     "maxclass": "newobj",
-                                    "numinlets": 2,
-                                    "numoutlets": 2,
-                                    "outlettype": [ "", "" ],
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "" ],
                                     "patching_rect": [ 144.0, 306.0, 107.0, 20.0 ],
                                     "saved_object_attributes": {
                                         "parameter_enable": 0
@@ -3308,12 +3308,6 @@
                                 "patchline": {
                                     "destination": [ "obj-17", 0 ],
                                     "source": [ "obj-3", 0 ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [ "obj-488", 1 ],
-                                    "source": [ "obj-486", 0 ]
                                 }
                             },
                             {
@@ -3609,7 +3603,7 @@
                                     "filename": "3d-dist.js",
                                     "id": "obj-488",
                                     "maxclass": "newobj",
-                                    "numinlets": 2,
+                                    "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 155.0, 301.0, 61.0, 20.0 ],
@@ -3669,12 +3663,6 @@
                                     "destination": [ "obj-2", 1 ],
                                     "midpoints": [ 318.5, 192.0, 382.48699951171875, 192.0, 382.48699951171875, 384.0, 175.0, 384.0 ],
                                     "source": [ "obj-3", 0 ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [ "obj-488", 1 ],
-                                    "source": [ "obj-486", 0 ]
                                 }
                             },
                             {
@@ -4164,24 +4152,22 @@
                 "box": {
                     "fontsize": 13.92709359605911,
                     "id": "obj-417",
-                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2179.0, 1357.0, 200.0, 38.0 ],
-                    "text": "Repelled if spectral feature distance is >"
+                    "patching_rect": [ 2177.0, 1366.0, 404.0, 22.0 ],
+                    "text": "Repelled from a player if spectral feature distance is > this value"
                 }
             },
             {
                 "box": {
                     "fontsize": 13.191127396453577,
                     "id": "obj-416",
-                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2161.0, 1284.0, 182.0, 36.0 ],
-                    "text": "Drawn to if spectral feature distance is <"
+                    "patching_rect": [ 2161.0, 1284.0, 353.0, 21.0 ],
+                    "text": "Drawn to a player if spectral feature distance is < this value"
                 }
             },
             {
@@ -4738,9 +4724,9 @@
                     "filename": "interpolator.js",
                     "id": "obj-32",
                     "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
                     "patching_rect": [ 33.0, 858.0, 72.0, 20.0 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0
@@ -5463,12 +5449,6 @@
             }
         ],
         "lines": [
-            {
-                "patchline": {
-                    "destination": [ "obj-32", 1 ],
-                    "source": [ "obj-1", 0 ]
-                }
-            },
             {
                 "patchline": {
                     "destination": [ "obj-83", 0 ],
@@ -6964,13 +6944,6 @@
                 "patchline": {
                     "destination": [ "obj-421", 0 ],
                     "source": [ "obj-537", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-32", 2 ],
-                    "midpoints": [ 350.0, 843.0, 95.5, 843.0 ],
-                    "source": [ "obj-54", 1 ]
                 }
             },
             {
