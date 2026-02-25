@@ -9,11 +9,48 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 3.0, 59.0, 628.0, 259.0 ],
+        "rect": [ 509.0, 163.0, 615.0, 220.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
-        "title": "VASE Viewer",
+        "title": "VASE Viewer Controls",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-26",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "bang", "bang" ],
+                    "patching_rect": [ 558.0, 11.0, 32.0, 22.0 ],
+                    "text": "t b b"
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Arial",
+                    "fontsize": 11.595187,
+                    "id": "obj-295",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 553.0, 53.0, 75.0, 21.0 ],
+                    "text": "window exec"
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Arial",
+                    "fontsize": 11.595187,
+                    "id": "obj-294",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 592.0, 23.0, 103.0, 21.0 ],
+                    "text": "window flags float"
+                }
+            },
             {
                 "box": {
                     "id": "obj-25",
@@ -22,7 +59,6 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 215.75, 58.0, 45.0, 22.0 ],
-                    "presentation_linecount": 2,
                     "text": "wclose"
                 }
             },
@@ -2116,8 +2152,8 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 9.75, -4.0, 156.0, 22.0 ],
-                    "text": "loadmess title VASE Viewer"
+                    "patching_rect": [ 9.75, -4.0, 204.0, 22.0 ],
+                    "text": "loadmess title VASE Viewer Controls"
                 }
             },
             {
@@ -8350,7 +8386,16 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-26", 0 ],
+                    "midpoints": [ 194.25, 54.0, 240.0, 54.0, 240.0, 33.0, 555.0, 33.0, 555.0, 6.0, 567.5, 6.0 ],
+                    "order": 0,
+                    "source": [ "obj-16", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-90", 0 ],
+                    "order": 1,
                     "source": [ "obj-16", 0 ]
                 }
             },
@@ -8565,6 +8610,18 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-294", 0 ],
+                    "source": [ "obj-26", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-295", 0 ],
+                    "source": [ "obj-26", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-17", 0 ],
                     "source": [ "obj-27", 0 ]
                 }
@@ -8573,6 +8630,20 @@
                 "patchline": {
                     "destination": [ "obj-5", 0 ],
                     "source": [ "obj-29", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-192", 0 ],
+                    "midpoints": [ 601.5, 45.0, 240.0, 45.0, 240.0, 27.0, 171.0, 27.0, 171.0, 33.0, 19.25, 33.0 ],
+                    "source": [ "obj-294", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-192", 0 ],
+                    "midpoints": [ 562.5, 75.0, 540.0, 75.0, 540.0, 33.0, 228.0, 33.0, 228.0, 27.0, 171.0, 27.0, 171.0, 33.0, 19.25, 33.0 ],
+                    "source": [ "obj-295", 0 ]
                 }
             },
             {
