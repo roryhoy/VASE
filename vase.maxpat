@@ -15,6 +15,51 @@
         "boxes": [
             {
                 "box": {
+                    "fontname": "Ableton Sans Bold",
+                    "fontsize": 10.0,
+                    "id": "obj-72",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 571.0, 308.0, 19.0, 18.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 284.0, 115.0, 19.0, 18.0 ],
+                    "text": "z",
+                    "textcolor": [ 0.5568627450980392, 0.5058823529411764, 0.5058823529411764, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Ableton Sans Bold",
+                    "fontsize": 10.0,
+                    "id": "obj-70",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 511.0, 308.0, 19.0, 18.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 226.0, 115.0, 19.0, 18.0 ],
+                    "text": "y",
+                    "textcolor": [ 0.5568627450980392, 0.5058823529411764, 0.5058823529411764, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Ableton Sans Bold",
+                    "fontsize": 10.0,
+                    "id": "obj-68",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 450.0, 308.0, 19.0, 18.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 167.0, 115.0, 19.0, 18.0 ],
+                    "text": "x",
+                    "textcolor": [ 0.5568627450980392, 0.5058823529411764, 0.5058823529411764, 1.0 ]
+                }
+            },
+            {
+                "box": {
                     "id": "obj-56",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -100,7 +145,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 22.5, 82.535, 53.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 37.0, 102.0, 53.0, 18.0 ],
+                    "presentation_rect": [ 36.5, 204.0, 53.0, 18.0 ],
                     "text": "Visualizer"
                 }
             },
@@ -113,7 +158,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 830.0, 456.5693374422187, 85.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 15.5, 51.5, 74.0, 18.0 ],
+                    "presentation_rect": [ 15.5, 153.0, 74.0, 18.0 ],
                     "text": "Signal Routing"
                 }
             },
@@ -128,7 +173,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 27.0, 110.035, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 93.0, 103.0, 44.0, 15.0 ],
+                    "presentation_rect": [ 92.5, 205.0, 44.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -210,7 +255,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1002.5, 655.8613251155625, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 93.0, 80.0, 44.0, 15.0 ],
+                    "presentation_rect": [ 184.0, 85.5, 44.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -269,7 +314,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 949.0, 504.5693374422187, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 139.0, 53.0, 44.0, 15.0 ],
+                    "presentation_rect": [ 138.5, 155.0, 44.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -5899,7 +5944,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 78.0, 110.035, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 139.0, 103.0, 44.0, 15.0 ],
+                    "presentation_rect": [ 138.5, 205.0, 44.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -5937,7 +5982,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 737.0, 504.5693374422187, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 93.0, 53.0, 44.0, 15.0 ],
+                    "presentation_rect": [ 92.5, 155.0, 44.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -6266,7 +6311,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 532.0, 314.0, 50.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 532.0, 314.0, 50.0, 20.0 ]
+                    "presentation_rect": [ 245.0, 119.5, 50.0, 20.0 ]
                 }
             },
             {
@@ -6280,7 +6325,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 474.0, 314.0, 50.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 474.0, 314.0, 50.0, 20.0 ]
+                    "presentation_rect": [ 187.0, 119.5, 50.0, 20.0 ]
                 }
             },
             {
@@ -6294,7 +6339,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 415.0, 314.0, 50.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 415.0, 314.0, 50.0, 20.0 ]
+                    "presentation_rect": [ 128.0, 119.5, 50.0, 20.0 ]
                 }
             },
             {
@@ -6349,9 +6394,8 @@
                     "numoutlets": 0,
                     "patching_rect": [ 310.0, 354.5, 56.0, 29.0 ],
                     "presentation": 1,
-                    "presentation_linecount": 2,
-                    "presentation_rect": [ 310.0, 354.5, 56.0, 29.0 ],
-                    "text": "Player \nPopulation"
+                    "presentation_rect": [ 45.0, 62.0, 87.0, 18.0 ],
+                    "text": "Player Population"
                 }
             },
             {
@@ -6367,7 +6411,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 258.0, 358.5, 50.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 258.0, 358.5, 50.0, 20.0 ]
+                    "presentation_rect": [ 132.0, 61.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -6379,9 +6423,8 @@
                     "numoutlets": 0,
                     "patching_rect": [ 132.0, 354.5, 68.0, 29.0 ],
                     "presentation": 1,
-                    "presentation_linecount": 2,
-                    "presentation_rect": [ 132.0, 354.5, 68.0, 29.0 ],
-                    "text": "Space Agent \nPopulation"
+                    "presentation_rect": [ 17.0, 84.0, 115.0, 18.0 ],
+                    "text": "Space Agent Population"
                 }
             },
             {
@@ -6396,19 +6439,20 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 196.0, 358.5, 50.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 196.0, 358.5, 50.0, 20.0 ]
+                    "presentation_rect": [ 132.0, 83.0, 50.0, 20.0 ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 13.546296296296294,
+                    "fontname": "Ableton Sans Bold",
+                    "fontsize": 10.0,
                     "id": "obj-80",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 564.0, 265.0, 143.0, 22.0 ],
+                    "patching_rect": [ 564.0, 265.0, 107.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 564.0, 265.0, 143.0, 22.0 ],
+                    "presentation_rect": [ 13.0, 120.0, 107.0, 18.0 ],
                     "text": "VASE Dimensions (m)"
                 }
             },
@@ -21466,7 +21510,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 636.0, 851.0, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 193.0, 53.0, 44.0, 15.0 ],
+                    "presentation_rect": [ 192.5, 155.0, 44.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "activebgoncolor": {
                             "expression": "themecolor.live_active_automation"
@@ -22578,7 +22622,24 @@
                     "numoutlets": 0,
                     "patching_rect": [ 726.0, 435.5693374422187, 416.0, 139.86132511556264 ],
                     "presentation": 1,
-                    "presentation_rect": [ 12.0, 47.0, 176.0, 27.0 ],
+                    "presentation_rect": [ 11.5, 149.0, 176.0, 27.0 ],
+                    "proportion": 0.5
+                }
+            },
+            {
+                "box": {
+                    "angle": 270.0,
+                    "bgcolor": [ 0.1843137254901961, 0.611764705882353, 0.25098039215686274, 0.0 ],
+                    "border": 1,
+                    "bordercolor": [ 0.5019607843137255, 0.23137254901960785, 0.611764705882353, 1.0 ],
+                    "id": "obj-58",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 557.0, 263.0, 122.0, 22.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 12.0, 116.0, 291.0, 27.0 ],
                     "proportion": 0.5
                 }
             }
