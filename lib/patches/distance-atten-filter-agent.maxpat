@@ -15,6 +15,18 @@
         "boxes": [
             {
                 "box": {
+                    "fontsize": 18.104876893939398,
+                    "id": "obj-10",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 65.0, 357.0, 257.0, 27.0 ],
+                    "text": "Cuttoff values might be weird...",
+                    "textcolor": [ 1.0, 0.0, 0.0, 1.0 ]
+                }
+            },
+            {
+                "box": {
                     "id": "obj-43",
                     "maxclass": "message",
                     "numinlets": 2,
@@ -164,7 +176,7 @@
                 "box": {
                     "comment": "Attenuation Factor (ideal 0.5 to 1.)",
                     "id": "obj-13",
-                    "index": 0,
+                    "index": 4,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
@@ -366,8 +378,8 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 50.0, 100.0, 76.0, 20.0 ],
-                                    "text": "loadmess 9001"
+                                    "patching_rect": [ 50.0, 100.0, 82.0, 20.0 ],
+                                    "text": "loadmess 20000"
                                 }
                             },
                             {
@@ -377,8 +389,8 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 135.0, 100.0, 76.0, 20.0 ],
-                                    "text": "loadmess 2000"
+                                    "patching_rect": [ 135.0, 100.0, 65.0, 20.0 ],
+                                    "text": "loadmess 40"
                                 }
                             },
                             {
@@ -809,7 +821,7 @@
                 "box": {
                     "comment": "Attenuation Factor (ideal 0.5 to 1.)",
                     "id": "obj-6",
-                    "index": 0,
+                    "index": 3,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
@@ -856,7 +868,7 @@
                 "box": {
                     "comment": "Distance (metres)",
                     "id": "obj-2",
-                    "index": 0,
+                    "index": 2,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
@@ -879,11 +891,11 @@
                 "box": {
                     "comment": "Input signal",
                     "id": "obj-64",
-                    "index": 0,
+                    "index": 1,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "outlettype": [ "signal" ],
                     "patching_rect": [ 229.0, 435.0, 30.0, 30.0 ]
                 }
             },
@@ -891,7 +903,7 @@
                 "box": {
                     "comment": "",
                     "id": "obj-66",
-                    "index": 0,
+                    "index": 1,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
@@ -1147,7 +1159,6 @@
                     "source": [ "obj-9", 0 ]
                 }
             }
-        ],
-        "autosave": 0
+        ]
     }
 }
