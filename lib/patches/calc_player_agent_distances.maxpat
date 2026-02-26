@@ -9,8 +9,24 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 151.0, 143.0, 1143.0, 968.0 ],
+        "rect": [ 791.0, 237.0, 1143.0, 968.0 ],
         "boxes": [
+            {
+                "box": {
+                    "color": [ 0.07058823529411765, 0.13725490196078433, 0.796078431372549, 1.0 ],
+                    "id": "obj-10",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 367.0, 835.0, 157.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player_agent_distances"
+                }
+            },
             {
                 "box": {
                     "id": "obj-8",
@@ -130,7 +146,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 266.0, 679.0, 69.0, 22.0 ],
+                    "patching_rect": [ 289.0, 682.0, 69.0, 22.0 ],
                     "text": "print debug"
                 }
             },
@@ -176,7 +192,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 386.0, 625.0, 457.0, 107.0 ],
-                    "text": "dict contains keys of all room agents and values of proximity:\n\n0 = not in sensing range or room area\n1 = in sensing range, but not room area\n2 = in room area (may technically not be in sensing range, but handle both direct and reflection audio)"
+                    "text": "coll contains keys of all room agents and values of proximity:\n\n0 = not in sensing range or room area\n1 = in sensing range, but not room area\n2 = in room area (may technically not be in sensing range, but handle both direct and reflection audio)"
                 }
             },
             {
@@ -197,7 +213,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 297.0, 327.0, 123.0, 33.0 ],
+                    "patching_rect": [ 297.0, 327.0, 124.0, 33.0 ],
                     "text": "sensing range on 4th list element"
                 }
             },
@@ -295,8 +311,8 @@
                     "id": "obj-5",
                     "maxclass": "newobj",
                     "numinlets": 2,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
+                    "numoutlets": 3,
+                    "outlettype": [ "", "", "" ],
                     "patching_rect": [ 100.0, 636.0, 185.0, 22.0 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0
@@ -550,8 +566,14 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-41", 0 ],
+                    "destination": [ "obj-10", 0 ],
                     "source": [ "obj-5", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-41", 0 ],
+                    "source": [ "obj-5", 2 ]
                 }
             },
             {
