@@ -9,12 +9,45 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 456.0, 93.0, 1783.0, 1293.0 ],
+        "rect": [ 456.0, 93.0, 1331.0, 1293.0 ],
         "openinpresentation": 1,
         "default_fontsize": 10.0,
-        "toolbarvisible": 0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-50",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "patching_rect": [ 484.0, 6.0, 50.0, 20.0 ],
+                    "text": "loadbang"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-47",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 392.0, 6.0, 71.0, 20.0 ],
+                    "text": "v player-count"
+                }
+            },
+            {
+                "box": {
+                    "attr": "chans",
+                    "id": "obj-49",
+                    "maxclass": "attrui",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 228.0, 6.0, 150.0, 20.0 ]
+                }
+            },
             {
                 "box": {
                     "fontname": "Ableton Sans Light",
@@ -5576,7 +5609,7 @@
                     "angle": 270.0,
                     "bgcolor": [ 0.172137149796092, 0.172137100044002, 0.172137113045018, 0.0 ],
                     "border": 1,
-                    "bordercolor": [ 1.0, 0.0, 0.090203, 1.0 ],
+                    "bordercolor": [ 0.348547, 0.0, 1.0, 1.0 ],
                     "id": "obj-46",
                     "maxclass": "panel",
                     "mode": 0,
@@ -6969,6 +7002,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-49", 0 ],
+                    "source": [ "obj-47", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-467", 0 ],
                     "source": [ "obj-470", 1 ]
                 }
@@ -7057,8 +7096,20 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-69", 0 ],
+                    "source": [ "obj-49", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-44", 0 ],
                     "source": [ "obj-5", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-47", 0 ],
+                    "source": [ "obj-50", 0 ]
                 }
             },
             {
@@ -7356,14 +7407,6 @@
             "obj-122::obj-76::obj-62": [ "live.text[12]", "live.text[9]", 0 ],
             "obj-122::obj-76::obj-72": [ "live.text[14]", "live.text[8]", 0 ],
             "obj-15": [ "live.text[18]", "live.text[13]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0

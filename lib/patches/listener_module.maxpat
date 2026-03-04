@@ -16,6 +16,40 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-74",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 211.0, 103.0, 83.0, 20.0 ],
+                    "text": "v space-count"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-73",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 290.5, 10.0, 71.0, 20.0 ],
+                    "text": "v player-count"
+                }
+            },
+            {
+                "box": {
+                    "attr": "chans",
+                    "id": "obj-69",
+                    "maxclass": "attrui",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 127.0, 10.0, 150.0, 20.0 ]
+                }
+            },
+            {
+                "box": {
                     "bgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
                     "color": [ 0.996078431372549, 1.0, 0.047058823529411764, 1.0 ],
                     "id": "obj-56",
@@ -2669,6 +2703,18 @@
                     "text": "/norm $1",
                     "varname": "norm_mess"
                 }
+            },
+            {
+                "box": {
+                    "attr": "chans",
+                    "id": "obj-48",
+                    "maxclass": "attrui",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 50.0, 122.0, 150.0, 20.0 ]
+                }
             }
         ],
         "lines": [
@@ -3602,6 +3648,21 @@
             {
                 "patchline": {
                     "destination": [ "obj-19", 0 ],
+                    "order": 0,
+                    "source": [ "obj-4", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-73", 0 ],
+                    "order": 1,
+                    "source": [ "obj-4", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-74", 0 ],
+                    "order": 2,
                     "source": [ "obj-4", 0 ]
                 }
             },
@@ -3739,6 +3800,12 @@
                 "patchline": {
                     "destination": [ "obj-338", 0 ],
                     "source": [ "obj-461", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-111", 0 ],
+                    "source": [ "obj-48", 0 ]
                 }
             },
             {
@@ -3941,6 +4008,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-280", 0 ],
+                    "source": [ "obj-69", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-3", 0 ],
                     "source": [ "obj-7", 0 ]
                 }
@@ -3955,6 +4028,18 @@
                 "patchline": {
                     "destination": [ "obj-205", 0 ],
                     "source": [ "obj-71", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-69", 0 ],
+                    "source": [ "obj-73", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-48", 0 ],
+                    "source": [ "obj-74", 0 ]
                 }
             },
             {
@@ -4102,14 +4187,6 @@
             "obj-64": [ "live.text[24]", "live.text[24]", 0 ],
             "obj-89": [ "live.tab[7]", "live.tab", 0 ],
             "obj-98": [ "live.toggle[80]", "live.toggle[80]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0
