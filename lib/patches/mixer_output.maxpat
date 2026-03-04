@@ -9,9 +9,31 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 234.0, 128.0, 1154.0, 780.0 ],
+        "rect": [ 993.0, 151.0, 1154.0, 780.0 ],
         "openinpresentation": 1,
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-8",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 193.0, 142.0, 77.0, 22.0 ],
+                    "text": "loadmess #1"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-7",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 193.0, 180.0, 189.0, 22.0 ],
+                    "text": "sprintf _parameter_shortname %i:"
+                }
+            },
             {
                 "box": {
                     "id": "obj-1",
@@ -30,7 +52,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 617.0, 212.0, 24.0, 24.0 ]
+                    "patching_rect": [ 581.0, 224.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -182,7 +204,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 508.0, 195.0, 70.0, 22.0 ],
+                    "patching_rect": [ 508.0, 161.0, 70.0, 22.0 ],
                     "text": "loadmess 0"
                 }
             },
@@ -202,7 +224,7 @@
                     "activebgcolor": [ 0.09782765023003, 0.097827613875914, 0.09782762332443, 1.0 ],
                     "activetextcolor": [ 0.261531128329206, 0.261531061881087, 0.261531079296546, 1.0 ],
                     "fontsize": 6.0,
-                    "hint": "Toggling on send~ will create a multichannel send named [send~ 1_from_vase]",
+                    "hint": "Toggling on send~ will create a multichannel send named [send~ 3_from_vase]",
                     "id": "obj-12",
                     "maxclass": "live.text",
                     "numinlets": 1,
@@ -221,7 +243,7 @@
                         },
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
-                            "parameter_longname": "live.text[34]",
+                            "parameter_longname": "live.text[97]",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "live.text",
@@ -262,7 +284,7 @@
                             "expression": "themecolor.live_arranger_grid_tiles"
                         },
                         "valueof": {
-                            "parameter_longname": "live.gain~[15]",
+                            "parameter_longname": "live.gain~[106]",
                             "parameter_mmax": 10.0,
                             "parameter_mmin": -70.0,
                             "parameter_modmode": 3,
@@ -396,7 +418,15 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-24", 0 ],
+                    "order": 0,
+                    "source": [ "obj-5", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-6", 0 ],
+                    "order": 1,
                     "source": [ "obj-5", 0 ]
                 }
             },
@@ -424,6 +454,18 @@
                     "destination": [ "obj-5452", 0 ],
                     "order": 1,
                     "source": [ "obj-6", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-174", 0 ],
+                    "source": [ "obj-7", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-7", 0 ],
+                    "source": [ "obj-8", 0 ]
                 }
             }
         ]

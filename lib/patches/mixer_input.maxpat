@@ -9,9 +9,31 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 449.0, 168.0, 1000.0, 780.0 ],
+        "rect": [ 1069.0, 167.0, 1000.0, 780.0 ],
         "openinpresentation": 1,
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-13",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 218.0, 449.0, 77.0, 22.0 ],
+                    "text": "loadmess #1"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-14",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 218.0, 487.0, 189.0, 22.0 ],
+                    "text": "sprintf _parameter_shortname %i:"
+                }
+            },
             {
                 "box": {
                     "id": "obj-6",
@@ -116,7 +138,7 @@
                 "box": {
                     "activebgcolor": [ 0.269595890603871, 0.408853959740371, 0.595943257030903, 1.0 ],
                     "fontsize": 8.0,
-                    "hint": "adc~ will take the input audio from your chosen input interface. receive~ will get a signal from another Max patch using [send~ to_vase_3]",
+                    "hint": "adc~ will take the input audio from your chosen input interface. receive~ will get a signal from another Max patch using [send~ to_vase_1]",
                     "id": "obj-12",
                     "maxclass": "live.text",
                     "numinlets": 1,
@@ -244,7 +266,7 @@
                             "parameter_mmax": 10.0,
                             "parameter_mmin": -70.0,
                             "parameter_modmode": 3,
-                            "parameter_shortname": "3:",
+                            "parameter_shortname": "1:",
                             "parameter_type": 0,
                             "parameter_unitstyle": 4
                         }
@@ -305,6 +327,18 @@
                 "patchline": {
                     "destination": [ "obj-16", 0 ],
                     "source": [ "obj-12", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-14", 0 ],
+                    "source": [ "obj-13", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-174", 0 ],
+                    "source": [ "obj-14", 0 ]
                 }
             },
             {
