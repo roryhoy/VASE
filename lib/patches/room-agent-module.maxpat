@@ -9,10 +9,56 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 702.0, 96.0, 1783.0, 1293.0 ],
+        "rect": [ 456.0, 93.0, 1783.0, 1293.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-24",
+                    "maxclass": "number",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "bang" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 977.0, 448.5, 50.0, 20.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-8",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 876.0, 500.5, 94.0, 20.0 ],
+                    "text": "sprintf set Agent %i"
+                }
+            },
+            {
+                "box": {
+                    "fontface": 1,
+                    "id": "obj-14",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 876.0, 535.5, 150.0, 18.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ -3.0, 3.0, 150.0, 18.0 ],
+                    "text": "Agent 1"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-16",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 876.0, 444.5, 65.0, 20.0 ],
+                    "text": "loadmess #1"
+                }
+            },
             {
                 "box": {
                     "id": "obj-210",
@@ -802,9 +848,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 1231.0, 951.0, 50.0, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 1489.0, 504.0, 50.0, 20.0 ]
+                    "patching_rect": [ 1231.0, 951.0, 50.0, 20.0 ]
                 }
             },
             {
@@ -941,8 +985,6 @@
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
                     "patching_rect": [ 828.0, 840.0, 72.0, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 810.0, 671.5, 72.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -5865,6 +5907,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-8", 0 ],
+                    "source": [ "obj-16", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-158", 0 ],
                     "source": [ "obj-161", 0 ]
                 }
@@ -6197,6 +6245,12 @@
                 "patchline": {
                     "destination": [ "obj-369", 0 ],
                     "source": [ "obj-237", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-8", 0 ],
+                    "source": [ "obj-24", 0 ]
                 }
             },
             {
@@ -7079,6 +7133,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-14", 0 ],
+                    "source": [ "obj-8", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-527", 0 ],
                     "source": [ "obj-83", 1 ]
                 }
@@ -7128,14 +7188,6 @@
             "obj-122::obj-76::obj-58": [ "live.text[10]", "live.text[9]", 0 ],
             "obj-122::obj-76::obj-62": [ "live.text[12]", "live.text[9]", 0 ],
             "obj-122::obj-76::obj-72": [ "live.text[14]", "live.text[8]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0

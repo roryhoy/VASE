@@ -16,6 +16,17 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-4",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "patching_rect": [ 708.0, 5.0, 50.0, 20.0 ],
+                    "text": "loadbang"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-539",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -187,7 +198,6 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 655.0, 1333.0, 242.0, 20.0 ],
-                    "presentation_linecount": 2,
                     "text": "script connect dist_coll_agent 0 agent_mess_cycle 0"
                 }
             },
@@ -199,7 +209,6 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 933.0, 1408.0, 135.0, 20.0 ],
-                    "presentation_linecount": 2,
                     "text": "script delete spaces_unpack"
                 }
             },
@@ -211,7 +220,6 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 933.0, 1374.0, 148.0, 20.0 ],
-                    "presentation_linecount": 2,
                     "text": "script delete agent_mess_cycle"
                 }
             },
@@ -222,7 +230,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 232.0, 175.0, 97.0, 18.0 ],
-                    "presentation_linecount": 2,
                     "text": "[agent_mess_cycle]",
                     "textcolor": [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
                 }
@@ -289,7 +296,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 160.0, 193.0, 84.0, 18.0 ],
-                    "presentation_linecount": 2,
                     "text": "[spaces_unpack]",
                     "textcolor": [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
                 }
@@ -301,7 +307,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 118.0, 71.0, 82.0, 18.0 ],
-                    "presentation_linecount": 2,
                     "text": "[source_unpack]",
                     "textcolor": [ 0.0, 0.486274509803922, 0.556862745098039, 1.0 ]
                 }
@@ -3204,6 +3209,14 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-214", 0 ],
+                    "midpoints": [ 620.0, 75.0, 340.5, 75.0 ],
+                    "order": 2,
+                    "source": [ "obj-205", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-60", 0 ],
                     "order": 1,
                     "source": [ "obj-205", 0 ]
@@ -3481,6 +3494,12 @@
                 "patchline": {
                     "destination": [ "obj-65", 0 ],
                     "source": [ "obj-39", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-200", 1 ],
+                    "source": [ "obj-4", 0 ]
                 }
             },
             {
@@ -3944,6 +3963,14 @@
             "obj-64": [ "live.text[24]", "live.text[24]", 0 ],
             "obj-89": [ "live.tab[7]", "live.tab", 0 ],
             "obj-98": [ "live.toggle[80]", "live.toggle[80]", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0
