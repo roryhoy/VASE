@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 433.0, 211.0, 1481.0, 1059.0 ],
+        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
         "openinpresentation": 1,
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
@@ -492,10 +492,21 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 34.0, 96.0, 1970.0, 1080.0 ],
+                        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
+                            {
+                                "box": {
+                                    "id": "obj-8",
+                                    "maxclass": "newobj",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "" ],
+                                    "patching_rect": [ 860.0, 263.0, 71.0, 20.0 ],
+                                    "text": "r legend-scale"
+                                }
+                            },
                             {
                                 "box": {
                                     "comment": "",
@@ -664,8 +675,8 @@
                                     "numinlets": 1,
                                     "numoutlets": 2,
                                     "outlettype": [ "", "" ],
-                                    "patching_rect": [ 697.0, 398.0, 307.0, 20.0 ],
-                                    "text": "jit.gl.text2d VASE @align 1 @gl_color 1. 1. 1. @scale 1. @enable 0"
+                                    "patching_rect": [ 697.0, 398.0, 365.0, 20.0 ],
+                                    "text": "jit.gl.text2d VASE @align 1 @gl_color 1. 1. 1. @scale 1. @enable 0 @antialias 1"
                                 }
                             },
                             {
@@ -2464,6 +2475,12 @@
                             },
                             {
                                 "patchline": {
+                                    "destination": [ "obj-66", 0 ],
+                                    "source": [ "obj-8", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
                                     "destination": [ "obj-7", 1 ],
                                     "source": [ "obj-83", 0 ]
                                 }
@@ -2780,7 +2797,7 @@
                     "angle": 270.0,
                     "bgcolor": [ 0.172137149796092, 0.172137100044002, 0.172137113045018, 0.0 ],
                     "border": 1,
-                    "bordercolor": [ 1.0, 0.0, 0.033794, 1.0 ],
+                    "bordercolor": [ 1.0, 0.0, 0.012806, 1.0 ],
                     "id": "obj-4",
                     "maxclass": "panel",
                     "mode": 0,
@@ -2790,17 +2807,6 @@
                     "presentation": 1,
                     "presentation_rect": [ 2.0, 1.0, 243.0, 69.0 ],
                     "proportion": 0.5
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-6",
-                    "maxclass": "newobj",
-                    "numinlets": 0,
-                    "numoutlets": 0,
-                    "patching_rect": [ 303.0, 77.0, 113.0, 20.0 ],
-                    "text": "mubu_player_module 1",
-                    "varname": "mubu"
                 }
             }
         ],
@@ -3287,14 +3293,6 @@
         ],
         "parameters": {
             "obj-195": [ "live.text[18]", "live.text[13]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0
