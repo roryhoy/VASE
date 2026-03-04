@@ -9,11 +9,59 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 509.0, 163.0, 615.0, 220.0 ],
+        "rect": [ 806.0, 704.0, 615.0, 220.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "title": "VASE Viewer Controls",
         "boxes": [
+            {
+                "box": {
+                    "fontname": "Ableton Sans Medium",
+                    "id": "obj-49",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 293.0, 803.5, 79.0, 21.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 373.0, 30.0, 37.0, 21.0 ],
+                    "text": "Scale"
+                }
+            },
+            {
+                "box": {
+                    "format": 6,
+                    "id": "obj-48",
+                    "maxclass": "flonum",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "bang" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 238.0, 803.0, 50.0, 22.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 321.0, 29.0, 50.0, 22.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-41",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 238.0, 770.0, 73.0, 22.0 ],
+                    "text": "loadmess 1."
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-39",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 238.0, 833.0, 86.0, 22.0 ],
+                    "text": "s legend-scale"
+                }
+            },
             {
                 "box": {
                     "id": "obj-26",
@@ -155,7 +203,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1176.0, 771.0, 153.0, 21.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 256.0, 186.0, 153.0, 21.0 ],
+                    "presentation_rect": [ 218.0, 187.0, 153.0, 21.0 ],
                     "text": "Draw Player Sound Activity"
                 }
             },
@@ -180,7 +228,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1336.0, 774.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 243.0, 189.0, 15.0, 15.0 ],
+                    "presentation_rect": [ 205.0, 190.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -225,7 +273,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1251.0, 670.0, 78.0, 21.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 256.0, 164.0, 78.0, 21.0 ],
+                    "presentation_rect": [ 218.0, 165.0, 78.0, 21.0 ],
                     "text": "Draw Players"
                 }
             },
@@ -239,7 +287,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1336.0, 673.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 243.0, 167.0, 15.0, 15.0 ],
+                    "presentation_rect": [ 205.0, 168.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -817,7 +865,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1219.0, 566.0, 115.0, 21.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 256.0, 75.5, 112.0, 21.0 ],
+                    "presentation_rect": [ 218.0, 76.0, 112.0, 21.0 ],
                     "text": "Draw Space Agents"
                 }
             },
@@ -831,7 +879,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1336.0, 569.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 243.0, 78.5, 15.0, 15.0 ],
+                    "presentation_rect": [ 205.0, 79.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -877,7 +925,7 @@
                     "patching_rect": [ 1221.0, 454.0, 110.0, 35.0 ],
                     "presentation": 1,
                     "presentation_linecount": 2,
-                    "presentation_rect": [ 256.0, 97.5, 111.0, 35.0 ],
+                    "presentation_rect": [ 218.0, 98.0, 111.0, 35.0 ],
                     "text": "Draw Space Agent \nsensing range"
                 }
             },
@@ -891,7 +939,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1336.0, 464.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 243.0, 107.5, 15.0, 15.0 ],
+                    "presentation_rect": [ 205.0, 108.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -5995,7 +6043,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1272.0, 905.0, 62.0, 35.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 259.5, 34.5, 92.0, 21.0 ],
+                    "presentation_rect": [ 222.0, 35.0, 92.0, 21.0 ],
                     "text": "Player Co-ords"
                 }
             },
@@ -6009,7 +6057,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1336.0, 915.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 242.5, 37.5, 15.0, 15.0 ],
+                    "presentation_rect": [ 205.0, 38.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -6043,7 +6091,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 61.0, 681.0, 78.0, 21.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 259.5, 16.5, 85.0, 21.0 ],
+                    "presentation_rect": [ 222.0, 17.0, 85.0, 21.0 ],
                     "text": "Draw Legend"
                 }
             },
@@ -6067,7 +6115,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 44.0, 684.0, 15.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 243.0, 19.5, 15.0, 15.0 ],
+                    "presentation_rect": [ 205.0, 20.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -6098,7 +6146,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 45.0, 585.0, 276.0, 107.0 ],
+                        "rect": [ 744.0, 585.0, 276.0, 107.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
@@ -8718,6 +8766,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-48", 0 ],
+                    "source": [ "obj-41", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-175", 0 ],
                     "source": [ "obj-42", 0 ]
                 }
@@ -8738,6 +8792,12 @@
                 "patchline": {
                     "destination": [ "obj-44", 0 ],
                     "source": [ "obj-46", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-39", 0 ],
+                    "source": [ "obj-48", 0 ]
                 }
             },
             {
