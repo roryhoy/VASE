@@ -9,10 +9,22 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 1876.0, 1220.0 ],
+        "rect": [ 1394.0, 939.0, 1015.0, 434.0 ],
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "comment": "",
+                    "id": "obj-2",
+                    "index": 2,
+                    "maxclass": "inlet",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 433.0, 68.0, 30.0, 30.0 ]
+                }
+            },
             {
                 "box": {
                     "id": "obj-14",
@@ -2166,6 +2178,12 @@
                 "patchline": {
                     "destination": [ "obj-8", 0 ],
                     "source": [ "obj-14", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-109", 0 ],
+                    "source": [ "obj-2", 0 ]
                 }
             },
             {
