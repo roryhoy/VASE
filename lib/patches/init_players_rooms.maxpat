@@ -9,8 +9,88 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 105.0, 1573.0, 549.0 ],
+        "rect": [ 34.0, 105.0, 1618.0, 690.0 ],
         "boxes": [
+            {
+                "box": {
+                    "color": [ 0.13725490196078433, 0.0, 1.0, 1.0 ],
+                    "id": "obj-40",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 717.5, 571.0, 120.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player-rot-offsets"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.13725490196078433, 0.0, 1.0, 1.0 ],
+                    "id": "obj-60",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 583.5, 571.0, 85.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player-dist"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.07058823529411765, 0.13725490196078433, 0.796078431372549, 1.0 ],
+                    "id": "obj-33",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 906.0, 622.0, 152.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player_agent_rotations"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.07058823529411765, 0.13725490196078433, 0.796078431372549, 1.0 ],
+                    "id": "obj-36",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 712.0, 622.0, 157.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player_agent_distances"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.07058823529411765, 0.13725490196078433, 0.796078431372549, 1.0 ],
+                    "id": "obj-37",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 519.0, 622.0, 153.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player_in_agent_range"
+                }
+            },
             {
                 "box": {
                     "id": "obj-32",
@@ -2241,7 +2321,7 @@
                 "patchline": {
                     "destination": [ "obj-1", 0 ],
                     "midpoints": [ 190.5, 195.0, 258.0, 195.0, 258.0, 219.0, 396.0, 219.0, 396.0, 366.0, 673.5, 366.0 ],
-                    "order": 0,
+                    "order": 3,
                     "source": [ "obj-29", 3 ]
                 }
             },
@@ -2263,7 +2343,7 @@
                 "patchline": {
                     "destination": [ "obj-21", 0 ],
                     "midpoints": [ 190.5, 195.0, 63.0, 195.0, 63.0, 369.0, 136.5, 369.0 ],
-                    "order": 4,
+                    "order": 9,
                     "source": [ "obj-29", 3 ]
                 }
             },
@@ -2276,9 +2356,44 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-33", 0 ],
+                    "order": 0,
+                    "source": [ "obj-29", 3 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-36", 0 ],
+                    "order": 2,
+                    "source": [ "obj-29", 3 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-37", 0 ],
+                    "order": 6,
+                    "source": [ "obj-29", 3 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-40", 0 ],
+                    "order": 1,
+                    "source": [ "obj-29", 3 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-49", 0 ],
                     "midpoints": [ 190.5, 195.0, 180.0, 195.0, 180.0, 240.0, 162.0, 240.0, 162.0, 306.0, 138.5, 306.0 ],
-                    "order": 3,
+                    "order": 8,
+                    "source": [ "obj-29", 3 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-60", 0 ],
+                    "order": 5,
                     "source": [ "obj-29", 3 ]
                 }
             },
@@ -2286,7 +2401,7 @@
                 "patchline": {
                     "destination": [ "obj-65", 0 ],
                     "midpoints": [ 190.5, 195.0, 258.0, 195.0, 258.0, 219.0, 396.0, 219.0, 396.0, 330.0, 671.5, 330.0 ],
-                    "order": 1,
+                    "order": 4,
                     "source": [ "obj-29", 3 ]
                 }
             },
@@ -2321,7 +2436,7 @@
                 "patchline": {
                     "destination": [ "obj-92", 0 ],
                     "midpoints": [ 190.5, 195.0, 63.0, 195.0, 63.0, 336.0, 138.5, 336.0 ],
-                    "order": 2,
+                    "order": 7,
                     "source": [ "obj-29", 3 ]
                 }
             },
