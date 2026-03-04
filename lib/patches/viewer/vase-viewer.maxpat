@@ -9,11 +9,22 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 806.0, 704.0, 615.0, 220.0 ],
+        "rect": [ 806.0, 703.0, 615.0, 220.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "title": "VASE Viewer Controls",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-50",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 246.25, 676.5, 86.0, 22.0 ],
+                    "text": "v legend-scale"
+                }
+            },
             {
                 "box": {
                     "fontname": "Ableton Sans Medium",
@@ -21,7 +32,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 293.0, 803.5, 79.0, 21.0 ],
+                    "patching_rect": [ 210.25, 640.5, 79.0, 21.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 373.0, 30.0, 37.0, 21.0 ],
                     "text": "Scale"
@@ -36,7 +47,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 238.0, 803.0, 50.0, 22.0 ],
+                    "patching_rect": [ 155.25, 639.5, 50.0, 22.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 321.0, 29.0, 50.0, 22.0 ]
                 }
@@ -48,7 +59,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 238.0, 770.0, 73.0, 22.0 ],
+                    "patching_rect": [ 155.25, 606.5, 73.0, 22.0 ],
                     "text": "loadmess 1."
                 }
             },
@@ -58,7 +69,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 238.0, 833.0, 86.0, 22.0 ],
+                    "patching_rect": [ 155.25, 676.5, 86.0, 22.0 ],
                     "text": "s legend-scale"
                 }
             },
@@ -1141,7 +1152,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 133.5, 717.0, 150.0, 33.0 ],
+                    "patching_rect": [ 117.75, 717.0, 150.0, 33.0 ],
                     "text": "Need to scale these positions for VASE Size"
                 }
             },
@@ -6078,7 +6089,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 44.0, 651.0, 70.0, 22.0 ],
+                    "patching_rect": [ 27.75, 651.0, 70.0, 22.0 ],
                     "text": "loadmess 1"
                 }
             },
@@ -6089,7 +6100,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 61.0, 681.0, 78.0, 21.0 ],
+                    "patching_rect": [ 44.75, 681.0, 78.0, 21.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 222.0, 17.0, 85.0, 21.0 ],
                     "text": "Draw Legend"
@@ -6101,7 +6112,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 43.5, 706.0, 75.0, 22.0 ],
+                    "patching_rect": [ 27.75, 706.0, 75.0, 22.0 ],
                     "text": "s legend-tog"
                 }
             },
@@ -6113,7 +6124,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 44.0, 684.0, 15.0, 15.0 ],
+                    "patching_rect": [ 27.75, 684.0, 15.0, 15.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 205.0, 20.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
@@ -6233,7 +6244,7 @@
                         ],
                         "lines": []
                     },
-                    "patching_rect": [ 44.5, 734.0, 78.0, 26.0 ],
+                    "patching_rect": [ 28.75, 734.0, 78.0, 26.0 ],
                     "saved_object_attributes": {
                         "fontsize": 10.0
                     },
@@ -6261,17 +6272,6 @@
                     "patching_rect": [ 335.5, 518.0, 125.0, 21.0 ],
                     "text": "VASE Dimensions (m)",
                     "textjustification": 2
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-200",
-                    "linecount": 6,
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 337.0, 679.0, 136.0, 87.0 ],
-                    "text": "DisPerSion dimensions (y as height)\n\nx - 7.77\nz - 7.56\ny - 5"
                 }
             },
             {
@@ -8797,6 +8797,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-39", 0 ],
+                    "order": 1,
+                    "source": [ "obj-48", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-50", 0 ],
+                    "order": 0,
                     "source": [ "obj-48", 0 ]
                 }
             },
