@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 1423.0, 962.0, 1131.0, 502.0 ],
+        "rect": [ 1442.0, 783.0, 1131.0, 692.0 ],
         "openinpresentation": 1,
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
@@ -796,7 +796,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 49.0, 1772.0, 235.0, 20.0 ],
+                    "patching_rect": [ 42.0, 1786.0, 235.0, 20.0 ],
                     "text": "script connect in_range_coll 0 cycle_to_filter_pos 0"
                 }
             },
@@ -829,8 +829,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1146.0, 1339.0, 126.0, 20.0 ],
-                    "text": "script delete cycle_to_filter"
+                    "patching_rect": [ 1098.0, 1326.0, 70.0, 20.0 ],
+                    "text": "cycle_to_filter"
                 }
             },
             {
@@ -5720,58 +5720,10 @@
             },
             {
                 "box": {
-                    "id": "obj-60",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 3,
-                    "outlettype": [ "", "", "" ],
-                    "patching_rect": [ 1242.0, 418.0, 100.0, 20.0 ],
-                    "text": "cycle 3",
-                    "varname": "cycle_to_filter_pos"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-81",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 3,
-                    "outlettype": [ "", "", "" ],
-                    "patching_rect": [ 1242.0, 418.0, 100.0, 20.0 ],
-                    "text": "cycle 3",
-                    "varname": "cycle_to_filter_pos[1]"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-212",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 3,
-                    "outlettype": [ "", "", "" ],
-                    "patching_rect": [ 1242.0, 418.0, 100.0, 20.0 ],
-                    "text": "cycle 3",
-                    "varname": "cycle_to_filter_pos[2]"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-218",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 3,
-                    "outlettype": [ "", "", "" ],
-                    "patching_rect": [ 1242.0, 418.0, 100.0, 20.0 ],
-                    "text": "cycle 3",
-                    "varname": "cycle_to_filter_pos[3]"
-                }
-            },
-            {
-                "box": {
                     "angle": 270.0,
                     "bgcolor": [ 0.172137149796092, 0.172137100044002, 0.172137113045018, 0.0 ],
                     "border": 1,
-                    "bordercolor": [ 0.066456, 0.0, 1.0, 1.0 ],
+                    "bordercolor": [ 0.438468, 0.0, 1.0, 1.0 ],
                     "id": "obj-46",
                     "maxclass": "panel",
                     "mode": 0,
@@ -5914,12 +5866,6 @@
                 "patchline": {
                     "destination": [ "obj-500", 0 ],
                     "source": [ "obj-122", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-60", 0 ],
-                    "source": [ "obj-128", 0 ]
                 }
             },
             {
@@ -6576,8 +6522,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-19", 0 ],
-                    "midpoints": [ 1155.5, 1755.0, 376.5, 1755.0 ],
+                    "destination": [ "obj-368", 0 ],
                     "source": [ "obj-245", 0 ]
                 }
             },
@@ -7671,14 +7616,6 @@
             "obj-122::obj-76::obj-72": [ "live.text[14]", "live.text[8]", 0 ],
             "obj-15": [ "live.text[18]", "live.text[13]", 0 ],
             "obj-52": [ "live.text[2]", "live.text[13]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0
