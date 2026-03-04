@@ -30,10 +30,10 @@
                     "id": "obj-55",
                     "maxclass": "newobj",
                     "numinlets": 1,
-                    "numoutlets": 3,
-                    "outlettype": [ "format", "", "reset" ],
-                    "patching_rect": [ 864.0, 182.0, 72.0, 20.0 ],
-                    "text": "t format l reset"
+                    "numoutlets": 4,
+                    "outlettype": [ "bang", "format", "", "reset" ],
+                    "patching_rect": [ 864.0, 182.0, 81.0, 20.0 ],
+                    "text": "t b format l reset"
                 }
             },
             {
@@ -3851,19 +3851,25 @@
             {
                 "patchline": {
                     "destination": [ "obj-17", 0 ],
-                    "source": [ "obj-55", 2 ]
+                    "source": [ "obj-55", 3 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-17", 0 ],
+                    "source": [ "obj-55", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-206", 0 ],
                     "source": [ "obj-55", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-49", 0 ],
-                    "source": [ "obj-55", 1 ]
+                    "source": [ "obj-55", 2 ]
                 }
             },
             {
@@ -4088,6 +4094,14 @@
             "obj-64": [ "live.text[24]", "live.text[24]", 0 ],
             "obj-89": [ "live.tab[7]", "live.tab", 0 ],
             "obj-98": [ "live.toggle[80]", "live.toggle[80]", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0
