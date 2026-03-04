@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 251.0, 199.0, 1205.0, 968.0 ],
+        "rect": [ 618.0, 309.0, 1205.0, 916.0 ],
         "boxes": [
             {
                 "box": {
@@ -78,7 +78,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 179.0, 710.0, 24.0, 24.0 ]
+                    "patching_rect": [ 136.5, 714.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -88,7 +88,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 179.0, 745.0, 52.0, 22.0 ],
+                    "patching_rect": [ 136.5, 749.0, 52.0, 22.0 ],
                     "text": "gate 1 0"
                 }
             },
@@ -98,7 +98,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 179.0, 788.0, 32.0, 22.0 ],
+                    "patching_rect": [ 136.5, 792.0, 32.0, 22.0 ],
                     "text": "print"
                 }
             },
@@ -626,6 +626,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-32", 0 ],
+                    "order": 0,
                     "source": [ "obj-5", 2 ]
                 }
             },
@@ -638,14 +639,13 @@
             {
                 "patchline": {
                     "destination": [ "obj-6", 1 ],
-                    "order": 0,
-                    "source": [ "obj-5", 0 ]
+                    "order": 1,
+                    "source": [ "obj-5", 2 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-65", 0 ],
-                    "order": 1,
                     "source": [ "obj-5", 0 ]
                 }
             },
