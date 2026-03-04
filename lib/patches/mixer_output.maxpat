@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 993.0, 151.0, 1154.0, 780.0 ],
+        "rect": [ 1183.0, 167.0, 1154.0, 780.0 ],
         "openinpresentation": 1,
         "boxes": [
             {
@@ -122,17 +122,6 @@
             },
             {
                 "box": {
-                    "id": "obj-14",
-                    "linecount": 2,
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 355.0, 468.0, 150.0, 33.0 ],
-                    "text": "swap to mc signal gated orrrrr what"
-                }
-            },
-            {
-                "box": {
                     "id": "obj-6",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -211,12 +200,13 @@
             {
                 "box": {
                     "id": "obj-15",
+                    "linecount": 2,
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 581.0, 254.0, 509.0, 22.0 ],
-                    "text": "sprintf hint \\\"Toggling on send~ will create a multichannel send named [send~ #1_from_vase]\\\""
+                    "patching_rect": [ 581.0, 254.0, 564.0, 35.0 ],
+                    "text": "sprintf hint \\\"Toggling on send~ will create a multichannel send named [send~ #1_from_vase]. This does not bypass chosen DAC output.\\\""
                 }
             },
             {
@@ -224,7 +214,7 @@
                     "activebgcolor": [ 0.09782765023003, 0.097827613875914, 0.09782762332443, 1.0 ],
                     "activetextcolor": [ 0.261531128329206, 0.261531061881087, 0.261531079296546, 1.0 ],
                     "fontsize": 6.0,
-                    "hint": "Toggling on send~ will create a multichannel send named [send~ 3_from_vase]",
+                    "hint": "Toggling on send~ will create a multichannel send named [send~ 1_from_vase]",
                     "id": "obj-12",
                     "maxclass": "live.text",
                     "numinlets": 1,
@@ -284,11 +274,11 @@
                             "expression": "themecolor.live_arranger_grid_tiles"
                         },
                         "valueof": {
-                            "parameter_longname": "live.gain~[106]",
+                            "parameter_longname": "live.gain~[112]",
                             "parameter_mmax": 10.0,
                             "parameter_mmin": -70.0,
                             "parameter_modmode": 3,
-                            "parameter_shortname": "3:",
+                            "parameter_shortname": "1:",
                             "parameter_type": 0,
                             "parameter_unitstyle": 4
                         }
