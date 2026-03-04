@@ -16,6 +16,72 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-67",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 968.0, 12.5, 150.0, 29.0 ],
+                    "text": "if no rooms, need to format after getting player rotations"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-55",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [ "format", "", "reset" ],
+                    "patching_rect": [ 864.0, 182.0, 72.0, 20.0 ],
+                    "text": "t format l reset"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-54",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 846.0, 55.5, 29.5, 20.0 ],
+                    "text": "2"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-38",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "bang", "" ],
+                    "patching_rect": [ 879.5, 47.0, 30.0, 20.0 ],
+                    "text": "sel 0"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-36",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 846.0, 90.5, 45.0, 20.0 ],
+                    "text": "gate 2 1"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-19",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 879.5, 17.0, 83.0, 20.0 ],
+                    "text": "v space-count"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-4",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -2201,7 +2267,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1099.0, 41.0, 374.0, 49.0 ],
+                    "patching_rect": [ 1151.5, 55.5, 374.0, 49.0 ],
                     "text": "Can be locked to source positions, or free moving (future)\n\nLocking to a source position would be the default for any  player"
                 }
             },
@@ -3159,6 +3225,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-38", 0 ],
+                    "source": [ "obj-19", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-337", 0 ],
                     "source": [ "obj-196", 0 ]
                 }
@@ -3480,6 +3552,20 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-203", 0 ],
+                    "midpoints": [ 855.5, 120.0, 813.0, 120.0, 813.0, 168.0, 827.5, 168.0 ],
+                    "source": [ "obj-36", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-55", 0 ],
+                    "midpoints": [ 881.5, 120.0, 813.0, 120.0, 813.0, 168.0, 873.5, 168.0 ],
+                    "source": [ "obj-36", 1 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-186", 0 ],
                     "source": [ "obj-362", 0 ]
                 }
@@ -3492,13 +3578,27 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-54", 0 ],
+                    "source": [ "obj-38", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-65", 0 ],
                     "source": [ "obj-39", 1 ]
                 }
             },
             {
                 "patchline": {
+                    "destination": [ "obj-19", 0 ],
+                    "order": 0,
+                    "source": [ "obj-4", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-200", 1 ],
+                    "order": 1,
                     "source": [ "obj-4", 0 ]
                 }
             },
@@ -3744,6 +3844,30 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-36", 0 ],
+                    "source": [ "obj-54", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-17", 0 ],
+                    "source": [ "obj-55", 2 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-17", 0 ],
+                    "source": [ "obj-55", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-49", 0 ],
+                    "source": [ "obj-55", 1 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-46", 0 ],
                     "source": [ "obj-58", 0 ]
                 }
@@ -3764,7 +3888,8 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-203", 0 ],
+                    "destination": [ "obj-36", 1 ],
+                    "midpoints": [ 827.5, 156.0, 813.0, 156.0, 813.0, 87.0, 881.5, 87.0 ],
                     "source": [ "obj-6", 0 ]
                 }
             },
@@ -3963,14 +4088,6 @@
             "obj-64": [ "live.text[24]", "live.text[24]", 0 ],
             "obj-89": [ "live.tab[7]", "live.tab", 0 ],
             "obj-98": [ "live.toggle[80]", "live.toggle[80]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0
