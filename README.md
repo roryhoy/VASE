@@ -1,5 +1,5 @@
 # VASE
-VASE (Virtual Acoustic Spatial Entities) is a telematic focused performance system which places performers within a dynamic virtual acoustics simulation. Multiple "space-agents" populate the encompassing space, allowing for unique compositional approaches to electroacoustic performance. 
+VASE (Virtual Acoustic Spatial Entities) is a telematic focused performance system which places performers alongside dynamic virtual acoustic agents. These "space-agents" populate the encompassing space, allowing for unique compositional approaches to electroacoustic performance. 
 
 
 ### Dependencies
