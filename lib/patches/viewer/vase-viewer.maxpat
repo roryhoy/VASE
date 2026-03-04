@@ -9,11 +9,22 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 806.0, 703.0, 615.0, 220.0 ],
+        "rect": [ 806.0, 681.0, 615.0, 220.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "title": "VASE Viewer Controls",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-51",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1397.0, 952.5, 121.0, 22.0 ],
+                    "text": "v draw-player-legend"
+                }
+            },
             {
                 "box": {
                     "id": "obj-50",
@@ -159,7 +170,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1336.0, 951.0, 111.0, 22.0 ],
+                    "patching_rect": [ 1277.0, 952.5, 111.0, 22.0 ],
                     "text": "s legend-tog-player"
                 }
             },
@@ -6040,7 +6051,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1336.0, 870.0, 70.0, 22.0 ],
+                    "patching_rect": [ 1277.0, 871.5, 70.0, 22.0 ],
                     "text": "loadmess 0"
                 }
             },
@@ -6052,7 +6063,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1272.0, 905.0, 62.0, 35.0 ],
+                    "patching_rect": [ 1213.0, 906.5, 62.0, 35.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 222.0, 35.0, 92.0, 21.0 ],
                     "text": "Player Co-ords"
@@ -6066,7 +6077,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 1336.0, 915.0, 15.0, 15.0 ],
+                    "patching_rect": [ 1277.0, 916.5, 15.0, 15.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 205.0, 38.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
@@ -8579,6 +8590,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-178", 0 ],
+                    "order": 1,
+                    "source": [ "obj-19", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-51", 0 ],
+                    "order": 0,
                     "source": [ "obj-19", 0 ]
                 }
             },
