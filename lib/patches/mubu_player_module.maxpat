@@ -9,8 +9,41 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 134.0, 165.0, 1612.0, 929.0 ],
+        "rect": [ 942.0, 901.0, 1612.0, 530.0 ],
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-31",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 251.0, 27.0, 147.0, 22.0 ],
+                    "text": "sprintf set open_mubu_%i"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-26",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 251.0, 61.0, 47.0, 22.0 ],
+                    "text": "receive"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-14",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 251.0, 105.5, 35.0, 22.0 ],
+                    "text": "open"
+                }
+            },
             {
                 "box": {
                     "color": [ 0.5725490196078431, 0.5686274509803921, 0.054901960784313725, 1.0 ],
@@ -2782,7 +2815,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 1372.0, 225.0, 50.0, 22.0 ],
-                    "text": "6"
+                    "text": "3"
                 }
             },
             {
@@ -5891,6 +5924,15 @@
             {
                 "patchline": {
                     "destination": [ "obj-3", 0 ],
+                    "order": 0,
+                    "source": [ "obj-101", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-31", 0 ],
+                    "midpoints": [ 563.5, 66.0, 408.0, 66.0, 408.0, 12.0, 260.5, 12.0 ],
+                    "order": 1,
                     "source": [ "obj-101", 0 ]
                 }
             },
@@ -6008,6 +6050,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-11", 0 ],
+                    "source": [ "obj-14", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-119", 0 ],
                     "source": [ "obj-147", 0 ]
                 }
@@ -6097,6 +6145,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-14", 0 ],
+                    "source": [ "obj-26", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-119", 0 ],
                     "source": [ "obj-28", 0 ]
                 }
@@ -6119,6 +6173,12 @@
                     "destination": [ "obj-18", 0 ],
                     "order": 1,
                     "source": [ "obj-3", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-26", 0 ],
+                    "source": [ "obj-31", 0 ]
                 }
             },
             {
