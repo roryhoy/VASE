@@ -9,8 +9,24 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 436.0, 318.0, 828.0, 723.0 ],
+        "rect": [ 456.0, 591.0, 828.0, 723.0 ],
         "boxes": [
+            {
+                "box": {
+                    "color": [ 0.07058823529411765, 0.13725490196078433, 0.796078431372549, 1.0 ],
+                    "id": "obj-10",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 293.0, 487.0, 167.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll agent_genome_distances"
+                }
+            },
             {
                 "box": {
                     "fontsize": 13.773913043478261,
@@ -239,9 +255,9 @@
                     "id": "obj-3",
                     "maxclass": "newobj",
                     "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "patching_rect": [ 86.0, 435.0, 105.0, 22.0 ],
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 86.0, 435.0, 226.0, 22.0 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0
                     },
@@ -350,6 +366,12 @@
                 "patchline": {
                     "destination": [ "obj-1", 0 ],
                     "source": [ "obj-3", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-10", 0 ],
+                    "source": [ "obj-3", 1 ]
                 }
             },
             {
