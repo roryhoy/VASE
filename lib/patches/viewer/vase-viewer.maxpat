@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 806.0, 681.0, 615.0, 220.0 ],
+        "rect": [ 1417.0, 447.0, 614.0, 223.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "title": "VASE Viewer Controls",
@@ -1107,7 +1107,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "jit_matrix" ],
                     "patching_rect": [ 68.0, 843.0, 153.0, 131.5 ],
-                    "pic": "xyz-coords-spat.world.png",
+                    "pic": "xyz-coords.png",
                     "presentation": 1,
                     "presentation_rect": [ 452.0, 19.683511970349585, 156.0, 128.0 ]
                 }
