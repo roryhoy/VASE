@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 321.0, 477.0 ],
+        "rect": [ 34.0, 97.0, 336.0, 477.0 ],
         "openinpresentation": 1,
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
@@ -52,13 +52,121 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 134.0, 165.0, 579.0, 622.0 ],
+                        "rect": [ 100.0, 134.0, 802.0, 622.0 ],
                         "openinpresentation": 1,
                         "default_fontsize": 10.0,
                         "toolbarvisible": 0,
                         "subpatcher_template": "bigpatcher",
                         "title": "Advanced Settings",
                         "boxes": [
+                            {
+                                "box": {
+                                    "bubble": 1,
+                                    "bubbleside": 3,
+                                    "hidden": 1,
+                                    "id": "obj-64",
+                                    "linecount": 5,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 783.0, 171.0, 269.0, 66.0 ],
+                                    "presentation": 1,
+                                    "presentation_linecount": 5,
+                                    "presentation_rect": [ 195.0, 31.0, 269.0, 66.0 ],
+                                    "text": "Player sensing range is used to calculate distance falloff for all incoming signals (both from other players and from space agents).\n\nThis value is set in meters.",
+                                    "varname": "help_text_move[1]"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "bgcolor": [ 0.125, 0.125, 0.125, 0.0 ],
+                                    "blinkcolor": [ 0.618934978328545, 0.744701397656435, 0.953750108255376, 0.0 ],
+                                    "hint": "",
+                                    "id": "obj-65",
+                                    "maxclass": "button",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "bang" ],
+                                    "outlinecolor": [ 0.38, 0.38, 0.38, 1.0 ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [ 756.0, 198.0, 24.0, 24.0 ],
+                                    "presentation": 1,
+                                    "presentation_rect": [ 466.0, 52.0, 24.0, 24.0 ],
+                                    "varname": "help_button_move[1]"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Ableton Sans Light",
+                                    "id": "obj-66",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 763.0, 201.0, 17.187499344348907, 18.0 ],
+                                    "presentation": 1,
+                                    "presentation_rect": [ 473.0, 55.0, 19.0, 18.0 ],
+                                    "text": "i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Ableton Sans Light",
+                                    "id": "obj-103",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 600.0, 201.0, 89.0, 18.0 ],
+                                    "presentation": 1,
+                                    "presentation_rect": [ 544.0, 55.0, 89.0, 18.0 ],
+                                    "text": "Sensing Range (m)"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-131",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 539.0, 226.0, 150.0, 18.0 ],
+                                    "text": "used in audio falloff calculation"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-129",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "" ],
+                                    "patching_rect": [ 692.0, 166.0, 68.0, 20.0 ],
+                                    "text": "loadmess 10."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "format": 6,
+                                    "id": "obj-126",
+                                    "maxclass": "flonum",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [ "", "bang" ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [ 692.0, 200.0, 50.0, 20.0 ],
+                                    "presentation": 1,
+                                    "presentation_rect": [ 492.0, 54.0, 50.0, 20.0 ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-13",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "" ],
+                                    "patching_rect": [ 692.0, 234.0, 110.0, 20.0 ],
+                                    "text": "v player-sensing-range"
+                                }
+                            },
                             {
                                 "box": {
                                     "bubble": 1,
@@ -72,7 +180,7 @@
                                     "presentation": 1,
                                     "presentation_linecount": 9,
                                     "presentation_rect": [ 157.0, 19.5, 269.0, 111.0 ],
-                                    "text": "When an agent reaches an attraction target based on its preference genome, it will \"adopt\" that player.\n\nAny movement from the agent will carry the player with it. In the case another agent is attracted to a player, that agent will take over the adoption. If a player then is deemed a mismatch, and the agent is repelled, that player will be no longer adopted and their movement will no longer match the agent.",
+                                    "text": "When an agent reaches an attraction target based on its preference genome, it will \"adopt\" that player.\n\nAny movement from the agent will carry the player with it. In the case another agent is attracted to a player, that agent will take over the adoption. If a player then is deemed a mismatch, and the agent is avoiding them, that player will be no longer adopted and their movement will no longer match the agent.",
                                     "varname": "help_text_adopt"
                                 }
                             },
@@ -565,9 +673,35 @@
                                     "presentation_rect": [ 105.0, 47.0, 19.0, 18.0 ],
                                     "text": "i"
                                 }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Ableton Sans Light",
+                                    "fontsize": 18.318525112443773,
+                                    "id": "obj-63",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 667.0, 113.0, 65.0, 28.0 ],
+                                    "presentation": 1,
+                                    "presentation_rect": [ 492.0, 11.0, 65.0, 28.0 ],
+                                    "text": "Players"
+                                }
                             }
                         ],
                         "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-13", 0 ],
+                                    "source": [ "obj-126", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-126", 0 ],
+                                    "source": [ "obj-129", 0 ]
+                                }
+                            },
                             {
                                 "patchline": {
                                     "destination": [ "obj-144", 0 ],
@@ -1040,19 +1174,6 @@
             },
             {
                 "box": {
-                    "fontname": "Ableton Sans Light",
-                    "id": "obj-103",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 490.0, 621.8613251155625, 118.0, 18.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 16.0, 300.0, 118.0, 18.0 ],
-                    "text": "Player Sensing Range (m)"
-                }
-            },
-            {
-                "box": {
                     "id": "obj-90",
                     "maxclass": "message",
                     "numinlets": 2,
@@ -1225,52 +1346,6 @@
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
                     "patching_rect": [ 358.5, 94.0, 24.0, 24.0 ]
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-131",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 458.0, 647.0, 150.0, 18.0 ],
-                    "text": "used in audio falloff calculation"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-129",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "patching_rect": [ 611.0, 586.8613251155625, 68.0, 20.0 ],
-                    "text": "loadmess 10."
-                }
-            },
-            {
-                "box": {
-                    "format": 6,
-                    "id": "obj-126",
-                    "maxclass": "flonum",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
-                    "parameter_enable": 0,
-                    "patching_rect": [ 611.0, 620.8613251155625, 50.0, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 136.0, 299.0, 50.0, 20.0 ]
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-13",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "patching_rect": [ 611.0, 654.8613251155625, 110.0, 20.0 ],
-                    "text": "v player-sensing-range"
                 }
             },
             {
@@ -6861,7 +6936,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 681.0, 345.0, 254.0, 354.0 ],
+                        "rect": [ 100.0, 134.0, 254.0, 354.0 ],
                         "openinpresentation": 1,
                         "default_fontsize": 10.0,
                         "toolbarvisible": 0,
@@ -7763,7 +7838,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 411.0, 347.0, 269.0, 357.0 ],
+                        "rect": [ 100.0, 134.0, 269.0, 357.0 ],
                         "openinpresentation": 1,
                         "default_fontsize": 10.0,
                         "toolbarvisible": 0,
@@ -21794,7 +21869,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 955.0, 443.0, 446.0, 242.0 ],
+                        "rect": [ 100.0, 134.0, 446.0, 242.0 ],
                         "openinpresentation": 1,
                         "default_fontsize": 10.0,
                         "toolbarvisible": 0,
@@ -23183,21 +23258,9 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-13", 0 ],
-                    "source": [ "obj-126", 0 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-44", 0 ],
                     "midpoints": [ 777.5, 918.0, 951.0, 918.0, 951.0, 951.0, 963.0, 951.0 ],
                     "source": [ "obj-127", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-126", 0 ],
-                    "source": [ "obj-129", 0 ]
                 }
             },
             {
