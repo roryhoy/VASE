@@ -9,11 +9,22 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 1417.0, 447.0, 614.0, 223.0 ],
+        "rect": [ 898.0, 447.0, 614.0, 223.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "title": "VASE Viewer Controls",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-47",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 598.0, 360.0, 173.0, 22.0 ],
+                    "text": "r vase-size-change_from_main"
+                }
+            },
             {
                 "box": {
                     "id": "obj-51",
@@ -371,7 +382,7 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 595.0, 366.0, 111.0, 22.0 ],
+                    "patching_rect": [ 476.0, 360.0, 111.0, 22.0 ],
                     "text": "r init-rooms-players"
                 }
             },
@@ -8811,6 +8822,12 @@
                 "patchline": {
                     "destination": [ "obj-44", 0 ],
                     "source": [ "obj-46", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-88", 0 ],
+                    "source": [ "obj-47", 0 ]
                 }
             },
             {
