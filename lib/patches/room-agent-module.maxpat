@@ -16,6 +16,55 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-83",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1553.5, 1330.0, 46.0, 20.0 ],
+                    "text": "deferlow"
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Ableton Sans Light",
+                    "id": "obj-80",
+                    "maxclass": "live.text",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "parameter_enable": 1,
+                    "patching_rect": [ 1757.0, 972.0, 77.0, 17.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 672.0, 344.0, 41.0, 16.0 ],
+                    "saved_attribute_attributes": {
+                        "valueof": {
+                            "parameter_enum": [ "val1", "val2" ],
+                            "parameter_longname": "live.text[3]",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "live.text[13]",
+                            "parameter_type": 2
+                        }
+                    },
+                    "text": "Rand_Genome",
+                    "texton": "Zero",
+                    "varname": "live.text[3]"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-64",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1523.0, 1449.0, 96.0, 20.0 ],
+                    "text": "s genome_changed"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-111",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -8295,7 +8344,7 @@
                     "angle": 270.0,
                     "bgcolor": [ 0.172137149796092, 0.172137100044002, 0.172137113045018, 0.0 ],
                     "border": 1,
-                    "bordercolor": [ 0.133979, 0.0, 1.0, 1.0 ],
+                    "bordercolor": [ 0.361857, 0.0, 1.0, 1.0 ],
                     "id": "obj-46",
                     "maxclass": "panel",
                     "mode": 0,
@@ -9693,8 +9742,29 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-62", 0 ],
+                    "order": 0,
+                    "source": [ "obj-80", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-83", 0 ],
+                    "midpoints": [ 1766.5, 1035.0, 1641.0, 1035.0, 1641.0, 1317.0, 1563.0, 1317.0 ],
+                    "order": 1,
+                    "source": [ "obj-80", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-57", 0 ],
                     "source": [ "obj-82", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-64", 0 ],
+                    "source": [ "obj-83", 0 ]
                 }
             },
             {
@@ -9745,14 +9815,7 @@
             "obj-122::obj-76::obj-72": [ "live.text[14]", "live.text[8]", 0 ],
             "obj-15": [ "live.text[18]", "live.text[13]", 0 ],
             "obj-52": [ "live.text[2]", "live.text[13]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
+            "obj-80": [ "live.text[3]", "live.text[13]", 0 ],
             "inherited_shortname": 1
         },
         "autosave": 0
