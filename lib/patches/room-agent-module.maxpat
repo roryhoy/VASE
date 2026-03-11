@@ -37,7 +37,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1757.0, 972.0, 77.0, 17.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 672.0, 344.0, 41.0, 16.0 ],
+                    "presentation_rect": [ 141.5, 3.0, 70.0, 16.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -4421,7 +4421,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 189.5, 87.0, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 76.0, 3.0, 41.0, 16.0 ],
+                    "presentation_rect": [ 76.0, 3.0, 65.0, 16.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -4432,7 +4432,7 @@
                             "parameter_type": 2
                         }
                     },
-                    "text": "Random",
+                    "text": "Rand_Reverb",
                     "texton": "Zero",
                     "varname": "live.text[1]"
                 }
@@ -4595,7 +4595,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 712.5, 840.0, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 217.0, 1.0, 28.0, 16.0 ],
+                    "presentation_rect": [ 212.0, 3.0, 28.0, 16.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -8344,7 +8344,7 @@
                     "angle": 270.0,
                     "bgcolor": [ 0.172137149796092, 0.172137100044002, 0.172137113045018, 0.0 ],
                     "border": 1,
-                    "bordercolor": [ 0.361857, 0.0, 1.0, 1.0 ],
+                    "bordercolor": [ 0.476082, 0.0, 1.0, 1.0 ],
                     "id": "obj-46",
                     "maxclass": "panel",
                     "mode": 0,
@@ -9816,6 +9816,14 @@
             "obj-15": [ "live.text[18]", "live.text[13]", 0 ],
             "obj-52": [ "live.text[2]", "live.text[13]", 0 ],
             "obj-80": [ "live.text[3]", "live.text[13]", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0
