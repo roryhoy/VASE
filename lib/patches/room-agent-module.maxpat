@@ -289,10 +289,21 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 238.0, 150.0, 1979.0, 1212.0 ],
+                        "rect": [ 34.0, 96.0, 1444.0, 852.0 ],
                         "default_fontsize": 10.0,
                         "subpatcher_template": "bigpatcher",
                         "boxes": [
+                            {
+                                "box": {
+                                    "id": "obj-12",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "" ],
+                                    "patching_rect": [ 1355.0, 327.5, 46.0, 20.0 ],
+                                    "text": "deferlow"
+                                }
+                            },
                             {
                                 "box": {
                                     "id": "obj-49",
@@ -334,7 +345,6 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [ 123.0, 954.0, 150.0, 29.0 ],
-                                    "presentation_linecount": 2,
                                     "text": "replace position of agent being adopted with 1 (true)"
                                 }
                             },
@@ -3326,7 +3336,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 1383.0, 324.0, 80.0, 29.0 ],
+                                    "patching_rect": [ 1403.0, 323.0, 80.0, 29.0 ],
                                     "text": "random cant move timeout"
                                 }
                             },
@@ -3337,7 +3347,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "bang" ],
-                                    "patching_rect": [ 1355.0, 299.0, 50.0, 20.0 ],
+                                    "patching_rect": [ 1355.0, 296.0, 50.0, 20.0 ],
                                     "text": "loadbang"
                                 }
                             },
@@ -3350,17 +3360,6 @@
                                     "outlettype": [ "", "bang" ],
                                     "parameter_enable": 0,
                                     "patching_rect": [ 1355.0, 393.0, 50.0, 20.0 ]
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-140",
-                                    "maxclass": "button",
-                                    "numinlets": 1,
-                                    "numoutlets": 1,
-                                    "outlettype": [ "bang" ],
-                                    "parameter_enable": 0,
-                                    "patching_rect": [ 1355.0, 326.0, 24.0, 24.0 ]
                                 }
                             },
                             {
@@ -3557,6 +3556,12 @@
                             },
                             {
                                 "patchline": {
+                                    "destination": [ "obj-132", 0 ],
+                                    "source": [ "obj-12", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
                                     "destination": [ "obj-1", 0 ],
                                     "source": [ "obj-13", 0 ]
                                 }
@@ -3575,12 +3580,6 @@
                             },
                             {
                                 "patchline": {
-                                    "destination": [ "obj-132", 0 ],
-                                    "source": [ "obj-140", 0 ]
-                                }
-                            },
-                            {
-                                "patchline": {
                                     "destination": [ "obj-20", 0 ],
                                     "source": [ "obj-144", 0 ]
                                 }
@@ -3593,7 +3592,7 @@
                             },
                             {
                                 "patchline": {
-                                    "destination": [ "obj-140", 0 ],
+                                    "destination": [ "obj-12", 0 ],
                                     "source": [ "obj-148", 0 ]
                                 }
                             },
@@ -8296,7 +8295,7 @@
                     "angle": 270.0,
                     "bgcolor": [ 0.172137149796092, 0.172137100044002, 0.172137113045018, 0.0 ],
                     "border": 1,
-                    "bordercolor": [ 0.169688, 0.0, 1.0, 1.0 ],
+                    "bordercolor": [ 0.133979, 0.0, 1.0, 1.0 ],
                     "id": "obj-46",
                     "maxclass": "panel",
                     "mode": 0,
@@ -9746,6 +9745,14 @@
             "obj-122::obj-76::obj-72": [ "live.text[14]", "live.text[8]", 0 ],
             "obj-15": [ "live.text[18]", "live.text[13]", 0 ],
             "obj-52": [ "live.text[2]", "live.text[13]", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0
