@@ -9,11 +9,73 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 46.0, 96.0, 627.0, 673.0 ],
+        "rect": [ 46.0, 96.0, 490.0, 394.0 ],
         "openinpresentation": 1,
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-131",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "signal", "" ],
+                    "patching_rect": [ 548.0, 607.0, 75.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "parameter_enable": 0
+                    },
+                    "text": "spat5.doppler~"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.0, 0.11764705882352941, 1.0, 1.0 ],
+                    "id": "obj-13",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 578.5, 481.0, 99.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll vase-params"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.0, 0.11764705882352941, 1.0, 1.0 ],
+                    "id": "obj-30",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 578.5, 451.0, 104.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll agent-params"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.0, 0.11764705882352941, 1.0, 1.0 ],
+                    "id": "obj-103",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 576.5, 416.0, 107.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll player-params"
+                }
+            },
             {
                 "box": {
                     "id": "obj-183",
@@ -8205,7 +8267,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 385.0, 220.0, 269.0, 357.0 ],
+                        "rect": [ 0.0, 53.0, 1512.0, 929.0 ],
                         "openinpresentation": 1,
                         "default_fontsize": 10.0,
                         "toolbarvisible": 0,
@@ -24252,14 +24314,6 @@
             "obj-8::obj-39::obj-174": [ "live.gain~[2]", "3:", 0 ],
             "obj-8::obj-4877": [ "live.text[24]", "live.text", 0 ],
             "obj-95": [ "live.text[72]", "live.text[13]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-128::obj-16": {
                     "parameter_longname": "live.text[15]"
