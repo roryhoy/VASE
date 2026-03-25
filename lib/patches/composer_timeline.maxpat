@@ -14,6 +14,17 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-113",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 118.0, 374.0, 216.0, 33.0 ],
+                    "text": "note: duration does not account for timeline jumps, as these can be looped"
+                }
+            },
+            {
+                "box": {
                     "color": [ 0.0, 0.047058823529411764, 1.0, 1.0 ],
                     "id": "obj-111",
                     "maxclass": "newobj",
@@ -47,7 +58,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 1121.0, 157.0, 24.0, 24.0 ]
+                    "patching_rect": [ 1140.0, 91.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -57,7 +68,7 @@
                     "numinlets": 2,
                     "numoutlets": 3,
                     "outlettype": [ "", "bang", "bang" ],
-                    "patching_rect": [ 1121.0, 191.0, 471.0, 22.0 ],
+                    "patching_rect": [ 1140.0, 125.0, 471.0, 22.0 ],
                     "text": "dialog Save current composition before load? (Unsaved changes will be lost) @mode 4"
                 }
             },
@@ -78,7 +89,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "int" ],
-                    "patching_rect": [ 639.0, 191.0, 128.0, 22.0 ],
+                    "patching_rect": [ 732.0, 162.0, 128.0, 22.0 ],
                     "text": "conformpath max boot"
                 }
             },
@@ -104,9 +115,9 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 564.0, 258.0, 530.0, 23.0 ],
+                    "patching_rect": [ 657.0, 229.0, 530.0, 23.0 ],
                     "presentation_linecount": 2,
-                    "text": "/Users/rhoy/Documents/PhD/VASE/lib/patches/mubu_player_module.maxpat"
+                    "text": "/Users/rhoy/Documents/PhD/VASE/lib/patches/timeline.maxpat"
                 }
             },
             {
@@ -202,7 +213,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1273.0, 246.0, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 904.0, 23.0, 44.0, 15.0 ],
+                    "presentation_rect": [ 103.0, 9.0, 44.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": "themecolor.live_record"
@@ -675,12 +686,12 @@
             {
                 "box": {
                     "id": "obj-44",
-                    "linecount": 2,
+                    "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1157.0, 79.0, 150.0, 33.0 ],
-                    "text": "Build XML which outlines full composition"
+                    "patching_rect": [ 1281.5, 43.0, 150.0, 47.0 ],
+                    "text": "Build XML which outlines full composition - in js? or coll"
                 }
             },
             {
@@ -689,7 +700,7 @@
                     "activetextcolor": [ 0.079348079365577, 0.07934804057877, 0.079348050547289, 1.0 ],
                     "annotation": "",
                     "bgcolor": [ 0.0, 0.854901960784314, 0.282352941176471, 1.0 ],
-                    "hint": "Add external receive channel strip to receive signals from other patchers in Max.",
+                    "hint": "Load pre-created compositions into VASE timeline.",
                     "id": "obj-52",
                     "maxclass": "live.text",
                     "mode": 0,
@@ -1244,7 +1255,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 908.0, 626.0, 4.0, 30.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 509.0, 100.0, 4.0, 30.0 ],
+                    "presentation_rect": [ 365.0, 100.0, 4.0, 30.0 ],
                     "proportion": 0.5,
                     "rounded": 0,
                     "varname": "cursor"
@@ -1675,7 +1686,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-94", 1 ],
-                    "midpoints": [ 648.5, 248.25, 1084.5, 248.25 ],
+                    "midpoints": [ 741.5, 219.25, 1177.5, 219.25 ],
                     "source": [ "obj-99", 0 ]
                 }
             },

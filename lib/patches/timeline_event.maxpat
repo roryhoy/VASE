@@ -13,6 +13,27 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-31",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 955.0, 488.0, 33.0, 22.0 ],
+                    "text": "front"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-28",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 270.0, 554.0, 150.0, 20.0 ],
+                    "text": "in the time"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-26",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -219,7 +240,7 @@
             },
             {
                 "box": {
-                    "activebgcolor": [ 0.9, 0.65, 0.05, 1.0 ],
+                    "activebgcolor": [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
                     "activetextcolor": [ 0.079348079365577, 0.07934804057877, 0.079348050547289, 1.0 ],
                     "annotation": "",
                     "bgcolor": [ 0.0, 0.854901960784314, 0.282352941176471, 1.0 ],
@@ -227,17 +248,16 @@
                     "hint": "Add external receive channel strip to receive signals from other patchers in Max.",
                     "id": "obj-52",
                     "maxclass": "live.text",
-                    "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "" ],
                     "parameter_enable": 1,
                     "patching_rect": [ 12.0, 65.0, 18.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 4.0, 7.0, 21.0, 22.0 ],
+                    "presentation_rect": [ 4.0, 7.0, 15.0, 12.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
-                            "expression": "themecolor.live_control_selection"
+                            "expression": "themecolor.live_control_fill_handle"
                         },
                         "activetextcolor": {
                             "expression": "themecolor.live_meter_bg"
@@ -255,7 +275,7 @@
                         }
                     },
                     "text": "+",
-                    "texton": "Presets",
+                    "texton": "-",
                     "varname": "live.text[4]"
                 }
             },
@@ -282,6 +302,12 @@
                 "patchline": {
                     "destination": [ "obj-72", 0 ],
                     "source": [ "obj-237", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-9", 0 ],
+                    "source": [ "obj-31", 0 ]
                 }
             },
             {
