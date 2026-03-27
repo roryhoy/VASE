@@ -1,0 +1,379 @@
+:root {
+  --bg: #111;
+  --panel: #1b1b1b;
+  --panel-2: #202020;
+  --border: #444;
+  --text: #eee;
+  --muted: #bdbdbd;
+  --accent: #ff6a57;
+  --other: #7ec8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+a {
+  color: #9ecbff;
+}
+
+#controls {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+}
+
+input,
+select {
+  padding: 10px 12px;
+  font-size: 16px;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 14px;
+  font-size: 16px;
+  cursor: pointer;
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.canvases,
+.dial-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .canvases,
+  .dial-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.canvas-card,
+.dial-card,
+.camera-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 16px;
+}
+
+canvas {
+  display: block;
+  border: 1px solid var(--border);
+  background: #151515;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.dial-section {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.dial-card {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .dial-section {
+    grid-template-columns: 1fr;
+  }
+
+  .dial-card {
+    width: 100%;
+    max-width: 240px;
+  }
+}
+
+.dial-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 70px;
+}
+
+.dial-header h2 {
+  margin: 0;
+}
+
+.offset-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.offset-label {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.knob {
+  width: 120px;
+  height: 120px;
+  margin: 12px auto;
+  touch-action: none;
+  user-select: none;
+}
+
+.knob-small {
+  width: 54px;
+  height: 54px;
+  margin: 0;
+}
+
+.knob-face {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #3a3a3a, #1a1a1a 70%);
+  border: 1px solid var(--border);
+}
+
+.knob-small .knob-face {
+  width: 54px;
+  height: 54px;
+}
+
+.knob-indicator {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  width: 4px;
+  height: 42px;
+  margin-left: -2px;
+  border-radius: 2px;
+  background: var(--accent);
+  transform-origin: 50% 50px;
+}
+
+.knob-small .knob-indicator {
+  top: 5px;
+  width: 3px;
+  height: 19px;
+  margin-left: -1.5px;
+  transform-origin: 50% 22px;
+}
+
+.knob-value {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.knob-value-small {
+  font-size: 12px;
+}
+
+.knob {
+  position: relative;
+}
+
+.knob::before,
+.knob::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6f6f6f;
+  font-size: 12px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.knob::before {
+  content: "−";
+  left: -14px;
+}
+
+.knob::after {
+  content: "+";
+  right: -14px;
+}
+
+.knob-small::before,
+.knob-small::after {
+  font-size: 10px;
+  color: #5f5f5f;
+}
+
+.knob-small::before {
+  left: -10px;
+}
+
+.knob-small::after {
+  right: -10px;
+}
+
+.knob-toggle {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.knob-toggle span {
+  color: var(--muted);
+}
+
+.camera-hidden {
+  display: none !important;
+}
+
+.tracking-offset {
+  display: none;
+}
+
+.tracking-offset.enabled {
+  display: flex;
+}
+
+.camera-section {
+  margin-top: 24px;
+}
+
+.camera-card {
+  max-width: 420px;
+}
+
+.camera-card label,
+.camera-card .toggle-row,
+.camera-card select,
+.camera-card p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.camera-card .toggle-row {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.camera-card .camera-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.camera-card .camera-header .toggle-row,
+.camera-card > .toggle-row {
+  justify-content: center;
+}
+
+#cameraVideo {
+  width: 100%;
+  max-width: 360px;
+  background: #000;
+  border: 1px solid var(--border);
+  display: block;
+  margin-top: 12px;
+}
+
+#cameraStatus {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.camera-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.camera-header h2 {
+  margin: 0;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.toggle-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.identity-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px;
+  gap: 12px;
+}
+
+.player-number-field input {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .identity-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.connect-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+#status {
+  margin: 0;
+  color: var(--muted);
+}
+
+.canvas-card,
+.dial-card,
+.camera-card {
+  text-align: center;
+}
+
+.canvas-card h2,
+.dial-card h2,
+.camera-card h2 {
+  margin-top: 0;
+  text-align: center;
+}
