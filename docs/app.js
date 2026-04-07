@@ -413,38 +413,21 @@ function playerLabel(player) {
     return player.name || "Player";
 }
 
-function drawRotatedRect(ctx, cx, cy, w, h, angleDeg, strokeStyle = "#5fcf80", fillStyle = "rgba(95, 207, 128, 0.12)") {
+function drawRotatedRectFromCorner(ctx, x0, y0, w, h, angleDeg, strokeStyle = "#5fcf80", fillStyle = "rgba(95, 207, 128, 0.12)") {
     const angle = degToRad(angleDeg);
 
     ctx.save();
-    ctx.translate(cx, cy);
+    ctx.translate(x0, y0);
     ctx.rotate(angle);
 
+    // because world origin is bottom-left but canvas y is downward,
+    // draw upward from the anchor
     ctx.fillStyle = fillStyle;
     ctx.strokeStyle = strokeStyle;
     ctx.lineWidth = 1.5;
 
     ctx.beginPath();
-    ctx.rect(-w / 2, -h / 2, w, h);
-    ctx.fill();
-    ctx.stroke();
-
-    ctx.restore();
-}
-
-function drawRotatedEllipse(ctx, cx, cy, w, h, angleDeg, strokeStyle = "#5fcf80", fillStyle = "rgba(95, 207, 128, 0.12)") {
-    const angle = degToRad(angleDeg);
-
-    ctx.save();
-    ctx.translate(cx, cy);
-    ctx.rotate(angle);
-
-    ctx.fillStyle = fillStyle;
-    ctx.strokeStyle = strokeStyle;
-    ctx.lineWidth = 1.5;
-
-    ctx.beginPath();
-    ctx.ellipse(0, 0, w / 2, h / 2, 0, 0, Math.PI * 2);
+    ctx.rect(0, -h, w, h);
     ctx.fill();
     ctx.stroke();
 
@@ -452,32 +435,38 @@ function drawRotatedEllipse(ctx, cx, cy, w, h, angleDeg, strokeStyle = "#5fcf80"
 }
 
 function worldToCanvasTopDown(space, canvas) {
-    const cx = worldUnitToCanvasX(space.x, canvas);
-    const cy = worldUnitToCanvasY(space.y, canvas);
+    const x0 = worldUnitToCanvasX(space.x, canvas);
+    const y0 = worldUnitToCanvasZ(space.z, canvas);
+
     const w = worldSizeToCanvasWidth(space.width, canvas);
-    const h = worldSizeToCanvasHeight(space.height, canvas);
+    const h = worldSizeToCanvasDepth(space.depth, canvas);
+
+    const rotation = worldRotationToCanvasRotation(space.yaw || 0);
 
     return {
-        cx,
-        cy,
+        x0,
+        y0,
         w,
         h,
-        rotation: worldRotationToCanvasRotation(space.yaw || 0)
+        rotation
     };
 }
 
 function worldToCanvasFront(space, canvas) {
-    const cx = worldUnitToCanvasX(space.x, canvas);
-    const cy = worldUnitToCanvasZ(space.z, canvas);
+    const x0 = worldUnitToCanvasX(space.x, canvas);
+    const y0 = worldUnitToCanvasY(space.y, canvas);
+
     const w = worldSizeToCanvasWidth(space.width, canvas);
-    const h = worldSizeToCanvasDepth(space.depth, canvas);
+    const h = worldSizeToCanvasHeight(space.height, canvas);
+
+    const rotation = worldRotationToCanvasRotation(space.roll || 0);
 
     return {
-        cx,
-        cy,
+        x0,
+        y0,
         w,
         h,
-        rotation: worldRotationToCanvasRotation(space.roll || 0)
+        rotation
     };
 }
 
@@ -519,10 +508,10 @@ function drawSpaces(ctx, canvas, mode) {
 
         const label = space.name || space.id;
 
-        drawRotatedRect(
+        drawRotatedRectFromCorner(
             ctx,
-            projected.cx,
-            projected.cy,
+            projected.x0,
+            projected.y0,
             projected.w,
             projected.h,
             projected.rotation
@@ -530,7 +519,7 @@ function drawSpaces(ctx, canvas, mode) {
 
         ctx.fillStyle = "#8ee6a4";
         ctx.font = "11px Arial";
-        ctx.fillText(label, projected.cx + 6, projected.cy - 6);
+        ctx.fillText(label, projected.x0 + 6, projected.y0 - 6);
     }
 }
 
