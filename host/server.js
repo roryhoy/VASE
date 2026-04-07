@@ -20,6 +20,12 @@ const io = new Server(server, {
 });
 
 const players = {};
+const spaces = {};
+let world = {
+  width: 1,
+  height: 1,
+  depth: 1
+};
 
 // browser -> Max
 const oscOut = new osc.UDPPort({
@@ -29,7 +35,7 @@ const oscOut = new osc.UDPPort({
   remotePort: MAX_OSC_OUT_PORT
 });
 
-// Max -> browser
+// Max -> Node
 const oscIn = new osc.UDPPort({
   localAddress: "0.0.0.0",
   localPort: NODE_OSC_IN_PORT
@@ -55,8 +61,29 @@ function normalizePlayer(data) {
   };
 }
 
-function broadcastState() {
-  io.emit("state", players);
+function normalizeSpace(data) {
+  return {
+    id: String(data.id || ""),
+    name: String(data.name || ""),
+    x: Number(data.x) || 0,
+    y: Number(data.y) || 0,
+    z: Number(data.z) || 0,
+    width: Number(data.width) || 0,
+    height: Number(data.height) || 0,
+    depth: Number(data.depth) || 0,
+    yaw: Number(data.yaw) || 0,
+    pitch: Number(data.pitch) || 0,
+    roll: Number(data.roll) || 0,
+  };
+}
+
+function emitFullState(socket = null) {
+  const payload = { players, spaces, world };
+  if (socket) {
+    socket.emit("state", payload);
+  } else {
+    io.emit("state", payload);
+  }
 }
 
 oscOut.open();
@@ -65,13 +92,12 @@ oscIn.open();
 oscIn.on("message", (msg) => {
   if (!msg || !msg.address) return;
 
-  // expected from Max:
-  // /player/state playerNumber name x y z azimuth elevation roll
-  if (msg.address === "/player/state") {
-    const args = (msg.args || []).map((arg) =>
-      typeof arg === "object" && arg !== null && "value" in arg ? arg.value : arg
-    );
+  const args = (msg.args || []).map((arg) =>
+    typeof arg === "object" && arg !== null && "value" in arg ? arg.value : arg
+  );
 
+  if (msg.address === "/player/state") {
+    // /player/state playerNumber name x y z azimuth elevation roll
     const player = normalizePlayer({
       playerNumber: args[0],
       name: args[1],
@@ -91,13 +117,58 @@ oscIn.on("message", (msg) => {
     return;
   }
 
-  // optional clear from Max:
-  // /players/clear
   if (msg.address === "/players/clear") {
-    for (const key of Object.keys(players)) {
-      delete players[key];
-    }
-    broadcastState();
+    for (const key of Object.keys(players)) delete players[key];
+    emitFullState();
+    return;
+  }
+
+  if (msg.address === "/world/state") {
+    // /world/state width height depth
+    world = {
+      width: Number(args[0]) || 1,
+      height: Number(args[1]) || 1,
+      depth: Number(args[2]) || 1
+    };
+    io.emit("worldState", world);
+    return;
+  }
+
+  if (msg.address === "/space/state") {
+    // /space/state id name x y z width height depth yaw pitch roll shape
+    const space = normalizeSpace({
+      id: args[0],
+      name: args[1],
+      x: args[2],
+      y: args[3],
+      z: args[4],
+      width: args[5],
+      height: args[6],
+      depth: args[7],
+      yaw: args[8],
+      pitch: args[9],
+      roll: args[10],
+      shape: args[11]
+    });
+
+    if (!space.id) return;
+    spaces[space.id] = space;
+    io.emit("spaceUpdate", space);
+    return;
+  }
+
+  if (msg.address === "/space/remove") {
+    const id = String(args[0] || "");
+    if (!id) return;
+    delete spaces[id];
+    io.emit("spaceRemove", id);
+    return;
+  }
+
+  if (msg.address === "/spaces/clear") {
+    for (const key of Object.keys(spaces)) delete spaces[key];
+    io.emit("spacesClear");
+    return;
   }
 });
 
@@ -122,7 +193,7 @@ io.on("connection", (socket) => {
       players[key] = player;
     }
 
-    broadcastState();
+    emitFullState(socket);
   });
 
   socket.on("playerData", (data) => {
@@ -134,9 +205,6 @@ io.on("connection", (socket) => {
 
     io.emit("playerUpdate", player);
 
-    // send browser input to Max
-    // format:
-    // /player/input playerNumber name x y z azimuth elevation roll
     oscOut.send({
       address: "/player/input",
       args: [
@@ -159,7 +227,7 @@ io.on("connection", (socket) => {
 
     if (key && players[key]) {
       delete players[key];
-      broadcastState();
+      emitFullState();
     }
 
     oscOut.send({

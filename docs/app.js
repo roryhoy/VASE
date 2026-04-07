@@ -85,6 +85,12 @@ const localState = {
 };
 
 let players = {};
+let spaces = {};
+let world = {
+    width: 1,
+    height: 1,
+    depth: 1
+};
 
 function wrapAngle(value, min, max) {
     const range = max - min;
@@ -409,8 +415,89 @@ function playerLabel(player) {
     return player.name || "Player";
 }
 
+function drawRotatedRect(ctx, cx, cy, w, h, angleDeg, strokeStyle = "#5fcf80", fillStyle = "rgba(95, 207, 128, 0.12)") {
+    const angle = degToRad(angleDeg);
+
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(angle);
+
+    ctx.fillStyle = fillStyle;
+    ctx.strokeStyle = strokeStyle;
+    ctx.lineWidth = 1.5;
+
+    ctx.beginPath();
+    ctx.rect(-w / 2, -h / 2, w, h);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.restore();
+}
+
+function drawRotatedEllipse(ctx, cx, cy, w, h, angleDeg, strokeStyle = "#5fcf80", fillStyle = "rgba(95, 207, 128, 0.12)") {
+    const angle = degToRad(angleDeg);
+
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(angle);
+
+    ctx.fillStyle = fillStyle;
+    ctx.strokeStyle = strokeStyle;
+    ctx.lineWidth = 1.5;
+
+    ctx.beginPath();
+    ctx.ellipse(0, 0, w / 2, h / 2, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.restore();
+}
+
+function worldToCanvasTopDown(space, canvas) {
+    const cx = (space.x / world.width) * canvas.width;
+    const cy = (space.y / world.height) * canvas.height;
+    const w = (space.width / world.width) * canvas.width;
+    const h = (space.height / world.height) * canvas.height;
+
+    return { cx, cy, w, h, rotation: space.yaw || 0 };
+}
+
+function worldToCanvasFront(space, canvas) {
+    const cx = (space.x / world.width) * canvas.width;
+    const cy = (space.z / world.depth) * canvas.height;
+    const w = (space.width / world.width) * canvas.width;
+    const h = (space.depth / world.depth) * canvas.height;
+
+    return { cx, cy, w, h, rotation: space.roll || 0 };
+}
+
+function drawSpaces(ctx, canvas, mode) {
+  for (const space of Object.values(spaces)) {
+    const projected = mode === "xy"
+      ? worldToCanvasTopDown(space, canvas)
+      : worldToCanvasFront(space, canvas);
+
+    const label = space.name || space.id;
+
+    drawRotatedRect(
+      ctx,
+      projected.cx,
+      projected.cy,
+      projected.w,
+      projected.h,
+      projected.rotation
+    );
+
+    ctx.fillStyle = "#8ee6a4";
+    ctx.font = "11px Arial";
+    ctx.fillText(label, projected.cx + 6, projected.cy - 6);
+  }
+}
+
 function drawCanvas(ctx, canvas, mode) {
     drawGrid(ctx, canvas, "X", mode === "xy" ? "Y" : "Z");
+
+    drawSpaces(ctx, canvas, mode);
 
     const currentPlayers = getDisplayState();
     const localKey = getLocalPlayerKey();
@@ -434,11 +521,7 @@ function drawCanvas(ctx, canvas, mode) {
                 const azRad = degToRad(localState.azimuth);
                 const elRad = degToRad(localState.elevation);
 
-                // horizontal left/right from azimuth
                 const vx = Math.sin(azRad);
-
-                // upward/downward tilt from elevation
-                // negative because canvas y increases downward
                 const vy = -Math.sin(elRad);
 
                 directionVector = { x: vx, y: vy };
@@ -748,7 +831,7 @@ function connect() {
     });
 
     socket.on("connect", () => {
-        statusEl.textContent = `Connected to ${hostUrl} as player ${playerNumber}`; 
+        statusEl.textContent = `Connected to ${hostUrl} as player ${playerNumber}`;
         socket.emit("join", { name: playerName, playerNumber });
         emitLocalState();
     });
@@ -761,8 +844,10 @@ function connect() {
         statusEl.textContent = `Connection error: ${err.message}`;
     });
 
-    socket.on("state", (serverPlayers) => {
-        players = serverPlayers || {};
+    socket.on("state", (payload) => {
+        players = payload?.players || {};
+        spaces = payload?.spaces || {};
+        world = payload?.world || { width: 1, height: 1, depth: 1 };
         redrawAll();
     });
 
@@ -771,6 +856,27 @@ function connect() {
         const key = player.playerNumber ? String(player.playerNumber) : (player.name || "");
         if (!key) return;
         players[key] = player;
+        redrawAll();
+    });
+
+    socket.on("worldState", (nextWorld) => {
+        world = nextWorld || { width: 1, height: 1, depth: 1 };
+        redrawAll();
+    });
+
+    socket.on("spaceUpdate", (space) => {
+        if (!space?.id) return;
+        spaces[space.id] = space;
+        redrawAll();
+    });
+
+    socket.on("spaceRemove", (spaceId) => {
+        delete spaces[spaceId];
+        redrawAll();
+    });
+
+    socket.on("spacesClear", () => {
+        spaces = {};
         redrawAll();
     });
 }
