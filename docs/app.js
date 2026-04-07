@@ -129,7 +129,7 @@ function normalizeCanvasPoint(canvas, event, radius = SELF_NODE_RADIUS) {
     const rect = canvas.getBoundingClientRect();
 
     const normalizedX = (event.clientX - rect.left) / rect.width;
-    const normalizedY = (event.clientY - rect.top) / rect.height;
+    const normalizedY = 1 - ((event.clientY - rect.top) / rect.height);
 
     const minX = radius / canvas.width;
     const maxX = 1 - radius / canvas.width;
@@ -145,7 +145,7 @@ function normalizeCanvasPoint(canvas, event, radius = SELF_NODE_RADIUS) {
 function getCanvasPosition(canvas, xNorm, yNorm) {
     return {
         x: xNorm * canvas.width,
-        y: yNorm * canvas.height
+        y: (1 - yNorm) * canvas.height
     };
 }
 
@@ -290,21 +290,19 @@ function drawGrid(ctx, canvas, labelX, labelY) {
     ctx.fillStyle = "#d0d0d0";
     ctx.font = "12px Arial";
 
-    // left / right edge labels
     ctx.textBaseline = "middle";
     ctx.textAlign = "left";
-    ctx.fillText(`−${labelX}`, 8, canvas.height / 2);
+    ctx.fillText(`${labelX}: 0`, 8, canvas.height / 2);
 
     ctx.textAlign = "right";
-    ctx.fillText(`+${labelX}`, canvas.width - 8, canvas.height / 2);
+    ctx.fillText(`${labelX}: 1`, canvas.width - 8, canvas.height / 2);
 
-    // top / bottom edge labels
     ctx.textAlign = "center";
     ctx.textBaseline = "top";
-    ctx.fillText(`+${labelY}`, canvas.width / 2, 6);
+    ctx.fillText(`${labelY}: 1`, canvas.width / 2, 6);
 
     ctx.textBaseline = "bottom";
-    ctx.fillText(`−${labelY}`, canvas.width / 2, canvas.height - 6);
+    ctx.fillText(`${labelY}: 0`, canvas.width / 2, canvas.height - 6);
 
     ctx.textAlign = "start";
     ctx.textBaseline = "alphabetic";
@@ -454,44 +452,86 @@ function drawRotatedEllipse(ctx, cx, cy, w, h, angleDeg, strokeStyle = "#5fcf80"
 }
 
 function worldToCanvasTopDown(space, canvas) {
-    const cx = (space.x / world.width) * canvas.width;
-    const cy = (space.y / world.height) * canvas.height;
-    const w = (space.width / world.width) * canvas.width;
-    const h = (space.height / world.height) * canvas.height;
+    const cx = worldUnitToCanvasX(space.x, canvas);
+    const cy = worldUnitToCanvasY(space.y, canvas);
+    const w = worldSizeToCanvasWidth(space.width, canvas);
+    const h = worldSizeToCanvasHeight(space.height, canvas);
 
-    return { cx, cy, w, h, rotation: space.yaw || 0 };
+    return {
+        cx,
+        cy,
+        w,
+        h,
+        rotation: worldRotationToCanvasRotation(space.yaw || 0)
+    };
 }
 
 function worldToCanvasFront(space, canvas) {
-    const cx = (space.x / world.width) * canvas.width;
-    const cy = (space.z / world.depth) * canvas.height;
-    const w = (space.width / world.width) * canvas.width;
-    const h = (space.depth / world.depth) * canvas.height;
+    const cx = worldUnitToCanvasX(space.x, canvas);
+    const cy = worldUnitToCanvasZ(space.z, canvas);
+    const w = worldSizeToCanvasWidth(space.width, canvas);
+    const h = worldSizeToCanvasDepth(space.depth, canvas);
 
-    return { cx, cy, w, h, rotation: space.roll || 0 };
+    return {
+        cx,
+        cy,
+        w,
+        h,
+        rotation: worldRotationToCanvasRotation(space.roll || 0)
+    };
+}
+
+function worldUnitToCanvasX(x, canvas) {
+    return (x / world.width) * canvas.width;
+}
+
+function worldUnitToCanvasY(y, canvas) {
+    return (1 - (y / world.height)) * canvas.height;
+}
+
+function worldUnitToCanvasZ(z, canvas) {
+    return (1 - (z / world.depth)) * canvas.height;
+}
+
+function worldSizeToCanvasWidth(w, canvas) {
+    return (w / world.width) * canvas.width;
+}
+
+function worldSizeToCanvasHeight(h, canvas) {
+    return (h / world.height) * canvas.height;
+}
+
+function worldSizeToCanvasDepth(d, canvas) {
+    return (d / world.depth) * canvas.height;
+}
+
+// Because the canvas Y axis is inverted for display,
+// negate world rotation angles so visual rotation matches world-space
+function worldRotationToCanvasRotation(angleDeg) {
+    return -angleDeg;
 }
 
 function drawSpaces(ctx, canvas, mode) {
-  for (const space of Object.values(spaces)) {
-    const projected = mode === "xy"
-      ? worldToCanvasTopDown(space, canvas)
-      : worldToCanvasFront(space, canvas);
+    for (const space of Object.values(spaces)) {
+        const projected = mode === "xy"
+            ? worldToCanvasTopDown(space, canvas)
+            : worldToCanvasFront(space, canvas);
 
-    const label = space.name || space.id;
+        const label = space.name || space.id;
 
-    drawRotatedRect(
-      ctx,
-      projected.cx,
-      projected.cy,
-      projected.w,
-      projected.h,
-      projected.rotation
-    );
+        drawRotatedRect(
+            ctx,
+            projected.cx,
+            projected.cy,
+            projected.w,
+            projected.h,
+            projected.rotation
+        );
 
-    ctx.fillStyle = "#8ee6a4";
-    ctx.font = "11px Arial";
-    ctx.fillText(label, projected.cx + 6, projected.cy - 6);
-  }
+        ctx.fillStyle = "#8ee6a4";
+        ctx.font = "11px Arial";
+        ctx.fillText(label, projected.cx + 6, projected.cy - 6);
+    }
 }
 
 function drawCanvas(ctx, canvas, mode) {
@@ -508,8 +548,9 @@ function drawCanvas(ctx, canvas, mode) {
             ? (typeof player.y === "number" ? player.y : 0.5)
             : (typeof player.z === "number" ? player.z : 0.5);
 
-        const px = clamp(x, 0, 1) * canvas.width;
-        const py = clamp(axisY, 0, 1) * canvas.height;
+        const pos = getCanvasPosition(canvas, clamp(x, 0, 1), clamp(axisY, 0, 1));
+        const px = pos.x;
+        const py = pos.y;
 
         let directionDeg = null;
         let directionVector = null;
