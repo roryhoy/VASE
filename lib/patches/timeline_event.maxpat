@@ -13,6 +13,18 @@
         "boxes": [
             {
                 "box": {
+                    "comment": "",
+                    "id": "obj-1",
+                    "index": 0,
+                    "maxclass": "inlet",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 956.5, 434.0, 30.0, 30.0 ]
+                }
+            },
+            {
+                "box": {
                     "id": "obj-31",
                     "maxclass": "message",
                     "numinlets": 2,
@@ -49,7 +61,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 667.0, 10.0, 24.0, 20.0 ],
-                    "presentation_linecount": 2,
                     "text": "ms"
                 }
             },
@@ -294,6 +305,12 @@
         "lines": [
             {
                 "patchline": {
+                    "destination": [ "obj-31", 0 ],
+                    "source": [ "obj-1", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-72", 0 ],
                     "source": [ "obj-137", 0 ]
                 }
@@ -331,14 +348,6 @@
         ],
         "parameters": {
             "obj-52": [ "live.text[47]", "live.text[13]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0
