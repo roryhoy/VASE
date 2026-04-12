@@ -518,7 +518,7 @@ function drawSpaces(ctx, canvas, mode) {
 function drawCanvas(ctx, canvas, mode) {
     drawGrid(ctx, canvas, "X", mode === "xy" ? "Y" : "Z");
 
-    drawSpaces(ctx, canvas, mode);
+    //drawSpaces(ctx, canvas, mode);
 
     const currentPlayers = getDisplayState();
     const localKey = getLocalPlayerKey();
