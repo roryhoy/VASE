@@ -435,31 +435,21 @@ function drawRotatedRect(ctx, cx, cy, w, h, angleDeg, strokeStyle = "#5fcf80", f
 function worldToCanvasTopDown(space, canvas) {
     const cx = worldUnitToCanvasX(space.x, canvas);
     const cy = worldUnitToCanvasY(space.y, canvas);
-    const w = worldSizeToCanvasWidth(space.width, canvas);
-    const h = worldSizeToCanvasHeight(space.height, canvas);
 
-    return {
-        cx,
-        cy,
-        w,
-        h,
-        rotation: worldRotationToCanvasRotation(space.yaw || 0)
-    };
+    // use world width as horizontal scale reference
+    const r = (space.radius / world.width) * canvas.width;
+
+    return { cx, cy, r };
 }
 
 function worldToCanvasFront(space, canvas) {
     const cx = worldUnitToCanvasX(space.x, canvas);
     const cy = worldUnitToCanvasZ(space.z, canvas);
-    const w = worldSizeToCanvasWidth(space.width, canvas);
-    const h = worldSizeToCanvasDepth(space.depth, canvas);
 
-    return {
-        cx,
-        cy,
-        w,
-        h,
-        rotation: worldRotationToCanvasRotation(space.roll || 0)
-    };
+    // use world width as horizontal scale reference for consistency
+    const r = (space.radius / world.width) * canvas.width;
+
+    return { cx, cy, r };
 }
 
 function worldUnitToCanvasX(x, canvas) {
@@ -493,32 +483,41 @@ function worldRotationToCanvasRotation(angleDeg) {
 }
 
 function drawSpaces(ctx, canvas, mode) {
-    for (const space of Object.values(spaces)) {
-        const projected = mode === "xy"
-            ? worldToCanvasTopDown(space, canvas)
-            : worldToCanvasFront(space, canvas);
+  for (const space of Object.values(spaces)) {
+    const projected = mode === "xy"
+      ? worldToCanvasTopDown(space, canvas)
+      : worldToCanvasFront(space, canvas);
 
-        const label = space.name || space.id;
+    const label = space.name || space.id;
 
-        drawRotatedRect(
-            ctx,
-            projected.cx,
-            projected.cy,
-            projected.w,
-            projected.h,
-            projected.rotation
-        );
+    drawSpaceCircle(
+      ctx,
+      projected.cx,
+      projected.cy,
+      projected.r
+    );
 
-        ctx.fillStyle = "#8ee6a4";
-        ctx.font = "11px Arial";
-        ctx.fillText(label, projected.cx + 6, projected.cy - 6);
-    }
+    ctx.fillStyle = "#8ee6a4";
+    ctx.font = "11px Arial";
+    ctx.fillText(label, projected.cx + projected.r + 6, projected.cy - 6);
+  }
+}
+
+function drawSpaceCircle(ctx, cx, cy, r, strokeStyle = "#5fcf80", fillStyle = "rgba(95, 207, 128, 0.12)") {
+    ctx.fillStyle = fillStyle;
+    ctx.strokeStyle = strokeStyle;
+    ctx.lineWidth = 1.5;
+
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
 }
 
 function drawCanvas(ctx, canvas, mode) {
     drawGrid(ctx, canvas, "X", mode === "xy" ? "Y" : "Z");
 
-    //drawSpaces(ctx, canvas, mode);
+    drawSpaces(ctx, canvas, mode);
 
     const currentPlayers = getDisplayState();
     const localKey = getLocalPlayerKey();

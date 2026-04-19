@@ -68,12 +68,7 @@ function normalizeSpace(data) {
     x: Number(data.x) || 0,
     y: Number(data.y) || 0,
     z: Number(data.z) || 0,
-    width: Number(data.width) || 0,
-    height: Number(data.height) || 0,
-    depth: Number(data.depth) || 0,
-    yaw: Number(data.yaw) || 0,
-    pitch: Number(data.pitch) || 0,
-    roll: Number(data.roll) || 0,
+    radius: Number(data.radius) || 0
   };
 }
 
@@ -135,20 +130,14 @@ oscIn.on("message", (msg) => {
   }
 
   if (msg.address === "/space/state") {
-    // /space/state id name x y z width height depth yaw pitch roll shape
+    // /space/state id name x y z radius
     const space = normalizeSpace({
       id: args[0],
       name: args[1],
       x: args[2],
       y: args[3],
       z: args[4],
-      width: args[5],
-      height: args[6],
-      depth: args[7],
-      yaw: args[8],
-      pitch: args[9],
-      roll: args[10],
-      shape: args[11]
+      radius: args[5]
     });
 
     if (!space.id) return;
