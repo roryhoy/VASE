@@ -63,6 +63,10 @@ const localState = {
     y: 0.5,
     z: 0.5,
 
+    playerR: 1,
+    playerG: 0.4,
+    playerB: 0.2,
+
     baseAzimuth: 0,
     baseElevation: 0,
     baseRoll: 0,
@@ -220,7 +224,10 @@ function makeLocalPayload() {
         z: round3(localState.z),
         azimuth: round3(localState.azimuth),
         elevation: round3(localState.elevation),
-        roll: round3(localState.roll)
+        roll: round3(localState.roll),
+        r: Number(localState.playerR ?? 1),
+        g: Number(localState.playerG ?? 0.4),
+        b: Number(localState.playerB ?? 0.2)
     };
 }
 
@@ -382,20 +389,20 @@ function drawDirectionArrow(ctx, px, py, angleDeg, length = 28, color = "#ffd166
     ctx.fill();
 }
 
-function drawPlayerNode(ctx, px, py, label, isSelf, directionDeg = null, directionVector = null) {
+function drawPlayerNode(ctx, px, py, label, isSelf, directionDeg = null, directionVector = null, playerColor = null) {
     const radius = isSelf ? SELF_NODE_RADIUS : OTHER_NODE_RADIUS;
 
     if (isSelf) {
         if (directionVector) {
-            drawVectorArrow(ctx, px, py, directionVector.x, directionVector.y);
+            drawVectorArrow(ctx, px, py, directionVector.x, directionVector.y, 28, playerColor?.stroke || "#ffd166");
         } else if (directionDeg !== null) {
-            drawDirectionArrow(ctx, px, py, directionDeg);
+            drawDirectionArrow(ctx, px, py, directionDeg, 28, playerColor?.stroke || "#ffd166");
         }
     }
 
     ctx.beginPath();
     ctx.arc(px, py, radius, 0, Math.PI * 2);
-    ctx.fillStyle = isSelf ? "#ff6a57" : "#7ec8ff";
+    ctx.fillStyle = playerColor?.fill || (isSelf ? "#ff6a57" : "#7ec8ff");
     ctx.fill();
     ctx.lineWidth = 2;
     ctx.strokeStyle = "#111";
@@ -483,35 +490,77 @@ function worldRotationToCanvasRotation(angleDeg) {
 }
 
 function drawSpaces(ctx, canvas, mode) {
-  for (const space of Object.values(spaces)) {
-    const projected = mode === "xy"
-      ? worldToCanvasTopDown(space, canvas)
-      : worldToCanvasFront(space, canvas);
+    for (const space of Object.values(spaces)) {
+        const projected = mode === "xy"
+            ? worldToCanvasTopDown(space, canvas)
+            : worldToCanvasFront(space, canvas);
 
-    const label = space.name || space.id;
+        const label = space.name || space.id;
 
-    drawSpaceCircle(
-      ctx,
-      projected.cx,
-      projected.cy,
-      projected.r
-    );
+        const r = Number(space.r);
+        const g = Number(space.g);
+        const b = Number(space.b);
 
-    ctx.fillStyle = "#8ee6a4";
-    ctx.font = "11px Arial";
-    ctx.fillText(label, projected.cx + projected.r + 6, projected.cy - 6);
-  }
+        const stroke = normalizedRgbToCss(
+            Number.isFinite(r) ? r : 0,
+            Number.isFinite(g) ? g : 1,
+            Number.isFinite(b) ? b : 1,
+            1
+        );
+
+        const fill = normalizedRgbToCss(
+            Number.isFinite(r) ? r : 0,
+            Number.isFinite(g) ? g : 1,
+            Number.isFinite(b) ? b : 1,
+            0.35
+        );
+
+        console.log("space draw", {
+            id: space.id,
+            name: space.name,
+            r: space.r,
+            g: space.g,
+            b: space.b,
+            stroke,
+            fill
+        });
+
+        drawSpaceCircle(ctx, projected.cx, projected.cy, projected.r, stroke, fill);
+
+        ctx.fillStyle = stroke;
+        ctx.font = "12px Arial";
+        ctx.fillText(label, projected.cx + projected.r + 6, projected.cy - 6);
+    }
 }
 
-function drawSpaceCircle(ctx, cx, cy, r, strokeStyle = "#5fcf80", fillStyle = "rgba(95, 207, 128, 0.12)") {
-    ctx.fillStyle = fillStyle;
-    ctx.strokeStyle = strokeStyle;
-    ctx.lineWidth = 1.5;
+function drawSpaceCircle(ctx, cx, cy, r, stroke, fill) {
+    ctx.save();
+
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = fill;
+    ctx.strokeStyle = stroke;
+    ctx.lineWidth = 3;
 
     ctx.beginPath();
     ctx.arc(cx, cy, r, 0, Math.PI * 2);
     ctx.fill();
     ctx.stroke();
+
+    ctx.restore();
+}
+
+
+function clamp01(value) {
+    const n = Number(value);
+    return Math.max(0, Math.min(1, Number.isFinite(n) ? n : 0));
+}
+
+function normalizedRgbToCss(r, g, b, alpha = 1) {
+    const rr = Math.round(clamp01(r) * 255);
+    const gg = Math.round(clamp01(g) * 255);
+    const bb = Math.round(clamp01(b) * 255);
+
+    return `rgba(${rr}, ${gg}, ${bb}, ${alpha})`;
 }
 
 function drawCanvas(ctx, canvas, mode) {
@@ -549,6 +598,20 @@ function drawCanvas(ctx, canvas, mode) {
             }
         }
 
+        const stroke = normalizedRgbToCss(
+            player.r ?? (key === localKey ? 1 : 0.494),
+            player.g ?? (key === localKey ? 0.416 : 0.784),
+            player.b ?? (key === localKey ? 0.341 : 1),
+            1
+        );
+
+        const fill = normalizedRgbToCss(
+            player.r ?? (key === localKey ? 1 : 0.494),
+            player.g ?? (key === localKey ? 0.416 : 0.784),
+            player.b ?? (key === localKey ? 0.341 : 1),
+            1
+        );
+
         drawPlayerNode(
             ctx,
             px,
@@ -556,7 +619,8 @@ function drawCanvas(ctx, canvas, mode) {
             playerLabel(player),
             key === localKey,
             directionDeg,
-            directionVector
+            directionVector,
+            { stroke, fill }
         );
     }
 }
@@ -869,6 +933,16 @@ function connect() {
         players = payload?.players || {};
         spaces = payload?.spaces || {};
         world = payload?.world || { width: 1, height: 1, depth: 1 };
+
+        const localKey = getLocalPlayerKey();
+        const localPlayerFromState = players[localKey];
+
+        if (localPlayerFromState) {
+            if (localPlayerFromState.r !== undefined) localState.playerR = Number(localPlayerFromState.r);
+            if (localPlayerFromState.g !== undefined) localState.playerG = Number(localPlayerFromState.g);
+            if (localPlayerFromState.b !== undefined) localState.playerB = Number(localPlayerFromState.b);
+        }
+
         redrawAll();
     });
 
@@ -877,6 +951,12 @@ function connect() {
         const key = player.playerNumber ? String(player.playerNumber) : (player.name || "");
         if (!key) return;
         players[key] = player;
+        const incomingPlayerNumber = Number(player.playerNumber);
+        if (incomingPlayerNumber === Number(playerNumber)) {
+            if (player.r !== undefined) localState.playerR = Number(player.r);
+            if (player.g !== undefined) localState.playerG = Number(player.g);
+            if (player.b !== undefined) localState.playerB = Number(player.b);
+        }
         redrawAll();
     });
 

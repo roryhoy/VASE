@@ -57,7 +57,10 @@ function normalizePlayer(data) {
     z: Number(data.z) || 0.5,
     azimuth: Number(data.azimuth) || 0,
     elevation: Number(data.elevation) || 0,
-    roll: Number(data.roll) || 0
+    roll: Number(data.roll) || 0,
+    r: Number(data.r ?? 1),
+    g: Number(data.g ?? 1),
+    b: Number(data.b ?? 1)
   };
 }
 
@@ -68,7 +71,10 @@ function normalizeSpace(data) {
     x: Number(data.x) || 0,
     y: Number(data.y) || 0,
     z: Number(data.z) || 0,
-    radius: Number(data.radius) || 0
+    radius: Number(data.radius) || 0,
+    r: Number(data.r ?? 0),
+    g: Number(data.g ?? 1),
+    b: Number(data.b ?? 1)
   };
 }
 
@@ -92,7 +98,7 @@ oscIn.on("message", (msg) => {
   );
 
   if (msg.address === "/player/state") {
-    // /player/state playerNumber name x y z azimuth elevation roll
+    // /player/state playerNumber name x y z azimuth elevation roll r g b
     const player = normalizePlayer({
       playerNumber: args[0],
       name: args[1],
@@ -101,7 +107,10 @@ oscIn.on("message", (msg) => {
       z: args[4],
       azimuth: args[5],
       elevation: args[6],
-      roll: args[7]
+      roll: args[7],
+      r: args[8],
+      g: args[9],
+      b: args[10]
     });
 
     const key = getPlayerKey(player);
@@ -130,14 +139,17 @@ oscIn.on("message", (msg) => {
   }
 
   if (msg.address === "/space/state") {
-    // /space/state id name x y z radius
+    // /space/state id name x y z radius r g b
     const space = normalizeSpace({
       id: args[0],
       name: args[1],
       x: args[2],
       y: args[3],
       z: args[4],
-      radius: args[5]
+      radius: args[5],
+      r: args[6],
+      g: args[7],
+      b: args[8]
     });
 
     if (!space.id) return;
