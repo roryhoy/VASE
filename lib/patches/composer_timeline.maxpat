@@ -14,6 +14,30 @@
         "boxes": [
             {
                 "box": {
+                    "color": [ 1.0, 0.0, 1.0, 1.0 ],
+                    "id": "obj-543",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1986.0, 648.0, 66.0, 22.0 ],
+                    "text": "r event_kill"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 1.0, 0.0, 1.0, 1.0 ],
+                    "id": "obj-526",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 36.230000000000004, 186.0, 95.0, 22.0 ],
+                    "text": "r event_updates"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-474",
                     "maxclass": "newobj",
                     "numinlets": 3,
@@ -889,8 +913,8 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1048.6486480236053, 1681.0810800790787, 350.0, 22.0 ],
-                    "text": "sprintf script newdefault event_%i 0 %i timeline_event @args %i"
+                    "patching_rect": [ 1048.6486480236053, 1681.0810800790787, 311.0, 22.0 ],
+                    "text": "sprintf script newdefault event_%i 0 %i timeline_event %i"
                 }
             },
             {
@@ -2112,8 +2136,8 @@
                     "numinlets": 4,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1101.0, 1012.0, 766.0, 22.0 ],
-                    "text": "sprintf script newdefault event_%i 0 %i bpatcher timeline_event @args %i @clickthrough 1 @presentation 1 @presentation_rect 0. %i 248. 70."
+                    "patching_rect": [ 1101.0, 1012.0, 727.0, 22.0 ],
+                    "text": "sprintf script newdefault event_%i 0 %i bpatcher timeline_event %i @clickthrough 1 @presentation 1 @presentation_rect 0. %i 248. 70."
                 }
             },
             {
@@ -2876,7 +2900,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 742.5, 841.0, 4.0, 30.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 176.0, 100.0, 4.0, 30.0 ],
+                    "presentation_rect": [ 453.0, 100.0, 4.0, 30.0 ],
                     "proportion": 0.5,
                     "rounded": 0,
                     "varname": "cursor"
@@ -3778,6 +3802,12 @@
                 "patchline": {
                     "destination": [ "obj-70", 0 ],
                     "source": [ "obj-54", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-137", 0 ],
+                    "source": [ "obj-543", 0 ]
                 }
             },
             {
