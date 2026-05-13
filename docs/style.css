@@ -16,7 +16,7 @@
 body {
   margin: 0;
   padding: 24px;
-  font-family: Arial, sans-serif;
+  font-family: 'tahoma', sans-serif;
   background: var(--bg);
   color: var(--text);
 }
@@ -339,7 +339,7 @@ canvas {
 
 .identity-row {
   display: grid;
-  grid-template-columns: 140px minmax(0, 1fr);
+  grid-template-columns: 160px minmax(0, 1fr);
   gap: 12px;
 }
 
