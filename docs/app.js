@@ -882,8 +882,15 @@ function normalizeHostInput(rawHost) {
     return `https://${value}`;
 }
 
+function sanitizePlayerName(name) {
+  return String(name || "")
+    .trim()
+    .replace(/\s+/g, "_");
+}
+
 function connect() {
-    const enteredName = nameInput.value.trim();
+    const enteredName = sanitizePlayerName(nameInput.value);
+    nameInput.value = enteredName;    
     const enteredPlayerNumber = validatePlayerNumber(playerNumberInput.value);
     const hostUrl = normalizeHostInput(hostInput.value);
 
