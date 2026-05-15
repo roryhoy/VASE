@@ -3,7 +3,7 @@ const express = require("express");
 const { Server } = require("socket.io");
 const osc = require("osc");
 
-const PORT = 3000;
+const PORT = 8080;
 
 // Node -> Max
 const MAX_OSC_OUT_HOST = "127.0.0.1";

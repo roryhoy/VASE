@@ -49,7 +49,7 @@ node server.js
 If this starts correctly, Terminal will print something like:
 
 ```text
-Host bridge listening on http://localhost:3000
+Host bridge listening on http://localhost:8080
 Listening for Max state on UDP 8001
 ```
 
@@ -58,12 +58,12 @@ Listening for Max state on UDP 8001
 If the controller page is running on the same computer as the server, use this in the controller page host field:
 
 ```text
-localhost:3000
+localhost:8080
 ```
 
 If the controller is on another device on the same network, use the host computer's local IP address instead, for example:
 
-`192.168.1.42:3000`
+`192.168.1.42:8080`
 
 ## Remote / Internet access
 
@@ -72,7 +72,7 @@ For remote players, expose the server with a tunnel.
 Example using Cloudflare Tunnel:
 
 ```bash
-cloudflared tunnel --url http://localhost:3000
+cloudflared tunnel --url http://localhost:8080
 ```
 
 That will give you a public hostname such as:
@@ -102,7 +102,7 @@ Ports can be changed if necessary within `VASE/host/server.js`, and update `MAX_
 1. Start the server:
    `node server.js`
 2. If remote users are connecting, start the tunnel:
-   `cloudflared tunnel --url http://localhost:3000`
+   `cloudflared tunnel --url http://localhost:8080`
    (You may use any other tunneling service you prefer)
 3. Open the controller page / have remote players open the controller
 4. Enter:
@@ -127,13 +127,13 @@ npm -v
 ```
 If these commands show package versions, you are ready to go!
 
-### Browser says WebSocket connection failed to `wss://localhost:3000`
+### Browser says WebSocket connection failed to `wss://localhost:8080`
 
 This usually happens when the controller page is loaded over HTTPS but the local server is only HTTP.
 
 Use one of these instead:
 
-- local testing from a local page using `localhost:3000`
+- local testing from a local page using `localhost:8080`
 - a Cloudflare tunnel hostname for HTTPS/WSS access
 
 ### No data received in Max
