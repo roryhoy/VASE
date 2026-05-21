@@ -9,8 +9,54 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 942.0, 901.0, 1612.0, 530.0 ],
+        "rect": [ 34.0, 93.0, 2492.0, 1313.0 ],
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-33",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "int" ],
+                    "patching_rect": [ 1533.0, 216.0, 29.5, 22.0 ],
+                    "text": "/ 10"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-29",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1533.0, 186.5, 95.0, 22.0 ],
+                    "text": "v mubu-duration"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-25",
+                    "linecount": 5,
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1735.0, 1173.0, 619.0, 76.0 ],
+                    "presentation_linecount": 5,
+                    "text": "sprintf script newdefault data_track 1376. 554. mubu.track %s data @timetagged 1 @samplerate audio @maxsize 10s @predef 1 @matrixcols 20 @info gui \"interface multibpf, colormode rainbow, fgcolor 1. 0. 0. 1, autobounds 1, showcolnames 1\" @matrixcolnames SpectralCentroid SpectralSpread SpectralSkewness SpectralKurtosis SpectralRolloff SpectralVariation SpectralDecrease SpectralSlope Chroma_0 Chroma_1 Chroma_2 Chroma_3 Chroma_4 Chroma_5 Chroma_6 Chroma_7 Chroma_8 Chroma_9 Chroma_10 Chroma_11"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-13",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 2292.0, 1059.0, 95.0, 22.0 ],
+                    "text": "v mubu-duration"
+                }
+            },
             {
                 "box": {
                     "id": "obj-31",
@@ -2624,10 +2670,10 @@
                     "id": "obj-63",
                     "maxclass": "newobj",
                     "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "bang", "int" ],
-                    "patching_rect": [ 1082.0, 983.0, 29.5, 22.0 ],
-                    "text": "t b i"
+                    "numoutlets": 3,
+                    "outlettype": [ "bang", "int", "bang" ],
+                    "patching_rect": [ 1082.0, 983.0, 40.0, 22.0 ],
+                    "text": "t b i b"
                 }
             },
             {
@@ -2876,13 +2922,13 @@
             {
                 "box": {
                     "id": "obj-17",
-                    "linecount": 5,
+                    "linecount": 3,
                     "maxclass": "newobj",
-                    "numinlets": 1,
+                    "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1217.0, 1102.0, 619.0, 76.0 ],
-                    "text": "sprintf script newdefault data_track 1376. 554. mubu.track %s data @timetagged 1 @samplerate audio @maxsize 10s @predef 1 @matrixcols 20 @info gui \"interface multibpf, colormode rainbow, fgcolor 1. 0. 0. 1, autobounds 1, showcolnames 1\" @matrixcolnames SpectralCentroid SpectralSpread SpectralSkewness SpectralKurtosis SpectralRolloff SpectralVariation SpectralDecrease SpectralSlope Chroma_0 Chroma_1 Chroma_2 Chroma_3 Chroma_4 Chroma_5 Chroma_6 Chroma_7 Chroma_8 Chroma_9 Chroma_10 Chroma_11"
+                    "patching_rect": [ 1217.0, 1102.0, 1233.0, 49.0 ],
+                    "text": "sprintf script newdefault data_track 1376. 554. mubu.track %s data @timetagged 1 @samplerate audio @maxsize %ims @predef 1 @matrixcols 20 @info gui \"interface multibpf, colormode rainbow, fgcolor 1. 0. 0. 1, autobounds 1, showcolnames 1\" @matrixcolnames SpectralCentroid SpectralSpread SpectralSkewness SpectralKurtosis SpectralRolloff SpectralVariation SpectralDecrease SpectralSlope Chroma_0 Chroma_1 Chroma_2 Chroma_3 Chroma_4 Chroma_5 Chroma_6 Chroma_7 Chroma_8 Chroma_9 Chroma_10 Chroma_11"
                 }
             },
             {
@@ -2954,17 +3000,6 @@
             },
             {
                 "box": {
-                    "id": "obj-30",
-                    "linecount": 3,
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 1356.0, 93.0, 151.0, 47.0 ],
-                    "text": "Could maybe just spawn the tracks and rename the record and record~"
-                }
-            },
-            {
-                "box": {
                     "id": "obj-27",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -3012,7 +3047,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 1125.0, 12.0, 58.0, 22.0 ],
+                    "patching_rect": [ 1525.0, 20.0, 58.0, 22.0 ],
                     "text": "loadbang"
                 }
             },
@@ -6050,6 +6085,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-17", 1 ],
+                    "source": [ "obj-13", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-11", 0 ],
                     "source": [ "obj-14", 0 ]
                 }
@@ -6063,6 +6104,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-124", 0 ],
+                    "order": 1,
+                    "source": [ "obj-15", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-29", 0 ],
+                    "order": 0,
                     "source": [ "obj-15", 0 ]
                 }
             },
@@ -6157,6 +6206,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-33", 0 ],
+                    "source": [ "obj-29", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-100", 0 ],
                     "source": [ "obj-3", 1 ]
                 }
@@ -6185,6 +6240,12 @@
                 "patchline": {
                     "destination": [ "obj-63", 0 ],
                     "source": [ "obj-32", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-35", 1 ],
+                    "source": [ "obj-33", 0 ]
                 }
             },
             {
@@ -6299,6 +6360,12 @@
                 "patchline": {
                     "destination": [ "obj-64", 0 ],
                     "source": [ "obj-62", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-13", 0 ],
+                    "source": [ "obj-63", 2 ]
                 }
             },
             {
