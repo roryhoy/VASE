@@ -79,8 +79,10 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 34.0, 96.0, 931.0, 852.0 ],
+                        "rect": [ 183.0, 62.0, 903.0, 861.0 ],
+                        "openinpresentation": 1,
                         "default_fontsize": 10.0,
+                        "toolbarvisible": 0,
                         "subpatcher_template": "bigpatcher",
                         "title": "Agent 1 Genome Features",
                         "boxes": [
