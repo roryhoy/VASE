@@ -9,12 +9,34 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 933.0, 615.0, 395.0, 267.0 ],
+        "rect": [ 258.0, 333.0, 396.0, 268.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "enablehscroll": 0,
         "title": "Space Agent Preview",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-14",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 644.0, 301.0, 130.0, 22.0 ],
+                    "text": "clear, append jongly.aif"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-2",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "patching_rect": [ 644.0, 272.0, 58.0, 22.0 ],
+                    "text": "loadbang"
+                }
+            },
             {
                 "box": {
                     "fontname": "Arial",
@@ -115,7 +137,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 619.0, 272.0, 24.0, 24.0 ]
+                    "patching_rect": [ 579.0, 271.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -125,7 +147,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 626.0, 312.0, 35.0, 22.0 ],
+                    "patching_rect": [ 579.0, 307.0, 35.0, 22.0 ],
                     "text": "clear"
                 }
             },
@@ -136,7 +158,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 514.5, 312.0, 96.0, 22.0 ],
+                    "patching_rect": [ 468.0, 301.0, 96.0, 22.0 ],
                     "text": "prepend append"
                 }
             },
@@ -173,7 +195,7 @@
                                 "absolutepath": "jongly.aif",
                                 "filename": "jongly.aif",
                                 "filekind": "audiofile",
-                                "id": "u401004225",
+                                "id": "u769004047",
                                 "loop": 0,
                                 "content_state": {                                }
                             }
@@ -186,7 +208,7 @@
                     "numoutlets": 5,
                     "outlettype": [ "signal", "signal", "signal", "", "dictionary" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 626.0, 343.0, 150.0, 30.0 ],
+                    "patching_rect": [ 579.0, 342.0, 150.0, 30.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 104.0, 158.0, 150.0, 30.0 ],
                     "quality": "basic",
@@ -1200,6 +1222,12 @@
             {
                 "patchline": {
                     "destination": [ "obj-6", 0 ],
+                    "source": [ "obj-14", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-6", 0 ],
                     "source": [ "obj-16", 0 ]
                 }
             },
@@ -1221,6 +1249,12 @@
                     "destination": [ "obj-80", 0 ],
                     "order": 0,
                     "source": [ "obj-19", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-14", 0 ],
+                    "source": [ "obj-2", 0 ]
                 }
             },
             {
