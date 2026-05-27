@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 898.0, 447.0, 614.0, 223.0 ],
+        "rect": [ 450.0, 243.0, 621.0, 240.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "title": "VASE Viewer Controls",
@@ -897,8 +897,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 1219.0, 566.0, 115.0, 21.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 218.0, 76.0, 112.0, 21.0 ],
                     "text": "Draw Space Agents"
                 }
             },
@@ -911,8 +909,6 @@
                     "outlettype": [ "" ],
                     "parameter_enable": 1,
                     "patching_rect": [ 1336.0, 569.0, 15.0, 15.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 205.0, 79.0, 15.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "off", "on" ],
@@ -944,7 +940,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 1336.0, 430.0, 70.0, 22.0 ],
-                    "text": "loadmess 0"
+                    "text": "loadmess 1"
                 }
             },
             {
@@ -958,7 +954,7 @@
                     "patching_rect": [ 1221.0, 454.0, 110.0, 35.0 ],
                     "presentation": 1,
                     "presentation_linecount": 2,
-                    "presentation_rect": [ 218.0, 98.0, 111.0, 35.0 ],
+                    "presentation_rect": [ 218.0, 98.0, 108.0, 35.0 ],
                     "text": "Draw Space Agent \nsensing range"
                 }
             },
@@ -4218,7 +4214,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 95.75, 381.0, 70.0, 22.0 ],
-                    "text": "loadmess 1"
+                    "text": "loadmess 0"
                 }
             },
             {
