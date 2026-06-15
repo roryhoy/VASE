@@ -16,6 +16,38 @@
         "boxes": [
             {
                 "box": {
+                    "activebgcolor": [ 0.269595890603871, 0.408853959740371, 0.595943257030903, 1.0 ],
+                    "fontname": "Ableton Sans Light",
+                    "id": "obj-1",
+                    "maxclass": "live.text",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "parameter_enable": 1,
+                    "patching_rect": [ 237.0, 87.0, 44.0, 15.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 123.0, 3.0, 45.0, 16.0 ],
+                    "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": "themecolor.live_selection"
+                        },
+                        "valueof": {
+                            "parameter_enum": [ "val1", "val2" ],
+                            "parameter_longname": "live.text[19]",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "live.text[13]",
+                            "parameter_type": 2
+                        }
+                    },
+                    "text": "Settings",
+                    "texton": "Zero",
+                    "varname": "live.text[3]"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-141",
                     "maxclass": "message",
                     "numinlets": 2,
@@ -36,7 +68,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1961.3333917856216, 1285.3333716392517, 77.0, 17.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 75.5, 3.0, 51.0, 16.0 ],
+                    "presentation_rect": [ 61.0, 3.0, 51.0, 16.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -6369,6 +6401,7 @@
             },
             {
                 "box": {
+                    "activebgcolor": [ 0.269595890603871, 0.408853959740371, 0.595943257030903, 1.0 ],
                     "fontname": "Ableton Sans Light",
                     "id": "obj-52",
                     "maxclass": "live.text",
@@ -6379,8 +6412,11 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 189.5, 87.0, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 133.0, 3.0, 65.0, 16.0 ],
+                    "presentation_rect": [ 168.0, 3.0, 41.0, 16.0 ],
                     "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": "themecolor.live_selection"
+                        },
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
                             "parameter_longname": "live.text[2]",
@@ -6390,7 +6426,7 @@
                             "parameter_type": 2
                         }
                     },
-                    "text": "Rand_Reverb",
+                    "text": "Random",
                     "texton": "Zero",
                     "varname": "live.text[1]"
                 }
@@ -6980,7 +7016,7 @@
                 "box": {
                     "id": "obj-122",
                     "maxclass": "newobj",
-                    "numinlets": 2,
+                    "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
                     "patching_rect": [ 95.5, 108.0, 113.0, 20.0 ],
@@ -9813,7 +9849,7 @@
                     "angle": 270.0,
                     "bgcolor": [ 0.172137149796092, 0.172137100044002, 0.172137113045018, 0.0 ],
                     "border": 1,
-                    "bordercolor": [ 0.474401, 0.0, 1.0, 1.0 ],
+                    "bordercolor": [ 0.279239, 0.0, 1.0, 1.0 ],
                     "id": "obj-46",
                     "maxclass": "panel",
                     "mode": 0,
@@ -9840,6 +9876,12 @@
             }
         ],
         "lines": [
+            {
+                "patchline": {
+                    "destination": [ "obj-122", 2 ],
+                    "source": [ "obj-1", 0 ]
+                }
+            },
             {
                 "patchline": {
                     "destination": [ "obj-41", 0 ],
@@ -11010,6 +11052,7 @@
             }
         ],
         "parameters": {
+            "obj-1": [ "live.text[19]", "live.text[13]", 0 ],
             "obj-122::obj-65::obj-12": [ "live.dial[12]", " ", 0 ],
             "obj-122::obj-65::obj-14": [ "live.menu[3]", "live.menu", 0 ],
             "obj-122::obj-65::obj-57": [ "live.dial[14]", " ", 0 ],
@@ -11047,6 +11090,14 @@
             "obj-140": [ "live.text[4]", "live.text[13]", 0 ],
             "obj-15": [ "live.text[18]", "live.text[13]", 0 ],
             "obj-52": [ "live.text[2]", "live.text[13]", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-139::obj-10::obj-80": {
                     "parameter_longname": "live.text[33]"
