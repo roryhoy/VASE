@@ -16,6 +16,38 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-27",
+                    "maxclass": "button",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 1064.0, 646.0, 24.0, 24.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-10",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1089.0, 593.0, 117.0, 18.0 ],
+                    "text": "FROM COMPOSER"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-4",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1064.0, 616.0, 138.0, 20.0 ],
+                    "text": "receive #1-agent-moved"
+                }
+            },
+            {
+                "box": {
                     "activebgcolor": [ 0.269595890603871, 0.408853959740371, 0.595943257030903, 1.0 ],
                     "fontname": "Ableton Sans Light",
                     "id": "obj-1",
@@ -9387,7 +9419,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1001.0, 657.0, 65.0, 20.0 ],
+                    "patching_rect": [ 958.0, 680.0, 65.0, 20.0 ],
                     "text": "loadmess #1"
                 }
             },
@@ -9849,7 +9881,7 @@
                     "angle": 270.0,
                     "bgcolor": [ 0.172137149796092, 0.172137100044002, 0.172137113045018, 0.0 ],
                     "border": 1,
-                    "bordercolor": [ 0.279239, 0.0, 1.0, 1.0 ],
+                    "bordercolor": [ 0.149715, 0.0, 1.0, 1.0 ],
                     "id": "obj-46",
                     "maxclass": "panel",
                     "mode": 0,
@@ -10446,6 +10478,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-142", 0 ],
+                    "source": [ "obj-27", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-183", 0 ],
                     "order": 0,
                     "source": [ "obj-28", 0 ]
@@ -10731,6 +10769,12 @@
                 "patchline": {
                     "destination": [ "obj-62", 0 ],
                     "source": [ "obj-399", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-27", 0 ],
+                    "source": [ "obj-4", 0 ]
                 }
             },
             {
@@ -11090,14 +11134,6 @@
             "obj-140": [ "live.text[4]", "live.text[13]", 0 ],
             "obj-15": [ "live.text[18]", "live.text[13]", 0 ],
             "obj-52": [ "live.text[2]", "live.text[13]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-139::obj-10::obj-80": {
                     "parameter_longname": "live.text[33]"
