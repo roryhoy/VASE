@@ -20,8 +20,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1210.0, 210.0, 67.0, 20.0 ],
-                    "text": "sprintf %s %f"
+                    "patching_rect": [ 1210.0, 210.0, 70.0, 20.0 ],
+                    "text": "sprintf /%s %f"
                 }
             },
             {
@@ -191,7 +191,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 342.0, 617.0, 137.0, 31.0 ],
-                    "text": "store #1/reverb/roomoffset 64.9"
+                    "text": "store #1/reverb/roomoffset 274.3"
                 }
             },
             {
@@ -2764,14 +2764,6 @@
             "obj-76::obj-58": [ "live.text[10]", "live.text[9]", 0 ],
             "obj-76::obj-62": [ "live.text[12]", "live.text[9]", 0 ],
             "obj-76::obj-72": [ "live.text[14]", "live.text[8]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0
