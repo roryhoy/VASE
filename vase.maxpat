@@ -9,11 +9,34 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 93.0, 332.0, 285.0 ],
+        "rect": [ 1.0, 59.0, 332.0, 285.0 ],
         "openinpresentation": 1,
         "default_fontsize": 10.0,
+        "toolbarvisible": 0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-168",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 690.0, 166.0, 30.0, 20.0 ],
+                    "text": "set 0"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-169",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 690.0, 139.0, 91.0, 20.0 ],
+                    "text": "r composer-closed"
+                }
+            },
             {
                 "box": {
                     "fontname": "Ableton Sans Light",
@@ -19721,6 +19744,18 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-158", 0 ],
+                    "source": [ "obj-168", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-168", 0 ],
+                    "source": [ "obj-169", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-8", 0 ],
                     "source": [ "obj-17", 0 ]
                 }
@@ -20161,10 +20196,6 @@
             "obj-128::obj-606": [ "live.text[2]", "live.text", 0 ],
             "obj-128::obj-607": [ "live.button[1]", "live.button", 0 ],
             "obj-129::obj-52": [ "live.text[271]", "live.text[13]", 0 ],
-            "obj-129::obj-632::obj-52": [ "live.text[38]", "live.text[13]", 0 ],
-            "obj-129::obj-632::obj-80": [ "live.text[42]", "live.text[13]", 0 ],
-            "obj-129::obj-637::obj-52": [ "live.text[66]", "live.text[13]", 0 ],
-            "obj-129::obj-637::obj-80": [ "live.text[68]", "live.text[13]", 0 ],
             "obj-129::obj-80": [ "live.text[360]", "live.text[13]", 0 ],
             "obj-130": [ "live.text[73]", "live.text[13]", 0 ],
             "obj-132": [ "live.text[57]", "live.text[13]", 0 ],
@@ -20271,12 +20302,6 @@
                 },
                 "obj-129::obj-52": {
                     "parameter_longname": "live.text[271]"
-                },
-                "obj-129::obj-637::obj-52": {
-                    "parameter_longname": "live.text[66]"
-                },
-                "obj-129::obj-637::obj-80": {
-                    "parameter_longname": "live.text[68]"
                 },
                 "obj-129::obj-80": {
                     "parameter_longname": "live.text[360]"
