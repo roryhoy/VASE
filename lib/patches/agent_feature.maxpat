@@ -62,7 +62,7 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 490.0, 230.0, 171.0, 22.0 ],
+                    "patching_rect": [ 541.5, 266.0, 171.0, 22.0 ],
                     "text": "r agent-genome-rand-changed"
                 }
             },
@@ -2075,7 +2075,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-94", 0 ],
+                    "destination": [ "obj-97", 0 ],
                     "source": [ "obj-91", 0 ]
                 }
             },
