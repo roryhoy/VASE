@@ -9,11 +9,32 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 387.0, 286.0, 652.0, 244.0 ],
+        "rect": [ 262.0, 418.0, 611.0, 224.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "title": "VASE Viewer Controls",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-63",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1585.0, 489.0, 84.0, 22.0 ],
+                    "text": "v draw-agents"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-59",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1227.0, 494.0, 99.0, 22.0 ],
+                    "text": "s agent-draw-tog"
+                }
+            },
             {
                 "box": {
                     "id": "obj-136",
@@ -1039,7 +1060,7 @@
                     "patching_rect": [ 1221.0, 454.0, 110.0, 35.0 ],
                     "presentation": 1,
                     "presentation_linecount": 2,
-                    "presentation_rect": [ 218.0, 98.0, 108.0, 35.0 ],
+                    "presentation_rect": [ 218.0, 98.0, 110.0, 35.0 ],
                     "text": "Draw Space Agent \nsensing range"
                 }
             },
@@ -1418,11 +1439,12 @@
             {
                 "box": {
                     "id": "obj-2",
+                    "linecount": 2,
                     "maxclass": "message",
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 423.5, 127.0, 85.0, 22.0 ],
+                    "patching_rect": [ 423.5, 127.0, 83.0, 35.0 ],
                     "text": "move 0.1 0. 0."
                 }
             },
@@ -1761,7 +1783,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 169.0, 179.0, 50.0, 20.0 ],
-                                    "text": "15."
+                                    "text": "45."
                                 }
                             },
                             {
@@ -1783,7 +1805,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 34.0, 179.0, 50.0, 20.0 ],
-                                    "text": "14.9"
+                                    "text": "44.9"
                                 }
                             },
                             {
@@ -8838,14 +8860,28 @@
             {
                 "patchline": {
                     "destination": [ "obj-36", 0 ],
-                    "order": 1,
+                    "order": 2,
+                    "source": [ "obj-30", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-59", 0 ],
+                    "order": 3,
+                    "source": [ "obj-30", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-63", 0 ],
+                    "order": 0,
                     "source": [ "obj-30", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-87", 0 ],
-                    "order": 0,
+                    "order": 1,
                     "source": [ "obj-30", 0 ]
                 }
             },
