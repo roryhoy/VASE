@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 1212.0, 852.0 ],
+        "rect": [ 251.0, 211.0, 1212.0, 852.0 ],
         "openinpresentation": 1,
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
@@ -9291,6 +9291,7 @@
                             {
                                 "patchline": {
                                     "destination": [ "obj-52", 0 ],
+                                    "disabled": 1,
                                     "source": [ "obj-49", 0 ]
                                 }
                             },
@@ -9881,7 +9882,7 @@
                     "angle": 270.0,
                     "bgcolor": [ 0.172137149796092, 0.172137100044002, 0.172137113045018, 0.0 ],
                     "border": 1,
-                    "bordercolor": [ 0.149715, 0.0, 1.0, 1.0 ],
+                    "bordercolor": [ 0.264747, 0.0, 1.0, 1.0 ],
                     "id": "obj-46",
                     "maxclass": "panel",
                     "mode": 0,
@@ -11134,6 +11135,14 @@
             "obj-140": [ "live.text[4]", "live.text[13]", 0 ],
             "obj-15": [ "live.text[18]", "live.text[13]", 0 ],
             "obj-52": [ "live.text[2]", "live.text[13]", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-139::obj-10::obj-80": {
                     "parameter_longname": "live.text[33]"
