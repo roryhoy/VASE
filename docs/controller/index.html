@@ -10,26 +10,31 @@
 
 <body>
   <main class="page">
-    <h1>VASE</h1>
-    <p><a href="../index.html">Back to project page</a></p>
-    <h2 > Player Spatial Controller</h2>
-    <hr style="clear:both;"/>
+    <div style="display: flex;
+  justify-content: left;
+  align-items: center;">
+      <a href="../index.html"><img class="logo" title="Return to main project page"
+          src="../../lib/images/vase_logo_white.png" alt="VASE logo"
+          style="width: 10vw; min-width: 200px; float: left;" /></a>
+      <h2>Player Spatial Controller</h2>
+    </div>
+    <hr style="clear:both;" />
 
     <section id="controls">
       <div class="identity-row">
         <label class="player-number-field">
-          Player Number
+          Player Number:
           <input id="playerNumber" type="number" min="1" step="1" placeholder="Enter number" />
         </label>
 
         <label>
-          Name
+          Name:
           <input id="name" type="text" placeholder="Player name" />
         </label>
       </div>
 
       <label>
-        Host URL
+        Host URL:
         <input id="host" type="text" placeholder="example.trycloudflare.com" />
       </label>
 
@@ -38,6 +43,7 @@
           <button id="connectBtn" type="button">Connect</button>
         </div>
 
+        <p>Status:</p>
         <p id="status">Disconnected</p>
       </div>
     </section>
