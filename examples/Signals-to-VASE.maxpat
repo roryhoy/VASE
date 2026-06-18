@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 1328.0, 987.0, 1000.0, 354.0 ],
+        "rect": [ 1328.0, 987.0, 898.0, 354.0 ],
         "boxes": [
             {
                 "box": {
@@ -69,7 +69,7 @@
                     "data": {
                         "clips": [
                             {
-                                "absolutepath": "Macintosh HD:/Applications/Max.app/Contents/Resources/C74/media/msp/cherokee.aif",
+                                "absolutepath": "cherokee.aif",
                                 "filename": "cherokee.aif",
                                 "filekind": "audiofile",
                                 "id": "u472005857",
@@ -88,8 +88,6 @@
                     "outlettype": [ "signal", "signal", "signal", "", "dictionary" ],
                     "parameter_enable": 0,
                     "patching_rect": [ 719.0, 174.0, 150.0, 30.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 719.0, 175.0, 150.0, 30.0 ],
                     "quality": "basic",
                     "saved_attribute_attributes": {
                         "candicane2": {
@@ -174,7 +172,7 @@
                     "data": {
                         "clips": [
                             {
-                                "absolutepath": "Macintosh HD:/Applications/Max.app/Contents/Resources/C74/media/msp/anton.aif",
+                                "absolutepath": "anton.aif",
                                 "filename": "anton.aif",
                                 "filekind": "audiofile",
                                 "id": "u087011622",
@@ -191,8 +189,6 @@
                     "outlettype": [ "signal", "signal", "signal", "", "dictionary" ],
                     "parameter_enable": 0,
                     "patching_rect": [ 417.0, 174.0, 150.0, 30.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 416.0, 175.0, 150.0, 30.0 ],
                     "quality": "basic",
                     "saved_attribute_attributes": {
                         "candicane2": {
@@ -317,8 +313,6 @@
                     "outlettype": [ "signal", "signal", "signal", "", "dictionary" ],
                     "parameter_enable": 0,
                     "patching_rect": [ 127.0, 174.0, 150.0, 30.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 28.0, 108.0, 150.0, 30.0 ],
                     "quality": "basic",
                     "saved_attribute_attributes": {
                         "candicane2": {
