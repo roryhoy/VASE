@@ -883,14 +883,14 @@ function normalizeHostInput(rawHost) {
 }
 
 function sanitizePlayerName(name) {
-  return String(name || "")
-    .trim()
-    .replace(/\s+/g, "_");
+    return String(name || "")
+        .trim()
+        .replace(/\s+/g, "_");
 }
 
 function connect() {
     const enteredName = sanitizePlayerName(nameInput.value);
-    nameInput.value = enteredName;    
+    nameInput.value = enteredName;
     const enteredPlayerNumber = validatePlayerNumber(playerNumberInput.value);
     const hostUrl = normalizeHostInput(hostInput.value);
 
@@ -955,15 +955,23 @@ function connect() {
 
     socket.on("playerUpdate", (player) => {
         if (!player) return;
+
         const key = player.playerNumber ? String(player.playerNumber) : (player.name || "");
         if (!key) return;
+
         players[key] = player;
-        const incomingPlayerNumber = Number(player.playerNumber);
-        if (incomingPlayerNumber === Number(playerNumber)) {
+
+        // If update is for local player, update local state but do not emit back to server to avoid feedback
+        if (Number(player.playerNumber) === Number(playerNumber)) {
+            if (Number.isFinite(Number(player.x))) localState.x = clamp(Number(player.x), 0, 1);
+            if (Number.isFinite(Number(player.y))) localState.y = clamp(Number(player.y), 0, 1);
+            if (Number.isFinite(Number(player.z))) localState.z = clamp(Number(player.z), 0, 1);
+
             if (player.r !== undefined) localState.playerR = Number(player.r);
             if (player.g !== undefined) localState.playerG = Number(player.g);
             if (player.b !== undefined) localState.playerB = Number(player.b);
         }
+
         redrawAll();
     });
 
