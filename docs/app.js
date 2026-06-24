@@ -901,7 +901,7 @@ function connect() {
         return;
     }
 
-    if (!enteredName || !host) {
+    if (!enteredName || !hostUrl) {
         statusEl.textContent = "Enter name, player number, and host URL.";
         return;
     }
@@ -945,6 +945,18 @@ function connect() {
         const localPlayerFromState = players[localKey];
 
         if (localPlayerFromState) {
+            if (Number.isFinite(Number(localPlayerFromState.x))) {
+                localState.x = clamp(Number(localPlayerFromState.x), 0, 1);
+            }
+
+            if (Number.isFinite(Number(localPlayerFromState.y))) {
+                localState.y = clamp(Number(localPlayerFromState.y), 0, 1);
+            }
+
+            if (Number.isFinite(Number(localPlayerFromState.z))) {
+                localState.z = clamp(Number(localPlayerFromState.z), 0, 1);
+            }
+
             if (localPlayerFromState.r !== undefined) localState.playerR = Number(localPlayerFromState.r);
             if (localPlayerFromState.g !== undefined) localState.playerG = Number(localPlayerFromState.g);
             if (localPlayerFromState.b !== undefined) localState.playerB = Number(localPlayerFromState.b);
