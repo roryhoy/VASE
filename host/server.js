@@ -42,25 +42,38 @@ const oscIn = new osc.UDPPort({
 });
 
 function getPlayerKey(player) {
-  if (player.playerNumber && Number(player.playerNumber) > 0) {
-    return String(Number(player.playerNumber));
+  const n = Number(player.playerNumber);
+
+  if (Number.isFinite(n) && n > 0) {
+    return String(n);
   }
+
   return String(player.name || "");
+}
+
+function numberOr(value, fallback) {
+  const n = Number(value);
+  return Number.isFinite(n) ? n : fallback;
 }
 
 function normalizePlayer(data) {
   return {
     name: String(data.name || ""),
-    playerNumber: Number(data.playerNumber) || null,
-    x: Number(data.x) || 0.5,
-    y: Number(data.y) || 0.5,
-    z: Number(data.z) || 0.5,
-    azimuth: Number(data.azimuth) || 0,
-    elevation: Number(data.elevation) || 0,
-    roll: Number(data.roll) || 0,
-    r: Number(data.r ?? 1),
-    g: Number(data.g ?? 1),
-    b: Number(data.b ?? 1)
+    playerNumber: Number.isFinite(Number(data.playerNumber))
+      ? Number(data.playerNumber)
+      : null,
+
+    x: numberOr(data.x, 0.5),
+    y: numberOr(data.y, 0.5),
+    z: numberOr(data.z, 0.5),
+
+    azimuth: numberOr(data.azimuth, 0),
+    elevation: numberOr(data.elevation, 0),
+    roll: numberOr(data.roll, 0),
+
+    r: numberOr(data.r, 1),
+    g: numberOr(data.g, 1),
+    b: numberOr(data.b, 1)
   };
 }
 
@@ -68,13 +81,15 @@ function normalizeSpace(data) {
   return {
     id: String(data.id || ""),
     name: String(data.name || ""),
-    x: Number(data.x) || 0,
-    y: Number(data.y) || 0,
-    z: Number(data.z) || 0,
-    radius: Number(data.radius) || 0,
-    r: Number(data.r ?? 0),
-    g: Number(data.g ?? 1),
-    b: Number(data.b ?? 1)
+
+    x: numberOr(data.x, 0),
+    y: numberOr(data.y, 0),
+    z: numberOr(data.z, 0),
+    radius: numberOr(data.radius, 0),
+
+    r: numberOr(data.r, 0),
+    g: numberOr(data.g, 1),
+    b: numberOr(data.b, 1)
   };
 }
 
