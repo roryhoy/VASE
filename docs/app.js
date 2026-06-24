@@ -821,7 +821,7 @@ const rollKnobControl = createKnob({
     emitOnChange: true
 });
 
-createKnob({
+const azimuthOffsetKnobControl = createKnob({
     elementId: "azimuthOffsetKnob",
     valueId: "azimuthOffsetValue",
     min: AXIS_CONFIG.azimuth.offsetMin,
@@ -830,7 +830,7 @@ createKnob({
     emitOnChange: true
 });
 
-createKnob({
+const elevationOffsetKnobControl = createKnob({
     elementId: "elevationOffsetKnob",
     valueId: "elevationOffsetValue",
     min: AXIS_CONFIG.elevation.offsetMin,
@@ -839,7 +839,7 @@ createKnob({
     emitOnChange: true
 });
 
-createKnob({
+const rollOffsetKnobControl = createKnob({
     elementId: "rollOffsetKnob",
     valueId: "rollOffsetValue",
     min: AXIS_CONFIG.roll.offsetMin,
@@ -853,6 +853,120 @@ function refreshMainKnobVisuals() {
     azimuthKnobControl.setVisual(localState.azimuth);
     elevationKnobControl.setVisual(localState.elevation);
     rollKnobControl.setVisual(localState.roll);
+}
+
+function findPlayerByNumber(playersObject, number) {
+    const targetNumber = Number(number);
+
+    if (!Number.isFinite(targetNumber)) return null;
+
+    return Object.values(playersObject || {}).find((player) => {
+        return Number(player?.playerNumber) === targetNumber;
+    }) || null;
+}
+
+function applyIncomingOrientationToLocal(player) {
+    if (!player) return;
+
+    const incomingAzimuth = Number(player.azimuth);
+    const incomingElevation = Number(player.elevation);
+    const incomingRoll = Number(player.roll);
+
+    if (Number.isFinite(incomingAzimuth)) {
+        if (mediapipeEnabled) {
+            const sourceAzimuth = localState.trackAzimuth
+                ? localState.trackedAzimuth
+                : localState.baseAzimuth;
+
+            localState.azimuthOffset = wrapAngle(
+                circularDiffDeg(incomingAzimuth, sourceAzimuth),
+                AXIS_CONFIG.azimuth.offsetMin,
+                AXIS_CONFIG.azimuth.offsetMax
+            );
+
+            azimuthOffsetKnobControl.setVisual(localState.azimuthOffset);
+        } else {
+            localState.baseAzimuth = wrapAngle(
+                incomingAzimuth,
+                AXIS_CONFIG.azimuth.min,
+                AXIS_CONFIG.azimuth.max
+            );
+        }
+    }
+
+    if (Number.isFinite(incomingElevation)) {
+        if (mediapipeEnabled) {
+            const sourceElevation = localState.trackElevation
+                ? localState.trackedElevation
+                : localState.baseElevation;
+
+            localState.elevationOffset = clamp(
+                incomingElevation - sourceElevation,
+                AXIS_CONFIG.elevation.offsetMin,
+                AXIS_CONFIG.elevation.offsetMax
+            );
+
+            elevationOffsetKnobControl.setVisual(localState.elevationOffset);
+        } else {
+            localState.baseElevation = clamp(
+                incomingElevation,
+                AXIS_CONFIG.elevation.min,
+                AXIS_CONFIG.elevation.max
+            );
+        }
+    }
+
+    if (Number.isFinite(incomingRoll)) {
+        if (mediapipeEnabled) {
+            const sourceRoll = localState.trackRoll
+                ? localState.trackedRoll
+                : localState.baseRoll;
+
+            localState.rollOffset = wrapAngle(
+                circularDiffDeg(incomingRoll, sourceRoll),
+                AXIS_CONFIG.roll.offsetMin,
+                AXIS_CONFIG.roll.offsetMax
+            );
+
+            rollOffsetKnobControl.setVisual(localState.rollOffset);
+        } else {
+            localState.baseRoll = wrapAngle(
+                incomingRoll,
+                AXIS_CONFIG.roll.min,
+                AXIS_CONFIG.roll.max
+            );
+        }
+    }
+
+    refreshMainKnobVisuals();
+}
+
+function applyIncomingPlayerToLocal(player) {
+    if (!player) return;
+
+    const incomingPlayerNumber = Number(player.playerNumber);
+
+    if (incomingPlayerNumber !== Number(playerNumber)) {
+        return;
+    }
+
+    if (Number.isFinite(Number(player.x))) {
+        localState.x = clamp(Number(player.x), 0, 1);
+    }
+
+    if (Number.isFinite(Number(player.y))) {
+        localState.y = clamp(Number(player.y), 0, 1);
+    }
+
+    if (Number.isFinite(Number(player.z))) {
+        localState.z = clamp(Number(player.z), 0, 1);
+    }
+
+    applyIncomingOrientationToLocal(player);
+
+    if (player.r !== undefined) localState.playerR = Number(player.r);
+    if (player.g !== undefined) localState.playerG = Number(player.g);
+    if (player.b !== undefined) localState.playerB = Number(player.b);
 }
 
 function validatePlayerNumber(rawValue) {
@@ -941,26 +1055,9 @@ function connect() {
         spaces = payload?.spaces || {};
         world = payload?.world || { width: 1, height: 1, depth: 1 };
 
-        const localKey = getLocalPlayerKey();
-        const localPlayerFromState = players[localKey];
+        const localPlayerFromState = findPlayerByNumber(players, playerNumber);
 
-        if (localPlayerFromState) {
-            if (Number.isFinite(Number(localPlayerFromState.x))) {
-                localState.x = clamp(Number(localPlayerFromState.x), 0, 1);
-            }
-
-            if (Number.isFinite(Number(localPlayerFromState.y))) {
-                localState.y = clamp(Number(localPlayerFromState.y), 0, 1);
-            }
-
-            if (Number.isFinite(Number(localPlayerFromState.z))) {
-                localState.z = clamp(Number(localPlayerFromState.z), 0, 1);
-            }
-
-            if (localPlayerFromState.r !== undefined) localState.playerR = Number(localPlayerFromState.r);
-            if (localPlayerFromState.g !== undefined) localState.playerG = Number(localPlayerFromState.g);
-            if (localPlayerFromState.b !== undefined) localState.playerB = Number(localPlayerFromState.b);
-        }
+        applyIncomingPlayerToLocal(localPlayerFromState);
 
         redrawAll();
     });
@@ -968,21 +1065,16 @@ function connect() {
     socket.on("playerUpdate", (player) => {
         if (!player) return;
 
-        const key = player.playerNumber ? String(player.playerNumber) : (player.name || "");
+        const incomingPlayerNumber = Number(player.playerNumber);
+        const key = Number.isFinite(incomingPlayerNumber)
+            ? String(incomingPlayerNumber)
+            : (player.name || "");
+
         if (!key) return;
 
         players[key] = player;
 
-        // If update is for local player, update local state but do not emit back to server to avoid feedback
-        if (Number(player.playerNumber) === Number(playerNumber)) {
-            if (Number.isFinite(Number(player.x))) localState.x = clamp(Number(player.x), 0, 1);
-            if (Number.isFinite(Number(player.y))) localState.y = clamp(Number(player.y), 0, 1);
-            if (Number.isFinite(Number(player.z))) localState.z = clamp(Number(player.z), 0, 1);
-
-            if (player.r !== undefined) localState.playerR = Number(player.r);
-            if (player.g !== undefined) localState.playerG = Number(player.g);
-            if (player.b !== undefined) localState.playerB = Number(player.b);
-        }
+        applyIncomingPlayerToLocal(player);
 
         redrawAll();
     });
