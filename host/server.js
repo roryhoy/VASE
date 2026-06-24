@@ -219,7 +219,7 @@ io.on("connection", (socket) => {
 
     players[key] = player;
 
-    io.emit("playerUpdate", player);
+    socket.broadcast.emit("playerUpdate", player);
 
     oscOut.send({
       address: "/player/input",
