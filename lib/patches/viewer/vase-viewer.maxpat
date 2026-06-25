@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 262.0, 418.0, 611.0, 224.0 ],
+        "rect": [ 459.0, 553.0, 622.0, 235.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "title": "VASE Viewer Controls",
@@ -937,17 +937,6 @@
                     "outlettype": [ "" ],
                     "patching_rect": [ 1484.0, 489.0, 89.0, 22.0 ],
                     "text": "v draw-sensing"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-86",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "patching_rect": [ 1444.0, 594.0, 84.0, 22.0 ],
-                    "text": "v draw-agents"
                 }
             },
             {
@@ -8912,14 +8901,6 @@
             {
                 "patchline": {
                     "destination": [ "obj-43", 0 ],
-                    "order": 1,
-                    "source": [ "obj-37", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-86", 0 ],
-                    "order": 0,
                     "source": [ "obj-37", 0 ]
                 }
             },

@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 342.0, 116.0, 1035.0, 196.0 ],
+        "rect": [ 443.0, 729.0, 1035.0, 196.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "enablehscroll": 0,
@@ -903,7 +903,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 895.0, 1120.0, 4.0, 51.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 175.6905, 94.0, 6.0, 43.0 ],
+                    "presentation_rect": [ 1016.4381, 94.0, 6.0, 43.0 ],
                     "proportion": 0.5,
                     "rounded": 0,
                     "varname": "playback"
@@ -1937,8 +1937,8 @@
                                     "maxclass": "newobj",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 2216.0, 843.0, 111.0, 22.0 ],
-                                    "text": "send player-moved"
+                                    "patching_rect": [ 2216.0, 843.0, 167.0, 22.0 ],
+                                    "text": "send player-moved-composer"
                                 }
                             },
                             {
@@ -1958,8 +1958,8 @@
                                     "maxclass": "newobj",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 1023.0, 860.0, 111.0, 22.0 ],
-                                    "text": "send player-moved"
+                                    "patching_rect": [ 954.0, 860.0, 167.0, 22.0 ],
+                                    "text": "send player-moved-composer"
                                 }
                             },
                             {
@@ -4109,7 +4109,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 395.0, 337.0, 102.0, 22.0 ],
-                                    "text": "10130.967625"
+                                    "text": "60026.845458"
                                 }
                             },
                             {
@@ -4185,7 +4185,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 149.5, 337.0, 81.0, 22.0 ],
-                                    "text": "0 0 10 130"
+                                    "text": "0 1 0 26"
                                 }
                             },
                             {
@@ -5586,7 +5586,7 @@
                     "patching_rect": [ 368.0, 2189.0, 88.0, 21.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 451.0, 139.0, 162.0, 21.0 ],
-                    "text": "0:00:22.255"
+                    "text": "0:00:27.121"
                 }
             },
             {
@@ -5864,7 +5864,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 95.0, 2137.0, 72.0, 22.0 ],
-                    "text": "0 0 22 255"
+                    "text": "0 0 27 121"
                 }
             },
             {
@@ -7158,7 +7158,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 756.0, 1321.0, 4.0, 30.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 380.0, 100.0, 4.0, 30.0 ],
+                    "presentation_rect": [ 462.0, 100.0, 4.0, 30.0 ],
                     "proportion": 0.5,
                     "rounded": 0,
                     "varname": "cursor"
