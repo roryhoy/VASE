@@ -285,7 +285,7 @@ io.on("connection", (socket) => {
       nodeReceivedAt: performance.now()
     });
 
-    udpPort.send({
+    oscOut.send({
       address: "/latency/ping",
       args: [
         { type: "s", value: msg.id }
