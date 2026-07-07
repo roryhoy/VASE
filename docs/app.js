@@ -1532,3 +1532,7 @@ emitLocalState();
 updateCameraPreviewUi();
 updateHeadTrackingUi();
 redrawAll();
+
+window.startLatencyTest = startLatencyTest;
+window.printLatencyStats = printLatencyStats;
+window.sendLatencyPing = sendLatencyPing;
