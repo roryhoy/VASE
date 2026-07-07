@@ -2,14 +2,16 @@ const http = require("http");
 const express = require("express");
 const { Server } = require("socket.io");
 const osc = require("osc");
+const { performance } = require("perf_hooks");
 
 const PORT = 8080;
+const pendingLatency = new Map();
 
-// Node -> Max
+// Node to Max
 const MAX_OSC_OUT_HOST = "127.0.0.1";
 const MAX_OSC_OUT_PORT = 8000;
 
-// Max -> Node
+// Max to Node
 const NODE_OSC_IN_PORT = 8001;
 
 const app = express();
@@ -27,7 +29,7 @@ let world = {
   depth: 1
 };
 
-// browser -> Max
+// browser to Max
 const oscOut = new osc.UDPPort({
   localAddress: "0.0.0.0",
   localPort: 57121,
@@ -35,7 +37,7 @@ const oscOut = new osc.UDPPort({
   remotePort: MAX_OSC_OUT_PORT
 });
 
-// Max -> Node
+// Max to Node
 const oscIn = new osc.UDPPort({
   localAddress: "0.0.0.0",
   localPort: NODE_OSC_IN_PORT
@@ -186,6 +188,26 @@ oscIn.on("message", (msg) => {
     io.emit("spacesClear");
     return;
   }
+
+  if (msg.address === "/latency/pong") {
+    const id = msg.args[0];
+    const pending = pendingLatency.get(id);
+
+    if (!pending) return;
+
+    const socket = io.sockets.sockets.get(pending.socketId);
+
+    if (socket) {
+      socket.emit("latency_pong", {
+        id,
+        playerNumber: pending.playerNumber,
+        t0: pending.t0
+      });
+    }
+
+    pendingLatency.delete(id);
+  }
+
 });
 
 io.on("connection", (socket) => {
@@ -253,6 +275,22 @@ io.on("connection", (socket) => {
         socket.data.name || ""
       ]
     });
+  });
+
+  socket.on("latency_ping", (msg) => {
+    pendingLatency.set(msg.id, {
+      socketId: socket.id,
+      t0: msg.t0,
+      playerNumber: msg.playerNumber,
+      nodeReceivedAt: performance.now()
+    });
+
+    udpPort.send({
+      address: "/latency/ping",
+      args: [
+        { type: "s", value: msg.id }
+      ]
+    }, "127.0.0.1", MAX_OSC_OUT_PORT);
   });
 });
 
