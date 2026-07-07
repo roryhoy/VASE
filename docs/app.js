@@ -1099,6 +1099,22 @@ function connect() {
         spaces = {};
         redrawAll();
     });
+
+    socket.on("latency_pong", (msg) => {
+        const t1 = performance.now();
+        const rtt = t1 - msg.t0;
+
+        latencySamples.push({
+            id: msg.id,
+            playerNumber: msg.playerNumber,
+            rtt_ms: rtt,
+            approx_one_way_ms: rtt / 2
+        });
+
+        console.log(
+            `RTT: ${rtt.toFixed(2)} ms | approx one-way: ${(rtt / 2).toFixed(2)} ms`
+        );
+    });
 }
 
 function normalizeAngleDeg(angle) {
@@ -1416,71 +1432,55 @@ let latencySeq = 0;
 let latencySamples = [];
 
 function sendLatencyPing() {
-  const id = `${playerNumber}-${Date.now()}-${latencySeq++}`;
-  const t0 = performance.now();
+    const id = `${playerNumber}-${Date.now()}-${latencySeq++}`;
+    const t0 = performance.now();
 
-  socket.emit("latency_ping", {
-    id,
-    playerNumber,
-    t0
-  });
+    socket.emit("latency_ping", {
+        id,
+        playerNumber,
+        t0
+    });
 }
 
-socket.on("latency_pong", (msg) => {
-  const t1 = performance.now();
-  const rtt = t1 - msg.t0;
-
-  latencySamples.push({
-    id: msg.id,
-    playerNumber: msg.playerNumber,
-    rtt_ms: rtt,
-    approx_one_way_ms: rtt / 2
-  });
-
-  console.log(
-    `RTT: ${rtt.toFixed(2)} ms | approx one-way: ${(rtt / 2).toFixed(2)} ms`
-  );
-});
-
 function startLatencyTest(intervalMs = 100, count = 200) {
-  latencySamples = [];
-  let sent = 0;
+    latencySamples = [];
+    let sent = 0;
 
-  const timer = setInterval(() => {
-    sendLatencyPing();
-    sent++;
+    const timer = setInterval(() => {
+        sendLatencyPing();
+        sent++;
 
-    if (sent >= count) {
-      clearInterval(timer);
-      setTimeout(printLatencyStats, 500);
-    }
-  }, intervalMs);
+        if (sent >= count) {
+            clearInterval(timer);
+            setTimeout(printLatencyStats, 500);
+        }
+    }, intervalMs);
 }
 
 function printLatencyStats() {
-  const values = latencySamples.map(s => s.rtt_ms).sort((a, b) => a - b);
+    const values = latencySamples.map(s => s.rtt_ms).sort((a, b) => a - b);
 
-  if (!values.length) {
-    console.log("No latency samples returned.");
-    return;
-  }
+    if (!values.length) {
+        console.log("No latency samples returned.");
+        return;
+    }
 
-  const percentile = (p) => {
-    const i = Math.floor((p / 100) * (values.length - 1));
-    return values[i];
-  };
+    const percentile = (p) => {
+        const i = Math.floor((p / 100) * (values.length - 1));
+        return values[i];
+    };
 
-  const mean = values.reduce((a, b) => a + b, 0) / values.length;
+    const mean = values.reduce((a, b) => a + b, 0) / values.length;
 
-  console.table({
-    samples_returned: values.length,
-    min_ms: values[0].toFixed(2),
-    median_ms: percentile(50).toFixed(2),
-    mean_ms: mean.toFixed(2),
-    p95_ms: percentile(95).toFixed(2),
-    p99_ms: percentile(99).toFixed(2),
-    max_ms: values[values.length - 1].toFixed(2)
-  });
+    console.table({
+        samples_returned: values.length,
+        min_ms: values[0].toFixed(2),
+        median_ms: percentile(50).toFixed(2),
+        mean_ms: mean.toFixed(2),
+        p95_ms: percentile(95).toFixed(2),
+        p99_ms: percentile(99).toFixed(2),
+        max_ms: values[values.length - 1].toFixed(2)
+    });
 }
 
 cameraSelect.addEventListener("change", async (event) => {
