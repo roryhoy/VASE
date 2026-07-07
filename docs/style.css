@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
   --bg: #111;
   --panel: #1b1b1b;
@@ -16,7 +18,7 @@
 body {
   margin: 0;
   padding: 24px;
-  font-family: 'tahoma', sans-serif;
+  font-family: 'Quantico', sans-serif;
   background: var(--bg);
   color: var(--text);
 }
@@ -48,6 +50,7 @@ select {
   background: var(--panel);
   color: var(--text);
   border: 1px solid var(--border);
+  font-family: 'Quantico', sans-serif;
 }
 
 .buttons {
@@ -63,13 +66,14 @@ button {
   background: var(--panel-2);
   color: var(--text);
   border: 1px solid var(--border);
+  font-family: 'Quantico', sans-serif;
 }
 
 .canvases,
 .dial-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 8px;
 }
 
 @media (max-width: 900px) {
@@ -84,7 +88,7 @@ button {
 .camera-card {
   background: var(--panel);
   border: 1px solid var(--border);
-  padding: 16px;
+  padding: 8px;
 }
 
 canvas {
@@ -98,12 +102,13 @@ canvas {
 .dial-section {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 240px);
+  justify-content: left;
+  gap: 0px;
 }
 
 .dial-card {
-  width: 100%;
+  width: 75%;
   text-align: center;
 }
 
@@ -115,14 +120,15 @@ canvas {
   .dial-card {
     width: 100%;
     max-width: 240px;
+    
   }
 }
 
 .dial-header {
-  display: flex;
+  /* display: flex; */
   align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px;
   min-height: 70px;
 }
 
@@ -241,7 +247,12 @@ canvas {
 }
 
 .knob-toggle {
-  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin: 6px auto 0;
   font-size: 12px;
 }
 
@@ -303,6 +314,7 @@ canvas {
   border: 1px solid var(--border);
   display: block;
   margin-top: 12px;
+  justify-self: center;
 }
 
 #cameraStatus {
@@ -329,6 +341,7 @@ canvas {
   color: var(--text);
   font-size: 14px;
   white-space: nowrap;
+  
 }
 
 .toggle-row input[type="checkbox"] {
