@@ -9,8 +9,20 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 634.0, 591.0, 828.0, 723.0 ],
+        "rect": [ 515.0, 542.0, 828.0, 723.0 ],
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-8",
+                    "linecount": 2,
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 63.0, 663.0, 156.0, 35.0 ],
+                    "text": "send room_1_move_message"
+                }
+            },
             {
                 "box": {
                     "color": [ 0.07058823529411765, 0.13725490196078433, 0.796078431372549, 1.0 ],
@@ -413,6 +425,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-22", 0 ],
+                    "order": 1,
+                    "source": [ "obj-440", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-8", 1 ],
+                    "order": 0,
                     "source": [ "obj-440", 0 ]
                 }
             },
