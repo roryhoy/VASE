@@ -9,11 +9,81 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 93.0, 2181.0, 1313.0 ],
+        "rect": [ 34.0, 96.0, 1133.0, 852.0 ],
         "openinpresentation": 1,
         "default_fontsize": 10.0,
         "subpatcher_template": "bigpatcher",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-105",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 1070.0, 875.0, 80.0, 20.0 ],
+                    "text": "zero_column #1"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-91",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 972.0, 875.0, 89.0, 20.0 ],
+                    "text": "loadmess compile"
+                }
+            },
+            {
+                "box": {
+                    "filename": "coll_column_clear.js",
+                    "id": "obj-87",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 972.0, 921.0, 102.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "parameter_enable": 0
+                    },
+                    "text": "v8 coll_column_clear",
+                    "textfile": {
+                        "filename": "coll_column_clear.js",
+                        "flags": 0,
+                        "embed": 0,
+                        "autowatch": 1
+                    }
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-47",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1000.0, 826.0, 150.0, 29.0 ],
+                    "text": "if a player manually moves, break adoption"
+                }
+            },
+            {
+                "box": {
+                    "color": [ 0.101960784313725, 0.003921568627451, 1.0, 1.0 ],
+                    "id": "obj-26",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 972.0, 970.0, 100.0, 20.0 ],
+                    "saved_object_attributes": {
+                        "embed": 0,
+                        "precision": 6
+                    },
+                    "text": "coll space-adoptions"
+                }
+            },
             {
                 "box": {
                     "id": "obj-81",
@@ -67,7 +137,6 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 1596.0, 767.0, 107.0, 31.0 ],
-                    "presentation_linecount": 2,
                     "text": "#1 305. -72.715565 -54.597"
                 }
             },
@@ -87,10 +156,10 @@
                     "id": "obj-77",
                     "maxclass": "newobj",
                     "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "patching_rect": [ 1157.0, 792.0, 30.0, 20.0 ],
-                    "text": "t #1 l"
+                    "numoutlets": 3,
+                    "outlettype": [ "", "", "bang" ],
+                    "patching_rect": [ 1157.0, 792.0, 40.0, 20.0 ],
+                    "text": "t #1 l b"
                 }
             },
             {
@@ -784,7 +853,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "", "", "", "" ],
-                    "patching_rect": [ 1150.0, 895.0, 73.0, 20.0 ],
+                    "patching_rect": [ 1168.0, 875.0, 73.0, 20.0 ],
                     "saved_object_attributes": {
                         "embed": 0,
                         "precision": 6
@@ -3378,7 +3447,7 @@
                     "angle": 270.0,
                     "bgcolor": [ 0.172137149796092, 0.172137100044002, 0.172137113045018, 0.0 ],
                     "border": 1,
-                    "bordercolor": [ 1.0, 0.0, 0.03973, 1.0 ],
+                    "bordercolor": [ 1.0, 0.0, 0.005718, 1.0 ],
                     "id": "obj-4",
                     "maxclass": "panel",
                     "mode": 0,
@@ -3396,6 +3465,12 @@
                 "patchline": {
                     "destination": [ "obj-13", 0 ],
                     "source": [ "obj-1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-87", 0 ],
+                    "source": [ "obj-105", 0 ]
                 }
             },
             {
@@ -3619,6 +3694,13 @@
                 "patchline": {
                     "destination": [ "obj-79", 0 ],
                     "source": [ "obj-25", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-87", 0 ],
+                    "midpoints": [ 981.5, 993.0, 941.0, 993.0, 941.0, 915.0, 981.5, 915.0 ],
+                    "source": [ "obj-26", 0 ]
                 }
             },
             {
@@ -3876,6 +3958,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-105", 0 ],
+                    "source": [ "obj-77", 2 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-45", 0 ],
                     "source": [ "obj-77", 1 ]
                 }
@@ -3984,8 +4072,26 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-26", 0 ],
+                    "source": [ "obj-87", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-26", 0 ],
+                    "source": [ "obj-87", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-94", 0 ],
                     "source": [ "obj-89", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-87", 0 ],
+                    "source": [ "obj-91", 0 ]
                 }
             },
             {
@@ -4000,6 +4106,14 @@
             "obj-21": [ "live.text[1]", "live.text[13]", 0 ],
             "obj-50": [ "live.text[2]", "live.text[13]", 0 ],
             "obj-53": [ "live.text[3]", "live.text[13]", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0

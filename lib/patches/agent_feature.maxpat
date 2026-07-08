@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 677.0, 209.0, 1350.0, 985.0 ],
+        "rect": [ 128.0, 96.0, 1350.0, 852.0 ],
         "openinpresentation": 1,
         "boxes": [
             {
@@ -130,7 +130,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 54.0, 798.0, 126.0, 49.0 ],
+                    "patching_rect": [ 54.0, 798.0, 128.0, 49.0 ],
                     "text": "replace room_0:: 0.89115 0.12246 0.16 0.84 2.833918"
                 }
             },
@@ -1268,6 +1268,7 @@
                     "format": 6,
                     "id": "obj-4",
                     "maxclass": "flonum",
+                    "minimum": 0.0,
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
@@ -1336,6 +1337,7 @@
                     "format": 6,
                     "id": "obj-180",
                     "maxclass": "flonum",
+                    "minimum": 0.0,
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
@@ -1350,6 +1352,7 @@
                     "format": 6,
                     "id": "obj-170",
                     "maxclass": "flonum",
+                    "minimum": 0.0,
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "bang" ],
@@ -2364,14 +2367,6 @@
         ],
         "parameters": {
             "obj-80": [ "live.text[3]", "live.text[13]", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0
