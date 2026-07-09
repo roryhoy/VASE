@@ -69,10 +69,10 @@
                     "data": {
                         "clips": [
                             {
-                                "absolutepath": "cherokee.aif",
-                                "filename": "cherokee.aif",
+                                "absolutepath": "cym.aiff",
+                                "filename": "cym.aiff",
                                 "filekind": "audiofile",
-                                "id": "u472005857",
+                                "id": "u932058126",
                                 "loop": 1,
                                 "content_state": {
                                     "loop": 1
@@ -176,8 +176,10 @@
                                 "filename": "anton.aif",
                                 "filekind": "audiofile",
                                 "id": "u087011622",
-                                "loop": 0,
-                                "content_state": {                                }
+                                "loop": 1,
+                                "content_state": {
+                                    "loop": 1
+                                }
                             }
                         ]
                     },
