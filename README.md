@@ -8,24 +8,27 @@ VASE places performers alongside dynamic virtual acoustic agents. These "space-a
 
 ![VASE Viewer with agents and players](lib/images/vase_viewer.png)
 
-This project is developed and distributed in partial fulfillment of the requirements for the degree of Doctor of Philosophy, York University, Toronto, Canada. 
-
 ### Reactive Acoustic Zones
 VASE's space-agents are able to listen to all incoming audio and react based on an established "behavioural genome" - a parametric weighting of particular spectral and chromatic features that a particular space-agent should "care" about. Agents are able to move toward and away from players based on their established preferences, and pick up or "adopt" players to move them around the space.
 
 <img src="lib/images/adoption_example.gif" width="500"/>
 
 ### System Walkthrough
-A system walkthrough of feature examples can be found here:
+A system walkthrough with feature examples can be found here:
 
-<a href="https://www.youtube.com/watch?v=zFuIP5dS3uE"><img src="lib/images/youtube_thumb.png" width="500"/></a>
+<a href="https://www.youtube.com/watch?v=zFuIP5dS3uE" target="_blank"><img src="lib/images/youtube_thumb.png" width="500"/></a>
 
 Installation and server hosting instructions can be found in the "host" folder README.md:
 [Here](https://github.com/roryhoy/VASE/blob/main/host/README.md)
 
 ### Dependencies
-VASE requires Max 9 or above: [https://cycling74.com/products/max-9](https://cycling74.com/products/max-9) 
+- VASE requires Max 9 or above: [https://cycling74.com/products/max-9](https://cycling74.com/products/max-9) 
 
-VASE is built upon functionality of IRCAM's Spat 5. Please install Spat from [forum.ircam](https://forum.ircam.fr/projects/detail/spat/) (account required). 
+- VASE is built upon functionality of IRCAM's Spat 5. Please install Spat from [forum.ircam](https://forum.ircam.fr/projects/detail/spat/) (account required). *Spatialisateur is an IRCAM registered trademark. The design of Spat and the reverberation module are protected under several French and international patents ([FR] 92 02528; [US] 5,491,754, [FR] 95 10111; [US] 5,812,674).*
 
-> *Spatialisateur is an IRCAM registered trademark. The design of Spat and the reverberation module are protected under several French and international patents ([FR] 92 02528; [US] 5,491,754, [FR] 95 10111; [US] 5,812,674).*
+- VASE uses routing objects from the CNMAT Externals package. This can be downloaded from the package manager inside of Max.
+
+####More Info:
+This project is developed and distributed in partial fulfillment of the requirements for the degree of Doctor of Philosophy in Digital Media, York University, Toronto, Canada. 
+
+Accompanying dissertation materials will be linked once made available online.
