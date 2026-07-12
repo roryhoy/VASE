@@ -2,11 +2,16 @@
 	<img src="lib/images/vase_logo_white.png" width="250"/>
 </center>
 
-VASE (Virtual Acoustic Spatial Entities) is a Max-based telematic performance system which allows for for unique perspectives in a shared virtual space. The system is designed to slot into typical telematic performance tech configurations as a audio processing layer that occurs before sending individualized perspectives back to players.
+VASE (Virtual Acoustic Spatial Entities) is a Max-based telematic performance system which allows for for unique perspectives in a shared virtual space. The system is designed to slot into typical telematic performance tech configurations as a audio processing layer that occurs before sending individualized perspectives back to players. A binaural ambisonic mix is created for each player, which can be routed back to them over your choice of networking platform (e.g. JackTrip, Sonobus, etc).
 
 VASE places performers alongside dynamic virtual acoustic agents. These "space-agents" populate the encompassing space, allowing for unique compositional approaches to electroacoustic performance. Composers working with the system can define custom layouts and playback timed events for the position and orientation of players and space-agents, or trigger temporal jumps in the timeline itself.
 
 ![VASE Viewer with agents and players](lib/images/vase_viewer.png)
+
+### Embodied Control of Spatial Perspective
+Remote players can connect to the system to control their position and orientation in the space via the [spatial controller](https://www.rhoy.ca/VASE/controller/index.html). Head tracking can be toggled on to map a player's movements to their virtual perspective.
+
+<img src="lib/images/head_tracking.gif" width="500"/>
 
 ### Reactive Acoustic Zones
 VASE's space-agents are able to listen to all incoming audio and react based on an established "behavioural genome" - a parametric weighting of particular spectral and chromatic features that a specific space-agent should "care" about. Agents are able to move toward and away from players based on their established preferences, and pick up or "adopt" players to move them around the space.
