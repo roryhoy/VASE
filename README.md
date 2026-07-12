@@ -29,7 +29,7 @@ Installation and server hosting instructions can be found in the "host" folder R
 - VASE uses routing objects from the **CNMAT Externals** package. This can be downloaded from the package manager inside of Max. *OSC-route by Matt Wright, Michael Zbyszynski. Copyright (c) 1999,2000-08,13 Regents of the University of California.  All rights reserved.*
 
 
-###More Info:
+#### More Info:
 This project is developed and distributed in partial fulfillment of the requirements for the degree of Doctor of Philosophy in Digital Media, York University, Toronto, Canada. 
 
 Accompanying dissertation materials will be linked once made available online.
