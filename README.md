@@ -22,11 +22,12 @@ Installation and server hosting instructions can be found in the "host" folder R
 [Here](https://github.com/roryhoy/VASE/blob/main/host/README.md)
 
 ### Dependencies
-- VASE requires Max 9 or above: [https://cycling74.com/products/max-9](https://cycling74.com/products/max-9) 
+- VASE requires **Max 9** or above: [https://cycling74.com/products/max-9](https://cycling74.com/products/max-9) 
 
-- VASE is built upon functionality of IRCAM's Spat 5. Please install Spat from [forum.ircam](https://forum.ircam.fr/projects/detail/spat/) (account required). *Spatialisateur is an IRCAM registered trademark. The design of Spat and the reverberation module are protected under several French and international patents ([FR] 92 02528; [US] 5,491,754, [FR] 95 10111; [US] 5,812,674).*
+- VASE uses ambisonic functionality from **IRCAM's Spat 5**. Please install Spat from [forum.ircam](https://forum.ircam.fr/projects/detail/spat/) (account required). *Spatialisateur is an IRCAM registered trademark. The design of Spat and the reverberation module are protected under several French and international patents ([FR] 92 02528; [US] 5,491,754, [FR] 95 10111; [US] 5,812,674).*
 
-- VASE uses routing objects from the CNMAT Externals package. This can be downloaded from the package manager inside of Max.
+- VASE uses routing objects from the **CNMAT Externals** package. This can be downloaded from the package manager inside of Max. *OSC-route by Matt Wright, Michael Zbyszynski. Copyright (c) 1999,2000-08,13 Regents of the University of California.  All rights reserved.*
+
 
 ####More Info:
 This project is developed and distributed in partial fulfillment of the requirements for the degree of Doctor of Philosophy in Digital Media, York University, Toronto, Canada. 
