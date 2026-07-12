@@ -9,7 +9,7 @@ VASE places performers alongside dynamic virtual acoustic agents. These "space-a
 ![VASE Viewer with agents and players](lib/images/vase_viewer.png)
 
 ### Reactive Acoustic Zones
-VASE's space-agents are able to listen to all incoming audio and react based on an established "behavioural genome" - a parametric weighting of particular spectral and chromatic features that a particular space-agent should "care" about. Agents are able to move toward and away from players based on their established preferences, and pick up or "adopt" players to move them around the space.
+VASE's space-agents are able to listen to all incoming audio and react based on an established "behavioural genome" - a parametric weighting of particular spectral and chromatic features that a specific space-agent should "care" about. Agents are able to move toward and away from players based on their established preferences, and pick up or "adopt" players to move them around the space.
 
 <img src="lib/images/adoption_example.gif" width="500"/>
 
